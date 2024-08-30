@@ -1,0 +1,32 @@
+project:
+  type: book
+  output-dir: "doc"
+
+lang: es
+
+book:
+  title: "Bitácoras Grupo #<su número>, CA-204 (II-2024)"
+  author: "Estudiante A, Estudiante B, Estudiante C"
+  date: today
+#  site-url: # Vacío por el momento
+  chapters:
+    - "index.qmd"
+    - "bitacora-1.qmd"
+
+bibliography: references.bib
+
+format:
+  html:
+      # Pueden usar cualquier tema de los que están aca:
+      # https://quarto.org/docs/output-formats/html-themes.html a excepción de
+      # los oscuros porque no entiende nada.
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+execute:
+  freeze: auto
+  cache: true
+
+from: markdown+tex_math_single_backslash+emoji
+link-external-newwindow: true

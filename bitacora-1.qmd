@@ -6,3 +6,5 @@ editor:
 
 Hola 
 $$\iiint_{\Omega}div(\vec{F})dV=\iint_{\partial \Omega}\vec{F}\cdot \vec{n}dS$$
+Hola
+$$\oint_{E}\vec{E}\cdot d\vec{s}=\dfrac{Q_{encerrada}}{\epsilon_{o}}$$

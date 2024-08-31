@@ -1,7 +1,10 @@
-Ejemplo
-Hola
-Me llamo andrey
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+Ejemplo Hola Me llamo andrey
 $$\iiint_{\Omega}div(\vec{F})dV=\iint_{\partial \Omega}\vec{F}\cdot\vec{n}dS$$
 
-
-@wadiai
+holass @wadiai

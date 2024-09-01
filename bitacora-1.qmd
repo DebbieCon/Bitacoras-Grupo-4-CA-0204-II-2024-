@@ -20,3 +20,25 @@ editor:
 ### Identificación de tensiones
 ### Reformulación de la idea en modo pregunta
 ### Argumentación de la pregunta
+
+**Pregunta**
+\
+¿Cuáles son las principales problemáticas enfrentadas por la biodiversidad del continente americano?
+\
+\
+***Contraargumento***
+\
+**logica:**
+\
+**etica:**
+\
+**emocional:**
+\
+\
+***Argumentos***
+\
+**logica**
+\
+**etica**
+\
+**emocional**

@@ -9,6 +9,13 @@ editor:
 ## Pregunta de investigación
 ### Definición de la idea
 ### Conceptualización de la idea 
+* Población: Una población es un conjunto completo de individuos u objetos que comparten características similares. (Fuente:<https://www.questionpro.com/blog/es/que-es-una-poblacion/>)
+
+* Problemática (ambiental): Los problemas medioambientales son el conjunto de desafíos a los que se enfrenta la Tierra y sus sistemas naturales. Aunque los ecosistemas de la Tierra están diseñados para manejar ciertas cantidades de alteraciones naturales (como incendios forestales e inundaciones), las actividades humanas pueden crear circunstancias en las que ocurren con mayor frecuencia o intensidad. 
+(Fuente: <https://www.ibm.com/es-es/topics/environmental-issues>) 
+
+* Continente americano: América es el segundo continente más grande de los cuatro que hay en el planeta y por su gran extensión se divide en tres regiones: América del Norte, América Central y América del Sur. Limita solo con océanos (Fuente:<https://concepto.de/america/#ixzz8kRmQwCRH>)
+
 
 ### Identificación de tensiones
 ### Reformulación de la idea en modo pregunta

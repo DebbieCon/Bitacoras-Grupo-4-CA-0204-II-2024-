@@ -167,6 +167,10 @@ Aun que hay argumentos que dicen que no es posible generalizar el perfil de espe
 
 \
 
+## Argumentación a Través de Datos
+
+La información que respalda el estudio propuesto se encuentra en dos bases de datos de la organización "IUCN Red List of Threatened Species" quienes habilitan al público los datos de miles de especies de diversos reinos quienes s ehan encontrado o se encuentran actualmente en peligro de extinción, así como la causa de este riesgo y las acciones que se han tomado al respecto. Se tomaron dos bases de datos, una de ellas con información más técnica de la especie y sus características y la otra con detalles más profundizados de la extinción de la especie. El enlace donde se pueden encontrar las bases de datos y más información de la especie y la organización es <https://www.iucnredlist.org/>.
+
 ## Referencias
 
 * Las especies en peligro de extinción y los mecanismos para la recuperación y conservación de la biodiversidad: un estudio sobre la viabilidad de los mecanismos y las trabas burocráticas. Fuente <https://dialnet.unirioja.es/servlet/articulo?codigo=6995233>

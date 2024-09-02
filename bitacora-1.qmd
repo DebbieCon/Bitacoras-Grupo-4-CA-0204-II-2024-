@@ -45,11 +45,12 @@ editor:
 \
 ***Argumentos***
 \
-**lógica**
 \
-**ética**
+**lógica:**
 \
-**emocional**
+**ética:**
+\
+**emocional:**
 \
 
 \
@@ -78,21 +79,23 @@ Las especies en peligro de extinción presentan muchas amenazas, pero en su mayo
 \
 ***Argumentos***
 \
-**lógica**
+**lógica:**
 \
 Las especies en peligro de extinción comparten algunos rasgos que puede ayudar en crear un perfil de características o aspectos en los que estas especies suelen ser vulnerables. Esta vulnerabilidad se puede estudiar en base a la caza, el uso que se le da a la especie en el mercado ya sea legal o ilegal o simplemente en el medio en el que la especie vive las amenazas que puede vivir. Todo esto más algunas características evolutivas son clave para el perfil que se busca.
 \
-**ética**
+**ética:**
 \
 Tanto el ser humano como la evolución proporcionan herramientas que aumentan el grado de posibilidad de extinción de una especie, algunas de estas especies mantienen tasas reproductivas muy bajas debido a largos tiempos de gestación también se han adaptado a una dieta especial que el ser humano es capaz de degradar al destruir el hábitat. Si se estudian las especies según el hábitat se pueden concluir algunas características en común que provocan esta extinción.
 \
-**emocional**
+**emocional:**
 \
 Hay casos muy conocidos de extinción de especies del grupo de mamíferos o aves las cuales representan una fuerte pérdida para la cultura de una zona. Pero más allá de esto se tratan de vidas que se pierden para siempre. Esta pregunta sirve para hacer conciencia de las especies que podrían llegar a estar en peligro de extinción e intentar preservar esta vida por muchos años más.
 \
 ***Conclusión***
 \
 Aun que hay argumentos que dicen que no es posible generalizar el perfil de especie en extinción si hay patrones de comportamiento y de evolución que apuntan a características notorias a la hora de hacer este estudio. Entre estos patrones están los mencionados anteriormente como la reproductividad, problemas con habitat, depredadores, entre otros. Todas estas tendencias pueden mejorar el entendimiento de riesgo de extinción de una especie y como se podría llegar a evitar.
+\
+\
 \
 **Pregunta**
 \
@@ -115,20 +118,23 @@ Aun que hay argumentos que dicen que no es posible generalizar el perfil de espe
 \
 ***Argumentos***
 \
-**lógica**
+**lógica:**
 \
 
 \
-**ética**
+**ética:**
 \
 
 \
-**emocional**
+**emocional:**
 \
 
 \
 ***Conclusión***
 \
+\
+\
+
 **Pregunta**
 \
 ¿Qué se puede decir sobre el estado de conservación de la biodiversidad en América?
@@ -150,11 +156,11 @@ Aun que hay argumentos que dicen que no es posible generalizar el perfil de espe
 \
 ***Argumentos***
 \
-**lógica**
+**lógica:**
 \
 
 \
-**ética**
+**ética:**
 \
 
 \
@@ -164,7 +170,7 @@ Aun que hay argumentos que dicen que no es posible generalizar el perfil de espe
 \
 ***Conclusión***
 \
-
+\
 \
 
 ## Argumentación a Través de Datos

@@ -21,6 +21,7 @@ editor:
 * Puede que los tipos de datos relevantes al tema no ofrezcan mayor diversidad de métodos de análisis, lo cual provocaría una investigación repetitiva.
 
 ### Reformulación de la idea en modo pregunta
+
 * ¿Cuáles son las principales problemáticas enfrentadas por la biodiversidad del continente americano?  
 * ¿Existen características comunes entre las especies de América que enfrentan un mayor peligro de extinción?
 * ¿Cuáles son las tendencias poblacionales generales de las diferentes especies que habitan el continente americano?
@@ -65,33 +66,33 @@ editor:
 \
 **lógica:**
 \
- 
+ Muchas especies que se han encontrado o se encuentran actualmente en peligro de extinción han llegado a ser muy variadas tanto en anatomía, fisiología, hábitat, entre otros factores. Cada especie tiene adaptaciones a su entorno y algunos cambios en estas o factores exógenos como caza, cambio climático o cambios en el hábitat son quienes provocan la extinción. Por lo que no se puede generalizar o concluir un perfil de las especies en peligro de extinción.
 \
 **ética:**
 \
-
+Muchas especies llegan a extinguirse debido a la actividad humana, esto se debe a la caza no controlada, o la caza “por diversión” así como el invadir el hábitat para construcciones o demás. Todas estas acciones pueden afectar la vida animal por lo que no son solo características de estos lo que provocan la extinción.
 \
 **emocional:**
 \
-
+Las especies en peligro de extinción presentan muchas amenazas, pero en su mayoría se deben por otras especies que entran al hábitat ajeno y provocan un descontrol en la convivencia, llegando a nuevas competencias y desplazando a las especies nativas a otro hábitat y posteriormente una disminución significativa en la población.
 \
 ***Argumentos***
 \
 **lógica**
 \
-
+Las especies en peligro de extinción comparten algunos rasgos que puede ayudar en crear un perfil de características o aspectos en los que estas especies suelen ser vulnerables. Esta vulnerabilidad se puede estudiar en base a la caza, el uso que se le da a la especie en el mercado ya sea legal o ilegal o simplemente en el medio en el que la especie vive las amenazas que puede vivir. Todo esto más algunas características evolutivas son clave para el perfil que se busca.
 \
 **ética**
 \
-
+Tanto el ser humano como la evolución proporcionan herramientas que aumentan el grado de posibilidad de extinción de una especie, algunas de estas especies mantienen tasas reproductivas muy bajas debido a largos tiempos de gestación también se han adaptado a una dieta especial que el ser humano es capaz de degradar al destruir el hábitat. Si se estudian las especies según el hábitat se pueden concluir algunas características en común que provocan esta extinción.
 \
 **emocional**
 \
-
+Hay casos muy conocidos de extinción de especies del grupo de mamíferos o aves las cuales representan una fuerte pérdida para la cultura de una zona. Pero más allá de esto se tratan de vidas que se pierden para siempre. Esta pregunta sirve para hacer conciencia de las especies que podrían llegar a estar en peligro de extinción e intentar preservar esta vida por muchos años más.
 \
 ***Conclusión***
 \
-
+Aun que hay argumentos que dicen que no es posible generalizar el perfil de especie en extinción si hay patrones de comportamiento y de evolución que apuntan a características notorias a la hora de hacer este estudio. Entre estos patrones están los mencionados anteriormente como la reproductividad, problemas con habitat, depredadores, entre otros. Todas estas tendencias pueden mejorar el entendimiento de riesgo de extinción de una especie y como se podría llegar a evitar.
 \
 **Pregunta**
 \

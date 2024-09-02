@@ -166,4 +166,37 @@ Aun que hay argumentos que dicen que no es posible generalizar el perfil de espe
 \
 
 \
+
+## Referencias
+
+* Las especies en peligro de extinción y los mecanismos para la recuperación y conservación de la biodiversidad: un estudio sobre la viabilidad de los mecanismos y las trabas burocráticas. Fuente <https://dialnet.unirioja.es/servlet/articulo?codigo=6995233>
+* La determinación del riesgo de extinción de especies silvestres en México. Fuente <https://www.redalyc.org/articulo.oa?id=53906101>
+* Los animales en peligro de extinción y la protección de la biodiversidad en educación infantil: una investigación.Fuente <https://uvadoc.uva.es/handle/10324/18428>
+
+## Fichas de Literarura
+
+**Título**: Las especies en peligro de extinción y los mecanismos para la recuperación y conservación de la biodiversidad: un estudio sobre la viabilidad de los mecanismos y las trabas burocráticas
+
+**Autor(es)**:  Marcelo López Alfonsín, María Sol Bucetto
+
+**Año**: 2019
+
+**Nombre del tema**: Este documento aborda la conservación de especies en peligro de extinción y los obstáculos burocráticos que afectan su recuperación.
+
+**Forma de organizarlo**:
 \
+- ***Cronológico***: El documento no se centra en un desarrollo cronológico específico, sino en la situación actual y los desafíos persistentes.
+\
+- ***Metodológico***: Se utiliza un enfoque analítico para evaluar la eficacia de los mecanismos de conservación y las barreras administrativas.
+\
+- ***Temático***: La metodología se clasifica bajo el tema de conservación de la biodiversidad y justicia ambiental.
+\
+- ***Teoría***: El documento se enmarca dentro de la teoría del derecho ambiental y la justicia social.
+
+**Resumen en una oración**: El artículo examina los desafíos burocráticos en la conservación de especies en peligro de extinción.
+
+**Argumento central**: El documento sostiene que las trabas administrativas y la falta de coordinación entre organismos son obstáculos significativos para la conservación efectiva de especies amenazadas.
+
+**Problemas con el argumento o el tema**: Los autores identifican que la gestión ineficaz y el abandono de proyectos de conservación, en favor de intereses económicos, comprometen los esfuerzos de recuperación de la vida silvestre.
+
+**Resumen en un párrafo**:  El artículo analiza la situación de las especies en peligro de extinción, centrándose en el caso del huemul en Argentina. Se discuten los mecanismos de conservación implementados por el Ministerio de Medio Ambiente y Desarrollo Sustentable, así como las demoras burocráticas que afectan la implementación de estos proyectos. A pesar de los esfuerzos realizados, se evidencian falencias en la gestión y la falta de un enfoque coordinado entre las provincias. El estudio concluye que las barreras administrativas son un obstáculo crítico para la recuperación de la biodiversidad, sugiriendo la necesidad de una revisión de las políticas y procedimientos actuales.

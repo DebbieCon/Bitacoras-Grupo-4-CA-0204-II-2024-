@@ -45,7 +45,6 @@ editor:
 \
 ***Argumentos***
 \
-\
 **lógica:**
 \
 **ética:**

@@ -21,10 +21,11 @@ editor:
 * Puede que los tipos de datos relevantes al tema no ofrezcan mayor diversidad de métodos de análisis, lo cual provocaría una investigación repetitiva.
 
 ### Reformulación de la idea en modo pregunta
-*¿Cuáles son las principales problemáticas enfrentadas por la biodiversidad del continente americano?  
-*¿Existen características comunes entre las especies de América que enfrentan un mayor peligro de extinción?
-*¿Cuáles son las tendencias poblacionales generales de las diferentes especies que habitan el continente americano?
-*¿Qué se puede decir sobre el estado de conservación de la biodiversidad en América?
+* ¿Cuáles son las principales problemáticas enfrentadas por la biodiversidad del continente americano?  
+* ¿Existen características comunes entre las especies de América que enfrentan un mayor peligro de extinción?
+* ¿Cuáles son las tendencias poblacionales generales de las diferentes especies que habitan el continente americano?
+* ¿Qué se puede decir sobre el estado de conservación de la biodiversidad en América?
+
 ### Argumentación de la pregunta
 
 **Pregunta**

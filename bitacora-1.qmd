@@ -3,8 +3,44 @@ editor:
   markdown: 
     wrap: 72
 ---
-Hola 
-$$\iiint_{\Omega}div(\vec{F})dV=\iint_{\partial \Omega}\vec{F}\cdot \vec{n}dS$$
-Hola
-$$\oint_{E}\vec{E}\cdot d\vec{s}=\dfrac{Q_{encerrada}}{\epsilon_{o}}$$
-Esta vez no hay integral
+# Parte de Planificación 
+## Pregunta de investigación
+### Definición de la idea
+### Conceptualización de la idea 
+* Población: Una población es un conjunto completo de individuos u objetos que comparten características similares. (Fuente:<https://www.questionpro.com/blog/es/que-es-una-poblacion/>)
+
+* Problemática (ambiental): Los problemas medioambientales son el conjunto de desafíos a los que se enfrenta la Tierra y sus sistemas naturales. Aunque los ecosistemas de la Tierra están diseñados para manejar ciertas cantidades de alteraciones naturales (como incendios forestales e inundaciones), las actividades humanas pueden crear circunstancias en las que ocurren con mayor frecuencia o intensidad. 
+(Fuente: <https://www.ibm.com/es-es/topics/environmental-issues>) 
+
+* Continente americano: América es el segundo continente más grande de los cuatro que hay en el planeta y por su gran extensión se divide en tres regiones: América del Norte, América Central y América del Sur. Limita solo con océanos (Fuente:<https://concepto.de/america/#ixzz8kRmQwCRH>)
+
+
+### Identificación de tensiones
+* Puede que el volumen de datos de la biodiversidad de todo el continente americano sea demasiado grande para procesar y analizar exitosamente.
+* Puede que no existan tendencias claras entre categorías más generales de seres vivos y que cada especie tenga comportamientos poblacionales particulares.
+* Puede que los tipos de datos relevantes al tema no ofrezcan mayor diversidad de métodos de análisis, lo cual provocaría una investigación repetitiva.
+
+### Reformulación de la idea en modo pregunta
+### Argumentación de la pregunta
+
+**Pregunta**
+\
+¿Cuáles son las principales problemáticas enfrentadas por la biodiversidad del continente americano?
+\
+\
+***Contraargumento***
+\
+**lógica:**
+\
+**ética:**
+\
+**emocional:**
+\
+\
+***Argumentos***
+\
+**lógica**
+\
+**ética**
+\
+**emocional**

@@ -7,31 +7,29 @@ editor:
 ## Pregunta de investigación
 ### Definición de la idea
 ### Conceptualización de la idea 
-* Población: Una población es un conjunto completo de individuos u objetos que comparten características similares. (Fuente:<https://www.questionpro.com/blog/es/que-es-una-poblacion/>)
+* Concepto 1
 
-* Problemática (ambiental): Los problemas medioambientales son el conjunto de desafíos a los que se enfrenta la Tierra y sus sistemas naturales. Aunque los ecosistemas de la Tierra están diseñados para manejar ciertas cantidades de alteraciones naturales (como incendios forestales e inundaciones), las actividades humanas pueden crear circunstancias en las que ocurren con mayor frecuencia o intensidad. 
-(Fuente: <https://www.ibm.com/es-es/topics/environmental-issues>) 
+* Concepto 2
 
-* Continente americano: América es el segundo continente más grande de los cuatro que hay en el planeta y por su gran extensión se divide en tres regiones: América del Norte, América Central y América del Sur. Limita solo con océanos (Fuente:<https://concepto.de/america/#ixzz8kRmQwCRH>)
-
+* Concepto 3
 
 ### Identificación de tensiones
-* Puede que el volumen de datos de la biodiversidad de todo el continente americano sea demasiado grande para procesar y analizar exitosamente.
-* Puede que no existan tendencias claras entre categorías más generales de seres vivos y que cada especie tenga comportamientos poblacionales particulares.
-* Puede que los tipos de datos relevantes al tema no ofrezcan mayor diversidad de métodos de análisis, lo cual provocaría una investigación repetitiva.
+* Tensión 1
+* Tensión 2
+* Tensión 3
 
 ### Reformulación de la idea en modo pregunta
 
-* ¿Cuáles son las principales problemáticas enfrentadas por la biodiversidad del continente americano?  
-* ¿Existen características comunes entre las especies de América que enfrentan un mayor peligro de extinción?
-* ¿Cuáles son las tendencias poblacionales generales de las diferentes especies que habitan el continente americano?
-* ¿Qué se puede decir sobre el estado de conservación de la biodiversidad en América?
+* Pregunta 1  
+* Pregunta 2
+* Pregunta 3
+* Pregunta 4
 
 ### Argumentación de la pregunta
 
 **Pregunta**
 \
-¿Cuáles son las principales problemáticas enfrentadas por la biodiversidad del continente americano?
+
 \
 \
 ***Contraargumento***
@@ -59,46 +57,44 @@ editor:
 \
 **Pregunta**
 \
-¿Existen características comunes entre las especies de América que enfrentan un mayor peligro de extinción?
+
 \
 \
 ***Contraargumento***
 \
 **lógica:**
 \
- Muchas especies que se han encontrado o se encuentran actualmente en peligro de extinción han llegado a ser muy variadas tanto en anatomía, fisiología, hábitat, entre otros factores. Cada especie tiene adaptaciones a su entorno y algunos cambios en estas o factores exógenos como caza, cambio climático o cambios en el hábitat son quienes provocan la extinción. Por lo que no se puede generalizar o concluir un perfil de las especies en peligro de extinción.
+
 \
 **ética:**
 \
-Muchas especies llegan a extinguirse debido a la actividad humana, esto se debe a la caza no controlada, o la caza “por diversión” así como el invadir el hábitat para construcciones o demás. Todas estas acciones pueden afectar la vida animal por lo que no son solo características de estos lo que provocan la extinción.
+
 \
 **emocional:**
 \
-Las especies en peligro de extinción presentan muchas amenazas, pero en su mayoría se deben por otras especies que entran al hábitat ajeno y provocan un descontrol en la convivencia, llegando a nuevas competencias y desplazando a las especies nativas a otro hábitat y posteriormente una disminución significativa en la población.
+
 \
 ***Argumentos***
 \
 **lógica:**
 \
-Las especies en peligro de extinción comparten algunos rasgos que puede ayudar en crear un perfil de características o aspectos en los que estas especies suelen ser vulnerables. Esta vulnerabilidad se puede estudiar en base a la caza, el uso que se le da a la especie en el mercado ya sea legal o ilegal o simplemente en el medio en el que la especie vive las amenazas que puede vivir. Todo esto más algunas características evolutivas son clave para el perfil que se busca.
+
 \
 **ética:**
 \
-Tanto el ser humano como la evolución proporcionan herramientas que aumentan el grado de posibilidad de extinción de una especie, algunas de estas especies mantienen tasas reproductivas muy bajas debido a largos tiempos de gestación también se han adaptado a una dieta especial que el ser humano es capaz de degradar al destruir el hábitat. Si se estudian las especies según el hábitat se pueden concluir algunas características en común que provocan esta extinción.
+
 \
 **emocional:**
 \
-Hay casos muy conocidos de extinción de especies del grupo de mamíferos o aves las cuales representan una fuerte pérdida para la cultura de una zona. Pero más allá de esto se tratan de vidas que se pierden para siempre. Esta pregunta sirve para hacer conciencia de las especies que podrían llegar a estar en peligro de extinción e intentar preservar esta vida por muchos años más.
+
 \
 ***Conclusión***
 \
-Aun que hay argumentos que dicen que no es posible generalizar el perfil de especie en extinción si hay patrones de comportamiento y de evolución que apuntan a características notorias a la hora de hacer este estudio. Entre estos patrones están los mencionados anteriormente como la reproductividad, problemas con habitat, depredadores, entre otros. Todas estas tendencias pueden mejorar el entendimiento de riesgo de extinción de una especie y como se podría llegar a evitar.
-\
-\
+
 \
 **Pregunta**
 \
-¿Cuáles son las tendencias poblacionales generales de las diferentes especies que habitan el continente americano?
+
 \
 \
 ***Contraargumento***
@@ -136,7 +132,7 @@ Aun que hay argumentos que dicen que no es posible generalizar el perfil de espe
 
 **Pregunta**
 \
-¿Qué se puede decir sobre el estado de conservación de la biodiversidad en América?
+
 \
 \
 ***Contraargumento***
@@ -174,7 +170,6 @@ Aun que hay argumentos que dicen que no es posible generalizar el perfil de espe
 
 ## Argumentación a Través de Datos
 
-La información que respalda el estudio propuesto se encuentra en dos bases de datos de la organización "IUCN Red List of Threatened Species" quienes habilitan al público los datos de miles de especies de diversos reinos quienes s ehan encontrado o se encuentran actualmente en peligro de extinción, así como la causa de este riesgo y las acciones que se han tomado al respecto. Se tomaron dos bases de datos, una de ellas con información más técnica de la especie y sus características y la otra con detalles más profundizados de la extinción de la especie.
 
 * **Fuente de Información**:
 * **Contexto Temporal y Espacial de los Datos**:
@@ -186,34 +181,39 @@ La información que respalda el estudio propuesto se encuentra en dos bases de d
 
 ## Referencias
 
-* Las especies en peligro de extinción y los mecanismos para la recuperación y conservación de la biodiversidad: un estudio sobre la viabilidad de los mecanismos y las trabas burocráticas. Fuente <https://dialnet.unirioja.es/servlet/articulo?codigo=6995233>
-* La determinación del riesgo de extinción de especies silvestres en México. Fuente <https://www.redalyc.org/articulo.oa?id=53906101>
-* Los animales en peligro de extinción y la protección de la biodiversidad en educación infantil: una investigación.Fuente <https://uvadoc.uva.es/handle/10324/18428>
+* Referencia 1
+* Referencia 2
+* Referencia 3
+* Referencia 4
+* Referencia 5
+* Referencia 6
+* Referencia 7
+* Referencia 8
+* Referencia 9
+* Referencia 10
 
 ## Fichas de Literarura
 
-**Título**: Las especies en peligro de extinción y los mecanismos para la recuperación y conservación de la biodiversidad: un estudio sobre la viabilidad de los mecanismos y las trabas burocráticas
+**Título**:
 
-**Autor(es)**:  Marcelo López Alfonsín, María Sol Bucetto
+**Autor(es)**: 
 
-**Año**: 2019
+**Año**:
 
-**Nombre del tema**: Este documento aborda la conservación de especies en peligro de extinción y los obstáculos burocráticos que afectan su recuperación.
+**Nombre del tema**:
 
 **Forma de organizarlo**:
 \
-- ***Cronológico***: El documento no se centra en un desarrollo cronológico específico, sino en la situación actual y los desafíos persistentes.
+- ***Cronológico***:
 \
-- ***Metodológico***: Se utiliza un enfoque analítico para evaluar la eficacia de los mecanismos de conservación y las barreras administrativas.
+- ***Metodológico***: 
 \
-- ***Temático***: La metodología se clasifica bajo el tema de conservación de la biodiversidad y justicia ambiental.
+- ***Temático***: 
 \
-- ***Teoría***: El documento se enmarca dentro de la teoría del derecho ambiental y la justicia social.
+- ***Teoría***: 
 
-**Resumen en una oración**: El artículo examina los desafíos burocráticos en la conservación de especies en peligro de extinción.
+**Resumen en una oración**: 
 
-**Argumento central**: El documento sostiene que las trabas administrativas y la falta de coordinación entre organismos son obstáculos significativos para la conservación efectiva de especies amenazadas.
-
-**Problemas con el argumento o el tema**: Los autores identifican que la gestión ineficaz y el abandono de proyectos de conservación, en favor de intereses económicos, comprometen los esfuerzos de recuperación de la vida silvestre.
-
-**Resumen en un párrafo**:  El artículo analiza la situación de las especies en peligro de extinción, centrándose en el caso del huemul en Argentina. Se discuten los mecanismos de conservación implementados por el Ministerio de Medio Ambiente y Desarrollo Sustentable, así como las demoras burocráticas que afectan la implementación de estos proyectos. A pesar de los esfuerzos realizados, se evidencian falencias en la gestión y la falta de un enfoque coordinado entre las provincias. El estudio concluye que las barreras administrativas son un obstáculo crítico para la recuperación de la biodiversidad, sugiriendo la necesidad de una revisión de las políticas y procedimientos actuales.
+**Argumento central**:
+**Problemas con el argumento o el tema**: 
+**Resumen en un párrafo**:  

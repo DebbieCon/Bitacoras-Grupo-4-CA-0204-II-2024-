@@ -7,6 +7,9 @@ editor:
 
 ## Comandos de Git
 
+@jovenes
+
+
 ### Historial de Commits
 
 ### Sección de Cambios
@@ -21,7 +24,7 @@ editor:
 
 #### Conceptualización de la idea
 
-* Concepto 1
+* Concepto 1 @factor_social
 * Concepto 2
 * Concepto 3
 * Concepto 4
@@ -133,7 +136,7 @@ editor:
 * **Descripción de los Elementos y como estos se relacionan con la investigación**
 
 ### Revisión Bibliográfica
-#### Búsqueda de bibliografía
+
 #### Construcción de Fichas de Literatura
 
 

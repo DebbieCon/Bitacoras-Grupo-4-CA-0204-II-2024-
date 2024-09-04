@@ -204,9 +204,26 @@ las condiciones básicas necesarias para conseguir el objetivo.\
 académicos y familiares en la trayectoria académica de un estudiante?**\
 \
 **Contraargumentos**\
-*Lógica*\
-*Ética*\
-*Emocional*\
+*Lógica:* es posible que no exista una correlación lo suficientemente
+fuerte entre los factores contemplados para afirmar que el rendimiento
+académico se ve afectado por estos. Puede que sea necesario implementar
+un modelo todavía más amplio y complejo que considere atributos
+individuales de los estudiantes, características del sistema educativo
+del que participan, entre otros aspectos.\
+\
+*Ética:* utilizar una base de datos cuya muestra sea muy homogénea
+podría resultar en conclusiones sesgadas cuya aplicación sea limitada,
+por lo que es importante garantizar que los datos sean variados y
+representativos de la realidad.\
+\
+*Emocional:* al contemplar únicamente factores objetivos y materiales
+sobre el entorno del estudiante, se ignora el impacto de aspectos más
+subjetivos y personales de cada individuo, como los hábitos de estudio y
+la disciplina, por ejemplo. Por lo tanto, el modelo resultante podría
+dar a entender que el éxito académico está definido completamente por
+factores fuera del control del estudiante, cuando es claro que también
+existen aspectos de responsabilidad individual.\
+\
 **Argumentos**\
 *Lógica*\
 *Ética*\

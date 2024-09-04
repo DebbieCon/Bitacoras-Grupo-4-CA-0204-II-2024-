@@ -7,8 +7,6 @@ editor:
 
 ## Comandos de Git
 
-@jovenes
-
 
 ### Historial de Commits
 
@@ -27,7 +25,7 @@ Se quiere estudiar los factores sociales, económicos, académicos y familiares 
 
 * *Factor Social:* Según @factor_social,  los factores sociales son fenómenos, eventos, agentes, hechos u otro tipo de elementos en una sociedad que influyen o afectan a subsistemas u otros fenómenos de la propia sociedad. [...]. Factores sociales que se consideran con frecuencia son la educación, el estatus socioeconómico, la renta y su desigualdad, el entorno institucional, la cohesión social, etc.
 
-* *Factor Académico:* Según @factor_academico, existen varios factores relacionados con el rendimiento académico de los estudiantes y la calidad de la educación superior, entre los cuales se destacan: la afectación de las propias asignaturas (debido a que las diversas disciplinas científicas que se transmiten a los estudiantes por su misma naturaleza sean estas teóricas o prácticas tienen incidencia en la asimilación de los conocimientos del sector estudiantil), la transmisión de conocimientos por parte del profesor, la actitud y la aptitud del docente, la infraestructura educativa, el sistema de evaluación docente, el entorno social, familiar y económico del estudiante, los tipos de exámenes, la malla curricular, entre otros que inciden en su propio rendimiento y la calidad de la educación.
+* *Factor Académico:* Según @factor_académico, existen varios factores relacionados con el rendimiento académico de los estudiantes y la calidad de la educación superior, entre los cuales se destacan: la afectación de las propias asignaturas (debido a que las diversas disciplinas científicas que se transmiten a los estudiantes por su misma naturaleza sean estas teóricas o prácticas tienen incidencia en la asimilación de los conocimientos del sector estudiantil), la transmisión de conocimientos por parte del profesor, la actitud y la aptitud del docente, la infraestructura educativa, el sistema de evaluación docente, el entorno social, familiar y económico del estudiante, los tipos de exámenes, la malla curricular, entre otros que inciden en su propio rendimiento y la calidad de la educación.
 
 * *Factor Familiar:* Según @factor_familiar,  hace referencia a un conjunto de condiciones provenientes del círculo familiar del cual una persona se rodea las cuales pueden impactar tanto de manera positiva como negativa el estudio de un individuo. Entre estas condiciones se encuentra el apoyo familiar, comunicación, condición del hogar, intereses, violencia o expectativa de los padres. Muchos de estas condiciones atacan aspectos psicológicos del estudiante como la autoestima o el miedo a decidir por sí mismos una carrera universitaria, otros impactan la salud del estudiante por medio de ataques de ansiedad, reconocimiento de logros o percepción propia. 
 
@@ -208,3 +206,5 @@ Se quiere estudiar los factores sociales, económicos, académicos y familiares 
 ## Parte de Escritura
 
 ### Resumen y Otras cosas
+
+## Referencias

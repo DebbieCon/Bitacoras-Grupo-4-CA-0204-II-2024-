@@ -566,20 +566,23 @@ social.\
     regresar a la educación. La investigación subraya la necesidad de
     abordar las desigualdades de género en el ámbito educativo.
 
-3.  **Título:**
+3.  **Título:** El factor económico como principal causa de deserción estudiantil universitaria en Centroamérica
 
--   **Autor(es):**
--   **Año:**
--   **Nombre del Tema:**
+-   **Autor(es):** Marlon Lobos y Judith Rodriguez
+-   **Año:** 2022
+-   **Nombre del Tema:**  el factor económico como principal causa del abandono de los estudios en Centroamérica y su impacto en la sociedad. 
+
 -   **Forma de Organizarlo:**
-    -   **Cronológico:**
-    -   **Metodológico:**
-    -   **Temático:**
-    -   **Teoría:**
--   **Resumen de una oración:**
--   **Argumento Central:**
--   **Problemas con el argumento o el tema:**
--   **Resumen de un párrafo:**
+    -   **Cronológico:**  no se especifica claramente el periodo el cual la investigación observa sin embargo, da a entender que considera la problemática desde aproximadamente 2020 a 2022 
+    -   **Metodológico:** revisión de literatura y análisis de datos empíricos
+    -   **Temático:** deserción estudiantil 
+    -   **Teoría:** deserción estudiantil en la educación superior en centroamérica a causa de factores económicos 
+-   **Resumen de una oración:** los factores económicos son responsables de la continuación de estudios superiores
+-   **Argumento Central:** se analiza cómo el factor económico limita a los estudiantes de escuela superior y los obliga a tomar decisiones acerca de su permanencia o retiro de las universidades. 
+-   **Problemas con el argumento o el tema:** se establece que las dificultades económicas de los estudiantes (imposibilidad de cubrir matrícula, etc) y las condiciones socioeconómicas desfavorables, la falta de oportunidades laborales para satisfacer los costos de estudio y vivienda y también el impacto de la pandemia COVID-19.  
+-   **Resumen de un párrafo:** El artículo se propone demostrar que los factores económicos son los más influyentes en la deserción estudiantil a nivel universitario en Centroamérica. Basado en la revisión de estudios independientes en Guatemala, Honduras, El Salvador, Nicaragua y Costa Rica, el autor argumenta que los altos costos de matrícula, materiales, transporte, alimentación y demás gastos necesarios para la educación superior son el principal obstáculo que enfrentan los estudiantes para continuar con su carrera, así como lo es la imposibilidad de estudiar y trabajar simultáneamente. Sin embargo, se destacan otros factores importantes que no son de carácter económico, como la personalidad del estudiante, la cual engloba aspectos como tolerancia a la frustración y autoestima. Asimismo, se determina que los antecedentes familiares en educación son relevantes para el estudiante, pues los parientes con educación superior representan una mayor motivación y un mejor sostén económico para el estudiante, comparado a familias con baja cualificación académica. Por otro lado, se establece que el factor académico o institucional, que incluye aspectos como horarios de clase, metodología de enseñanza y personal docente, también juegan un papel en la trayectoria académica del estudiante. Finalmente, el artículo concluye que, dado el contexto económico de la región, es fundamental abordar estos desafíos para mejorar la retención estudiantil y fomentar el acceso a la educación superior en Centroamérica, pues la deserción también significa la pérdida de un futuro profesional para el país. 
+
+
 
 ### Construcción de la UVE de Gowin
 

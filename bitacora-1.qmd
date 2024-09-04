@@ -197,7 +197,9 @@ las condiciones básicas necesarias para conseguir el objetivo.\
 \
 **Argumentos**\
 *Lógica:*\
+\
 *Ética:*\
+\
 *Emocional:*\
 \
 **¿De qué manera interactúan los factores sociales, económicos,
@@ -225,9 +227,24 @@ factores fuera del control del estudiante, cuando es claro que también
 existen aspectos de responsabilidad individual.\
 \
 **Argumentos**\
-*Lógica*\
-*Ética*\
-*Emocional*\
+*Lógica:* al considerar la gran mayoría de los factores ajenos al
+estudiante que pueden influir sobre su rendimiento académico y
+utilizando un método que logre incorporar todas estas variables se
+podría obtener un modelo integral que explique la relación entre estos.\
+\
+*Ética:* a través del uso de datos sobre factores que sean objetivos y
+fácilmente cuantificables o categorizables, como edad y calificaciones,
+se minimiza la posibilidad de obtener resultados prejuiciosos que estén
+basados en conceptos subjetivos y más difíciles de medir, por ejemplo la
+inteligencia.\
+\
+*Emocional:* la identificación de los factores externos al estudiante
+que más afectan su rendimiento académico podría ofrecer información
+relevante para la elaboración de estrategias que contribuyan a
+oportunidades educativas más equitativas, especialmente para los grupos
+más marginados. Asimismo, permite valorar cuánta responsabilidad sobre
+el rendimiento académico recae sobre el propio estudiante, sus
+circunstancias o el sistema educativo en sí.\
 \
 **¿Cuál es la relación entre los antecedentes de un estudiante en el
 ámbito familiar, social, académico y económico y su decisión de

@@ -3,41 +3,43 @@ editor:
   markdown: 
     wrap: 72
 ---
-# Comandos de Git
+# Bitácora 1: Planificación y Pregunta de Investigación
 
-## Historial de Commits
+## Comandos de Git
 
-## Sección de Cambios
+### Historial de Commits
 
-## Resumen de Commits
+### Sección de Cambios
 
-# Parte de planificación
+### Resumen de Commits
 
-## Pregunta de investigación
+## Parte de planificación
 
-### Definción de la idea
+### Pregunta de investigación
 
-### Conceptualización de la idea
+#### Definción de la idea
+
+#### Conceptualización de la idea
 
 * Concepto 1
 * Concepto 2
 * Concepto 3
 * Concepto 4
 
-### Identificación de Tensiones
+#### Identificación de Tensiones
 
 * Tensión 1
 * Tensión 2
 * Tensión 3
 
-### Reformulación de la idea en modo pregunta
+#### Reformulación de la idea en modo pregunta
 
 * Pregunta 1 
 * Pregunta 2
 * Pregunta 3
 * Pregunta 4
 
-### Argumentación de la pregunta
+#### Argumentación de la pregunta
 \
 **Pregunta 1**
 \
@@ -119,7 +121,7 @@ editor:
 *Emocional*
 \
 
-### Argumentación a través de datos
+#### Argumentación a través de datos
 
 * **Fuente de Información**
 * **Contexto Temporal y Espacial de los Datos**
@@ -130,9 +132,9 @@ editor:
 * **Descripción de las Variables**
 * **Descripción de los Elementos y como estos se relacionan con la investigación**
 
-## Revisión Bibliográfica
-### Búsqueda de bibliografía
-### Construcción de Fichas de Literatura
+### Revisión Bibliográfica
+#### Búsqueda de bibliografía
+#### Construcción de Fichas de Literatura
 ::: {} 
 1. * **Título:**
 * **Autor(es):**
@@ -194,9 +196,9 @@ editor:
 * **Resumen de un párrafo:**
 :::
 
-## Construcción de la UVE de Gowin
+### Construcción de la UVE de Gowin
 ![UVE de Gowin](/Images/UVE_Gowin.png "Figura 1. UVE de Gowin")
 
-# Parte de Escritura
+## Parte de Escritura
 
-## Resumen y Otras cosas
+### Resumen y Otras cosas

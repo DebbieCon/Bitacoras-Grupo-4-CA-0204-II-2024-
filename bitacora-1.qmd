@@ -360,15 +360,95 @@ social.\
 
 -   **Fuente de Información:** <https://www.mdpi.com/2306-5729/7/11/146>
 -   **Contexto Temporal y Espacial de los Datos:**Abarca datos de universidades europeas desde el 2008 hasta el 2018
--   **Facilidad de Obtener la Información:** Estudiantes Universitarios Europeos
--   **Población de Estudio:** Estudiantes Europeos admitidos desde 2008 hasta 2018 de las carreras: Agronomía, Diseño, Educación, Enfermería, Periodismo, Administración, Servicios Sociales, Tecnologías.
--   **Muestra Observada:** Deserción del estudiante universitario desde su momento de postulación hasta el final de su segundo semestre.
 
--   **Unidad Estadística o Individuos**
+-   **Facilidad de Obtener la Información:** Actualmente hay bastante información 
+
+-   **Población de Estudio:** Estudiantes Universitarios Europeos
+
+-   **Muestra Observada:** Estudiantes Europeos admitidos desde 2008 hasta 2018 de las carreras: Agronomía, Diseño, Educación, Enfermería, Periodismo, Administración, Servicios Sociales, Tecnologías.
+
+-   **Unidad Estadística o Individuos:** Deserción del estudiante universitario desde su momento de postulación hasta el final de su segundo semestre.
+
 -   **Descripción de las Variables**
+
+ + **Estado Civil:** Esta variable muestra el estado del estudiante durante sus estudios, se rige en la siguiente escala: 1 = Soltero(a), 2 = Casado(a), 3 = Viudo(a), 4 = Unión Libre, 5 = Divorciado(a).
+ 
+ + **Nacionalidad:** Muestra el país de origen de la persona estudiante postulante, abarca 21 países alrededor del mundo, de los cuales se obtuvo información en las universidades, los países son los siguientes: 1 = Portugal, 2 = Alemania, 3 = España, 4 = Italia, 5 = Países Bajos, 6 = Inglaterra, 7 = Lituania, 8 = Angola, 9 = Cabo Verde, 10 = Guinea, 11 = Mozambique, 12 = Santo Tomé y Príncipe, 13 = Turquía, 14 = Brasil, 15 = Romania, 16 = República de Moldavia, 17 = México, 18 = Ucrania, 19 = Rusia, 20 = Cuba, 21 = Colombia.
+ 
+ + **Modo de Aplicación**: Muestra distintas formas en las que los estudiantes aplican a la universidad en ese momento, abarca muchos factores, entre ellos si es estudiante de intercambio, estudiantes de diplomado,  estudiante internacional o en distintas fases generales de admisión.
+ 
+ + **Orden de Aplicación:** Muestra el orden de preferencia del estudiante al ingresar a la universidad en cuestión, muestra una escala del 0 al 9 donde el 0 define a la orden número 1 y el 9 a la última opción.
+ 
+ + **Curso:** Muestra distintos cursos que los estudiantes llevaron y fueron importantes para su decisión de retiro. Entre ellos se encuentran cursos introductorios a la educación, gerencia, agronomía, cursos de animación, producción, informática y enfermería.
+ 
+ + **Horario de Asistencia:** Muestra el tiempo en el que el estudiante asiste a lecciones, es un valor binario donde 0 significa que asiste por la tarde / noche y el 1 por la mañana.
+ 
+ + **Titulación Previa:** Muestra distintas opciones de la titulación que presenta el estudiante al momento de aplicar a la universidad, muestra varias opciones, entre ellas la secundaria y sus distintos grados, títulos de técnicos, diplomados, bachilleratos, licenciaturas, maestrías, doctorados o grados escolares.
+ 
+ + **Calificación Previa:** Muestra en una escala de 0 a 200 la calificación obtenida en la titulación previa.
+ 
+ + **Titulación de la Madre:** Muestra las mismas opciones de la titulación previa pero en este caso de la madre del estudiante.
+ 
+ + **Titulación del Padre:** Muestra las mismas opciones de la titulación previa pero en este caso del padre del estudiante.
+ 
+ + **Ocupación de la Madre:** Muestra opciones de empleos de la madre del estudiante, entre ellas se muestran puestos de gobierno, trabajos independientes o empresariales.
+ 
+ + **Ocupación del Padre:** Muestra opciones de empleos del padre del estudiante, entre ellas se muestran puestos de gobierno, trabajos independientes o empresariales.
+ 
+ + **Nota de Admisión:** Muestra en una escala de 0 a 200 la nota de admisión del estudiante al postular a la universidad.
+ 
+ + **Desplazamiento:** Es una variable binaria que define si el estudiante tuvo que trasladarse de su ciudad para poder postular y estudiar en la universidad, toma los valores 0 y 1 donde 0 significa que no tuvo que desplazarse y 1 que sí tuvo que desplazarse.
+ 
+ + **Necesidades Educativas Especiales:** Es una variable binaria que toma los valores 0 y 1 donde 0 significa que el estudiante no tiene necesidades especiales académicas y 1 que el estudiante si las necesita.
+ 
+ + **Deudor:** Es una variable binaria que muestra si el estudiante debe dinero a alguna entidad bancaria o a alguna institución de educación superior.
+ 
+ + **Cuotas Escolares Pagadas:** Es una variable binaria que muestra si el estudiante ha pagado sus cuotas y no debe dinero a la universidad.
+ 
+ + **Género:** Variable binaria que muestra si el estudiante es de género femenino o masculino.
+ 
+ + **Portador de Beca:** Es una variable binaria que muestra si el estudiante es portador de algún tipo de beca escolar ya sea deportiva, socioeconómica, por participación, entre otras.
+ 
+ + **Edad al Postular:** Variable natural que muestra la edad del estudiante al postular a la universidad.
+ 
+ + **Internacional:** Variable binaria que muestra si el estudiante es o no extranjero.
+ 
+ + **Créditos Primer Semestre:** Variable entera que muestra la cantidad de créditos pre-matriculados en el primer semestre.
+ 
+ + **Créditos Matriculados Primer Semestre:** Variable entera que muestra la cantidad de créditos matriculados en el primer semestre.
+ 
+ + **Número de Evaluaciones de los Cursos Matriculados en el Primer Semestre:** Variable entera que muestra la cantidad de evaluaciones en los cursos matriculados en el primer semestre.
+ 
+ + **Créditos Aprobados Primer Semestre:** Variable entera que muestra los créditos aprobados por el/la estudiante en el primer semestre.
+ 
+ + **Promedio Primer Semestre:** Variable entera que muestra el promedio ponderado del estudiante en el primer semestre.
+ 
+ + **Cantidad de Cursos sin Evaluaciones Primer Semestre:** Variable entera que muestra la cantidad de cursos que matriculó el estudiante que no presentan evaluaciones.
+ 
+ + **Créditos Segundo Semestre:** Variable entera que muestra la cantidad de créditos pre-matriculados en el segundo semestre.
+ 
+ + **Créditos Matriculados segundo Semestre:** Variable entera que muestra la cantidad de créditos matriculados en el segundo semestre.
+ 
+ + **Número de Evaluaciones de los Cursos Matriculados en el segundo Semestre:** Variable entera que muestra la cantidad de evaluaciones en los cursos matriculados en el segundo semestre.
+ 
+ + **Créditos Aprobados segundo Semestre:** Variable entera que muestra los créditos aprobados por el/la estudiante en el segundo semestre.
+ 
+ + **Promedio segundo Semestre:** Variable entera que muestra el promedio ponderado del estudiante en el segundo semestre.
+ 
+ + **Cantidad de Cursos sin Evaluaciones segundo Semestre:** Variable entera que muestra la cantidad de cursos que matriculó el estudiante que no presentan evaluaciones.
+ 
+ + **Tasa de Desempleo:** Variable continua que muestra la tasa de desempleo en porcentaje de la población en estudio.
+ 
+ + **Tasa de Inflación:** Variable continua que muestra la tasa de inflación en porcentaje de la población en estudio.
+ 
+ + **PIB:** Variable continua que muestra el valor del Producto Interno Bruto de la localización donde se encuentra la universidad.
+ 
+ + **Clasificación:** Variable categórica que muestra el estado del estudiante, entre estos se encuentra “deserción”, “matriculado”, “graduado” todo esto medido al final del semestre.
+
 -   **Descripción de los Elementos y como estos se relacionan con la
-    investigación**
+    investigación:**
     \
+    
     Los diferentes datos de esta tabla como la información del estudiante y de su familia serán importantes para intentar crear el perfil del estudiante desertor y estudiar cómo ciertos factores socioeconómicos y familiares pueden afectar en esta decisión. Los datos de los créditos matriculados, aprobados y la nota serán útiles al estudiar la carga académica soportada por los estudiantes y como la sobrecarga de ésta puede influir en la decisión de deserción. 
 
 ### Revisión Bibliográfica

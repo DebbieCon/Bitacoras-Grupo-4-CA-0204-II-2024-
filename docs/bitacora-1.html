@@ -88,6 +88,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -247,7 +276,7 @@ div.csl-indent {
 <section id="conceptualización-de-la-idea" class="level4" data-number="1.2.1.2">
 <h4 data-number="1.2.1.2" class="anchored" data-anchor-id="conceptualización-de-la-idea"><span class="header-section-number">1.2.1.2</span> Conceptualización de la idea</h4>
 <ul>
-<li><p><strong>Factor Social:</strong> Según <span class="citation" data-cites="factor_social">Sarasola (<a href="#ref-factor_social" role="doc-biblioref">2024</a>)</span>, los factores sociales son fenómenos, eventos, agentes, hechos u otro tipo de elementos en una sociedad que influyen o afectan a subsistemas u otros fenómenos de la propia sociedad. […]. Factores sociales que se consideran con frecuencia son la educación, el estatus socioeconómico, la renta y su desigualdad, el entorno institucional, la cohesión social, etc.</p></li>
+<li><p><strong>Factor Social:</strong> Según <span class="citation" data-cites="factor_social">Sarasola (<a href="#ref-factor_social" role="doc-biblioref">2024</a>)</span>, los factores sociales son fenómenos, eventos, agentes, hechos u otro tipo de elementos en una sociedad que influyen o afectan a subsistemas u otros fenómenos de la propia sociedad. <span class="math display">\[...\]</span>. Factores sociales que se consideran con frecuencia son la educación, el estatus socioeconómico, la renta y su desigualdad, el entorno institucional, la cohesión social, etc.</p></li>
 <li><p><strong>Factor Académico:</strong> Según <span class="citation" data-cites="factor_académico">Paz et&nbsp;al. (<a href="#ref-factor_académico" role="doc-biblioref">2020</a>)</span>, existen varios factores relacionados con el rendimiento académico de los estudiantes y la calidad de la educación superior, entre los cuales se destacan: la afectación de las propias asignaturas (debido a que las diversas disciplinas científicas que se transmiten a los estudiantes por su misma naturaleza sean estas teóricas o prácticas tienen incidencia en la asimilación de los conocimientos del sector estudiantil), la transmisión de conocimientos por parte del profesor, la actitud y la aptitud del docente, la infraestructura educativa, el sistema de evaluación docente, el entorno social, familiar y económico del estudiante, los tipos de exámenes, la malla curricular, entre otros que inciden en su propio rendimiento y la calidad de la educación.</p></li>
 <li><p><strong>Factor Familiar:</strong> Según <span class="citation" data-cites="factor_familiar">Cuerva y Sánchez (<a href="#ref-factor_familiar" role="doc-biblioref">2007</a>)</span>, hace referencia a un conjunto de condiciones provenientes del círculo familiar del cual una persona se rodea las cuales pueden impactar tanto de manera positiva como negativa el estudio de un individuo. Entre estas condiciones se encuentra el apoyo familiar, comunicación, condición del hogar, intereses, violencia o expectativa de los padres. Muchos de estas condiciones atacan aspectos psicológicos del estudiante como la autoestima o el miedo a decidir por sí mismos una carrera universitaria, otros impactan la salud del estudiante por medio de ataques de ansiedad, reconocimiento de logros o percepción propia.</p></li>
 <li><p><strong>Factor Económico:</strong> Según <span class="citation" data-cites="factor_economico">Abarca Rodríguez (<a href="#ref-factor_economico" role="doc-biblioref">2005</a>)</span>, hace referencia a las circunstancias relacionadas con el ingreso familiar del estudiante y cómo puede influir este en la capacidad de continuar con los estudios, bajo este contexto se tratan temas como el costo de estudio como la matrícula, créditos, transporte, vivienda así como la posibilidad y acceso a una beca universitaria que exonere parcial o totalmente el pago de matrícula y cubra gastos de reubicación o transporte.</p></li>
@@ -276,9 +305,12 @@ div.csl-indent {
 <strong>¿Cuáles son los factores sociales, económicos, académicos y familiares que influyen sobre los estudiantes universitarios a la hora de decidir continuar o terminar con sus estudios?</strong><br>
 <br>
 <strong>Contraargumentos</strong><br>
-<em>Lógica</em><br>
-<em>Ética</em><br>
-<em>Emocional</em><br>
+<em>Lógica:</em> Existen diversas razones por las cuales una persona toma la decisión de dejar o continuar sus estudios. Los factores sociales, económicos, académicos y familiares no solo se conectan entre sí, por lo que una determinación clara de la causa podría ser difícil de obtener pero también dependen del contexto cultural de cada persona. Asimismo, algunos de estos aspectos son difíciles de cuantificar, especialmente la parte familiar.<br>
+<br>
+<em>Ética:</em> es necesario que los datos utilizados sean un reflejo verdadero de los estudiantes universitarios, sin embargo al lidiar con información tan personal como lo son los factores sociales, económicos y familiares de cada uno de los individuos no se puede omitir la posibilidad de que estos no sean totalmente ciertos ni que se deje por fuera el contexto detrás de ellos. Además, que la verificación de estos requeriría en algunos casos acceso a la información sobre toda la familia, no solo el estudiante.<br>
+<br>
+<em>Emocional:</em> los resultados de esta investigación pueden jugar un papel en la toma de decisiones de aquellos estudiantes que se encuentran con duda sobre la continuación de sus estudios. Si se ven reflejados bajo los factores que se atribuyen como los que generan una cantidad más grande de abandono escolar, es posible que se desmotivan a continuar.<br>
+<br>
 <strong>Argumentos</strong><br>
 <em>Lógica</em><br>
 <em>Ética</em><br>
@@ -295,7 +327,7 @@ div.csl-indent {
 <em>Ética</em><br>
 <em>Emocional</em><br>
 <br>
-<strong>¿De qué manera interactúan los factores sociales, económicos, académicos y familiares en la trayectoria académica de un estudiante? </strong><br>
+<strong>¿De qué manera interactúan los factores sociales, económicos, académicos y familiares en la trayectoria académica de un estudiante?</strong><br>
 <br>
 <strong>Contraargumentos</strong><br>
 <em>Lógica</em><br>

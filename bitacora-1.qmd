@@ -3,10 +3,10 @@ editor:
   markdown: 
     wrap: 72
 ---
+
 # Bitácora 1: Planificación y Pregunta de Investigación
 
 ## Comandos de Git
-
 
 ### Historial de Commits
 
@@ -19,198 +19,252 @@ editor:
 ### Pregunta de investigación
 
 #### Definción de la idea
-Se quiere estudiar los factores sociales, económicos, académicos y familiares que influyen sobre los estudiantes universitarios para determinar su impacto en la decisión de continuar con la carrera, abandonarla o graduarse. 
+
+Se quiere estudiar los factores sociales, económicos, académicos y
+familiares que influyen sobre los estudiantes universitarios para
+determinar su impacto en la decisión de continuar con la carrera,
+abandonarla o graduarse.
 
 #### Conceptualización de la idea
 
-* **Factor Social:** Según @factor_social,  los factores sociales son fenómenos, eventos, agentes, hechos u otro tipo de elementos en una sociedad que influyen o afectan a subsistemas u otros fenómenos de la propia sociedad. [...]. Factores sociales que se consideran con frecuencia son la educación, el estatus socioeconómico, la renta y su desigualdad, el entorno institucional, la cohesión social, etc.
+-   **Factor Social:** Según @factor_social, los factores sociales son
+    fenómenos, eventos, agentes, hechos u otro tipo de elementos en una
+    sociedad que influyen o afectan a subsistemas u otros fenómenos de
+    la propia sociedad. \[...\]. Factores sociales que se consideran con
+    frecuencia son la educación, el estatus socioeconómico, la renta y
+    su desigualdad, el entorno institucional, la cohesión social, etc.
 
-* **Factor Académico:** Según @factor_académico, existen varios factores relacionados con el rendimiento académico de los estudiantes y la calidad de la educación superior, entre los cuales se destacan: la afectación de las propias asignaturas (debido a que las diversas disciplinas científicas que se transmiten a los estudiantes por su misma naturaleza sean estas teóricas o prácticas tienen incidencia en la asimilación de los conocimientos del sector estudiantil), la transmisión de conocimientos por parte del profesor, la actitud y la aptitud del docente, la infraestructura educativa, el sistema de evaluación docente, el entorno social, familiar y económico del estudiante, los tipos de exámenes, la malla curricular, entre otros que inciden en su propio rendimiento y la calidad de la educación.
+-   **Factor Académico:** Según @factor_académico, existen varios
+    factores relacionados con el rendimiento académico de los
+    estudiantes y la calidad de la educación superior, entre los cuales
+    se destacan: la afectación de las propias asignaturas (debido a que
+    las diversas disciplinas científicas que se transmiten a los
+    estudiantes por su misma naturaleza sean estas teóricas o prácticas
+    tienen incidencia en la asimilación de los conocimientos del sector
+    estudiantil), la transmisión de conocimientos por parte del
+    profesor, la actitud y la aptitud del docente, la infraestructura
+    educativa, el sistema de evaluación docente, el entorno social,
+    familiar y económico del estudiante, los tipos de exámenes, la malla
+    curricular, entre otros que inciden en su propio rendimiento y la
+    calidad de la educación.
 
-* **Factor Familiar:** Según @factor_familiar,  hace referencia a un conjunto de condiciones provenientes del círculo familiar del cual una persona se rodea las cuales pueden impactar tanto de manera positiva como negativa el estudio de un individuo. Entre estas condiciones se encuentra el apoyo familiar, comunicación, condición del hogar, intereses, violencia o expectativa de los padres. Muchos de estas condiciones atacan aspectos psicológicos del estudiante como la autoestima o el miedo a decidir por sí mismos una carrera universitaria, otros impactan la salud del estudiante por medio de ataques de ansiedad, reconocimiento de logros o percepción propia. 
+-   **Factor Familiar:** Según @factor_familiar, hace referencia a un
+    conjunto de condiciones provenientes del círculo familiar del cual
+    una persona se rodea las cuales pueden impactar tanto de manera
+    positiva como negativa el estudio de un individuo. Entre estas
+    condiciones se encuentra el apoyo familiar, comunicación, condición
+    del hogar, intereses, violencia o expectativa de los padres. Muchos
+    de estas condiciones atacan aspectos psicológicos del estudiante
+    como la autoestima o el miedo a decidir por sí mismos una carrera
+    universitaria, otros impactan la salud del estudiante por medio de
+    ataques de ansiedad, reconocimiento de logros o percepción propia.
 
-* **Factor Económico:** Según @factor_economico, hace referencia a las circunstancias relacionadas con el ingreso familiar del estudiante y cómo puede influir este en la capacidad de continuar con los estudios, bajo este contexto se tratan temas como el costo de estudio como la matrícula, créditos, transporte, vivienda así como la posibilidad y acceso a una beca universitaria que exonere parcial o totalmente el pago de matrícula y cubra gastos de reubicación o transporte.
+-   **Factor Económico:** Según @factor_economico, hace referencia a las
+    circunstancias relacionadas con el ingreso familiar del estudiante y
+    cómo puede influir este en la capacidad de continuar con los
+    estudios, bajo este contexto se tratan temas como el costo de
+    estudio como la matrícula, créditos, transporte, vivienda así como
+    la posibilidad y acceso a una beca universitaria que exonere parcial
+    o totalmente el pago de matrícula y cubra gastos de reubicación o
+    transporte.
 
 #### Identificación de Tensiones
 
-* Es posible que no se pueda determinar una característica común entre los estudiantes que optan por abandonar la carrera. La diversidad del ser humano da la bienvenida a una cantidad infinita de decisiones que este puede tomar y cómo reacciona ante los distintos desafíos que se le presenten. Por lo que, al final del día reducir una decisión tan grande a unos cuantos aspectos puede probarse complicado. 
+-   Es posible que no se pueda determinar una característica común entre
+    los estudiantes que optan por abandonar la carrera. La diversidad
+    del ser humano da la bienvenida a una cantidad infinita de
+    decisiones que este puede tomar y cómo reacciona ante los distintos
+    desafíos que se le presenten. Por lo que, al final del día reducir
+    una decisión tan grande a unos cuantos aspectos puede probarse
+    complicado.
 
-* Puede que las personas que decidan no continuar con sus estudios no encajen con un perfil definido. La falta de características compartidas entre los individuos perjudica el establecimiento de un perfil completo y que sea pertinente a la realidad. Además, si no se pueden establecer causas ante la deserción estudiantil el planteamiento de posibles soluciones no sería factible perjudicando la importancia de un estudio de este tipo. 
+-   Puede que las personas que decidan no continuar con sus estudios no
+    encajen con un perfil definido. La falta de características
+    compartidas entre los individuos perjudica el establecimiento de un
+    perfil completo y que sea pertinente a la realidad. Además, si no se
+    pueden establecer causas ante la deserción estudiantil el
+    planteamiento de posibles soluciones no sería factible perjudicando
+    la importancia de un estudio de este tipo.
 
-* La posible falta de información puede afectar que se determine un perfil completo y conciso de las personas tanto que continúan sus estudios como aquellas que no lo hacen. Esta limitación a la hora de acceder a información afecta el análisis ya que los resultados obtenidos pueden o no apegarse a la realidad causando desinformación en el área.   
-
+-   La posible falta de información puede afectar que se determine un
+    perfil completo y conciso de las personas tanto que continúan sus
+    estudios como aquellas que no lo hacen. Esta limitación a la hora de
+    acceder a información afecta el análisis ya que los resultados
+    obtenidos pueden o no apegarse a la realidad causando desinformación
+    en el área.
 
 #### Reformulación de la idea en modo pregunta
 
- 1. ¿Cuáles son los factores sociales, económicos, académicos y familiares que influyen sobre los estudiantes universitarios a la hora de decidir continuar o terminar con sus estudios?
- 2. ¿Es posible determinar características en común entre aquellos estudiantes que continúan sus estudios o deciden terminar con ellos?
- 3. ¿De qué manera interactúan los factores sociales, económicos, académicos y familiares en la trayectoria académica de un estudiante?
- 4. ¿Cuál es la relación entre los antecedentes de un estudiante en el ámbito familiar, social, académico y económico y su decisión de continuar con su carrera o desertar?
+1.  ¿Cuáles son los factores sociales, económicos, académicos y
+    familiares que influyen sobre los estudiantes universitarios a la
+    hora de decidir continuar o terminar con sus estudios?
+2.  ¿Es posible determinar características en común entre aquellos
+    estudiantes que continúan sus estudios o deciden terminar con ellos?
+3.  ¿De qué manera interactúan los factores sociales, económicos,
+    académicos y familiares en la trayectoria académica de un
+    estudiante?
+4.  ¿Cuál es la relación entre los antecedentes de un estudiante en el
+    ámbito familiar, social, académico y económico y su decisión de
+    continuar con su carrera o desertar?
 
 #### Argumentación de la pregunta
+
 \
-**¿Cuáles son los factores sociales, económicos, académicos y familiares que influyen sobre los estudiantes universitarios a la hora de decidir continuar o terminar con sus estudios?**
+**¿Cuáles son los factores sociales, económicos, académicos y familiares
+que influyen sobre los estudiantes universitarios a la hora de decidir
+continuar o terminar con sus estudios?**\
 \
+**Contraargumentos**\
+*Lógica:* Existen diversas razones por las cuales una persona toma la
+decisión de dejar o continuar sus estudios. Los factores sociales,
+económicos, académicos y familiares no solo se conectan entre sí, por lo
+que una determinación clara de la causa podría ser difícil de obtener
+pero también dependen del contexto cultural de cada persona. Asimismo,
+algunos de estos aspectos son difíciles de cuantificar, especialmente la
+parte familiar.\
 \
-**Contraargumentos**
+*Ética:* es necesario que los datos utilizados sean un reflejo verdadero
+de los estudiantes universitarios, sin embargo al lidiar con información
+tan personal como lo son los factores sociales, económicos y familiares
+de cada uno de los individuos no se puede omitir la posibilidad de que
+estos no sean totalmente ciertos ni que se deje por fuera el contexto
+detrás de ellos. Además, que la verificación de estos requeriría en
+algunos casos acceso a la información sobre toda la familia, no solo el
+estudiante.\
 \
-*Lógica*
+*Emocional:* los resultados de esta investigación pueden jugar un papel
+en la toma de decisiones de aquellos estudiantes que se encuentran con
+duda sobre la continuación de sus estudios. Si se ven reflejados bajo
+los factores que se atribuyen como los que generan una cantidad más
+grande de abandono escolar, es posible que se desmotivan a continuar.\
 \
-*Ética*
+**Argumentos**\
+*Lógica*\
+*Ética*\
+*Emocional*\
 \
-*Emocional*
+**¿Es posible determinar características en común entre aquellos
+estudiantes que continúan sus estudios o deciden terminar con ellos?**\
 \
-**Argumentos**
+**Contraargumentos**\
+*Lógica*\
+*Ética*\
+*Emocional*\
+**Argumentos**\
+*Lógica*\
+*Ética*\
+*Emocional*\
 \
-*Lógica*
+**¿De qué manera interactúan los factores sociales, económicos,
+académicos y familiares en la trayectoria académica de un estudiante?**\
 \
-*Ética*
+**Contraargumentos**\
+*Lógica*\
+*Ética*\
+*Emocional*\
+**Argumentos**\
+*Lógica*\
+*Ética*\
+*Emocional*\
 \
-*Emocional*
+**¿Cuál es la relación entre los antecedentes de un estudiante en el
+ámbito familiar, social, académico y económico y su decisión de
+continuar con su carrera o desertar?**\
 \
-\
-**¿Es posible determinar características en común entre aquellos estudiantes que continúan sus estudios o deciden terminar con ellos?**
-\
-\
-**Contraargumentos**
-\
-*Lógica*
-\
-*Ética*
-\
-*Emocional*
-\
-**Argumentos**
-\
-*Lógica*
-\
-*Ética*
-\
-*Emocional*
-\
-\
-**¿De qué manera interactúan los factores sociales, económicos, académicos y familiares en la trayectoria académica de un estudiante? **
-\
-\
-**Contraargumentos**
-\
-*Lógica*
-\
-*Ética*
-\
-*Emocional*
-\
-**Argumentos**
-\
-*Lógica*
-\
-*Ética*
-\
-*Emocional*
-\
-\
-**¿Cuál es la relación entre los antecedentes de un estudiante en el ámbito familiar, social, académico y económico y su decisión de continuar con su carrera o desertar?**
-\
-\
-**Contraargumentos**
-\
-*Lógica*
-\
-*Ética*
-\
-*Emocional*
-\
-**Argumentos**
-\
-*Lógica*
-\
-*Ética*
-\
-*Emocional*
-\
+**Contraargumentos**\
+*Lógica*\
+*Ética*\
+*Emocional*\
+**Argumentos**\
+*Lógica*\
+*Ética*\
+*Emocional*\
 
 #### Argumentación a través de datos
 
-* **Fuente de Información**
-* **Contexto Temporal y Espacial de los Datos**
-* **Facilidad de Obtener la Información**
-* **Población de Estudio**
-* **Muestra Observada**
-* **Unidad Estadística o Individuos**
-* **Descripción de las Variables**
-* **Descripción de los Elementos y como estos se relacionan con la investigación**
+-   **Fuente de Información**
+-   **Contexto Temporal y Espacial de los Datos**
+-   **Facilidad de Obtener la Información**
+-   **Población de Estudio**
+-   **Muestra Observada**
+-   **Unidad Estadística o Individuos**
+-   **Descripción de las Variables**
+-   **Descripción de los Elementos y como estos se relacionan con la
+    investigación**
 
 ### Revisión Bibliográfica
 
 #### Construcción de Fichas de Literatura
 
+1.  **Título:**
 
-1. **Título:**
-* **Autor(es):**
-* **Año:**
-* **Nombre del Tema:**
-* **Forma de Organizarlo:**
-  - **Cronológico:**
-  - **Metodológico:**
-  - **Temático:**
-  - **Teoría:**
-* **Resumen de una oración:**
-* **Argumento Central:**
-* **Problemas con el argumento o el tema:**
-* **Resumen de un párrafo:**
+-   **Autor(es):**
+-   **Año:**
+-   **Nombre del Tema:**
+-   **Forma de Organizarlo:**
+    -   **Cronológico:**
+    -   **Metodológico:**
+    -   **Temático:**
+    -   **Teoría:**
+-   **Resumen de una oración:**
+-   **Argumento Central:**
+-   **Problemas con el argumento o el tema:**
+-   **Resumen de un párrafo:**
 
-2. **Título:**
-* **Autor(es):**
-* **Año:**
-* **Nombre del Tema:**
-* **Forma de Organizarlo:**
-  - **Cronológico:**
-  - **Metodológico:**
-  - **Temático:**
-  - **Teoría:**
-* **Resumen de una oración:**
-* **Argumento Central:**
-* **Problemas con el argumento o el tema:**
-* **Resumen de un párrafo:**
- 
-3. **Título:**
-* **Autor(es):**
-* **Año:**
-* **Nombre del Tema:**
-* **Forma de Organizarlo:**
-  - **Cronológico:**
-  - **Metodológico:**
-  - **Temático:**
-  - **Teoría:**
-* **Resumen de una oración:**
-* **Argumento Central:**
-* **Problemas con el argumento o el tema:**
-* **Resumen de un párrafo:**
+2.  **Título:**
 
-4. **Título:**
-* **Autor(es):**
-* **Año:**
-* **Nombre del Tema:**
-* **Forma de Organizarlo:**
-  - **Cronológico:**
-  - **Metodológico:**
-  - **Temático:**
-  - **Teoría:**
-* **Resumen de una oración:**
-* **Argumento Central:**
-* **Problemas con el argumento o el tema:**
-* **Resumen de un párrafo:**
+-   **Autor(es):**
+-   **Año:**
+-   **Nombre del Tema:**
+-   **Forma de Organizarlo:**
+    -   **Cronológico:**
+    -   **Metodológico:**
+    -   **Temático:**
+    -   **Teoría:**
+-   **Resumen de una oración:**
+-   **Argumento Central:**
+-   **Problemas con el argumento o el tema:**
+-   **Resumen de un párrafo:**
 
+3.  **Título:**
+
+-   **Autor(es):**
+-   **Año:**
+-   **Nombre del Tema:**
+-   **Forma de Organizarlo:**
+    -   **Cronológico:**
+    -   **Metodológico:**
+    -   **Temático:**
+    -   **Teoría:**
+-   **Resumen de una oración:**
+-   **Argumento Central:**
+-   **Problemas con el argumento o el tema:**
+-   **Resumen de un párrafo:**
+
+4.  **Título:**
+
+-   **Autor(es):**
+-   **Año:**
+-   **Nombre del Tema:**
+-   **Forma de Organizarlo:**
+    -   **Cronológico:**
+    -   **Metodológico:**
+    -   **Temático:**
+    -   **Teoría:**
+-   **Resumen de una oración:**
+-   **Argumento Central:**
+-   **Problemas con el argumento o el tema:**
+-   **Resumen de un párrafo:**
 
 ### Construcción de la UVE de Gowin
+
 ![UVE de Gowin](/Images/UVE_Gowin.png "Figura 1. UVE de Gowin")
 
 #### Teorías o principios
 
-* La Teoría Ecológica de Urie Bronfenbrenner
-  
-* Modelo de condicionamiento del fracaso escolar de Martínez-Otero
+-   La Teoría Ecológica de Urie Bronfenbrenner
 
+-   Modelo de condicionamiento del fracaso escolar de Martínez-Otero
 
 ### Parte de Escritura
 

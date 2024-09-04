@@ -311,22 +311,75 @@ herramientas necesarias para continuar con sus estudios.\
 
 #### Construcción de Fichas de Literatura
 
-1.  **Título:**
+1.  **Título:** Análisis cuantitativo de las variables que influyen en
+    el rendimiento universitario.
 
--   **Autor(es):**
--   **Año:**
--   **Nombre del Tema:**
--   **Forma de Organizarlo:**
-    -   **Cronológico:**
-    -   **Metodológico:**
-    -   **Temático:**
-    -   **Teoría:**
--   **Resumen de una oración:**
--   **Argumento Central:**
--   **Problemas con el argumento o el tema:**
--   **Resumen de un párrafo:**
+2.  **Autor(es):** Martha Jiménez García.
 
-2.  **Título:**
+3.  **Año:** 2018.
+
+4.  **Nombre del Tema:** Impacto del uso de tecnologías de la
+    información y la comunicación en el rendimiento académico de
+    estudiantes universitarios.
+
+5.  **Forma de Organizarlo:**
+
+    -   **Cronológico:** Datos recolectados en 2016, artículo publicado
+        en 2018.
+
+    -   **Metodológico:** encuesta semiestructurada para la elaboración
+        de un modelo de regresión lineal múltiple.
+
+    -   **Temático:** la autora clasifica la investigación como
+        ‘‘exploratoria y transversal’’.
+
+    -   **Teoría:** Impacto positivo del uso de la tecnología sobre el
+        rendimiento académico a nivel universitario.
+
+6.  **Resumen de una oración:** Elaboración de modelo de regresión
+    lineal múltiple sobre rendimiento académico según datos de encuesta.
+
+7.  **Argumento central:** Mediante un modelo un modelo de regresión
+    lineal múltiple que tomaba como variable dependiente el rendimiento
+    académico y como variables independientes el género, la beca, el
+    semestre, las materias reprobadas y la frecuencia de uso diferentes
+    herramientas tecnológicas para el aprendizaje, la autora determinó
+    con certeza que la beca y el uso de ciertas herramientas contribuyen
+    a un mejor rendimiento académico.
+
+8.  **Problemas con el argumento o el tema:** La autora destaca dos
+    imitaciones de la investigación: se pudieron haber considerado más
+    variables con correlación directa al rendimiento académico y se pudo
+    haber desarrollado un programa que midiese la cantidad exacta de
+    usos de cada herramienta por cada estudiante, para no depender de
+    sus respuestas autopercibidas.
+
+9.  **Resumen de un párrafo:** Basándose en literatura sobre la
+    importancia de implementar la tecnología en el proceso de
+    enseñanza-aprendizaje, esta investigación se propone analizar el
+    impacto del uso de diferentes herramientas digitales sobre el
+    rendimiento académico en una universidad pública mexicana. De una
+    población de doce mil estudiantes, se aplicó una encuesta a una
+    muestra de 428 alumnos, en la que se les pedía indicar con qué
+    frecuencia utilizan ciertas herramientas en una semana (de 0 a 7
+    días). Las variables contempladas para cada estudiante fueron el
+    rendimiento académico, el género, la beca, el semestre, las materias
+    reprobadas y la frecuencia de uso de seis herramientas digitales
+    (cada una por separado). A partir de los datos recolectados, se
+    elaboró un modelo mediante el “método de mínimos ordinarios con el
+    procedimiento MCO del software SAS” y la regresión lineal múltiple.
+    Luego, el modelo se puso a prueba con un valor-p que indica la
+    probabilidad de aceptar la hipótesis nula con respecto a un nivel de
+    significancia de 0.01. Los resultados indican que el valor-p del
+    modelo es menor que el nivel de significancia establecido, por lo
+    que se afirma que el rendimiento académico aumenta cuando hay
+    cambios en alguna variable independiente y las demás se mantienen
+    constantes. Se concluye que la beca y el uso de herramientas
+    digitales contribuyen a un mejor rendimiento académico, pero se
+    advierte que la implementación de estas tecnologías en el aula debe
+    ser bien planificada.
+
+10. **Título:**
 
 -   **Autor(es):**
 -   **Año:**

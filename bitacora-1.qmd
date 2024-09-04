@@ -131,7 +131,7 @@ editor:
 * **Descripción de los Elementos y como estos se relacionan con la investigación**
 
 ## Revisión Bibliográfica
-### Búsqueda de bibliografía}
+### Búsqueda de bibliografía
 ### Construcción de Fichas de Literatura
 ::: {} 
 1. * **Título:**

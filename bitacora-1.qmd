@@ -18,6 +18,7 @@ editor:
 ### Pregunta de investigación
 
 #### Definción de la idea
+Se quiere estudiar los factores sociales, económicos, académicos y familiares que influyen sobre los estudiantes universitarios para determinar su impacto en la decisión de continuar con la carrera, abandonarla o graduarse. 
 
 #### Conceptualización de la idea
 

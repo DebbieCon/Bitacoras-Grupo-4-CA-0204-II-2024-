@@ -49,7 +49,7 @@ Se quiere estudiar los factores sociales, económicos, académicos y familiares 
 
 #### Argumentación de la pregunta
 \
-**Pregunta 1**
+**¿Cuáles son los factores sociales, económicos, académicos y familiares que influyen sobre los estudiantes universitarios a la hora de decidir continuar o terminar con sus estudios?**
 \
 \
 **Contraargumentos**
@@ -69,7 +69,7 @@ Se quiere estudiar los factores sociales, económicos, académicos y familiares 
 *Emocional*
 \
 \
-**Pregunta 2**
+**¿Es posible determinar características en común entre aquellos estudiantes que continúan sus estudios o deciden terminar con ellos?**
 \
 \
 **Contraargumentos**
@@ -89,7 +89,7 @@ Se quiere estudiar los factores sociales, económicos, académicos y familiares 
 *Emocional*
 \
 \
-**Pregunta 3**
+**¿De qué manera interactúan los factores sociales, económicos, académicos y familiares en la trayectoria académica de un estudiante? **
 \
 \
 **Contraargumentos**
@@ -109,7 +109,7 @@ Se quiere estudiar los factores sociales, económicos, académicos y familiares 
 *Emocional*
 \
 \
-**Pregunta 4**
+**¿Cuál es la relación entre los antecedentes de un estudiante en el ámbito familiar, social, académico y económico y su decisión de continuar con su carrera o desertar?**
 \
 \
 **Contraargumentos**

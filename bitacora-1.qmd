@@ -135,8 +135,9 @@ editor:
 ### Revisión Bibliográfica
 #### Búsqueda de bibliografía
 #### Construcción de Fichas de Literatura
-::: {} 
-1. * **Título:**
+
+
+1. **Título:**
 * **Autor(es):**
 * **Año:**
 * **Nombre del Tema:**
@@ -149,9 +150,8 @@ editor:
 * **Argumento Central:**
 * **Problemas con el argumento o el tema:**
 * **Resumen de un párrafo:**
-:::
-::: {} 
-2. * **Título:**
+
+2. **Título:**
 * **Autor(es):**
 * **Año:**
 * **Nombre del Tema:**
@@ -164,9 +164,8 @@ editor:
 * **Argumento Central:**
 * **Problemas con el argumento o el tema:**
 * **Resumen de un párrafo:**
-:::
-::: {} 
-3. * **Título:**
+ 
+3. **Título:**
 * **Autor(es):**
 * **Año:**
 * **Nombre del Tema:**
@@ -179,9 +178,8 @@ editor:
 * **Argumento Central:**
 * **Problemas con el argumento o el tema:**
 * **Resumen de un párrafo:**
-:::
-::: {} 
-4. * **Título:**
+
+4. **Título:**
 * **Autor(es):**
 * **Año:**
 * **Nombre del Tema:**
@@ -194,7 +192,7 @@ editor:
 * **Argumento Central:**
 * **Problemas con el argumento o el tema:**
 * **Resumen de un párrafo:**
-:::
+
 
 ### Construcción de la UVE de Gowin
 ![UVE de Gowin](/Images/UVE_Gowin.png "Figura 1. UVE de Gowin")

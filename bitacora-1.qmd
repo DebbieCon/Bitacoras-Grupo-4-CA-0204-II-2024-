@@ -504,11 +504,14 @@ social.\
 
 #### Teorías o principios
 
--   La Teoría Ecológica de Urie Bronfenbrenner:
+-  **La Teoría Ecológica de Urie Bronfenbrenner**
 La teoría ecológica o teoría de los sistemas ecológicos fue desarrollada en 1970 por Urie Bronfenbrenner. Según @urie,  “esta pretende explicar cómo interactúan varios elementos ambientales para influir en el desarrollo de una persona”. Bronfenbrenner considera cinco sistemas ecológicos: el microsistema, macrosistema, exosistema, y el mesosistema. Cada uno influye a su manera en el desarrollo del individuo, donde el microsistema es el más influyente ya que abarca su entorno inmediato; es decir, su familia, escuela, amistades, etc. El macrosistema en cambio, es más ambiental. En este se discuten los factores culturales, el estatus socioeconómico, origen etnico, etc; en fin, explora los factores ambientales. Sin embargo, todos estos componentes están influenciados por fuerzas exteriores, lo que se considera el exosistema y además se relacionan entre ellos, dando lugar al mesosistema. 
 
 
--   Modelo de condicionamiento del fracaso escolar de Martínez-Otero
+-   **Modelo de condicionamiento del fracaso escolar de Martínez-Otero**
+El modelo de condicionantes del fracaso escolar de Martinez-Otero fue primeramente en 1997 quien define el fracaso escolar como: “Fracaso escolar es toda insuficiencia detectada en los resultados alcanzados por los alumnos en los centros de enseñanza respecto de los objetivos propuestos para su nivel, edad y desarrollo, y que habitualmente se expresa a través de calificaciones escolares negativas.(@martinez-otero)”. Explica que lo anterior se debe a ciertos condicionantes sean estos el ámbito personal, ámbito familiar y ámbito escolar-social. El personal incluye la motivación, hábitos de estudio, la personalidad y la afectividad. El ámbito familiar y ámbito escolar-social consideran las relaciones sociales del individuo uno el clima familiar y el otro el clima social escolar respectivamente. 
+
+
 
 ### Parte de Escritura
 

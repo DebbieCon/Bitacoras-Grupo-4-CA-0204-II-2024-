@@ -149,7 +149,8 @@ subgrupo, las conclusiones que se desarrollan serían mucho más exactas.\
 *Ética:* la recolección de información fiable, junto con la revisión de
 estos datos a través de otras fuentes y el análisis crítico de los
 mismos, garantiza que el estudio se realice con precisión. De esta
-manera, se busca asegurar la calidad de la información y su validez.\
+manera, se busca asegurar la calidad de la información y la
+aplicabilidad de las conclusiones. \
 \
 *Emocional:* un análisis de este tipo permitiría observar que factores
 necesitan de reformas para el beneficio de los estudiantes y así
@@ -251,9 +252,25 @@ circunstancias o el sistema educativo en sí.\
 continuar con su carrera o desertar?**\
 \
 **Contraargumentos**\
-*Lógica*\
-*Ética*\
-*Emocional*\
+*Lógica:* cada estudiante es distinto y toma decisiones no siempre
+racionales por lo que definir la relación entre los antecedentes del
+estudiante en el ámbito familiar, social, académico y económico puede
+sesgar los resultados. Además, hay más factores que contribuyen a una
+decisión de este tipo, por ejemplo el área emocional, la cual no se está
+considerando.\
+\
+*Ética:* investigar sobre la relación de los antecedentes de un
+estudiante en el ámbito familiar, social, académico y económico
+involucra acceso a información privada y sensible lo que prueba ser un
+reto al verificar la veracidad de los mismos y su manejo de forma
+discreta.\
+\
+*Emocional:* los resultados de una investigación de este tipo, abre la
+puerta para que se den casos de estigmatización y discriminación. Estos
+hallazgos pueden ser malinterpretados y propiciar estereotipos
+negativos. Esto solo incrementa la desigualdad y las emociones negativas
+entre el estudiantado.\
+\
 **Argumentos**\
 *Lógica*\
 *Ética*\

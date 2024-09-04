@@ -30,7 +30,7 @@ abandonarla o graduarse.
 -   **Factor Social:** Según @factor_social, los factores sociales son
     fenómenos, eventos, agentes, hechos u otro tipo de elementos en una
     sociedad que influyen o afectan a subsistemas u otros fenómenos de
-    la propia sociedad. \[...\]. Factores sociales que se consideran con
+    la propia sociedad. Factores sociales que se consideran con
     frecuencia son la educación, el estatus socioeconómico, la renta y
     su desigualdad, el entorno institucional, la cohesión social, etc.
 
@@ -162,6 +162,16 @@ de no encajar con el perfil de una persona “propensa” a graduarse, igual
 lo logró y servir como motivación hacia otros en las mismas
 condiciones.\
 \
+**Conclusión:** La idea de identificar los factores sociales,
+económicos, académicos y familiares que influyen sobre los estudiantes
+universitarios a la hora de decidir continuar o terminar con sus
+estudios requiere de una recolección de información fiable que
+represente estudiantes en distintos contextos. Utilizando modelos,
+teorías y proyectos previos como ayuda , se puede analizar propiamente
+la información y brindar resultados confiables. Estos resultados
+proporcionan una guía hacia posibles reformas educativas y como
+inspiración a aquellos estudiantes en su camino por la universidad.\
+\
 **¿Es posible determinar características en común entre aquellos
 estudiantes que continúan sus estudios o deciden terminar con ellos?**\
 \
@@ -220,6 +230,16 @@ comprender que muchos de los desafíos que enfrentan pueden tener una
 causa sistémica y que no todo se debe a deficiencias personales
 autopercibidas.\
 \
+**Conclusión:** Es posible identificar características comunes entre los
+estudiantes que continúan sus estudios o deciden terminarlos. Sin
+embargo, se deben considerar las limitaciones asociadas con la
+individualidad de las experiencias educativas y los factores externos
+incontrolables. Pese a estas limitaciones, la evidencia científica
+respalda la existencia de patrones predictivos. En última instancia,
+este análisis puede guiar el diseño de políticas educativas más
+inclusivas y eficientes, que aborden tanto las necesidades particulares
+como los problemas sistémicos.\
+\
 **¿De qué manera interactúan los factores sociales, económicos,
 académicos y familiares en la trayectoria académica de un estudiante?**\
 \
@@ -263,6 +283,18 @@ oportunidades educativas más equitativas, especialmente para los grupos
 más marginados. Asimismo, permite valorar cuánta responsabilidad sobre
 el rendimiento académico recae sobre el propio estudiante, sus
 circunstancias o el sistema educativo en sí.\
+\
+**Conclusión:**La pregunta de investigación es viable y relevante, pero
+debe abordarse con cuidado para asegurar que los resultados sean
+completos y equilibrados. Aunque la investigación podría beneficiarse de
+un enfoque más amplio que considere variables adicionales, el estudio de
+factores sociales, económicos, académicos y familiares ya es un buen
+punto de partida que utiliza las variables más fácilmente medibles.
+También es necesario que los datos utilizados sean diversos y
+representativos, y que el análisis no minimice el papel de los aspectos
+individuales. Tomando en cuenta estas observaciones, el proyecto tiene
+el potencial de proporcionar información significativa sobre el
+rendimiento académico de un estudiante según sus circunstancias.\
 \
 **¿Cuál es la relación entre los antecedentes de un estudiante en el
 ámbito familiar, social, académico y económico y su decisión de
@@ -311,8 +343,20 @@ enfrentan mayores obstáculos. Este enfoque promueve la generación de
 conocimiento y la movilidad social al ofrecer a los estudiantes las
 herramientas necesarias para continuar con sus estudios.\
 \
+**Conclusión:** Si se quiere relacionar los antecedentes de un
+estudiante en el ámbito familiar, social, académico y económico y su
+decisión de continuar con su carrera o desertar es necesario considerar
+varios aspectos. La necesidad de modelos estadísticos avanzados y
+proyectos realizados anteriormente asegura la completitud de la
+investigación. Mientras que su veracidad se atribuye a la recolección de
+datos de fuentes confiables. Esta investigación propone evaluar la
+situación que experimentan los estudiantes universitarios y analizar las
+razones debido a su posible deserción estudiantil para ayudar a
+implementar medidas que alivianen esta situación. Siempre con el
+objetivo de promover la generación de conocimiento y la movilidad
+social.\
 
-#### Argumentación a través de datos
+### Argumentación a través de datos
 
 -   **Fuente de Información**
 -   **Contexto Temporal y Espacial de los Datos**

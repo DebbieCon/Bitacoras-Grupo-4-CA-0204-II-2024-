@@ -88,35 +88,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -222,10 +193,11 @@ window.Quarto = {
   <li><a href="#parte-de-planificación" id="toc-parte-de-planificación" class="nav-link" data-scroll-target="#parte-de-planificación"><span class="header-section-number">1.2</span> Parte de planificación</a>
   <ul class="collapse">
   <li><a href="#pregunta-de-investigación" id="toc-pregunta-de-investigación" class="nav-link" data-scroll-target="#pregunta-de-investigación"><span class="header-section-number">1.2.1</span> Pregunta de investigación</a></li>
-  <li><a href="#revisión-bibliográfica" id="toc-revisión-bibliográfica" class="nav-link" data-scroll-target="#revisión-bibliográfica"><span class="header-section-number">1.2.2</span> Revisión Bibliográfica</a></li>
-  <li><a href="#construcción-de-la-uve-de-gowin" id="toc-construcción-de-la-uve-de-gowin" class="nav-link" data-scroll-target="#construcción-de-la-uve-de-gowin"><span class="header-section-number">1.2.3</span> Construcción de la UVE de Gowin</a></li>
-  <li><a href="#parte-de-escritura" id="toc-parte-de-escritura" class="nav-link" data-scroll-target="#parte-de-escritura"><span class="header-section-number">1.2.4</span> Parte de Escritura</a></li>
-  <li><a href="#resumen-y-otras-cosas" id="toc-resumen-y-otras-cosas" class="nav-link" data-scroll-target="#resumen-y-otras-cosas"><span class="header-section-number">1.2.5</span> Resumen y Otras cosas</a></li>
+  <li><a href="#argumentación-a-través-de-datos" id="toc-argumentación-a-través-de-datos" class="nav-link" data-scroll-target="#argumentación-a-través-de-datos"><span class="header-section-number">1.2.2</span> Argumentación a través de datos</a></li>
+  <li><a href="#revisión-bibliográfica" id="toc-revisión-bibliográfica" class="nav-link" data-scroll-target="#revisión-bibliográfica"><span class="header-section-number">1.2.3</span> Revisión Bibliográfica</a></li>
+  <li><a href="#construcción-de-la-uve-de-gowin" id="toc-construcción-de-la-uve-de-gowin" class="nav-link" data-scroll-target="#construcción-de-la-uve-de-gowin"><span class="header-section-number">1.2.4</span> Construcción de la UVE de Gowin</a></li>
+  <li><a href="#parte-de-escritura" id="toc-parte-de-escritura" class="nav-link" data-scroll-target="#parte-de-escritura"><span class="header-section-number">1.2.5</span> Parte de Escritura</a></li>
+  <li><a href="#resumen-y-otras-cosas" id="toc-resumen-y-otras-cosas" class="nav-link" data-scroll-target="#resumen-y-otras-cosas"><span class="header-section-number">1.2.6</span> Resumen y Otras cosas</a></li>
   </ul></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">1.3</span> Referencias</a></li>
   </ul>
@@ -276,7 +248,7 @@ window.Quarto = {
 <section id="conceptualización-de-la-idea" class="level4" data-number="1.2.1.2">
 <h4 data-number="1.2.1.2" class="anchored" data-anchor-id="conceptualización-de-la-idea"><span class="header-section-number">1.2.1.2</span> Conceptualización de la idea</h4>
 <ul>
-<li><p><strong>Factor Social:</strong> Según <span class="citation" data-cites="factor_social">Sarasola (<a href="#ref-factor_social" role="doc-biblioref">2024</a>)</span>, los factores sociales son fenómenos, eventos, agentes, hechos u otro tipo de elementos en una sociedad que influyen o afectan a subsistemas u otros fenómenos de la propia sociedad. <span class="math display">\[...\]</span>. Factores sociales que se consideran con frecuencia son la educación, el estatus socioeconómico, la renta y su desigualdad, el entorno institucional, la cohesión social, etc.</p></li>
+<li><p><strong>Factor Social:</strong> Según <span class="citation" data-cites="factor_social">Sarasola (<a href="#ref-factor_social" role="doc-biblioref">2024</a>)</span>, los factores sociales son fenómenos, eventos, agentes, hechos u otro tipo de elementos en una sociedad que influyen o afectan a subsistemas u otros fenómenos de la propia sociedad. Factores sociales que se consideran con frecuencia son la educación, el estatus socioeconómico, la renta y su desigualdad, el entorno institucional, la cohesión social, etc.</p></li>
 <li><p><strong>Factor Académico:</strong> Según <span class="citation" data-cites="factor_académico">Paz et&nbsp;al. (<a href="#ref-factor_académico" role="doc-biblioref">2020</a>)</span>, existen varios factores relacionados con el rendimiento académico de los estudiantes y la calidad de la educación superior, entre los cuales se destacan: la afectación de las propias asignaturas (debido a que las diversas disciplinas científicas que se transmiten a los estudiantes por su misma naturaleza sean estas teóricas o prácticas tienen incidencia en la asimilación de los conocimientos del sector estudiantil), la transmisión de conocimientos por parte del profesor, la actitud y la aptitud del docente, la infraestructura educativa, el sistema de evaluación docente, el entorno social, familiar y económico del estudiante, los tipos de exámenes, la malla curricular, entre otros que inciden en su propio rendimiento y la calidad de la educación.</p></li>
 <li><p><strong>Factor Familiar:</strong> Según <span class="citation" data-cites="factor_familiar">Cuerva y Sánchez (<a href="#ref-factor_familiar" role="doc-biblioref">2007</a>)</span>, hace referencia a un conjunto de condiciones provenientes del círculo familiar del cual una persona se rodea las cuales pueden impactar tanto de manera positiva como negativa el estudio de un individuo. Entre estas condiciones se encuentra el apoyo familiar, comunicación, condición del hogar, intereses, violencia o expectativa de los padres. Muchos de estas condiciones atacan aspectos psicológicos del estudiante como la autoestima o el miedo a decidir por sí mismos una carrera universitaria, otros impactan la salud del estudiante por medio de ataques de ansiedad, reconocimiento de logros o percepción propia.</p></li>
 <li><p><strong>Factor Económico:</strong> Según <span class="citation" data-cites="factor_economico">Abarca Rodríguez (<a href="#ref-factor_economico" role="doc-biblioref">2005</a>)</span>, hace referencia a las circunstancias relacionadas con el ingreso familiar del estudiante y cómo puede influir este en la capacidad de continuar con los estudios, bajo este contexto se tratan temas como el costo de estudio como la matrícula, créditos, transporte, vivienda así como la posibilidad y acceso a una beca universitaria que exonere parcial o totalmente el pago de matrícula y cubra gastos de reubicación o transporte.</p></li>
@@ -318,6 +290,8 @@ window.Quarto = {
 <br>
 <em>Emocional:</em> un análisis de este tipo permitiría observar que factores necesitan de reformas para el beneficio de los estudiantes y así aumentar la cantidad de personas que continúan sus estudios y finalmente logran graduarse. A grandes rasgos, el graduarse mejora la calidad de vida del individuo por lo que incrementar el número de personas que lo hacen sería beneficioso. Además, se podría mostrar casos donde a pesar de no encajar con el perfil de una persona “propensa” a graduarse, igual lo logró y servir como motivación hacia otros en las mismas condiciones.<br>
 <br>
+<strong>Conclusión:</strong> La idea de identificar los factores sociales, económicos, académicos y familiares que influyen sobre los estudiantes universitarios a la hora de decidir continuar o terminar con sus estudios requiere de una recolección de información fiable que represente estudiantes en distintos contextos. Utilizando modelos, teorías y proyectos previos como ayuda , se puede analizar propiamente la información y brindar resultados confiables. Estos resultados proporcionan una guía hacia posibles reformas educativas y como inspiración a aquellos estudiantes en su camino por la universidad.<br>
+<br>
 <strong>¿Es posible determinar características en común entre aquellos estudiantes que continúan sus estudios o deciden terminar con ellos?</strong><br>
 <br>
 <strong>Contraargumentos</strong><br>
@@ -328,11 +302,13 @@ window.Quarto = {
 <em>Emocional:</em> Muchas personas viven condiciones que los hacen retirarse de la educación, el principal de estos según las referencias consultadas es el dinero, al rededor del mundo se encuentran miles de personas con muy poco recursos quienes intentan sobrevivir el día a día con lo que tienen. Esta no es una razón para rendirse y calificar a todas las personas pobres como incapaces de obtener sus estudios. Se han observado muchos ejemplos de estudiantes muy ingeniosos que lograron cambiar para siempre algunos aspectos de su país de origen aún cuando este no proveía las condiciones básicas necesarias para conseguir el objetivo.<br>
 <br>
 <strong>Argumentos</strong><br>
-<em>Lógica:</em><br>
+<em>Lógica:</em> Existen estudios que han logrado caracterizar a las personas que tienen mayores probabilidades de desertar la educación debido a los factores anteriormente mencionados y también se ha visto como ayudas del gobierno o institución ayudan al estudiante como por ejemplo el otorgamiento de becas socioeconómicas.<br>
 <br>
-<em>Ética:</em><br>
+<em>Ética:</em> Aún cuando se han logrado caracterizar rasgos comunes de estos grupos de personas no es lo correcto generalizar el resultado esperado según la calidad de vida del individuo ya que esto genera mucha presión en ambos extremos del espectro, por un lado un sentimiento de impotencia y una baja autoestima y por el otro un sentimiento de presión por no lograr lo esperado.<br>
 <br>
-<em>Emocional:</em><br>
+<em>Emocional:</em> El determinar las características comunes de aquellos estudiantes más propensos a abandonar los estudios, especialmente por factores socioeconómicos o académicos, puede aprovecharse positivamente para la elaboración e implementación de políticas educativas orientadas a mitigar estas desigualdades. Por otro lado, los resultados de esta pregunta podrían motivar a estudiantes en situaciones críticas a comprender que muchos de los desafíos que enfrentan pueden tener una causa sistémica y que no todo se debe a deficiencias personales autopercibidas.<br>
+<br>
+<strong>Conclusión:</strong> Es posible identificar características comunes entre los estudiantes que continúan sus estudios o deciden terminarlos. Sin embargo, se deben considerar las limitaciones asociadas con la individualidad de las experiencias educativas y los factores externos incontrolables. Pese a estas limitaciones, la evidencia científica respalda la existencia de patrones predictivos. En última instancia, este análisis puede guiar el diseño de políticas educativas más inclusivas y eficientes, que aborden tanto las necesidades particulares como los problemas sistémicos.<br>
 <br>
 <strong>¿De qué manera interactúan los factores sociales, económicos, académicos y familiares en la trayectoria académica de un estudiante?</strong><br>
 <br>
@@ -350,6 +326,8 @@ window.Quarto = {
 <br>
 <em>Emocional:</em> la identificación de los factores externos al estudiante que más afectan su rendimiento académico podría ofrecer información relevante para la elaboración de estrategias que contribuyan a oportunidades educativas más equitativas, especialmente para los grupos más marginados. Asimismo, permite valorar cuánta responsabilidad sobre el rendimiento académico recae sobre el propio estudiante, sus circunstancias o el sistema educativo en sí.<br>
 <br>
+<strong>Conclusión:</strong>La pregunta de investigación es viable y relevante, pero debe abordarse con cuidado para asegurar que los resultados sean completos y equilibrados. Aunque la investigación podría beneficiarse de un enfoque más amplio que considere variables adicionales, el estudio de factores sociales, económicos, académicos y familiares ya es un buen punto de partida que utiliza las variables más fácilmente medibles. También es necesario que los datos utilizados sean diversos y representativos, y que el análisis no minimice el papel de los aspectos individuales. Tomando en cuenta estas observaciones, el proyecto tiene el potencial de proporcionar información significativa sobre el rendimiento académico de un estudiante según sus circunstancias.<br>
+<br>
 <strong>¿Cuál es la relación entre los antecedentes de un estudiante en el ámbito familiar, social, académico y económico y su decisión de continuar con su carrera o desertar?</strong><br>
 <br>
 <strong>Contraargumentos</strong><br>
@@ -366,10 +344,12 @@ window.Quarto = {
 <br>
 <em>Emocional:</em> al investigar sobre los factores en las áreas mencionadas que afectan a un estudiante en su decisión de continuar o abandonar sus estudios, se está contextualizando la realidad y las dificultades que estos enfrentan. La interconexión entre estos sectores es esencial para lograr un bien mayor, alivianando las áreas donde los estudiantes enfrentan mayores obstáculos. Este enfoque promueve la generación de conocimiento y la movilidad social al ofrecer a los estudiantes las herramientas necesarias para continuar con sus estudios.<br>
 <br>
+<strong>Conclusión:</strong> Si se quiere relacionar los antecedentes de un estudiante en el ámbito familiar, social, académico y económico y su decisión de continuar con su carrera o desertar es necesario considerar varios aspectos. La necesidad de modelos estadísticos avanzados y proyectos realizados anteriormente asegura la completitud de la investigación. Mientras que su veracidad se atribuye a la recolección de datos de fuentes confiables. Esta investigación propone evaluar la situación que experimentan los estudiantes universitarios y analizar las razones debido a su posible deserción estudiantil para ayudar a implementar medidas que alivianen esta situación. Siempre con el objetivo de promover la generación de conocimiento y la movilidad social.<br>
 </p>
 </section>
-<section id="argumentación-a-través-de-datos" class="level4" data-number="1.2.1.6">
-<h4 data-number="1.2.1.6" class="anchored" data-anchor-id="argumentación-a-través-de-datos"><span class="header-section-number">1.2.1.6</span> Argumentación a través de datos</h4>
+</section>
+<section id="argumentación-a-través-de-datos" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="argumentación-a-través-de-datos"><span class="header-section-number">1.2.2</span> Argumentación a través de datos</h3>
 <ul>
 <li><strong>Fuente de Información</strong></li>
 <li><strong>Contexto Temporal y Espacial de los Datos</strong></li>
@@ -381,11 +361,10 @@ window.Quarto = {
 <li><strong>Descripción de los Elementos y como estos se relacionan con la investigación</strong></li>
 </ul>
 </section>
-</section>
-<section id="revisión-bibliográfica" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="revisión-bibliográfica"><span class="header-section-number">1.2.2</span> Revisión Bibliográfica</h3>
-<section id="construcción-de-fichas-de-literatura" class="level4" data-number="1.2.2.1">
-<h4 data-number="1.2.2.1" class="anchored" data-anchor-id="construcción-de-fichas-de-literatura"><span class="header-section-number">1.2.2.1</span> Construcción de Fichas de Literatura</h4>
+<section id="revisión-bibliográfica" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="revisión-bibliográfica"><span class="header-section-number">1.2.3</span> Revisión Bibliográfica</h3>
+<section id="construcción-de-fichas-de-literatura" class="level4" data-number="1.2.3.1">
+<h4 data-number="1.2.3.1" class="anchored" data-anchor-id="construcción-de-fichas-de-literatura"><span class="header-section-number">1.2.3.1</span> Construcción de Fichas de Literatura</h4>
 <ol type="1">
 <li><strong>Título:</strong> Análisis cuantitativo de las variables que influyen en el rendimiento universitario.</li>
 </ol>
@@ -445,27 +424,27 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="construcción-de-la-uve-de-gowin" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="construcción-de-la-uve-de-gowin"><span class="header-section-number">1.2.3</span> Construcción de la UVE de Gowin</h3>
+<section id="construcción-de-la-uve-de-gowin" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="construcción-de-la-uve-de-gowin"><span class="header-section-number">1.2.4</span> Construcción de la UVE de Gowin</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src=".\Images/UVE_Gowin.png" title="Figura 1. UVE de Gowin" class="img-fluid figure-img"></p>
 <figcaption>UVE de Gowin</figcaption>
 </figure>
 </div>
-<section id="teorías-o-principios" class="level4" data-number="1.2.3.1">
-<h4 data-number="1.2.3.1" class="anchored" data-anchor-id="teorías-o-principios"><span class="header-section-number">1.2.3.1</span> Teorías o principios</h4>
+<section id="teorías-o-principios" class="level4" data-number="1.2.4.1">
+<h4 data-number="1.2.4.1" class="anchored" data-anchor-id="teorías-o-principios"><span class="header-section-number">1.2.4.1</span> Teorías o principios</h4>
 <ul>
 <li><p>La Teoría Ecológica de Urie Bronfenbrenner</p></li>
 <li><p>Modelo de condicionamiento del fracaso escolar de Martínez-Otero</p></li>
 </ul>
 </section>
 </section>
-<section id="parte-de-escritura" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="parte-de-escritura"><span class="header-section-number">1.2.4</span> Parte de Escritura</h3>
+<section id="parte-de-escritura" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="parte-de-escritura"><span class="header-section-number">1.2.5</span> Parte de Escritura</h3>
 </section>
-<section id="resumen-y-otras-cosas" class="level3" data-number="1.2.5">
-<h3 data-number="1.2.5" class="anchored" data-anchor-id="resumen-y-otras-cosas"><span class="header-section-number">1.2.5</span> Resumen y Otras cosas</h3>
+<section id="resumen-y-otras-cosas" class="level3" data-number="1.2.6">
+<h3 data-number="1.2.6" class="anchored" data-anchor-id="resumen-y-otras-cosas"><span class="header-section-number">1.2.6</span> Resumen y Otras cosas</h3>
 </section>
 </section>
 <section id="referencias" class="level2" data-number="1.3">

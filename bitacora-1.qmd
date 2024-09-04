@@ -150,7 +150,7 @@ subgrupo, las conclusiones que se desarrollan serían mucho más exactas.\
 estos datos a través de otras fuentes y el análisis crítico de los
 mismos, garantiza que el estudio se realice con precisión. De esta
 manera, se busca asegurar la calidad de la información y la
-aplicabilidad de las conclusiones. \
+aplicabilidad de las conclusiones.\
 \
 *Emocional:* un análisis de este tipo permitiría observar que factores
 necesitan de reformas para el beneficio de los estudiantes y así
@@ -272,9 +272,28 @@ negativos. Esto solo incrementa la desigualdad y las emociones negativas
 entre el estudiantado.\
 \
 **Argumentos**\
-*Lógica*\
-*Ética*\
-*Emocional*\
+*Lógica:* el uso de modelos estadísticos avanzados junto con los
+antecedentes acerca de este o similares es posible abarcar bastantes
+direcciones. Al seleccionar una cantidad limitada de factores pero
+siendo cada uno de estos bastante amplio en su abordaje se minimiza la
+cantidad de aspectos que quedarían por fuera. Todo esto de la mano de
+proyectos realizados anteriormente.\
+\
+*Ética:* la obtención de datos desde una fuente de información verídica
+y confiable es fundamental para asegurar que la investigación sea
+completa y que los datos sean representativos. Al usar otros recursos
+como revistas, libros, y artículos se puede complementar los faltantes
+de información que se encuentren.\
+\
+*Emocional:* al investigar sobre los factores en las áreas mencionadas
+que afectan a un estudiante en su decisión de continuar o abandonar sus
+estudios, se está contextualizando la realidad y las dificultades que
+estos enfrentan. La interconexión entre estos sectores es esencial para
+lograr un bien mayor, alivianando las áreas donde los estudiantes
+enfrentan mayores obstáculos. Este enfoque promueve la generación de
+conocimiento y la movilidad social al ofrecer a los estudiantes las
+herramientas necesarias para continuar con sus estudios.\
+\
 
 #### Argumentación a través de datos
 

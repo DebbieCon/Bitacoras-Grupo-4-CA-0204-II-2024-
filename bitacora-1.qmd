@@ -3,3 +3,200 @@ editor:
   markdown: 
     wrap: 72
 ---
+# Comandos de Git
+
+## Historial de Commits
+
+## Sección de Cambios
+
+## Resumen de Commits
+
+# Parte de planificación
+
+## Pregunta de investigación
+
+### Definción de la idea
+
+### Conceptualización de la idea
+
+* Concepto 1
+* Concepto 2
+* Concepto 3
+* Concepto 4
+
+### Identificación de Tensiones
+
+* Tensión 1
+* Tensión 2
+* Tensión 3
+
+### Reformulación de la idea en modo pregunta
+
+* Pregunta 1 
+* Pregunta 2
+* Pregunta 3
+* Pregunta 4
+
+### Argumentación de la pregunta
+\
+**Pregunta 1**
+\
+\
+**Contraargumentos**
+\
+*Lógica*
+\
+*Ética*
+\
+*Emocional*
+\
+**Argumentos**
+\
+*Lógica*
+\
+*Ética*
+\
+*Emocional*
+\
+\
+**Pregunta 2**
+\
+\
+**Contraargumentos**
+\
+*Lógica*
+\
+*Ética*
+\
+*Emocional*
+\
+**Argumentos**
+\
+*Lógica*
+\
+*Ética*
+\
+*Emocional*
+\
+\
+**Pregunta 3**
+\
+\
+**Contraargumentos**
+\
+*Lógica*
+\
+*Ética*
+\
+*Emocional*
+\
+**Argumentos**
+\
+*Lógica*
+\
+*Ética*
+\
+*Emocional*
+\
+\
+**Pregunta 4**
+\
+\
+**Contraargumentos**
+\
+*Lógica*
+\
+*Ética*
+\
+*Emocional*
+\
+**Argumentos**
+\
+*Lógica*
+\
+*Ética*
+\
+*Emocional*
+\
+
+### Argumentación a través de datos
+
+* **Fuente de Información**
+* **Contexto Temporal y Espacial de los Datos**
+* **Facilidad de Obtener la Información**
+* **Población de Estudio**
+* **Muestra Observada**
+* **Unidad Estadística o Individuos**
+* **Descripción de las Variables**
+* **Descripción de los Elementos y como estos se relacionan con la investigación**
+
+## Revisión Bibliográfica
+### Búsqueda de bibliografía}
+### Construcción de Fichas de Literatura
+::: {} 
+1. * **Título:**
+* **Autor(es):**
+* **Año:**
+* **Nombre del Tema:**
+* **Forma de Organizarlo:**
+  - **Cronológico:**
+  - **Metodológico:**
+  - **Temático:**
+  - **Teoría:**
+* **Resumen de una oración:**
+* **Argumento Central:**
+* **Problemas con el argumento o el tema:**
+* **Resumen de un párrafo:**
+:::
+::: {} 
+2. * **Título:**
+* **Autor(es):**
+* **Año:**
+* **Nombre del Tema:**
+* **Forma de Organizarlo:**
+  - **Cronológico:**
+  - **Metodológico:**
+  - **Temático:**
+  - **Teoría:**
+* **Resumen de una oración:**
+* **Argumento Central:**
+* **Problemas con el argumento o el tema:**
+* **Resumen de un párrafo:**
+:::
+::: {} 
+3. * **Título:**
+* **Autor(es):**
+* **Año:**
+* **Nombre del Tema:**
+* **Forma de Organizarlo:**
+  - **Cronológico:**
+  - **Metodológico:**
+  - **Temático:**
+  - **Teoría:**
+* **Resumen de una oración:**
+* **Argumento Central:**
+* **Problemas con el argumento o el tema:**
+* **Resumen de un párrafo:**
+:::
+::: {} 
+4. * **Título:**
+* **Autor(es):**
+* **Año:**
+* **Nombre del Tema:**
+* **Forma de Organizarlo:**
+  - **Cronológico:**
+  - **Metodológico:**
+  - **Temático:**
+  - **Teoría:**
+* **Resumen de una oración:**
+* **Argumento Central:**
+* **Problemas con el argumento o el tema:**
+* **Resumen de un párrafo:**
+:::
+
+## Construcción de la UVE de Gowin
+![UVE de Gowin](/Images/UVE_Gowin.png "Figura 1. UVE de Gowin")
+
+# Parte de Escritura
+
+## Resumen y Otras cosas

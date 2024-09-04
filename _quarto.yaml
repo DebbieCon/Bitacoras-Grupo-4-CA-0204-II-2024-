@@ -11,7 +11,7 @@ book:
   search: true
   repo-url: https://github.com/DebbieCon/Bitacoras-Grupo-4-CA-0204-II-2024-
  #site-url: # Vacío por el momento
-  repo-actions: [edit]
+  repo-actions: [edit, source]
   downloads: [pdf, epub]
   sharing: [twitter, facebook]
   chapters:

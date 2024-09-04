@@ -358,15 +358,18 @@ social.\
 
 ### Argumentación a través de datos
 
--   **Fuente de Información**
--   **Contexto Temporal y Espacial de los Datos**
--   **Facilidad de Obtener la Información**
--   **Población de Estudio**
--   **Muestra Observada**
+-   **Fuente de Información:** <https://www.mdpi.com/2306-5729/7/11/146>
+-   **Contexto Temporal y Espacial de los Datos:**Abarca datos de universidades europeas desde el 2008 hasta el 2018
+-   **Facilidad de Obtener la Información:** Estudiantes Universitarios Europeos
+-   **Población de Estudio:** Estudiantes Europeos admitidos desde 2008 hasta 2018 de las carreras: Agronomía, Diseño, Educación, Enfermería, Periodismo, Administración, Servicios Sociales, Tecnologías.
+-   **Muestra Observada:** Deserción del estudiante universitario desde su momento de postulación hasta el final de su segundo semestre.
+
 -   **Unidad Estadística o Individuos**
 -   **Descripción de las Variables**
 -   **Descripción de los Elementos y como estos se relacionan con la
     investigación**
+    \
+    Los diferentes datos de esta tabla como la información del estudiante y de su familia serán importantes para intentar crear el perfil del estudiante desertor y estudiar cómo ciertos factores socioeconómicos y familiares pueden afectar en esta decisión. Los datos de los créditos matriculados, aprobados y la nota serán útiles al estudiar la carga académica soportada por los estudiantes y como la sobrecarga de ésta puede influir en la decisión de deserción. 
 
 ### Revisión Bibliográfica
 

@@ -314,15 +314,15 @@ herramientas necesarias para continuar con sus estudios.\
 1.  **Título:** Análisis cuantitativo de las variables que influyen en
     el rendimiento universitario.
 
-2.  **Autor(es):** Martha Jiménez García.
+-   **Autor(es):** Martha Jiménez García.
 
-3.  **Año:** 2018.
+-   **Año:** 2018.
 
-4.  **Nombre del Tema:** Impacto del uso de tecnologías de la
+-   **Nombre del Tema:** Impacto del uso de tecnologías de la
     información y la comunicación en el rendimiento académico de
     estudiantes universitarios.
 
-5.  **Forma de Organizarlo:**
+-   **Forma de Organizarlo:**
 
     -   **Cronológico:** Datos recolectados en 2016, artículo publicado
         en 2018.
@@ -336,10 +336,10 @@ herramientas necesarias para continuar con sus estudios.\
     -   **Teoría:** Impacto positivo del uso de la tecnología sobre el
         rendimiento académico a nivel universitario.
 
-6.  **Resumen de una oración:** Elaboración de modelo de regresión
+-   **Resumen de una oración:** Elaboración de modelo de regresión
     lineal múltiple sobre rendimiento académico según datos de encuesta.
 
-7.  **Argumento central:** Mediante un modelo un modelo de regresión
+-   **Argumento central:** Mediante un modelo un modelo de regresión
     lineal múltiple que tomaba como variable dependiente el rendimiento
     académico y como variables independientes el género, la beca, el
     semestre, las materias reprobadas y la frecuencia de uso diferentes
@@ -347,14 +347,14 @@ herramientas necesarias para continuar con sus estudios.\
     con certeza que la beca y el uso de ciertas herramientas contribuyen
     a un mejor rendimiento académico.
 
-8.  **Problemas con el argumento o el tema:** La autora destaca dos
+-   **Problemas con el argumento o el tema:** La autora destaca dos
     imitaciones de la investigación: se pudieron haber considerado más
     variables con correlación directa al rendimiento académico y se pudo
     haber desarrollado un programa que midiese la cantidad exacta de
     usos de cada herramienta por cada estudiante, para no depender de
     sus respuestas autopercibidas.
 
-9.  **Resumen de un párrafo:** Basándose en literatura sobre la
+-   **Resumen de un párrafo:** Basándose en literatura sobre la
     importancia de implementar la tecnología en el proceso de
     enseñanza-aprendizaje, esta investigación se propone analizar el
     impacto del uso de diferentes herramientas digitales sobre el
@@ -379,37 +379,50 @@ herramientas necesarias para continuar con sus estudios.\
     advierte que la implementación de estas tecnologías en el aula debe
     ser bien planificada.
 
-10. **Título:**
+2.  **Título:** Los jóvenes que desertan de la educación media: virajes
+    y puntos de no retorno.
 
--   **Autor(es):**
--   **Año:**
--   **Nombre del Tema:**
+-   **Autor(es):** Marcos Jacobo Estrada-Ruiz.
+
+-   **Año:** 2015.
+
+-   **Nombre del Tema:** Deserción escolar en jóvenes mujeres y sus
+    factores asociados.
+
 -   **Forma de Organizarlo:**
-    -   **Cronológico:**
-    -   **Metodológico:**
-    -   **Temático:**
-    -   **Teoría:**
--   **Resumen de una oración:**
--   **Argumento Central:**
--   **Problemas con el argumento o el tema:**
--   **Resumen de un párrafo:**
+
+    -   **Cronológico:** La investigación se originó entre 2012 y 2013.
+    -   **Metodológico:** Se utilizaron entrevistas biográficas y
+        narraciones de vida.
+    -   **Temático:** Deserción escolar y vulnerabilidad juvenil.
+    -   **Teoría:** Teoría de la deserción educativa y su relación con
+        el género.
+
+-   **Resumen de una oración:** El documento analiza los factores que
+    llevan a las jóvenes a abandonar la educación media.
+
+-   **Argumento Central:** La deserción escolar en jóvenes mujeres está
+    influenciada por factores sociales, económicos y familiares que
+    afectan su trayectoria educativa.
+
+-   **Problemas con el argumento o el tema:** El autor encontró que las
+    expectativas de género y las condiciones socioeconómicas limitan las
+    oportunidades educativas de las jóvenes, generando un ciclo de
+    desventajas.
+
+-   **Resumen de un párrafo:** Este documento explora las experiencias
+    de jóvenes mujeres que desertan de la educación media en Hermosillo,
+    Sonora. A través de entrevistas biográficas, se identifican los
+    factores que contribuyen a la deserción, como la presión social, las
+    responsabilidades familiares y la falta de apoyo institucional. El
+    estudio revela que muchas de estas jóvenes enfrentan
+    vulnerabilidades significativas tras abandonar la escuela, lo que
+    impacta sus trayectorias de vida. Además, se destaca la importancia
+    de las relaciones familiares y el contexto social en la decisión de
+    regresar a la educación. La investigación subraya la necesidad de
+    abordar las desigualdades de género en el ámbito educativo.
 
 3.  **Título:**
-
--   **Autor(es):**
--   **Año:**
--   **Nombre del Tema:**
--   **Forma de Organizarlo:**
-    -   **Cronológico:**
-    -   **Metodológico:**
-    -   **Temático:**
-    -   **Teoría:**
--   **Resumen de una oración:**
--   **Argumento Central:**
--   **Problemas con el argumento o el tema:**
--   **Resumen de un párrafo:**
-
-4.  **Título:**
 
 -   **Autor(es):**
 -   **Año:**

@@ -1,4 +1,2 @@
-# Introducción {.unnumbered}
-# Bitacora 1 {.unnumbered}
+# Capítulo 1. Bitacora 1: Planificación y Pregunta de Investigación {.unnumbered}
 
-Texto cualquiera

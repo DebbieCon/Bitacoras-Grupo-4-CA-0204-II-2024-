@@ -780,5 +780,41 @@ afectaciones en los estudios de las personas. Un ejemplo es el trabajo
 titulado Los factores que influyen en la calidad de la educación
 (@Yao_2016).\
 \
+Durante esta investigación se abarca la deserción estudiantil en
+universidades europeas entre los años 2008 y 2018 enfocándose en los
+principales factores que muestra la base de datos recolectada por
+(@data) como los factores económicos, familiares, sociales y académicos,
+y cómo estos repercuten en la decisión de deserción del estudiantado. La
+base de datos utilizada recolecta datos como el perfil académico del
+estudiante incluyendo distintas variables como la nota de admisión,
+cantidad de créditos matriculados y aprobados en los dos primeros
+semestres y el ponderado obtenido de estos. También muestra el perfil
+socioeconómico del estudiante mediante la información de los padres
+(titulación y ocupación), el ingreso que presenta, las deudas
+provenientes por gastos escolares entre muchas otras. En total esta base
+de datos presenta 37 atributos y más de 5000 registros de estudiantes.
+Según (@Modelos_Rendimiento) y sus modelos predictivos, logran predecir
+el efecto de estos factores, por ejemplo, estos autores mencionan el
+“Modelo de Estrés Familiar” donde se sugiere que las tensiones y
+problemas familiares son uno de los principales motivos por lo que los
+estudiantes abandonan los estudios, este modelo considera variables
+económicas y apoyo familiar que en la mayoría de casos de abandono se
+tienen condiciones malas de economía y un bajo nivel de apoyo familiar
+que repercute psicológicamente en el estudiante.\
+\
+Como este, estos autores presentan varios modelos como el “Modelo de
+Capital Humano” y “Motivación Intrínseca y Extrínseca” los cuales
+también predicen distintos comportamientos estudiantiles. De la mano se
+tiene el modelo multinivel el cual es vital ya que permite jerarquizar
+distintas variables para así obtener una mayor información sobre el
+impacto de cada una de estas. Este modelo aplicado a este contexto,
+según (@Murillo_Torrecilla_2008) permite jerarquizar el problema de los
+estudiantes en sus factores individuales como su motivación, rendimiento
+y aspectos personales, factores del aula como el personal docente,
+metodologías, relaciones, factores de la institución como lo son la
+institución, el apoyo brindado, recursos y por último los factores
+contextuales que caracterizan los aspectos externos al entorno
+estudiantil como la familia o trabajo.\
+\
 
 ## Referencias

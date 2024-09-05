@@ -10,9 +10,21 @@ editor:
 
 ### Historial de Commits
 
+![Log_1](/Images/log1.jpg)
+![Log_2](/Images/log2.jpg)
+![Log_3](/Images/log3.jpg)
+![Log_4](/Images/log4.jpg)
+![Log_5](/Images/log5.jpg)
+![Log_6](/Images/log6.jpg)
+
 ### Sección de Cambios
 
+![clif_1](/Images/cliff1.jpg)
+![clif_2](/Images/cliff2.jpg)
+
 ### Resumen de Commits
+
+![summary](/Images/summary.jpg)
 
 ## Parte de planificación
 
@@ -698,7 +710,8 @@ social.\
 
 ### Construcción de la UVE de Gowin
 
-![UVE de Gowin](/Images/UVE_Gowin.png "Figura 1. UVE de Gowin")
+![UVE_Gowin](/Images/UVE_Gowin.png "Figura 1. UVE Heurística") 
+
 
 #### Teorías o principios
 

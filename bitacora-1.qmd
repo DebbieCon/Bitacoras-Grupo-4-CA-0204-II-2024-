@@ -456,7 +456,7 @@ social.\
 #### Construcción de Fichas de Literatura
 
 1.  **Título:** Análisis cuantitativo de las variables que influyen en
-    el rendimiento universitario.
+    el rendimiento universitario. (@analisis_cuantitativo)
 
 -   **Autor(es):** Martha Jiménez García.
 
@@ -524,7 +524,7 @@ social.\
     ser bien planificada.
 
 2.  **Título:** Los jóvenes que desertan de la educación media: virajes
-    y puntos de no retorno.
+    y puntos de no retorno.(@jovenes)
 
 -   **Autor(es):** Marcos Jacobo Estrada-Ruiz.
 
@@ -567,10 +567,11 @@ social.\
     abordar las desigualdades de género en el ámbito educativo.
 
 3.  **Título:** El factor económico como principal causa de deserción estudiantil universitaria en Centroamérica
+    
 
--   **Autor(es):** Marlon Lobos y Judith Rodriguez
+-   **Autor(es):** Marlon Lobos y Judith Rodriguez (@Lobos)
 -   **Año:** 2022
--   **Nombre del Tema:**  el factor económico como principal causa del abandono de los estudios en Centroamérica y su impacto en la sociedad. 
+-   **Nombre del Tema:**  El factor económico como principal causa del abandono de los estudios en Centroamérica y su impacto en la sociedad.
 
 -   **Forma de Organizarlo:**
     -   **Cronológico:**  no se especifica claramente el periodo el cual la investigación observa sin embargo, da a entender que considera la problemática desde aproximadamente 2020 a 2022 

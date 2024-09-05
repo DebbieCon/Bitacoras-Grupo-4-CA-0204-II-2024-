@@ -62,8 +62,8 @@ abandonarla o graduarse.
 -   **Factor Económico:** Según @factor_economico, hace referencia a las
     circunstancias relacionadas con el ingreso familiar del estudiante y
     cómo puede influir este en la capacidad de continuar con los
-    estudios, bajo este contexto se tratan temas como el costo de
-    estudio como la matrícula, créditos, transporte, vivienda así como
+    estudios. Bajo este contexto se tratan temas como el costo de
+    estudio, la matrícula, créditos, transporte, vivienda , así como
     la posibilidad y acceso a una beca universitaria que exonere parcial
     o totalmente el pago de matrícula y cubra gastos de reubicación o
     transporte.
@@ -74,20 +74,20 @@ abandonarla o graduarse.
     los estudiantes que optan por abandonar la carrera. La diversidad
     del ser humano da la bienvenida a una cantidad infinita de
     decisiones que este puede tomar y cómo reacciona ante los distintos
-    desafíos que se le presenten. Por lo que, al final del día reducir
+    desafíos que se le presenten. Por lo que al final del día, reducir
     una decisión tan grande a unos cuantos aspectos puede probarse
     complicado.
 
 -   Puede que las personas que decidan no continuar con sus estudios no
     encajen con un perfil definido. La falta de características
     compartidas entre los individuos perjudica el establecimiento de un
-    perfil completo y que sea pertinente a la realidad. Además, si no se
+    perfil completo que sea pertinente a la realidad. Además, si no se
     pueden establecer causas ante la deserción estudiantil el
     planteamiento de posibles soluciones no sería factible perjudicando
     la importancia de un estudio de este tipo.
 
 -   La posible falta de información puede afectar que se determine un
-    perfil completo y conciso de las personas tanto que continúan sus
+    perfil adecuado y conciso de las personas tanto que continúan sus
     estudios como aquellas que no lo hacen. Esta limitación a la hora de
     acceder a información afecta el análisis ya que los resultados
     obtenidos pueden o no apegarse a la realidad causando desinformación
@@ -115,7 +115,7 @@ que influyen sobre los estudiantes universitarios a la hora de decidir
 continuar o terminar con sus estudios?**\
 \
 **Contraargumentos**\
-*Lógica:* Existen diversas razones por las cuales una persona toma la
+*Lógica:\ * Existen diversas razones por las cuales una persona toma la
 decisión de dejar o continuar sus estudios. Los factores sociales,
 económicos, académicos y familiares no solo se conectan entre sí, por lo
 que una determinación clara de la causa podría ser difícil de obtener
@@ -123,7 +123,7 @@ pero también dependen del contexto cultural de cada persona. Asimismo,
 algunos de estos aspectos son difíciles de cuantificar, especialmente la
 parte familiar.\
 \
-*Ética:* es necesario que los datos utilizados sean un reflejo verdadero
+*Ética:\ * Es necesario que los datos utilizados sean un reflejo verdadero
 de los estudiantes universitarios, sin embargo al lidiar con información
 tan personal como lo son los factores sociales, económicos y familiares
 de cada uno de los individuos no se puede omitir la posibilidad de que
@@ -132,7 +132,7 @@ detrás de ellos. Además, que la verificación de estos requeriría en
 algunos casos acceso a la información sobre toda la familia, no solo el
 estudiante.\
 \
-*Emocional:* los resultados de esta investigación pueden jugar un papel
+*Emocional: \ * Los resultados de esta investigación pueden jugar un papel
 en la toma de decisiones de aquellos estudiantes que se encuentran con
 duda sobre la continuación de sus estudios. Si se ven reflejados bajo
 los factores que se atribuyen como los que generan una cantidad más

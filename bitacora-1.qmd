@@ -359,97 +359,181 @@ social.\
 ### Argumentación a través de datos
 
 -   **Fuente de Información:** <https://www.mdpi.com/2306-5729/7/11/146>
--   **Contexto Temporal y Espacial de los Datos:**Abarca datos de universidades europeas desde el 2008 hasta el 2018
 
--   **Facilidad de Obtener la Información:** Actualmente hay bastante información 
+-   **Contexto Temporal y Espacial de los Datos:**Abarca datos de
+    universidades europeas desde el 2008 hasta el 2018
+
+-   **Facilidad de Obtener la Información:** Actualmente hay bastante
+    información
 
 -   **Población de Estudio:** Estudiantes Universitarios Europeos
 
--   **Muestra Observada:** Estudiantes Europeos admitidos desde 2008 hasta 2018 de las carreras: Agronomía, Diseño, Educación, Enfermería, Periodismo, Administración, Servicios Sociales, Tecnologías.
+-   **Muestra Observada:** Estudiantes Europeos admitidos desde 2008
+    hasta 2018 de las carreras: Agronomía, Diseño, Educación,
+    Enfermería, Periodismo, Administración, Servicios Sociales,
+    Tecnologías.
 
--   **Unidad Estadística o Individuos:** Deserción del estudiante universitario desde su momento de postulación hasta el final de su segundo semestre.
+-   **Unidad Estadística o Individuos:** Deserción del estudiante
+    universitario desde su momento de postulación hasta el final de su
+    segundo semestre.
 
 -   **Descripción de las Variables**
 
- + **Estado Civil:** Esta variable muestra el estado del estudiante durante sus estudios, se rige en la siguiente escala: 1 = Soltero(a), 2 = Casado(a), 3 = Viudo(a), 4 = Unión Libre, 5 = Divorciado(a).
- 
- + **Nacionalidad:** Muestra el país de origen de la persona estudiante postulante, abarca 21 países alrededor del mundo, de los cuales se obtuvo información en las universidades, los países son los siguientes: 1 = Portugal, 2 = Alemania, 3 = España, 4 = Italia, 5 = Países Bajos, 6 = Inglaterra, 7 = Lituania, 8 = Angola, 9 = Cabo Verde, 10 = Guinea, 11 = Mozambique, 12 = Santo Tomé y Príncipe, 13 = Turquía, 14 = Brasil, 15 = Romania, 16 = República de Moldavia, 17 = México, 18 = Ucrania, 19 = Rusia, 20 = Cuba, 21 = Colombia.
- 
- + **Modo de Aplicación**: Muestra distintas formas en las que los estudiantes aplican a la universidad en ese momento, abarca muchos factores, entre ellos si es estudiante de intercambio, estudiantes de diplomado,  estudiante internacional o en distintas fases generales de admisión.
- 
- + **Orden de Aplicación:** Muestra el orden de preferencia del estudiante al ingresar a la universidad en cuestión, muestra una escala del 0 al 9 donde el 0 define a la orden número 1 y el 9 a la última opción.
- 
- + **Curso:** Muestra distintos cursos que los estudiantes llevaron y fueron importantes para su decisión de retiro. Entre ellos se encuentran cursos introductorios a la educación, gerencia, agronomía, cursos de animación, producción, informática y enfermería.
- 
- + **Horario de Asistencia:** Muestra el tiempo en el que el estudiante asiste a lecciones, es un valor binario donde 0 significa que asiste por la tarde / noche y el 1 por la mañana.
- 
- + **Titulación Previa:** Muestra distintas opciones de la titulación que presenta el estudiante al momento de aplicar a la universidad, muestra varias opciones, entre ellas la secundaria y sus distintos grados, títulos de técnicos, diplomados, bachilleratos, licenciaturas, maestrías, doctorados o grados escolares.
- 
- + **Calificación Previa:** Muestra en una escala de 0 a 200 la calificación obtenida en la titulación previa.
- 
- + **Titulación de la Madre:** Muestra las mismas opciones de la titulación previa pero en este caso de la madre del estudiante.
- 
- + **Titulación del Padre:** Muestra las mismas opciones de la titulación previa pero en este caso del padre del estudiante.
- 
- + **Ocupación de la Madre:** Muestra opciones de empleos de la madre del estudiante, entre ellas se muestran puestos de gobierno, trabajos independientes o empresariales.
- 
- + **Ocupación del Padre:** Muestra opciones de empleos del padre del estudiante, entre ellas se muestran puestos de gobierno, trabajos independientes o empresariales.
- 
- + **Nota de Admisión:** Muestra en una escala de 0 a 200 la nota de admisión del estudiante al postular a la universidad.
- 
- + **Desplazamiento:** Es una variable binaria que define si el estudiante tuvo que trasladarse de su ciudad para poder postular y estudiar en la universidad, toma los valores 0 y 1 donde 0 significa que no tuvo que desplazarse y 1 que sí tuvo que desplazarse.
- 
- + **Necesidades Educativas Especiales:** Es una variable binaria que toma los valores 0 y 1 donde 0 significa que el estudiante no tiene necesidades especiales académicas y 1 que el estudiante si las necesita.
- 
- + **Deudor:** Es una variable binaria que muestra si el estudiante debe dinero a alguna entidad bancaria o a alguna institución de educación superior.
- 
- + **Cuotas Escolares Pagadas:** Es una variable binaria que muestra si el estudiante ha pagado sus cuotas y no debe dinero a la universidad.
- 
- + **Género:** Variable binaria que muestra si el estudiante es de género femenino o masculino.
- 
- + **Portador de Beca:** Es una variable binaria que muestra si el estudiante es portador de algún tipo de beca escolar ya sea deportiva, socioeconómica, por participación, entre otras.
- 
- + **Edad al Postular:** Variable natural que muestra la edad del estudiante al postular a la universidad.
- 
- + **Internacional:** Variable binaria que muestra si el estudiante es o no extranjero.
- 
- + **Créditos Primer Semestre:** Variable entera que muestra la cantidad de créditos pre-matriculados en el primer semestre.
- 
- + **Créditos Matriculados Primer Semestre:** Variable entera que muestra la cantidad de créditos matriculados en el primer semestre.
- 
- + **Número de Evaluaciones de los Cursos Matriculados en el Primer Semestre:** Variable entera que muestra la cantidad de evaluaciones en los cursos matriculados en el primer semestre.
- 
- + **Créditos Aprobados Primer Semestre:** Variable entera que muestra los créditos aprobados por el/la estudiante en el primer semestre.
- 
- + **Promedio Primer Semestre:** Variable entera que muestra el promedio ponderado del estudiante en el primer semestre.
- 
- + **Cantidad de Cursos sin Evaluaciones Primer Semestre:** Variable entera que muestra la cantidad de cursos que matriculó el estudiante que no presentan evaluaciones.
- 
- + **Créditos Segundo Semestre:** Variable entera que muestra la cantidad de créditos pre-matriculados en el segundo semestre.
- 
- + **Créditos Matriculados segundo Semestre:** Variable entera que muestra la cantidad de créditos matriculados en el segundo semestre.
- 
- + **Número de Evaluaciones de los Cursos Matriculados en el segundo Semestre:** Variable entera que muestra la cantidad de evaluaciones en los cursos matriculados en el segundo semestre.
- 
- + **Créditos Aprobados segundo Semestre:** Variable entera que muestra los créditos aprobados por el/la estudiante en el segundo semestre.
- 
- + **Promedio segundo Semestre:** Variable entera que muestra el promedio ponderado del estudiante en el segundo semestre.
- 
- + **Cantidad de Cursos sin Evaluaciones segundo Semestre:** Variable entera que muestra la cantidad de cursos que matriculó el estudiante que no presentan evaluaciones.
- 
- + **Tasa de Desempleo:** Variable continua que muestra la tasa de desempleo en porcentaje de la población en estudio.
- 
- + **Tasa de Inflación:** Variable continua que muestra la tasa de inflación en porcentaje de la población en estudio.
- 
- + **PIB:** Variable continua que muestra el valor del Producto Interno Bruto de la localización donde se encuentra la universidad.
- 
- + **Clasificación:** Variable categórica que muestra el estado del estudiante, entre estos se encuentra “deserción”, “matriculado”, “graduado” todo esto medido al final del semestre.
+-   **Estado Civil:** Esta variable muestra el estado del estudiante
+    durante sus estudios, se rige en la siguiente escala: 1 =
+    Soltero(a), 2 = Casado(a), 3 = Viudo(a), 4 = Unión Libre, 5 =
+    Divorciado(a).
+
+-   **Nacionalidad:** Muestra el país de origen de la persona estudiante
+    postulante, abarca 21 países alrededor del mundo, de los cuales se
+    obtuvo información en las universidades, los países son los
+    siguientes: 1 = Portugal, 2 = Alemania, 3 = España, 4 = Italia, 5 =
+    Países Bajos, 6 = Inglaterra, 7 = Lituania, 8 = Angola, 9 = Cabo
+    Verde, 10 = Guinea, 11 = Mozambique, 12 = Santo Tomé y Príncipe, 13
+    = Turquía, 14 = Brasil, 15 = Romania, 16 = República de Moldavia, 17
+    = México, 18 = Ucrania, 19 = Rusia, 20 = Cuba, 21 = Colombia.
+
+-   **Modo de Aplicación**: Muestra distintas formas en las que los
+    estudiantes aplican a la universidad en ese momento, abarca muchos
+    factores, entre ellos si es estudiante de intercambio, estudiantes
+    de diplomado, estudiante internacional o en distintas fases
+    generales de admisión.
+
+-   **Orden de Aplicación:** Muestra el orden de preferencia del
+    estudiante al ingresar a la universidad en cuestión, muestra una
+    escala del 0 al 9 donde el 0 define a la orden número 1 y el 9 a la
+    última opción.
+
+-   **Curso:** Muestra distintos cursos que los estudiantes llevaron y
+    fueron importantes para su decisión de retiro. Entre ellos se
+    encuentran cursos introductorios a la educación, gerencia,
+    agronomía, cursos de animación, producción, informática y
+    enfermería.
+
+-   **Horario de Asistencia:** Muestra el tiempo en el que el estudiante
+    asiste a lecciones, es un valor binario donde 0 significa que asiste
+    por la tarde / noche y el 1 por la mañana.
+
+-   **Titulación Previa:** Muestra distintas opciones de la titulación
+    que presenta el estudiante al momento de aplicar a la universidad,
+    muestra varias opciones, entre ellas la secundaria y sus distintos
+    grados, títulos de técnicos, diplomados, bachilleratos,
+    licenciaturas, maestrías, doctorados o grados escolares.
+
+-   **Calificación Previa:** Muestra en una escala de 0 a 200 la
+    calificación obtenida en la titulación previa.
+
+-   **Titulación de la Madre:** Muestra las mismas opciones de la
+    titulación previa pero en este caso de la madre del estudiante.
+
+-   **Titulación del Padre:** Muestra las mismas opciones de la
+    titulación previa pero en este caso del padre del estudiante.
+
+-   **Ocupación de la Madre:** Muestra opciones de empleos de la madre
+    del estudiante, entre ellas se muestran puestos de gobierno,
+    trabajos independientes o empresariales.
+
+-   **Ocupación del Padre:** Muestra opciones de empleos del padre del
+    estudiante, entre ellas se muestran puestos de gobierno, trabajos
+    independientes o empresariales.
+
+-   **Nota de Admisión:** Muestra en una escala de 0 a 200 la nota de
+    admisión del estudiante al postular a la universidad.
+
+-   **Desplazamiento:** Es una variable binaria que define si el
+    estudiante tuvo que trasladarse de su ciudad para poder postular y
+    estudiar en la universidad, toma los valores 0 y 1 donde 0 significa
+    que no tuvo que desplazarse y 1 que sí tuvo que desplazarse.
+
+-   **Necesidades Educativas Especiales:** Es una variable binaria que
+    toma los valores 0 y 1 donde 0 significa que el estudiante no tiene
+    necesidades especiales académicas y 1 que el estudiante si las
+    necesita.
+
+-   **Deudor:** Es una variable binaria que muestra si el estudiante
+    debe dinero a alguna entidad bancaria o a alguna institución de
+    educación superior.
+
+-   **Cuotas Escolares Pagadas:** Es una variable binaria que muestra si
+    el estudiante ha pagado sus cuotas y no debe dinero a la
+    universidad.
+
+-   **Género:** Variable binaria que muestra si el estudiante es de
+    género femenino o masculino.
+
+-   **Portador de Beca:** Es una variable binaria que muestra si el
+    estudiante es portador de algún tipo de beca escolar ya sea
+    deportiva, socioeconómica, por participación, entre otras.
+
+-   **Edad al Postular:** Variable natural que muestra la edad del
+    estudiante al postular a la universidad.
+
+-   **Internacional:** Variable binaria que muestra si el estudiante es
+    o no extranjero.
+
+-   **Créditos Primer Semestre:** Variable entera que muestra la
+    cantidad de créditos pre-matriculados en el primer semestre.
+
+-   **Créditos Matriculados Primer Semestre:** Variable entera que
+    muestra la cantidad de créditos matriculados en el primer semestre.
+
+-   **Número de Evaluaciones de los Cursos Matriculados en el Primer
+    Semestre:** Variable entera que muestra la cantidad de evaluaciones
+    en los cursos matriculados en el primer semestre.
+
+-   **Créditos Aprobados Primer Semestre:** Variable entera que muestra
+    los créditos aprobados por el/la estudiante en el primer semestre.
+
+-   **Promedio Primer Semestre:** Variable entera que muestra el
+    promedio ponderado del estudiante en el primer semestre.
+
+-   **Cantidad de Cursos sin Evaluaciones Primer Semestre:** Variable
+    entera que muestra la cantidad de cursos que matriculó el estudiante
+    que no presentan evaluaciones.
+
+-   **Créditos Segundo Semestre:** Variable entera que muestra la
+    cantidad de créditos pre-matriculados en el segundo semestre.
+
+-   **Créditos Matriculados segundo Semestre:** Variable entera que
+    muestra la cantidad de créditos matriculados en el segundo semestre.
+
+-   **Número de Evaluaciones de los Cursos Matriculados en el segundo
+    Semestre:** Variable entera que muestra la cantidad de evaluaciones
+    en los cursos matriculados en el segundo semestre.
+
+-   **Créditos Aprobados segundo Semestre:** Variable entera que muestra
+    los créditos aprobados por el/la estudiante en el segundo semestre.
+
+-   **Promedio segundo Semestre:** Variable entera que muestra el
+    promedio ponderado del estudiante en el segundo semestre.
+
+-   **Cantidad de Cursos sin Evaluaciones segundo Semestre:** Variable
+    entera que muestra la cantidad de cursos que matriculó el estudiante
+    que no presentan evaluaciones.
+
+-   **Tasa de Desempleo:** Variable continua que muestra la tasa de
+    desempleo en porcentaje de la población en estudio.
+
+-   **Tasa de Inflación:** Variable continua que muestra la tasa de
+    inflación en porcentaje de la población en estudio.
+
+-   **PIB:** Variable continua que muestra el valor del Producto Interno
+    Bruto de la localización donde se encuentra la universidad.
+
+-   **Clasificación:** Variable categórica que muestra el estado del
+    estudiante, entre estos se encuentra “deserción”, “matriculado”,
+    “graduado” todo esto medido al final del semestre.
 
 -   **Descripción de los Elementos y como estos se relacionan con la
-    investigación:**
-    \
-    
-    Los diferentes datos de esta tabla como la información del estudiante y de su familia serán importantes para intentar crear el perfil del estudiante desertor y estudiar cómo ciertos factores socioeconómicos y familiares pueden afectar en esta decisión. Los datos de los créditos matriculados, aprobados y la nota serán útiles al estudiar la carga académica soportada por los estudiantes y como la sobrecarga de ésta puede influir en la decisión de deserción. 
+    investigación:**\
+
+    Los diferentes datos de esta tabla como la información del
+    estudiante y de su familia serán importantes para intentar crear el
+    perfil del estudiante desertor y estudiar cómo ciertos factores
+    socioeconómicos y familiares pueden afectar en esta decisión. Los
+    datos de los créditos matriculados, aprobados y la nota serán útiles
+    al estudiar la carga académica soportada por los estudiantes y como
+    la sobrecarga de ésta puede influir en la decisión de deserción.
 
 ### Revisión Bibliográfica
 
@@ -566,24 +650,66 @@ social.\
     regresar a la educación. La investigación subraya la necesidad de
     abordar las desigualdades de género en el ámbito educativo.
 
-3.  **Título:** El factor económico como principal causa de deserción estudiantil universitaria en Centroamérica
-    
+3.  **Título:** El factor económico como principal causa de deserción
+    estudiantil universitaria en Centroamérica
 
 -   **Autor(es):** Marlon Lobos y Judith Rodriguez (@Lobos)
+
 -   **Año:** 2022
--   **Nombre del Tema:**  El factor económico como principal causa del abandono de los estudios en Centroamérica y su impacto en la sociedad.
+
+-   **Nombre del Tema:** El factor económico como principal causa del
+    abandono de los estudios en Centroamérica y su impacto en la
+    sociedad.
 
 -   **Forma de Organizarlo:**
-    -   **Cronológico:**  no se especifica claramente el periodo el cual la investigación observa sin embargo, da a entender que considera la problemática desde aproximadamente 2020 a 2022 
-    -   **Metodológico:** revisión de literatura y análisis de datos empíricos
-    -   **Temático:** deserción estudiantil 
-    -   **Teoría:** deserción estudiantil en la educación superior en centroamérica a causa de factores económicos 
--   **Resumen de una oración:** los factores económicos son responsables de la continuación de estudios superiores
--   **Argumento Central:** se analiza cómo el factor económico limita a los estudiantes de escuela superior y los obliga a tomar decisiones acerca de su permanencia o retiro de las universidades. 
--   **Problemas con el argumento o el tema:** se establece que las dificultades económicas de los estudiantes (imposibilidad de cubrir matrícula, etc) y las condiciones socioeconómicas desfavorables, la falta de oportunidades laborales para satisfacer los costos de estudio y vivienda y también el impacto de la pandemia COVID-19.  
--   **Resumen de un párrafo:** El artículo se propone demostrar que los factores económicos son los más influyentes en la deserción estudiantil a nivel universitario en Centroamérica. Basado en la revisión de estudios independientes en Guatemala, Honduras, El Salvador, Nicaragua y Costa Rica, el autor argumenta que los altos costos de matrícula, materiales, transporte, alimentación y demás gastos necesarios para la educación superior son el principal obstáculo que enfrentan los estudiantes para continuar con su carrera, así como lo es la imposibilidad de estudiar y trabajar simultáneamente. Sin embargo, se destacan otros factores importantes que no son de carácter económico, como la personalidad del estudiante, la cual engloba aspectos como tolerancia a la frustración y autoestima. Asimismo, se determina que los antecedentes familiares en educación son relevantes para el estudiante, pues los parientes con educación superior representan una mayor motivación y un mejor sostén económico para el estudiante, comparado a familias con baja cualificación académica. Por otro lado, se establece que el factor académico o institucional, que incluye aspectos como horarios de clase, metodología de enseñanza y personal docente, también juegan un papel en la trayectoria académica del estudiante. Finalmente, el artículo concluye que, dado el contexto económico de la región, es fundamental abordar estos desafíos para mejorar la retención estudiantil y fomentar el acceso a la educación superior en Centroamérica, pues la deserción también significa la pérdida de un futuro profesional para el país. 
 
+    -   **Cronológico:** no se especifica claramente el periodo el cual
+        la investigación observa sin embargo, da a entender que
+        considera la problemática desde aproximadamente 2020 a 2022
+    -   **Metodológico:** revisión de literatura y análisis de datos
+        empíricos
+    -   **Temático:** deserción estudiantil
+    -   **Teoría:** deserción estudiantil en la educación superior en
+        centroamérica a causa de factores económicos
 
+-   **Resumen de una oración:** los factores económicos son responsables
+    de la continuación de estudios superiores
+
+-   **Argumento Central:** se analiza cómo el factor económico limita a
+    los estudiantes de escuela superior y los obliga a tomar decisiones
+    acerca de su permanencia o retiro de las universidades.
+
+-   **Problemas con el argumento o el tema:** se establece que las
+    dificultades económicas de los estudiantes (imposibilidad de cubrir
+    matrícula, etc) y las condiciones socioeconómicas desfavorables, la
+    falta de oportunidades laborales para satisfacer los costos de
+    estudio y vivienda y también el impacto de la pandemia COVID-19.\
+
+-   **Resumen de un párrafo:** El artículo se propone demostrar que los
+    factores económicos son los más influyentes en la deserción
+    estudiantil a nivel universitario en Centroamérica. Basado en la
+    revisión de estudios independientes en Guatemala, Honduras, El
+    Salvador, Nicaragua y Costa Rica, el autor argumenta que los altos
+    costos de matrícula, materiales, transporte, alimentación y demás
+    gastos necesarios para la educación superior son el principal
+    obstáculo que enfrentan los estudiantes para continuar con su
+    carrera, así como lo es la imposibilidad de estudiar y trabajar
+    simultáneamente. Sin embargo, se destacan otros factores importantes
+    que no son de carácter económico, como la personalidad del
+    estudiante, la cual engloba aspectos como tolerancia a la
+    frustración y autoestima. Asimismo, se determina que los
+    antecedentes familiares en educación son relevantes para el
+    estudiante, pues los parientes con educación superior representan
+    una mayor motivación y un mejor sostén económico para el estudiante,
+    comparado a familias con baja cualificación académica. Por otro
+    lado, se establece que el factor académico o institucional, que
+    incluye aspectos como horarios de clase, metodología de enseñanza y
+    personal docente, también juegan un papel en la trayectoria
+    académica del estudiante. Finalmente, el artículo concluye que, dado
+    el contexto económico de la región, es fundamental abordar estos
+    desafíos para mejorar la retención estudiantil y fomentar el acceso
+    a la educación superior en Centroamérica, pues la deserción también
+    significa la pérdida de un futuro profesional para el país.
 
 ### Construcción de la UVE de Gowin
 
@@ -591,21 +717,68 @@ social.\
 
 #### Teorías o principios
 
--  **La Teoría Ecológica de Urie Bronfenbrenner**
-La teoría ecológica o teoría de los sistemas ecológicos fue desarrollada en 1970 por Urie Bronfenbrenner. Según @urie,  “esta pretende explicar cómo interactúan varios elementos ambientales para influir en el desarrollo de una persona”. Bronfenbrenner considera cinco sistemas ecológicos: el microsistema, macrosistema, exosistema, y el mesosistema. Cada uno influye a su manera en el desarrollo del individuo, donde el microsistema es el más influyente ya que abarca su entorno inmediato; es decir, su familia, escuela, amistades, etc. El macrosistema en cambio, es más ambiental. En este se discuten los factores culturales, el estatus socioeconómico, origen etnico, etc; en fin, explora los factores ambientales. Sin embargo, todos estos componentes están influenciados por fuerzas exteriores, lo que se considera el exosistema y además se relacionan entre ellos, dando lugar al mesosistema. 
-
+-   **La Teoría Ecológica de Urie Bronfenbrenner** La teoría ecológica o
+    teoría de los sistemas ecológicos fue desarrollada en 1970 por Urie
+    Bronfenbrenner. Según @urie, “esta pretende explicar cómo
+    interactúan varios elementos ambientales para influir en el
+    desarrollo de una persona”. Bronfenbrenner considera cinco sistemas
+    ecológicos: el microsistema, macrosistema, exosistema, y el
+    mesosistema. Cada uno influye a su manera en el desarrollo del
+    individuo, donde el microsistema es el más influyente ya que abarca
+    su entorno inmediato; es decir, su familia, escuela, amistades, etc.
+    El macrosistema en cambio, es más ambiental. En este se discuten los
+    factores culturales, el estatus socioeconómico, origen etnico, etc;
+    en fin, explora los factores ambientales. Sin embargo, todos estos
+    componentes están influenciados por fuerzas exteriores, lo que se
+    considera el exosistema y además se relacionan entre ellos, dando
+    lugar al mesosistema.
 
 -   **Modelo de condicionamiento del fracaso escolar de Martínez-Otero**
-El modelo de condicionantes del fracaso escolar de Martinez-Otero fue primeramente en 1997 quien define el fracaso escolar como: “Fracaso escolar es toda insuficiencia detectada en los resultados alcanzados por los alumnos en los centros de enseñanza respecto de los objetivos propuestos para su nivel, edad y desarrollo, y que habitualmente se expresa a través de calificaciones escolares negativas.(@martinez-otero)”. Explica que lo anterior se debe a ciertos condicionantes sean estos el ámbito personal, ámbito familiar y ámbito escolar-social. El personal incluye la motivación, hábitos de estudio, la personalidad y la afectividad. El ámbito familiar y ámbito escolar-social consideran las relaciones sociales del individuo uno el clima familiar y el otro el clima social escolar respectivamente. 
-
-
+    El modelo de condicionantes del fracaso escolar de Martinez-Otero
+    fue primeramente en 1997 quien define el fracaso escolar como:
+    “Fracaso escolar es toda insuficiencia detectada en los resultados
+    alcanzados por los alumnos en los centros de enseñanza respecto de
+    los objetivos propuestos para su nivel, edad y desarrollo, y que
+    habitualmente se expresa a través de calificaciones escolares
+    negativas.(@martinez-otero)”. Explica que lo anterior se debe a
+    ciertos condicionantes sean estos el ámbito personal, ámbito
+    familiar y ámbito escolar-social. El personal incluye la motivación,
+    hábitos de estudio, la personalidad y la afectividad. El ámbito
+    familiar y ámbito escolar-social consideran las relaciones sociales
+    del individuo uno el clima familiar y el otro el clima social
+    escolar respectivamente.
 
 ### Parte de Escritura
 
 #### Pregunta de investigación seleccionada
-¿De qué manera interactúan los factores sociales, económicos, académicos y familiares en la trayectoria académica de un estudiante? 
+
+¿De qué manera interactúan los factores sociales, económicos, académicos
+y familiares en la trayectoria académica de un estudiante?
 
 #### Resumen
 
+La educación superior en la sociedad es de gran importancia, sin embargo
+muchas personas no logran completar sus estudios universitarios. Las
+razones por la cuales toman la decisión de desertar no son cortas de
+complejas, no obstante, se quiere determinar cómo interactúan ciertos
+factores para la toma de tal decisión; sea esta continuar persiguiendo
+sus estudios universitarios o abandonar este camino.\
+\
+Las personas están condicionadas por su alrededor ya sea la manera en
+que interactúan con otros, su situación económica, su contexto cultural
+y su familia. De hecho, según La teoría Ecológica de Urie Bronfenbrenner
+(@urie), la cual describe esta relación en términos de cinco sistemas
+ecológicos, todo esto afecta en la capacidad de tomar decisiones
+individuales. La misma relación entre estos factores y la academia es
+considerada por Martínez-Otero en la construcción de su modelo de
+condicionantes del fracaso escolar. En este trabajo, define el fracaso
+escolar como la incapacidad de alcanzar ciertas metas académicamente que
+se suponen deben ser alcanzadas para cierto nivel. Y, justifica este
+suceso a base de tres condicionantes (@martinez_otero). Otros trabajos
+similares también señalan la interconexión de estos factores y sus
+afectaciones en los estudios de las personas. Un ejemplo es el trabajo
+titulado Los factores que influyen en la calidad de la educación
+(@Yao_2016).\
+\
 
 ## Referencias

@@ -816,5 +816,39 @@ institución, el apoyo brindado, recursos y por último los factores
 contextuales que caracterizan los aspectos externos al entorno
 estudiantil como la familia o trabajo.\
 \
+Existe material bibliográfico previo que se asemeja al objetivo y la
+estructura que se pretende seguir en esta investigación. Uno de ellos es
+el estudio de (@factores_desempeño) sobre los factores que afectan el
+desempeño académico de los estudiantes universitarios en Rioverde, San
+Luis de Potosí, México. El estudio realizó una recopilación teórica de
+otros trabajos relevantes para establecer cuáles serían los factores
+pertinentes, que en este caso fueron los fisiológicos, pedagógicos,
+psicológicos y sociológicos, para luego crear un instrumento de encuesta
+que fue aplicado a una muestra de 365 individuos. Los datos obtenidos se
+analizaron estadísticamente mediante un método de regresión lineal que
+toma como variable dependiente el promedio de calificaciones y como
+variables independientes los varios factores escogidos.\
+\
+La investigación de (@una_heredia) sigue una disposición similar,
+conformada por revisión bibliográfica previa para la identificación de
+variables relevantes, seguida por la elaboración y aplicación de una
+encuesta con el objetivo de efectuar un análisis estadístico posterior
+de los datos recopilados, en este caso dentro del contexto de la
+Universidad de Costa Rica. Sin embargo, esta investigación es de todavía
+mayor importancia porque utiliza un volumen y diversidad de variables
+más cercana a las que contempla la base de datos elegida. Por lo tanto,
+estas investigaciones sientan un precedente útil para los fines que se
+persiguen ahora, especialmente en cuanto a la secuencia y los métodos
+más aptos para el análisis de datos, dado que la recolección no será
+necesaria al contar con una base de datos ya existente.\
+\
+Se pretende que el análisis a realizar complemente los estudios que lo
+anteceden y contribuya a la construcción del conocimiento futuro sobre
+el desempeño académico en la educación superior y su relación con
+factores externos. La disminución de la tasa de deserción estudiantil es
+fundamental, por lo que aclarar las principales causas de este fenómeno
+para potencialmente aliviar la problemática es esencial. Finalmente, se
+desea informar al público acerca de la situación actual y por ende
+incitar a la reflexión.
 
 ## Referencias

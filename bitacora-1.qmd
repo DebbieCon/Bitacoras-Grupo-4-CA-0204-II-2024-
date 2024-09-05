@@ -774,7 +774,7 @@ considerada por Martínez-Otero en la construcción de su modelo de
 condicionantes del fracaso escolar. En este trabajo, define el fracaso
 escolar como la incapacidad de alcanzar ciertas metas académicamente que
 se suponen deben ser alcanzadas para cierto nivel. Y, justifica este
-suceso a base de tres condicionantes @martinez-otero. Otros trabajos
+suceso a base de tres condicionantes (@martinez-otero). Otros trabajos
 similares también señalan la interconexión de estos factores y sus
 afectaciones en los estudios de las personas. Un ejemplo es el trabajo
 titulado Los factores que influyen en la calidad de la educación por

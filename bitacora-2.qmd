@@ -1,0 +1,8 @@
+---
+title: "bitacora-2"
+editor: visual
+---
+
+#Bitácora 2
+
+![](images/clipboard-3298335813.png)

@@ -7,7 +7,7 @@ install.packages("janitor")
 library(janitor)
 install.packages("hrbrthemes")
 library(hrbrthemes)
-df <- read_csv2("C:/Users/andre/OneDrive/Escritorio/UCR-TEC/2024/Segundo Semestre 2024/Herramientas de Ciencia de Datos I/base_datos/universidades_europeas.csv")
+df <- read_csv2("base_datos/universidades_europeas.csv")
 view(df)
 df <- df %>% clean_names()
 glimpse(df)
@@ -33,7 +33,7 @@ view(df)
 
 df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
 df$marital_status <- as.factor(df$marital_status)
-glimpse(Base)
+glimpse(df)
 
 
 df <- df %>%
@@ -127,4 +127,6 @@ df %>%count(international, target) %>%
   theme(legend.position = "bottom", 
         panel.border = element_rect(colour = "black", fill = NA),
         plot.title = element_text(hjust = 0.5))
+
+
 

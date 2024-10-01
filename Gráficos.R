@@ -10,7 +10,7 @@ library(readr)
 install.packages("hrbrthemes")
 library(hrbrthemes)
 
-df <- read_csv2("C:/Users/andre/OneDrive/Escritorio/UCR-TEC/2024/Segundo Semestre 2024/Herramientas de Ciencia de Datos I/base_datos/universidades_europeas.csv")
+df <- read_csv2("base_datos/universidades_europeas.csv")
 view(df)
 df <- df %>% clean_names()
 glimpse(df)
@@ -38,7 +38,7 @@ df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grad
 df$marital_status <- as.factor(df$marital_status)
 glimpse(Base)
 class(df)
-write_csv(Base, "universidades_europeas.csv")
+
 
 
 df <- df %>%

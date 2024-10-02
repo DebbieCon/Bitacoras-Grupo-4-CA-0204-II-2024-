@@ -64,17 +64,19 @@ df <- df %>%
   ))
 view(df)
 
-df %>%count(debtor, target) %>% 
-  ggplot(aes(x=target, y = n, fill = debtor))+
+df %>% 
+  mutate(debtor = ifelse(debtor == 1, "Si", "No")) %>% 
+  count(debtor, target) %>% 
+  ggplot(aes(x = target, y = n, fill = debtor)) + 
   geom_col(position = "dodge") + 
-  theme_classic()+
+  theme_classic() + 
   labs(
     x = "Tipo de Estudiante",
     y = "Frecuencia",
     fill = "Deudor",
     title = "Deudor o no Deudor según Categoría del Estudiante"
-  ) +
-  scale_fill_manual(values = c("Si" = "blue","No"="red"))+
+  ) + 
+  scale_fill_manual(values = c("Si" = "blue", "No" = "red")) + 
   theme(legend.position = "bottom", 
         panel.border = element_rect(colour = "black", fill = NA),
         plot.title = element_text(hjust = 0.5))
@@ -409,19 +411,27 @@ df <- df %>%
 
 df$curricular_units_1st_sem_grade <-
   ifelse(df$curricular_units_1st_sem_grade>25, NA, df$curricular_units_1st_sem_grade)
+df_gr <- df %>% 
+  filter(nacionality != "Otros" & !is.na(nacionality))
 
-df_gr %>% mutate(
-  nacionality = fct_lump(nacionality, n = 3.5)
-) %>% mutate(nacionality = fct_collapse(nacionality, "Otros" = c(NA, "Other"))) %>% 
-  mutate(nacionality = fct_reorder(nacionality, curricular_units_1st_sem_grade)) %>% group_by(nacionality) %>% 
+
+df_gr %>% 
+  mutate(nacionality = as.factor(nacionality)) %>% 
+  mutate(nacionality = fct_lump(nacionality, n = 3)) %>% 
+  mutate(nacionality = fct_collapse(nacionality, "Otros" = c(NA, "Other"))) %>% 
+  mutate(nacionality = fct_reorder(nacionality, curricular_units_1st_sem_grade)) %>% 
+  group_by(nacionality) %>% 
   ggplot(aes(x=nacionality,y=curricular_units_1st_sem_grade, fill = nacionality)) + 
-  geom_boxplot(outlier.color = "red", outlier.size = 2) + labs(
+  geom_boxplot(outlier.color = "red", outlier.size = 2) + 
+  labs(
     title = "Promedio del Primer Semestre en \nFunción de la Nacionalidad",
     x = "Nacionalidad",
     fill = "Nacionalidad",
     y = "Promedio Ponderado"
-  ) + theme_minimal() + 
+  ) + 
+  theme_minimal() + 
   theme(plot.title=element_text(hjust=0.5),legend.position="none",axis.text.x = element_text(angle=90,hjust=1))
+
 
 tabla_1 <- df %>% 
   group_by(nacionality) %>% 

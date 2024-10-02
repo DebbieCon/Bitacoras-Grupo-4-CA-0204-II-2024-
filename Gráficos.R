@@ -367,7 +367,7 @@ df_porcentajes<-data.frame(
 )
 
 ggplot(df_porcentajes,aes(fill = target, values=porcentaje))+
-  geom_waffle(na.rm=TRUE, n_rows = 5, flip=FALSE, size=0.33,colour="white")+
+  geom_waffle(na.rm=TRUE, n_rows = 5, flip=FALSE,colour="white")+
   facet_wrap(~reorder(target, porcentaje), ncol=1, strip.position = "left")+
   coord_equal()+ guides(fill='none')+
   labs(

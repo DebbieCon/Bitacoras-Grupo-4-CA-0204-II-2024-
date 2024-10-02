@@ -1,6 +1,19 @@
 ---
 title: "bitacora-2"
-editor: visual
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-#Bitácora 2
+#Bitácora 2: Planificación y Análisis
+## Parte de planificación
+### Ordenamiento de la literatura 
+
+## Enlaces de la literatura 
+
+## Análisis estadísticos
+### Análisis descriptivo 
+### Propuesta métodologica
+### Construcción de fichas de resultados
+
+

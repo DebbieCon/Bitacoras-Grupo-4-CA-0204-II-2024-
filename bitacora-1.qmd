@@ -10,17 +10,13 @@ editor:
 
 ### Historial de Commits
 
-![Log_1](/Images/log1.jpg)
-![Log_2](/Images/log2.jpg)
-![Log_3](/Images/log3.jpg)
-![Log_4](/Images/log4.jpg)
-![Log_5](/Images/log5.jpg)
-![Log_6](/Images/log6.jpg)
+![Log_1](/Images/log1.jpg) ![Log_2](/Images/log2.jpg)
+![Log_3](/Images/log3.jpg) ![Log_4](/Images/log4.jpg)
+![Log_5](/Images/log5.jpg) ![Log_6](/Images/log6.jpg)
 
 ### Sección de Cambios
 
-![clif_1](/Images/cliff1.jpg)
-![clif_2](/Images/cliff2.jpg)
+![clif_1](/Images/cliff1.jpg) ![clif_2](/Images/cliff2.jpg)
 
 ### Resumen de Commits
 
@@ -75,9 +71,9 @@ abandonarla o graduarse.
     circunstancias relacionadas con el ingreso familiar del estudiante y
     cómo puede influir este en la capacidad de continuar con los
     estudios. Bajo este contexto se tratan temas como el costo de
-    estudio, la matrícula, créditos, transporte, vivienda , así como
-    la posibilidad y acceso a una beca universitaria que exonere parcial
-    o totalmente el pago de matrícula y cubra gastos de reubicación o
+    estudio, la matrícula, créditos, transporte, vivienda , así como la
+    posibilidad y acceso a una beca universitaria que exonere parcial o
+    totalmente el pago de matrícula y cubra gastos de reubicación o
     transporte.
 
 #### Identificación de Tensiones
@@ -127,7 +123,7 @@ que influyen sobre los estudiantes universitarios a la hora de decidir
 continuar o terminar con sus estudios?**\
 \
 **Contraargumentos**\
-*Lógica:\ * Existen diversas razones por las cuales una persona toma la
+*Lógica:* Existen diversas razones por las cuales una persona toma la
 decisión de dejar o continuar sus estudios. Los factores sociales,
 económicos, académicos y familiares no solo se conectan entre sí, por lo
 que una determinación clara de la causa podría ser difícil de obtener
@@ -135,7 +131,7 @@ pero también dependen del contexto cultural de cada persona. Asimismo,
 algunos de estos aspectos son difíciles de cuantificar, especialmente la
 parte familiar.\
 \
-*Ética:\ * Es necesario que los datos utilizados sean un reflejo verdadero
+*Ética:* Es necesario que los datos utilizados sean un reflejo verdadero
 de los estudiantes universitarios, sin embargo al lidiar con información
 tan personal como lo son los factores sociales, económicos y familiares
 de cada uno de los individuos no se puede omitir la posibilidad de que
@@ -144,27 +140,27 @@ detrás de ellos. Además, que la verificación de estos requeriría en
 algunos casos acceso a la información sobre toda la familia, no solo el
 estudiante.\
 \
-*Emocional: \ * Los resultados de esta investigación pueden jugar un papel
+*Emocional:* Los resultados de esta investigación pueden jugar un papel
 en la toma de decisiones de aquellos estudiantes que se encuentran con
 duda sobre la continuación de sus estudios. Si se ven reflejados bajo
 los factores que se atribuyen como los que generan una cantidad más
 grande de abandono escolar, es posible que se desmotivan a continuar.\
 \
 **Argumentos**\
-*Lógica: \ * El uso de modelos, teorías y otros proyectos de esta índole
+*Lógica:* El uso de modelos, teorías y otros proyectos de esta índole
 serían de gran ayuda a la hora de definir los factores deseados y sus
 consecuencias. De igual manera, es posible delimitar y agrupar los
 estudiantes con base a las características que comparten principalmente
 aquellas más contextuales. Al separar la muestra y el análisis de cada
 subgrupo, las conclusiones que se desarrollan serían mucho más exactas.\
 \
-*Ética: \ * La recolección de información fiable, junto con la revisión de
+*Ética:* La recolección de información fiable, junto con la revisión de
 estos datos a través de otras fuentes y el análisis crítico de los
 mismos, garantiza que el estudio se realice con precisión. De esta
 manera, se busca asegurar la calidad de la información y la
 aplicabilidad de las conclusiones.\
 \
-*Emocional: \ * Un análisis de este tipo permitiría observar qué factores
+*Emocional:* Un análisis de este tipo permitiría observar qué factores
 necesitan de reformas para el beneficio de los estudiantes y así
 aumentar la cantidad de personas que continúan sus estudios y finalmente
 logran graduarse. A grandes rasgos, el graduarse mejora la calidad de
@@ -179,8 +175,8 @@ económicos, académicos y familiares que influyen sobre los estudiantes
 universitarios a la hora de decidir continuar o terminar con sus
 estudios requiere de una recolección de información fiable que
 represente estudiantes en distintos contextos. Utilizando modelos,
-teorías y proyectos previos como ayuda, se puede analizar propiamente
-la información y brindar resultados confiables. Estos resultados
+teorías y proyectos previos como ayuda, se puede analizar propiamente la
+información y brindar resultados confiables. Estos resultados
 proporcionan una guía hacia posibles reformas educativas y como
 inspiración a aquellos estudiantes en su camino por la universidad.\
 \
@@ -188,34 +184,51 @@ inspiración a aquellos estudiantes en su camino por la universidad.\
 estudiantes que continúan sus estudios o deciden terminar con ellos?**\
 \
 **Contraargumentos**\
-*Lógica: \ * Es una tarea de suma dificultad el modelar un perfil para
+*Lógica:* Es una tarea de suma dificultad el modelar un perfil para
 estudiantes quienes desertan de la educación contra aquellos quienes
 continúan hasta graduarse, esto se debe a que cada estudiante vive una
 realidad distinta creando así una gran diferencia entre los factores
 socioeconómicos, familiares y psicológicos de cada uno. Es esta
 diversidad de factores quienes dificultan la búsqueda de un perfil para
-estas personas. A su vez es discriminatorio generalizar la calidad de vida de
-un grupo de personas y creer que todo aquel en las mismas condiciones
-tendrá el mismo resultado, lo cual en la vida real con distintos casos
-de estudiantes en condiciones precarias contra algunos en condiciones de
-lujo presentan resultados fuera de lo que se creería.\
+estas personas. A su vez es discriminatorio generalizar la calidad de
+vida de un grupo de personas y creer que todo aquel en las mismas
+condiciones tendrá el mismo resultado, lo cual en la vida real con
+distintos casos de estudiantes en condiciones precarias contra algunos
+en condiciones de lujo presentan resultados fuera de lo que se creería.\
 \
-*Ética: \ *  Al tomar en cuenta datos de estudiantes donde la mayoría abandonó sus estudios existe la posibilidad de que se haya escrito cierta información distinta a la realidad. Al tratar con cargas académicas, ingresos, costos de estudios se debe tener información completamente verdadera para así proporcionar un análisis más preciso. Para conseguir una verificación de estos datos se tendría que solicitar a la institución comprobantes de pagos, matrícula y expedientes académicos. \
+*Ética:* Al tomar en cuenta datos de estudiantes donde la mayoría
+abandonó sus estudios existe la posibilidad de que se haya escrito
+cierta información distinta a la realidad. Al tratar con cargas
+académicas, ingresos, costos de estudios se debe tener información
+completamente verdadera para así proporcionar un análisis más preciso.
+Para conseguir una verificación de estos datos se tendría que solicitar
+a la institución comprobantes de pagos, matrícula y expedientes
+académicos.\
 \
-*Emocional:\ * Muchas personas viven en condiciones que los hacen retirarse
-de la educación, el principal de estos según las referencias consultadas
-es el dinero, alrededor del mundo se encuentran miles de personas con
-muy pocos recursos quienes intentan sobrevivir el día a día con lo que
-tienen. Generalizar los rasgos de las personas quienes desertan de la educación es algo que puede desincentivar el aprendizaje y calidad de vida de otros en condiciones parecidas, esto puede repercutir en otros factores más allá de los mencionados en esta investigación. \
+*Emocional:* Muchas personas viven en condiciones que los hacen
+retirarse de la educación, el principal de estos según las referencias
+consultadas es el dinero, alrededor del mundo se encuentran miles de
+personas con muy pocos recursos quienes intentan sobrevivir el día a día
+con lo que tienen. Generalizar los rasgos de las personas quienes
+desertan de la educación es algo que puede desincentivar el aprendizaje
+y calidad de vida de otros en condiciones parecidas, esto puede
+repercutir en otros factores más allá de los mencionados en esta
+investigación.\
 \
 **Argumentos**\
-*Lógica: \ * Existen estudios que han logrado caracterizar a las personas
+*Lógica:* Existen estudios que han logrado caracterizar a las personas
 que tienen mayores probabilidades de desertar la educación debido a los
-factores anteriormente mencionados y también se ha visto como incentivos del
-gobierno o instituciones ayudan al estudiante, por ejemplo,  el
+factores anteriormente mencionados y también se ha visto como incentivos
+del gobierno o instituciones ayudan al estudiante, por ejemplo, el
 otorgamiento de becas socioeconómicas.\
 \
-*Ética: \ * Obtener los datos de fuentes fiables es fundamental para obtener un análisis bastante preciso, esto se consigue con datos publicados por las instituciones de educación superior o una organización que controle todos estos datos. Al analizar información completa del estudiante como datos personales y datos familiares se podría verificar fácilmente la veracidad de la misma ya que son métricas que no recaigan en la subjetividad del estudiante. \
+*Ética:* Obtener los datos de fuentes fiables es fundamental para
+obtener un análisis bastante preciso, esto se consigue con datos
+publicados por las instituciones de educación superior o una
+organización que controle todos estos datos. Al analizar información
+completa del estudiante como datos personales y datos familiares se
+podría verificar fácilmente la veracidad de la misma ya que son métricas
+que no recaigan en la subjetividad del estudiante.\
 \
 *Emocional:* El determinar las características comunes de aquellos
 estudiantes más propensos a abandonar los estudios, especialmente por
@@ -227,7 +240,7 @@ comprender que muchos de los desafíos que enfrentan pueden tener una
 causa sistémica y que no todo se debe a deficiencias personales
 autopercibidas.\
 \
-**Conclusión: \ ** Es posible identificar características comunes entre los
+**Conclusión:** Es posible identificar características comunes entre los
 estudiantes que continúan sus estudios o deciden terminarlos. Sin
 embargo, se deben considerar las limitaciones asociadas con la
 individualidad de las experiencias educativas y los factores externos
@@ -241,19 +254,19 @@ como los problemas sistémicos.\
 académicos y familiares en la trayectoria académica de un estudiante?**\
 \
 **Contraargumentos**\
-*Lógica: \ * Es posible que no exista una correlación lo suficientemente
+*Lógica:* Es posible que no exista una correlación lo suficientemente
 fuerte entre los factores contemplados para afirmar que el rendimiento
 académico se ve afectado por estos. Puede que sea necesario implementar
 un modelo todavía más amplio y complejo que considere atributos
 individuales de los estudiantes, características del sistema educativo
 del que participan, entre otros aspectos.\
 \
-*Ética: \ * Utilizar una base de datos cuya muestra sea muy homogénea
+*Ética:* Utilizar una base de datos cuya muestra sea muy homogénea
 podría resultar en conclusiones sesgadas cuya aplicación sea limitada,
 por lo que es importante garantizar que los datos sean variados y
 representativos de la realidad.\
 \
-*Emocional: \ * Al contemplar únicamente factores objetivos y materiales
+*Emocional:* Al contemplar únicamente factores objetivos y materiales
 sobre el entorno del estudiante, se ignora el impacto de aspectos más
 subjetivos y personales de cada individuo, como los hábitos de estudio y
 la disciplina, por ejemplo. Por lo tanto, el modelo resultante podría
@@ -262,18 +275,18 @@ factores fuera del control del estudiante, cuando es claro que también
 existen aspectos de responsabilidad individual.\
 \
 **Argumentos**\
-*Lógica: \ * Al considerar la gran mayoría de los factores ajenos al
+*Lógica:* Al considerar la gran mayoría de los factores ajenos al
 estudiante que pueden influir sobre su rendimiento académico y
 utilizando un método que logre incorporar todas estas variables se
 podría obtener un modelo integral que explique la relación entre estos.\
 \
-*Ética: \ *   A través del uso de datos sobre factores que sean objetivos y
+*Ética:* A través del uso de datos sobre factores que sean objetivos y
 fácilmente cuantificables o categorizables, como edad y calificaciones,
 se minimiza la posibilidad de obtener resultados prejuiciosos que estén
 basados en conceptos subjetivos y más difíciles de medir, por ejemplo la
 inteligencia.\
 \
-*Emocional: \ * La identificación de los factores externos al estudiante
+*Emocional:* La identificación de los factores externos al estudiante
 que más afectan su rendimiento académico podría ofrecer información
 relevante para la elaboración de estrategias que contribuyan a
 oportunidades educativas más equitativas, especialmente para los grupos
@@ -298,40 +311,40 @@ rendimiento académico de un estudiante según sus circunstancias.\
 continuar con su carrera o desertar?**\
 \
 **Contraargumentos**\
-*Lógica: \ * Cada estudiante es distinto y toma decisiones no siempre
+*Lógica:* Cada estudiante es distinto y toma decisiones no siempre
 racionales por lo que definir la relación entre los antecedentes del
 estudiante en el ámbito familiar, social, académico y económico puede
 sesgar los resultados. Además, hay más factores que contribuyen a una
 decisión de este tipo, por ejemplo el área emocional, la cual no se está
 considerando.\
 \
-*Ética: \ * Investigar sobre la relación de los antecedentes de un
+*Ética:* Investigar sobre la relación de los antecedentes de un
 estudiante en el ámbito familiar, social, académico y económico
 involucra acceso a información privada y sensible lo que prueba ser un
 reto al verificar la veracidad de los mismos y su manejo de forma
 discreta.\
 \
-*Emocional: \ * Los resultados de una investigación de este tipo, abre la
+*Emocional:* Los resultados de una investigación de este tipo, abre la
 puerta para que se den casos de estigmatización y discriminación. Estos
 hallazgos pueden ser malinterpretados y propiciar estereotipos
-negativos, lo que puede incrementar la desigualdad y las emociones negativas
-entre el estudiantado.\
+negativos, lo que puede incrementar la desigualdad y las emociones
+negativas entre el estudiantado.\
 \
 **Argumentos**\
-*Lógica: \ * El uso de modelos estadísticos avanzados junto con los
+*Lógica:* El uso de modelos estadísticos avanzados junto con los
 antecedente de este tema o similares permite abarcar bastantes
 direcciones. Al seleccionar una cantidad limitada de factores pero
 siendo cada uno de estos bastante amplio en su abordaje se minimiza la
 cantidad de aspectos que quedarían por fuera. Todo esto de la mano de
 proyectos realizados anteriormente.\
 \
-*Ética: \ * La obtención de datos desde una fuente de información verídica
+*Ética:* La obtención de datos desde una fuente de información verídica
 y confiable es fundamental para asegurar que la investigación sea
 completa y que los datos sean representativos. Al usar otros recursos
 como revistas, libros, y artículos se puede complementar los faltantes
 de información que se encuentren.\
 \
-*Emocional: \ * Al investigar sobre los factores en las áreas mencionadas
+*Emocional:* Al investigar sobre los factores en las áreas mencionadas
 que afectan a un estudiante en su decisión de continuar o abandonar sus
 estudios, se está contextualizando la realidad y las dificultades que
 estos enfrentan. La interconexión entre estos sectores es esencial para
@@ -340,7 +353,7 @@ enfrentan mayores obstáculos. Este enfoque promueve la generación de
 conocimiento y la movilidad social al ofrecer a los estudiantes las
 herramientas necesarias para continuar con sus estudios.\
 \
-**Conclusión: \ ** Si se quiere relacionar los antecedentes de un
+**Conclusión:** Si se quiere relacionar los antecedentes de un
 estudiante en el ámbito familiar, social, académico y económico y su
 decisión de continuar con su carrera o desertar es necesario considerar
 varios aspectos. Es necesario el uso de modelos estadísticos avanzados y
@@ -348,10 +361,9 @@ proyectos realizados anteriormente para asegurar la completitud de la
 investigación. mientras que su veracidad se atribuye a la recolección de
 datos de fuentes confiables. Esta investigación propone evaluar la
 situación que experimentan los estudiantes universitarios y analizar las
-razones de su posible deserción para ayudar a
-implementar medidas que aplaquen esta situación. Siempre con el
-objetivo de promover la generación de conocimiento y la movilidad
-social.\
+razones de su posible deserción para ayudar a implementar medidas que
+aplaquen esta situación. Siempre con el objetivo de promover la
+generación de conocimiento y la movilidad social.\
 
 ### Argumentación a través de datos
 
@@ -361,7 +373,10 @@ social.\
     universidades europeas desde el 2008 hasta el 2018
 
 -   **Facilidad de Obtener la Información:** Actualmente hay bastante
-    información de distintas instituciones de educación superior acerca del abandono de estudios. Debido a los sistemas automatizados de información que ofrecen las universidades y la creciente cantidad de casos que fomenta el interés público. 
+    información de distintas instituciones de educación superior acerca
+    del abandono de estudios. Debido a los sistemas automatizados de
+    información que ofrecen las universidades y la creciente cantidad de
+    casos que fomenta el interés público.
 
 -   **Población de Estudio:** Estudiantes Universitarios Europeos
 
@@ -512,7 +527,8 @@ social.\
     desempleo en porcentaje de la población en estudio.
 
 -   **Tasa de Inflación:** Variable continua que muestra la tasa de
-    inflación en porcentaje de la localización donde se encuentra la universidad.
+    inflación en porcentaje de la localización donde se encuentra la
+    universidad.
 
 -   **PIB:** Variable continua que muestra el valor del Producto Interno
     Bruto de la localización donde se encuentra la universidad.
@@ -564,13 +580,13 @@ social.\
 -   **Resumen de una oración:** Elaboración de modelo de regresión
     lineal múltiple sobre rendimiento académico según datos de encuesta.
 
--   **Argumento central:** Mediante un modelo de regresión
-    lineal múltiple que tomaba como variable dependiente el rendimiento
+-   **Argumento central:** Mediante un modelo de regresión lineal
+    múltiple que tomaba como variable dependiente el rendimiento
     académico y como variables independientes el género, la beca, el
-    semestre, las materias reprobadas y la frecuencia de uso de diferentes
-    herramientas tecnológicas para el aprendizaje, la autora determinó
-    con certeza que la beca y el uso de ciertas herramientas contribuyen
-    a un mejor rendimiento académico.
+    semestre, las materias reprobadas y la frecuencia de uso de
+    diferentes herramientas tecnológicas para el aprendizaje, la autora
+    determinó con certeza que la beca y el uso de ciertas herramientas
+    contribuyen a un mejor rendimiento académico.
 
 -   **Problemas con el argumento o el tema:** La autora destaca dos
     limitaciones de la investigación: se pudieron haber considerado más
@@ -673,14 +689,14 @@ social.\
     de la continuación de estudios superiores
 
 -   **Argumento Central:** Se analiza cómo el factor económico limita a
-    los estudiantes de educación superior y los obliga a tomar decisiones
-    acerca de su permanencia o retiro de las universidades.
+    los estudiantes de educación superior y los obliga a tomar
+    decisiones acerca de su permanencia o retiro de las universidades.
 
 -   **Problemas con el argumento o el tema:** Se establece que las
-    dificultades son: económicas (imposibilidad de cubrir
-    matrícula, etc), las condiciones socioeconómicas desfavorables, la
-    falta de oportunidades laborales para satisfacer los costos de
-    estudio y vivienda, asi como el impacto de la pandemia de COVID-19.\
+    dificultades son: económicas (imposibilidad de cubrir matrícula,
+    etc), las condiciones socioeconómicas desfavorables, la falta de
+    oportunidades laborales para satisfacer los costos de estudio y
+    vivienda, asi como el impacto de la pandemia de COVID-19.\
 
 -   **Resumen de un párrafo:** El artículo se propone demostrar que los
     factores económicos son los más influyentes en la deserción
@@ -710,8 +726,7 @@ social.\
 
 ### Construcción de la UVE de Gowin
 
-![UVE_Gowin](/Images/UVE_Gowin.png "Figura 1. UVE Heurística") 
-
+![UVE_Gowin](/Images/UVE_Gowin.png "Figura 1. UVE Heurística")
 
 #### Teorías o principios
 
@@ -726,23 +741,24 @@ social.\
     su entorno inmediato; es decir, su familia, escuela, amistades, etc.
     El macrosistema en cambio, es más ambiental. En este se discuten los
     factores culturales, el estatus socioeconómico, origen etnico, etc.
-    Sin embargo, todos estos componentes están influenciados por fuerzas 
-    exteriores, lo que se considera el exosistema y además se relacionan entre ellos,       dando lugar al mesosistema.
+    Sin embargo, todos estos componentes están influenciados por fuerzas
+    exteriores, lo que se considera el exosistema y además se relacionan
+    entre ellos, dando lugar al mesosistema.
 
 -   **Modelo de condicionamiento del fracaso escolar de Martínez-Otero**
     El modelo de condicionantes del fracaso escolar de Martinez-Otero
-    fue primeramente establecido en 1997, donde se define el fracaso escolar como:
-    “Fracaso escolar es toda insuficiencia detectada en los resultados
-    alcanzados por los alumnos en los centros de enseñanza respecto de
-    los objetivos propuestos para su nivel, edad y desarrollo, y que
-    habitualmente se expresa a través de calificaciones escolares
-    negativas" (@martinez-otero). Explica que lo anterior se debe a
-    ciertos condicionantes sean estos el ámbito personal, ámbito
-    familiar y ámbito escolar-social. El personal incluye la motivación,
-    hábitos de estudio, la personalidad y la afectividad. El ámbito
-    familiar y ámbito escolar-social consideran las relaciones sociales
-    del individuo, uno el clima familiar y el otro el clima social
-    escolar respectivamente.
+    fue primeramente establecido en 1997, donde se define el fracaso
+    escolar como: “Fracaso escolar es toda insuficiencia detectada en
+    los resultados alcanzados por los alumnos en los centros de
+    enseñanza respecto de los objetivos propuestos para su nivel, edad y
+    desarrollo, y que habitualmente se expresa a través de
+    calificaciones escolares negativas" (@martinez-otero). Explica que
+    lo anterior se debe a ciertos condicionantes sean estos el ámbito
+    personal, ámbito familiar y ámbito escolar-social. El personal
+    incluye la motivación, hábitos de estudio, la personalidad y la
+    afectividad. El ámbito familiar y ámbito escolar-social consideran
+    las relaciones sociales del individuo, uno el clima familiar y el
+    otro el clima social escolar respectivamente.
 
 ### Parte de Escritura
 
@@ -789,8 +805,8 @@ socioeconómico del estudiante mediante la información de los padres
 (titulación y ocupación), el ingreso que presenta, las deudas
 provenientes por gastos escolares entre muchas otras. En total esta base
 de datos presenta 37 atributos y más de 5000 registros de estudiantes.
-Según @Modelos_Rendimiento y sus modelos predictivos, se logra proyectar el
-efecto de estos factores. Por ejemplo, estos autores mencionan el
+Según @Modelos_Rendimiento y sus modelos predictivos, se logra proyectar
+el efecto de estos factores. Por ejemplo, estos autores mencionan el
 “Modelo de Estrés Familiar” donde se sugiere que las tensiones y
 problemas familiares son uno de los principales motivos por lo que los
 estudiantes abandonan los estudios, este modelo considera variables
@@ -798,16 +814,17 @@ económicas y apoyo familiar que en la mayoría de casos de abandono se
 tienen condiciones malas de economía y un bajo nivel de apoyo familiar
 que repercute psicológicamente en el estudiante.\
 \
-De forma semejante, estos autores presentan varios modelos como el “Modelo de
-Capital Humano” y “Motivación Intrínseca y Extrínseca” los cuales
-también predicen distintos comportamientos estudiantiles. Junto a este se
-tiene el modelo multinivel el cual es vital ya que permite jerarquizar
-distintas variables para así obtener una mayor información sobre el
-impacto de cada una de estas. Este modelo aplicado a este contexto,
-según @Murillo_Torrecilla_2008 permite jerarquizar el problema de los
-estudiantes en sus factores individuales como su motivación, rendimiento
-y aspectos personales, factores del aula como el personal docente,
-metodologías, relaciones, factores de la institución como lo son el apoyo brindado, recursos disponibles y por último, los factores
+De forma semejante, estos autores presentan varios modelos como el
+“Modelo de Capital Humano” y “Motivación Intrínseca y Extrínseca” los
+cuales también predicen distintos comportamientos estudiantiles. Junto a
+este se tiene el modelo multinivel el cual es vital ya que permite
+jerarquizar distintas variables para así obtener una mayor información
+sobre el impacto de cada una de estas. Este modelo aplicado a este
+contexto, según @Murillo_Torrecilla_2008 permite jerarquizar el problema
+de los estudiantes en sus factores individuales como su motivación,
+rendimiento y aspectos personales, factores del aula como el personal
+docente, metodologías, relaciones, factores de la institución como lo
+son el apoyo brindado, recursos disponibles y por último, los factores
 contextuales que caracterizan los aspectos externos al entorno
 estudiantil como la familia o trabajo.\
 \

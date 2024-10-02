@@ -15,6 +15,7 @@ install.packages("babynames")
 library(babynames)
 library(forcats)
 library(waffle)
+library(scales)
 
 df <- reknitrdf <- read_csv2("base_datos/universidades_europeas.csv")
 view(df)
@@ -136,6 +137,7 @@ df %>%count(international, target) %>%
         panel.border = element_rect(colour = "black", fill = NA),
         plot.title = element_text(hjust = 0.5))
 
+#LIMPIEZA DE NIVEL EDUCATIVO PADRES 
 df <- df %>% 
   mutate(mothers_qualification=case_when(
     mothers_qualification== 1 ~ "Educación Secundaria",
@@ -284,8 +286,10 @@ sum_mothers_qualification<-sum_mothers_qualification %>%
 sum_mothers_qualification
 sum_fathers_qualification
 
+#TABLA NIVEL EDUCATIVO-NIVEL EDUCACION HIJOS 
 sum_qualification<-sum_mothers_qualification %>% 
   left_join(sum_fathers_qualification, by="nivel_de_estudios") 
+
 sum_qualification
 
 
@@ -345,17 +349,22 @@ print(target_parents_qualification,n=90)
 
 target_parents_qualification$mothers_qualification <- str_wrap(target_parents_qualification$mothers_qualification, width = 10)
 
+#GRAFICO NIVEL EDUCATIVO PADRES-TARGET
 ggplot(target_parents_qualification, aes(x = mothers_qualification, y = fathers_qualification, fill = count)) + 
   geom_tile() + scale_fill_gradient(low="#AAE48D",
                                     high = "#2B7308",
                                     guide = "colorbar" )+
-  facet_wrap(~ target) + labs(x = "Nivel educativo de la madre", y = "Nivel educativo del padre", fill = "Frecuencia")+theme_bw()
+  facet_wrap(~ target) + labs(x = "Nivel educativo de la madre", y = "Nivel educativo del padre", fill = "Frecuencia")+
+  theme_bw()+theme(
+    axis.text.x = element_text(size = 8)
+  )
 
 
+#GRAFICO PROPORCION DE ESTUDIANTES 
 total_estudiantes<-nrow(df)
-porcentaje_graduados<-(sum(df$target=="Graduado")/total_estudiantes*100)
-porcentaje_matriculados<-(sum(df$target=="Matriculado")/total_estudiantes*100)
-porcentaje_desertores<-(sum(df$target=="Desertor")/total_estudiantes*100)
+porcentaje_graduados<-(sum(df$target=="Graduado")/total_estudiantes)*100
+porcentaje_matriculados<-(sum(df$target=="Matriculado")/total_estudiantes)*100
+porcentaje_desertores<-(sum(df$target=="Desertor")/total_estudiantes)*100
 
 print(porcentaje_matriculados)
 print(porcentaje_desertores)
@@ -366,12 +375,16 @@ df_porcentajes<-data.frame(
   porcentaje=c(porcentaje_graduados,porcentaje_matriculados ,porcentaje_desertores)
 )
 
+
 ggplot(df_porcentajes,aes(fill = target, values=porcentaje))+
   geom_waffle(na.rm=TRUE, n_rows = 5, flip=FALSE,colour="white")+
   facet_wrap(~reorder(target, porcentaje), ncol=1, strip.position = "left")+
   coord_equal()+ guides(fill='none')+
   labs(
     title="Proporción de estudiantes por categoría" )+
-  scale_fill_manual(values = c('#f72585', '#4F0325', '#8BC34A'))
+  scale_fill_manual(values = c('#f72585', '#4F0325', '#8BC34A'))+ scale_x_continuous(labels = function(x) paste0(round(x), "%"))+
+ theme(
+   axis.text.y = element_blank(),
+   axis.ticks.y = element_blank())
 
 

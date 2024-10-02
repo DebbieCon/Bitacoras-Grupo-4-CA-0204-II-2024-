@@ -410,7 +410,10 @@ df <- df %>%
 df$curricular_units_1st_sem_grade <-
   ifelse(df$curricular_units_1st_sem_grade>25, NA, df$curricular_units_1st_sem_grade)
 
-df %>% group_by(nacionality) %>% 
+df_gr %>% mutate(
+  nacionality = fct_lump(nacionality, n = 3.5)
+) %>% mutate(nacionality = fct_collapse(nacionality, "Otros" = c(NA, "Other"))) %>% 
+  mutate(nacionality = fct_reorder(nacionality, curricular_units_1st_sem_grade)) %>% group_by(nacionality) %>% 
   ggplot(aes(x=nacionality,y=curricular_units_1st_sem_grade, fill = nacionality)) + 
   geom_boxplot(outlier.color = "red", outlier.size = 2) + labs(
     title = "Promedio del Primer Semestre en \nFunción de la Nacionalidad",
@@ -419,4 +422,17 @@ df %>% group_by(nacionality) %>%
     y = "Promedio Ponderado"
   ) + theme_minimal() + 
   theme(plot.title=element_text(hjust=0.5),legend.position="none",axis.text.x = element_text(angle=90,hjust=1))
-?theme()
+
+tabla_1 <- df %>% 
+  group_by(nacionality) %>% 
+  summarise(
+    Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+    N = n()
+  ) %>%
+  filter(!is.na(nacionality)) %>%
+  arrange(desc(N))
+
+kable(tabla_1)
+

@@ -73,12 +73,7 @@ view(df)
 |--------|--------------|-----------------|--------|-----|-----------|
 |Temático|Factores que afectan el desempeño académico <br> de los estudiantes de nivel superior|Técnicas de recolección y análisis cuantitativo.|
 Factores asociados al rendimiento académico en estudiantes universitarios desde el nivel socioeconómico: Un estudio en la Universidad de Costa Rica|2013|Guiselle María Garbanzo Vargas|
->>>>>>> 7c9d29cb773dafaa4448c7a4f30aee3c8866fe63
 
-
-
-
-<<<<<<< HEAD
 ```{r}
 df %>%count(debtor, target) %>% 
   ggplot(aes(x=target, y = n, fill = debtor))+
@@ -96,7 +91,6 @@ df %>%count(debtor, target) %>%
         plot.title = element_text(hjust = 0.5))
 ```
 
-=======
 
 ## Enlaces de la literatura
 ### Resumen de las fichas literarias 
@@ -134,4 +128,4 @@ Basándose en literatura sobre la importancia de implementar la tecnología en e
 ### Propuesta métodologica
 
 ### Construcción de fichas de resultados
->>>>>>> 7c9d29cb773dafaa4448c7a4f30aee3c8866fe63
+

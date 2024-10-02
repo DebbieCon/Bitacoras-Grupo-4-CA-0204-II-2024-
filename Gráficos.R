@@ -5,6 +5,8 @@ library(cowplot)
 library(dplyr)
 install.packages("janitor")
 library(janitor)
+library(readr)
+
 install.packages("hrbrthemes")
 library(hrbrthemes)
 df <- read_csv2("base_datos/universidades_europeas.csv")
@@ -34,7 +36,8 @@ view(df)
 df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
 df$marital_status <- as.factor(df$marital_status)
 glimpse(df)
-
+glimpse(Base)
+class(df)
 
 df <- df %>%
   mutate(debtor = case_when(

@@ -129,3 +129,43 @@ df %>%count(international, target) %>%
         plot.title = element_text(hjust = 0.5))
 
 ?geom_boxplot
+
+df <- df %>% 
+  mutate(nacionality = case_when(
+    nacionality == 1 ~ "Portugal",
+    nacionality ==2  ~ "Alemania",
+    nacionality ==3  ~ "España",
+    nacionality ==4  ~ "Italia",
+    nacionality ==5  ~ "Países Bajos",
+    nacionality ==6  ~ "Inglaterra",
+    nacionality ==7  ~ "Lituania",
+    nacionality ==8  ~ "Angola",
+    nacionality ==9  ~ "Cabo Verde",
+    nacionality ==10  ~ "Guinea",
+    nacionality ==11  ~ "Mozambique",
+    nacionality ==12  ~ "Santo Tomé",
+    nacionality ==13  ~ "Turquía",
+    nacionality ==14  ~ "Brasil",
+    nacionality ==15  ~ "Rumania",
+    nacionality ==16  ~ "Maldovia",
+    nacionality ==17  ~ "México",
+    nacionality ==18  ~ "Ucrania",
+    nacionality ==19  ~ "Rusia",
+    nacionality ==20  ~ "Cuba",
+    nacionality ==21  ~ "Colombia",
+    TRUE ~ "Otros"
+  ))
+
+df$curricular_units_1st_sem_grade <-
+  ifelse(df$curricular_units_1st_sem_grade>25, NA, df$curricular_units_1st_sem_grade)
+
+df %>% group_by(nacionality) %>% 
+  ggplot(aes(x=nacionality,y=curricular_units_1st_sem_grade, fill = nacionality)) + 
+  geom_boxplot(outlier.color = "red", outlier.size = 2) + labs(
+    title = "Promedio del Primer Semestre en \nFunción de la Nacionalidad",
+    x = "Nacionalidad",
+    fill = "Nacionalidad",
+    y = "Promedio Ponderado"
+  ) + theme_minimal() + 
+  theme(plot.title=element_text(hjust=0.5),legend.position="none",axis.text.x = element_text(angle=90,hjust=1))
+?theme()

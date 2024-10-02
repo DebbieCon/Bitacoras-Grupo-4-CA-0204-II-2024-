@@ -141,7 +141,6 @@ df %>%count(international, target) %>%
         panel.border = element_rect(colour = "black", fill = NA),
         plot.title = element_text(hjust = 0.5))
 
-<<<<<<< HEAD
 df <- df %>% 
   mutate(mothers_qualification=case_when(
     mothers_qualification== 1 ~ "Educación Secundaria",
@@ -373,7 +372,7 @@ df_porcentajes<-data.frame(
 )
 
 ggplot(df_porcentajes,aes(fill = target, values=porcentaje))+
-  geom_waffle(na.rm=TRUE, n_rows = 5, flip=FALSE, size=0.33,colour="white")+
+  geom_waffle(na.rm=TRUE, n_rows = 5, flip=FALSE,colour="white")+
   facet_wrap(~reorder(target, porcentaje), ncol=1, strip.position = "left")+
   coord_equal()+ guides(fill='none')+
   labs(

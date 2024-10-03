@@ -261,19 +261,19 @@ planificada.\
 
 ### Análisis descriptivo
 
-####Tabla de nivel de estudios del padre y de la madre 
+#### Tabla de nivel de estudios del padre y de la madre 
 Estas variables son importantes para el objetivo en el área de los factores económicos y sociales. Un nivel educativo más alto tiende a implicar un nivel socioeconómico tan bien más alto, por lo que dado la literatura elegida ha mostrado que es uno de los factores determinantes al estudiante elegir si continuar con su carrera o no. Del mismo modo, de manera más social que los padres tengan un nivel educativo mayor podría actuar como motivación a los hijos en su travesía educativa. Así como el apoyo a seguir por el camino de los estudios; un apoyo tanto económico como motivacional.
 
 
 Esta tabla muestra el nivel de estudios resumidos en 8 categorías, mostrando la completitud o no de cada nivel educativo más si se desconoce, si ha recibido cursos complementarios y si no saben leer y escribir. Para cada de estas categorías enumera la cantidad de estudiantes cuyos padres tienen este nivel educativo
 
-#####Tabla de estudiante por nacionalidad  y nota del primer semestre 
+#### Tabla de estudiante por nacionalidad  y nota del primer semestre 
 Las variables de nacionalidad y nota del primer semestre son importantes para la presente investigación dado que un posible factor que afecta la decisión de permanecer en la universidad es el ser un estudiante internacional o nacional y la nota del primer semestre. Esto dado que si un estudiante internacional puede tener problemas para adaptarse a su nuevo hogar y cuenta con menor apoyo de sus familia y amigos. Lo que puede afectar sus notas. La manera en que cada estudiante se adapta es esencial en determinar si continúa en sus estudios o no. Una nota más baja tiende a relacionarse con desmotivación mientras que una alta muestra motivación y una buena adaptabilidad. 
 
 
 La presente tabla muestra la nacionalidad, la media, la mediana y la desviación estándar. De estas variables la nacionalidad es la que está presente en la base de datos, las demás fueron creadas para la mejor visualización de los datos. 
 
-####Tabla del estado del estudiante y sus notas de del primer y segundo semestre
+#### Tabla del estado del estudiante y sus notas de del primer y segundo semestre
 Las variables elegidas para esta tabla se relacionan con el objetivo dado que uno de los factores a investigar es visualizar la trayectoria académica del estudiante. Se quiere analizar si aquellos estudiantes con mejor nota durante el primer año de universidad son más frecuentes a terminar su carrera o no o si esta relación entre variables no implica nada en la estudia de un estudiante o no. 
 Las variables con las que cuenta la tabla son la variable “Target” la cual indica el estado del estudiante en términos de ser graduado, desertor y estar matriculado en el centro educativo.Las otras dos variables son el promedio del primer semestre y del segundo, ambas proporcionadas por la base de datos. Además, se realizó el cálculo de la desviación estándar tanto para el primer semestre como para el segundo.   
 
@@ -283,36 +283,41 @@ Las variables con las que cuenta la tabla son la variable “Target” la cual i
 
 ### Construcción de fichas de resultados
 
-1. *Nombre de su hallazgo/resultado:*
+1. Gráfica 1\
+- *Nombre de su hallazgo/resultado:*
 Relación entre la completitud de los estudios superiores de ambos padres y la permanencia del estudiante en la carrera \
 - *Resumen en una oración:* La diferencia entre aquellos estudiantes que deciden desertar y aquellos graduados cuyos padres ambos poseen títulos universitarios es muy poca.\
 - *Principal característica:* Se simplificaron los datos en 8 niveles de educación\
--*Problemas o posibles desafíos:*Este hallazgo no es determinante dentro de nuestro objetivo, además dado la gran cantidad de combinaciones entre el nivel educativo del padre y la madre el establecer una única conclusión global se imposibilita.\
--*Resumen en un párrafo:*Al observar el gráfico, se nota que la la cantidad de estudiantes cuyos padres son ambos graduados universitarios entre los desertores y matriculados es muy poca. Esto contradice la suposición que entre mayor es el nivel educativo de los padres, sus hijos van a tener uno igual o mayor. Sin embargo, está  relación a primera vista un poco contradictoria es respaldada por la literatura en el artículo de Landeta et al (2011). Además, este resultado también es observado para aquellos estudiantes cuyos padres (tanto madre como padre) no han completado la educación primaria. Ya que esta combinación es la mas frecuente para ambos desertores y graduados\
+- *Problemas o posibles desafíos:*Este hallazgo no es determinante dentro de nuestro objetivo, además dado la gran cantidad de combinaciones entre el nivel educativo del padre y la madre el establecer una única conclusión global se imposibilita.\
+- *Resumen en un párrafo:*Al observar el gráfico, se nota que la la cantidad de estudiantes cuyos padres son ambos graduados universitarios entre los desertores y matriculados es muy poca. Esto contradice la suposición que entre mayor es el nivel educativo de los padres, sus hijos van a tener uno igual o mayor. Sin embargo, está  relación a primera vista un poco contradictoria es respaldada por la literatura en el artículo de Landeta et al (2011). Además, este resultado también es observado para aquellos estudiantes cuyos padres (tanto madre como padre) no han completado la educación primaria. Ya que esta combinación es la mas frecuente para ambos desertores y graduados\
 
-2. *Nombre de su hallazgo/resultado:* Relación entre cumplimiento de cuotas escolares y permanencia del estudiante en la carrera.\
+2.Gráfica 2 \
+- *Nombre de su hallazgo/resultado:* Relación entre cumplimiento de cuotas escolares y permanencia del estudiante en la carrera.\
 - *Resumen en una oración:* Existe una clara relación entre la deserción y el incumplimiento en el pago de las cuotas escolares.\
--*Principal característica:*El gráfico fue generado a partir de las frecuencias obtenidas de clasificar los estudiantes según su categoría y separarlos con una variable binaria.\
-- *Problemas o posibles desafíos:* Es posible que para estudiantes graduados fuera un requisito estar al día con los pagos de cuotas para concluir sus estudios, por lo que necesariamente todos los estudiantes en esta categoría serían no deudores, es decir, un estudiante no puede ser graduado y deudor. Una situación similar puede ocurrir con estudiantes matriculados. Esto limita la información que se puede extraer de este gráfico.\ 
--*Resumen en un párrafo:* Al plantear un gráfico que muestra si un estudiante es deudor en cuotas escolares según su categoría (desertor, graduado o matriculado) se revela una fuerte tendencia. En los estudiantes graduados, ninguno o casi ninguno es deudor de cuotas escolares, lo cual es esperable dado que ya concluyeron sus estudios. Asimismo, es posible que la puntualidad de los pagos sea un requisito para los estudiantes matriculados. Sin embargo, lo más relevante es que en los estudiantes desertores existe una parte significativa de la población que es deudora, lo que muestra que la imposibilidad de pagar las cuotas escolares por dificultades económicas puede ser un factor de peso en la decisión de abandonar la carrera. Este hallazgo es consistente con Lobos Rivera y Rodríguez Vásquez (2023). \
+- *Principal característica:*El gráfico fue generado a partir de las frecuencias obtenidas de clasificar los estudiantes según su categoría y separarlos con una variable binaria.\
+- *Problemas o posibles desafíos:* Es posible que para estudiantes graduados fuera un requisito estar al día con los pagos de cuotas para concluir sus estudios, por lo que necesariamente todos los estudiantes en esta categoría serían no deudores, es decir, un estudiante no puede ser graduado y deudor. Una situación similar puede ocurrir con estudiantes matriculados. Esto limita la información que se puede extraer de este gráfico.\
+- *Resumen en un párrafo:* Al plantear un gráfico que muestra si un estudiante es deudor en cuotas escolares según su categoría (desertor, graduado o matriculado) se revela una fuerte tendencia. En los estudiantes graduados, ninguno o casi ninguno es deudor de cuotas escolares, lo cual es esperable dado que ya concluyeron sus estudios. Asimismo, es posible que la puntualidad de los pagos sea un requisito para los estudiantes matriculados. Sin embargo, lo más relevante es que en los estudiantes desertores existe una parte significativa de la población que es deudora, lo que muestra que la imposibilidad de pagar las cuotas escolares por dificultades económicas puede ser un factor de peso en la decisión de abandonar la carrera. Este hallazgo es consistente con Lobos Rivera y Rodríguez Vásquez (2023). \
 
-3.*Nombre de su hallazgo/resultado:*Impacto de la obtención de una beca socioeconómica en la permanencia en la universidad \
--*Resumen en una oración:*Los estudiantes con beca socioeconómica se gradúan com mayor frecuencia\ 
--*Principal característica:*Se comparan dos variables categóricas (tipo de estudiante y si posee beca)\
--*Problemas o posibles desafíos:* Si se evalúan otros aspectos de la gráfica, se observa que la cantidad de graduados que no poseen beca es la más alta lo que podría presentar un problema si se llega a querer comprar solo estos dos aspectos.\
--*Resumen en un párrafo:*La gráfica nos indica cómo hay una gran diferencia entre la cantidad de estudiantes que tienen beca y deciden abandonar los estudios en comparación con aquellos que sí tienen beca y se gradúan. Entonces, es posible concluir que la situación económica que enfrenta cada estudiante tiene un gran impacto a la hora de decidir si continuar con su carrera universitaria o no. Esta relación es bastante conocida y ha sido estudiada en títulos como el de Sistemas Ecológicos de Urie Bronfenbrenner. \
+3.Gráfica 3\
+- *Nombre de su hallazgo/resultado:*Impacto de la obtención de una beca socioeconómica en la permanencia en la universidad \
+- *Resumen en una oración:*Los estudiantes con beca socioeconómica se gradúan com mayor frecuencia\
+- *Principal característica:*Se comparan dos variables categóricas (tipo de estudiante y si posee beca)\
+- *Problemas o posibles desafíos:* Si se evalúan otros aspectos de la gráfica, se observa que la cantidad de graduados que no poseen beca es la más alta lo que podría presentar un problema si se llega a querer comprar solo estos dos aspectos.\
+- *Resumen en un párrafo:*La gráfica nos indica cómo hay una gran diferencia entre la cantidad de estudiantes que tienen beca y deciden abandonar los estudios en comparación con aquellos que sí tienen beca y se gradúan. Entonces, es posible concluir que la situación económica que enfrenta cada estudiante tiene un gran impacto a la hora de decidir si continuar con su carrera universitaria o no. Esta relación es bastante conocida y ha sido estudiada en títulos como el de Sistemas Ecológicos de Urie Bronfenbrenner. \
 
-4. *Nombre de su hallazgo/resultado:*Independencia entre el origen del estudiante y la permanencia en la carrera. \
--*Resumen en una oración:* No existe una relación contundente entre la permanencia del estudiante en la carrera y si es internacional.\
--*Principal característica:* El gráfico fue generado a partir de las frecuencias obtenidas de clasificar los estudiantes según su categoría y separarlos con una variable binaria.\
--*Problemas o posibles desafíos:* Agrupar todas las nacionalidades extranjeras en una única categoría enmascara comportamientos particulares de cada una que podrían ser útiles si se estudiaran por separado.\
--*Resumen en un párrafo:* Basado en este gráfico, es válido afirmar que no existe una relación entre si un estudiante es internacional o no y su permanencia en la carrera. Los estudiantes internacionales siguen la misma tendencia general que los estudiantes no internacionales, solo que a una escala mucho menor. Es decir, en ambos grupos existen más graduados que desertores y más desertores que matriculados, por lo que la diferencia entre internacional y no internacional no es relevante. \
+4. Gráfica 4\
+- *Nombre de su hallazgo/resultado:*Independencia entre el origen del estudiante y la permanencia en la carrera. \
+- *Resumen en una oración:* No existe una relación contundente entre la permanencia del estudiante en la carrera y si es internacional.\
+- *Principal característica:* El gráfico fue generado a partir de las frecuencias obtenidas de clasificar los estudiantes según su categoría y separarlos con una variable binaria.\
+- *Problemas o posibles desafíos:* Agrupar todas las nacionalidades extranjeras en una única categoría enmascara comportamientos particulares de cada una que podrían ser útiles si se estudiaran por separado.\
+- *Resumen en un párrafo:* Basado en este gráfico, es válido afirmar que no existe una relación entre si un estudiante es internacional o no y su permanencia en la carrera. Los estudiantes internacionales siguen la misma tendencia general que los estudiantes no internacionales, solo que a una escala mucho menor. Es decir, en ambos grupos existen más graduados que desertores y más desertores que matriculados, por lo que la diferencia entre internacional y no internacional no es relevante. \
 
-5. *Nombre de su hallazgo/resultado:* Relación entre los créditos aprobados en el primer semestre de carrera universitaria y la permanencia en la carrera\
--*Resumen en una oración:* una mayor cantidad de créditos aprobados se asocia con una mayor probabilidad de mantenerse en la carrera y graduarse\
--*Principal característica:* El uso de densidad permite observar las tendencias generales a la vez que minimiza el impacto de datos atípicos.\
--*Problemas o posibles desafíos:* Puede que sea necesario evaluar créditos aprobados contra créditos matriculados, pues la proporción entre estas variables es más representativa del “éxito” en el primer semestre que la cantidad absoluta de créditos aprobados. \
--*Resumen en un párrafo:* Al visualizar la densidad de los créditos aprobados en el primer semestre por categoría de estudiante se evidencian patrones claros sobre el impacto de las primeras evaluaciones universitarias en el estudiante. Primero, los estudiantes con pocos créditos aprobados en el primer semestre son más propensos a ser desertores. De hecho, la mayor densidad de desertores ocurre cuando no se aprobó ningún crédito. Por otro lado, la máxima densidad de estudiantes graduados se da en un valor de créditos aprobados más elevado. Esto insinúa que existe una relación positiva entre créditos aprobados en primer semestre y la posibilidad de graduarse. Por lo tanto, las primeras experiencias con la evaluación universitaria son importantes para las decisiones del estudiante. \
+5. Gráfica 5\
+- *Nombre de su hallazgo/resultado:* Relación entre los créditos aprobados en el primer semestre de carrera universitaria y la permanencia en la carrera\
+- *Resumen en una oración:* una mayor cantidad de créditos aprobados se asocia con una mayor probabilidad de mantenerse en la carrera y graduarse\
+- *Principal característica:* El uso de densidad permite observar las tendencias generales a la vez que minimiza el impacto de datos atípicos.\
+- *Problemas o posibles desafíos:* Puede que sea necesario evaluar créditos aprobados contra créditos matriculados, pues la proporción entre estas variables es más representativa del “éxito” en el primer semestre que la cantidad absoluta de créditos aprobados. \
+- *Resumen en un párrafo:* Al visualizar la densidad de los créditos aprobados en el primer semestre por categoría de estudiante se evidencian patrones claros sobre el impacto de las primeras evaluaciones universitarias en el estudiante. Primero, los estudiantes con pocos créditos aprobados en el primer semestre son más propensos a ser desertores. De hecho, la mayor densidad de desertores ocurre cuando no se aprobó ningún crédito. Por otro lado, la máxima densidad de estudiantes graduados se da en un valor de créditos aprobados más elevado. Esto insinúa que existe una relación positiva entre créditos aprobados en primer semestre y la posibilidad de graduarse. Por lo tanto, las primeras experiencias con la evaluación universitaria son importantes para las decisiones del estudiante. \
 
 
 

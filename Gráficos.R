@@ -1,24 +1,19 @@
-install.packages("tidyverse")
 library(tidyverse)
-install.packages("cowplot")
 library(cowplot)
 library(dplyr)
-install.packages("janitor")
 library(janitor)
 library(readr)
 library(ggplot2)
-install.packages("hrbrthemes")
 library(hrbrthemes)
 library(stringr)
 library(knitr)
-install.packages("babynames")
 library(babynames)
 library(forcats)
 library(waffle)
 library(scales)
+library(rmarkdown)
 
 df <- reknitrdf <- read_csv2("base_datos/universidades_europeas.csv")
-view(df)
 df <- df %>% clean_names()
 glimpse(df)
 
@@ -39,10 +34,10 @@ df <- df %>%
     daytime_evening_attendance == 1 ~ "Mañana",
     TRUE ~ NA
   ))
-view(df)
 
 df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
 df$marital_status <- as.factor(df$marital_status)
+
 
 df <- df %>%
   mutate(debtor = case_when(
@@ -58,7 +53,29 @@ df <- df %>%
     target == "Graduate" ~ "Graduado",
     TRUE ~ NA
   ))
-view(df)
+
+
+df <- df %>%
+  mutate(scholarship_holder = case_when(
+    scholarship_holder == 0 ~ "No",
+    scholarship_holder == 1 ~ "Si",
+    TRUE ~ NA
+  ))
+
+df <- df %>%
+  mutate(tuition_fees_up_to_date = case_when(
+    tuition_fees_up_to_date == 0 ~ "No",
+    tuition_fees_up_to_date == 1 ~ "Si",
+    TRUE ~ NA
+  ))
+
+df <- df %>%
+  mutate(international = case_when(
+    international == 0 ~ "No",
+    international == 1 ~ "Si",
+    TRUE ~ NA
+  ))
+
 
 df %>%count(debtor, target) %>% 
   ggplot(aes(x=target, y = n, fill = debtor))+
@@ -291,7 +308,7 @@ sum_qualification<-sum_mothers_qualification %>%
   left_join(sum_fathers_qualification, by="nivel_de_estudios") 
 
 sum_qualification
-
+kable(sum_qualification)
 
 
 target_parents_qualification<-df %>% 
@@ -356,7 +373,7 @@ ggplot(target_parents_qualification, aes(x = mothers_qualification, y = fathers_
                                     guide = "colorbar" )+
   facet_wrap(~ target) + labs(x = "Nivel educativo de la madre", y = "Nivel educativo del padre", fill = "Frecuencia")+
   theme_bw()+theme(
-    axis.text.x = element_text(size = 8)
+    axis.text.x = element_text(size = 7)
   )
 
 
@@ -376,15 +393,58 @@ df_porcentajes<-data.frame(
 )
 
 
-ggplot(df_porcentajes,aes(fill = target, values=porcentaje))+
-  geom_waffle(na.rm=TRUE, n_rows = 5, flip=FALSE,colour="white")+
-  facet_wrap(~reorder(target, porcentaje), ncol=1, strip.position = "left")+
-  coord_equal()+ guides(fill='none')+
-  labs(
-    title="Proporción de estudiantes por categoría" )+
-  scale_fill_manual(values = c('#f72585', '#4F0325', '#8BC34A'))+ scale_x_continuous(labels = function(x) paste0(round(x), "%"))+
- theme(
-   axis.text.y = element_blank(),
-   axis.ticks.y = element_blank())
+ggplot(df_porcentajes, aes(x=target, fill = porcentaje))+ geom_bar()+
+  labs(x="Estado", y="Porcentaje", title = "Porcentaje de Estudiantes por Estado")+
+  theme_minimal()
 
+#ggplot(df_porcentajes,aes(filtargetggplot(df_porcentajes,aes(filporcentajeggplot(df_porcentajes,aes(fill = target, values=porcentaje))+
+  ##geom_waffle(na.rm=TRUE, n_rows = 5, flip=FALSE,colour="white")+
+  #facet_wrap(~reorder(target, porcentaje), ncol=1, strip.position = "left")+
+  #coord_equal()+ guides(fill='none')+
+  #labs(
+    #title="Proporción de estudiantes por categoría" )+
+ # scale_fill_manual(values = c('#f72585', '#4F0325', '#8BC34A'))+ scale_x_continuous(labels = function(x) paste0(round(x), "%"))+
+ #theme(
+   #axis.text.y = element_blank(),
+   #axis.ticks.y = element_blank()
+   #)
 
+df <- df %>% 
+  mutate(nacionality = case_when(
+    nacionality == 1 ~ "Portugal",
+    nacionality ==2  ~ "Alemania",
+    nacionality ==3  ~ "España",
+    nacionality ==4  ~ "Italia",
+    nacionality ==5  ~ "Países Bajos",
+    nacionality ==6  ~ "Inglaterra",
+    nacionality ==7  ~ "Lituania",
+    nacionality ==8  ~ "Angola",
+    nacionality ==9  ~ "Cabo Verde",
+    nacionality ==10  ~ "Guinea",
+    nacionality ==11  ~ "Mozambique",
+    nacionality ==12  ~ "Santo Tomé",
+    nacionality ==13  ~ "Turquía",
+    nacionality ==14  ~ "Brasil",
+    nacionality ==15  ~ "Rumania",
+    nacionality ==16  ~ "Maldovia",
+    nacionality ==17  ~ "México",
+    nacionality ==18  ~ "Ucrania",
+    nacionality ==19  ~ "Rusia",
+    nacionality ==20  ~ "Cuba",
+    nacionality ==21  ~ "Colombia",
+    TRUE ~ NA
+  ))
+
+ tabla_1 <- df %>% 
+   group_by(nacionality) %>% 
+   summarise(
+     Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+     Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+     DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+     N = n()
+   )
+ tabla_1 <- tabla_1 %>%
+   filter(!is.na(nacionality)) %>%
+   arrange(desc(N))
+ 
+ kable(tabla_1)

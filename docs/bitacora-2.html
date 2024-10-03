@@ -728,8 +728,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>target_parents_qualification<span class="sc">$</span>mothers_qualification <span class="ot">&lt;-</span> <span class="fu">str_wrap</span>(target_parents_qualification<span class="sc">$</span>mothers_qualification, <span class="at">width =</span> <span class="dv">10</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>curricular_units_2nd_sem_grade <span class="ot">&lt;-</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(df<span class="sc">$</span>curricular_units_2nd_sem_grade<span class="sc">&gt;</span><span class="dv">25</span>, <span class="cn">NA</span>, df<span class="sc">$</span>curricular_units_2nd_sem_grade)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>curricular_units_1st_sem_grade <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(df<span class="sc">$</span>curricular_units_1st_sem_grade)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>curricular_units_2nd_sem_grade <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(df<span class="sc">$</span>curricular_units_2nd_sem_grade)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>curricular_units_2nd_sem_grade <span class="ot">&lt;-</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(df<span class="sc">$</span>curricular_units_2nd_sem_grade<span class="sc">&gt;</span><span class="dv">25</span>, <span class="cn">NA</span>, df<span class="sc">$</span>curricular_units_2nd_sem_grade)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>curricular_units_1st_sem_grade <span class="ot">&lt;-</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(df<span class="sc">$</span>curricular_units_1st_sem_grade<span class="sc">&gt;</span><span class="dv">25</span>, <span class="cn">NA</span>, df<span class="sc">$</span>curricular_units_1st_sem_grade)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(df)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1082,51 +1087,51 @@ Caused by warning in `mean.default()`:
 ! argument is not numeric or logical: returning NA
 ℹ Run `dplyr::last_dplyr_warnings()` to see the 2 remaining warnings.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tabla_2)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">t</span>(tabla_2))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 7%">
-<col style="width: 5%">
-<col style="width: 19%">
-<col style="width: 20%">
-<col style="width: 23%">
-<col style="width: 23%">
+<col style="width: 54%">
+<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 17%">
 </colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">target</th>
-<th style="text-align: right;">cantidad</th>
-<th style="text-align: right;">Promedio_Nota_Primer_Semestre</th>
-<th style="text-align: right;">Promedio_Nota_Segundo_Semestre</th>
-<th style="text-align: right;">Desviación_Estándar_Primer_Semestre</th>
-<th style="text-align: right;">Desviación_Estándar_Segundo_Semestre</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">target</td>
 <td style="text-align: left;">Graduado</td>
-<td style="text-align: right;">2209</td>
-<td style="text-align: right;">15.590693</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">2.686148</td>
-<td style="text-align: right;">2.211709</td>
+<td style="text-align: left;">Desertor</td>
+<td style="text-align: left;">Matriculado</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Desertor</td>
-<td style="text-align: right;">1421</td>
-<td style="text-align: right;">6.359149</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">2.104695</td>
-<td style="text-align: right;">1.679548</td>
+<td style="text-align: left;">cantidad</td>
+<td style="text-align: left;">2209</td>
+<td style="text-align: left;">1421</td>
+<td style="text-align: left;">794</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Matriculado</td>
-<td style="text-align: right;">794</td>
-<td style="text-align: right;">10.545293</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">1.715758</td>
-<td style="text-align: right;">1.329034</td>
+<td style="text-align: left;">Promedio_Nota_Primer_Semestre</td>
+<td style="text-align: left;">15.590693</td>
+<td style="text-align: left;">6.359149</td>
+<td style="text-align: left;">10.545293</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Promedio_Nota_Segundo_Semestre</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Desviación_Estándar_Primer_Semestre</td>
+<td style="text-align: left;">2.686148</td>
+<td style="text-align: left;">2.104695</td>
+<td style="text-align: left;">1.715758</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Desviación_Estándar_Segundo_Semestre</td>
+<td style="text-align: left;">2.211709</td>
+<td style="text-align: left;">1.679548</td>
+<td style="text-align: left;">1.329034</td>
 </tr>
 </tbody>
 </table>
@@ -1153,6 +1158,48 @@ Caused by warning in `mean.default()`:
 </section>
 <section id="construcción-de-fichas-de-resultados" class="level3" data-number="3.3.3">
 <h3 data-number="3.3.3" class="anchored" data-anchor-id="construcción-de-fichas-de-resultados"><span class="header-section-number">3.3.3</span> Construcción de fichas de resultados</h3>
+<ol type="1">
+<li><em>Nombre de su hallazgo/resultado:</em> Relación entre la completitud de los estudios superiores de ambos padres y la permanencia del estudiante en la carrera<br>
+</li>
+</ol>
+<ul>
+<li><em>Resumen en una oración:</em> La diferencia entre aquellos estudiantes que deciden desertar y aquellos graduados cuyos padres ambos poseen títulos universitarios es muy poca.<br>
+</li>
+<li><em>Principal característica:</em> Se simplificaron los datos en 8 niveles de educación<br>
+-<em>Problemas o posibles desafíos:</em>Este hallazgo no es determinante dentro de nuestro objetivo, además dado la gran cantidad de combinaciones entre el nivel educativo del padre y la madre el establecer una única conclusión global se imposibilita.<br>
+-<em>Resumen en un párrafo:</em>Al observar el gráfico, se nota que la la cantidad de estudiantes cuyos padres son ambos graduados universitarios entre los desertores y matriculados es muy poca. Esto contradice la suposición que entre mayor es el nivel educativo de los padres, sus hijos van a tener uno igual o mayor. Sin embargo, está relación a primera vista un poco contradictoria es respaldada por la literatura en el artículo de Landeta et al (2011). Además, este resultado también es observado para aquellos estudiantes cuyos padres (tanto madre como padre) no han completado la educación primaria. Ya que esta combinación es la mas frecuente para ambos desertores y graduados<br>
+</li>
+</ul>
+<ol start="2" type="1">
+<li><em>Nombre de su hallazgo/resultado:</em> Relación entre cumplimiento de cuotas escolares y permanencia del estudiante en la carrera.<br>
+</li>
+</ol>
+<ul>
+<li><em>Resumen en una oración:</em> Existe una clara relación entre la deserción y el incumplimiento en el pago de las cuotas escolares.<br>
+-<em>Principal característica:</em>El gráfico fue generado a partir de las frecuencias obtenidas de clasificar los estudiantes según su categoría y separarlos con una variable binaria.<br>
+</li>
+<li><em>Problemas o posibles desafíos:</em> Es posible que para estudiantes graduados fuera un requisito estar al día con los pagos de cuotas para concluir sus estudios, por lo que necesariamente todos los estudiantes en esta categoría serían no deudores, es decir, un estudiante no puede ser graduado y deudor. Una situación similar puede ocurrir con estudiantes matriculados. Esto limita la información que se puede extraer de este gráfico.&nbsp; -<em>Resumen en un párrafo:</em> Al plantear un gráfico que muestra si un estudiante es deudor en cuotas escolares según su categoría (desertor, graduado o matriculado) se revela una fuerte tendencia. En los estudiantes graduados, ninguno o casi ninguno es deudor de cuotas escolares, lo cual es esperable dado que ya concluyeron sus estudios. Asimismo, es posible que la puntualidad de los pagos sea un requisito para los estudiantes matriculados. Sin embargo, lo más relevante es que en los estudiantes desertores existe una parte significativa de la población que es deudora, lo que muestra que la imposibilidad de pagar las cuotas escolares por dificultades económicas puede ser un factor de peso en la decisión de abandonar la carrera. Este hallazgo es consistente con Lobos Rivera y Rodríguez Vásquez (2023).<br>
+</li>
+</ul>
+<p>3.<em>Nombre de su hallazgo/resultado:</em>Impacto de la obtención de una beca socioeconómica en la permanencia en la universidad<br>
+-<em>Resumen en una oración:</em>Los estudiantes con beca socioeconómica se gradúan com mayor frecuencia&nbsp; -<em>Principal característica:</em>Se comparan dos variables categóricas (tipo de estudiante y si posee beca)<br>
+-<em>Problemas o posibles desafíos:</em> Si se evalúan otros aspectos de la gráfica, se observa que la cantidad de graduados que no poseen beca es la más alta lo que podría presentar un problema si se llega a querer comprar solo estos dos aspectos.<br>
+-<em>Resumen en un párrafo:</em>La gráfica nos indica cómo hay una gran diferencia entre la cantidad de estudiantes que tienen beca y deciden abandonar los estudios en comparación con aquellos que sí tienen beca y se gradúan. Entonces, es posible concluir que la situación económica que enfrenta cada estudiante tiene un gran impacto a la hora de decidir si continuar con su carrera universitaria o no. Esta relación es bastante conocida y ha sido estudiada en títulos como el de Sistemas Ecológicos de Urie Bronfenbrenner.<br>
+</p>
+<ol start="4" type="1">
+<li><p><em>Nombre de su hallazgo/resultado:</em>Independencia entre el origen del estudiante y la permanencia en la carrera.<br>
+-<em>Resumen en una oración:</em> No existe una relación contundente entre la permanencia del estudiante en la carrera y si es internacional.<br>
+-<em>Principal característica:</em> El gráfico fue generado a partir de las frecuencias obtenidas de clasificar los estudiantes según su categoría y separarlos con una variable binaria.<br>
+-<em>Problemas o posibles desafíos:</em> Agrupar todas las nacionalidades extranjeras en una única categoría enmascara comportamientos particulares de cada una que podrían ser útiles si se estudiaran por separado.<br>
+-<em>Resumen en un párrafo:</em> Basado en este gráfico, es válido afirmar que no existe una relación entre si un estudiante es internacional o no y su permanencia en la carrera. Los estudiantes internacionales siguen la misma tendencia general que los estudiantes no internacionales, solo que a una escala mucho menor. Es decir, en ambos grupos existen más graduados que desertores y más desertores que matriculados, por lo que la diferencia entre internacional y no internacional no es relevante.<br>
+</p></li>
+<li><p><em>Nombre de su hallazgo/resultado:</em> Relación entre los créditos aprobados en el primer semestre de carrera universitaria y la permanencia en la carrera<br>
+-<em>Resumen en una oración:</em> una mayor cantidad de créditos aprobados se asocia con una mayor probabilidad de mantenerse en la carrera y graduarse<br>
+-<em>Principal característica:</em> El uso de densidad permite observar las tendencias generales a la vez que minimiza el impacto de datos atípicos.<br>
+-<em>Problemas o posibles desafíos:</em> Puede que sea necesario evaluar créditos aprobados contra créditos matriculados, pues la proporción entre estas variables es más representativa del “éxito” en el primer semestre que la cantidad absoluta de créditos aprobados.<br>
+-<em>Resumen en un párrafo:</em> Al visualizar la densidad de los créditos aprobados en el primer semestre por categoría de estudiante se evidencian patrones claros sobre el impacto de las primeras evaluaciones universitarias en el estudiante. Primero, los estudiantes con pocos créditos aprobados en el primer semestre son más propensos a ser desertores. De hecho, la mayor densidad de desertores ocurre cuando no se aprobó ningún crédito. Por otro lado, la máxima densidad de estudiantes graduados se da en un valor de créditos aprobados más elevado. Esto insinúa que existe una relación positiva entre créditos aprobados en primer semestre y la posibilidad de graduarse. Por lo tanto, las primeras experiencias con la evaluación universitaria son importantes para las decisiones del estudiante.<br>
+</p></li>
+</ol>
 
 
 </section>

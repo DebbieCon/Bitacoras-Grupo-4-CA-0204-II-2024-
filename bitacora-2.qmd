@@ -338,8 +338,13 @@ print(target_parents_qualification,n=90)
 
 target_parents_qualification$mothers_qualification <- str_wrap(target_parents_qualification$mothers_qualification, width = 10)
 
+df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
+df$curricular_units_2nd_sem_grade <- as.integer(df$curricular_units_2nd_sem_grade)
+
 df$curricular_units_2nd_sem_grade <-
   ifelse(df$curricular_units_2nd_sem_grade>25, NA, df$curricular_units_2nd_sem_grade)
+df$curricular_units_1st_sem_grade <-
+  ifelse(df$curricular_units_1st_sem_grade>25, NA, df$curricular_units_1st_sem_grade)
 
 
 
@@ -608,7 +613,7 @@ tabla_2 <- df %>% group_by(target) %>%
   filter(!is.na(cantidad)) %>% 
   arrange(desc(cantidad))
 
-kable(tabla_2)
+kable(t(tabla_2))
 ```
 
 ### Análisis descriptivo

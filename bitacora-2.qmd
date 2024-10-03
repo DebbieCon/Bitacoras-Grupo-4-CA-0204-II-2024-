@@ -622,12 +622,17 @@ kable(t(tabla_2))
 
 ### Análisis descriptivo
 
-![Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes](/Images/grafica_1.png "Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes")
-!["Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes"](/Images/grafica_2.png)
-!["Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes"](/Images/grafica_3.png)
-!["Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes"](/Images/grafica_4.png)
-!["Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes"](/Images/grafica_5.png)
-!["Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes"](/Images/grafica_6.png)
+![Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes](/Images/grafica1.png)
+\\ 
+![Gráfica 2. Relación entre persona deudora y resultado académico](/Images/grafica2.png)
+\\
+![Gráfica 3. Frecuencia de Estudiantes Graduados, Matriculados o Desertores según su categoría de beca](/Images/grafica3.png)
+\\
+![Gráfica 4. Comparación en la frecuencia del estado de los estudiantes según su nacionalidad](/Images/grafica4.png)
+\\
+![Gráfica 5. Distribución de edad de admisión por categoría de estudiante](/Images/grafica5.png)
+\\
+![Gráfica 5. Distribución de créditos aprobados en primer semestre por tipo de estudiante](/Images/grafica6.png)
 
 
 

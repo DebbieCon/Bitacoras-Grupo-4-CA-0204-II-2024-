@@ -4,49 +4,27 @@ editor: visual
 ---
 
 # Bitácora 2: Análisis Descriptivo de los Datos
-
-```{r}
-install.packages("knitr", repos = "https://cran.r-project.org")
-```
-
-```{r}
+Aquí se cargan los paquetes
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
 library(rmarkdown)
-```
-
-```{r}
 library(knitr)
-```
-
-```{r}
-install.packages("tidyverse", repos = "https://cran.r-project.org")
 library(tidyverse)
-install.packages("cowplot", repos = "https://cran.r-project.org")
 library(cowplot)
 library(dplyr)
-install.packages("janitor", repos = "https://cran.r-project.org")
 library(janitor)
 library(readr)
-install.packages("hrbrthemes", repos = "https://cran.r-project.org")
 library(hrbrthemes)
 library(ggplot2)
-install.packages("hrbrthemes", repos = "https://cran.r-project.org")
 library(hrbrthemes)
 library(stringr)
 library(knitr)
-install.packages("babynames", repos = "https://cran.r-project.org")
-library(babynames)
 library(forcats)
-library(waffle)
-```
-
-```{r}
+library(babynames)
 df <- read_csv2("base_datos/universidades_europeas.csv")
-view(df)
-df <- reknitrdf <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
 ```
-
-```{r}
+Aquí se limpian los datos
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(marital_status = case_when(
     marital_status == 1 ~ "Soltero",
@@ -126,7 +104,7 @@ df <- df %>%
     nacionality ==19  ~ "Rusia",
     nacionality ==20  ~ "Cuba",
     nacionality ==21  ~ "Colombia",
-    TRUE ~ "Desconocida"
+    TRUE ~ NA
   ))
 df <- df %>% 
   mutate(mothers_qualification=case_when(
@@ -338,6 +316,9 @@ target_parents_qualification$mothers_qualification <- str_wrap(target_parents_qu
 
 
 ```
+```{r}
+view(df)
+```
 
 ======= \# Bitácora 2: Planificación y Análisis
 
@@ -375,7 +356,7 @@ El artículo proporciona una base de datos de distintas universidades europeas c
 Basándose en literatura sobre la importancia de implementar la tecnología en el proceso de enseñanza-aprendizaje, esta investigación se propone analizar el impacto del uso de diferentes herramientas digitales sobre el rendimiento académico en una universidad pública mexicana. Se aplicó una encuesta en la que se les pedía a los estudiantes indicar con qué frecuencia utilizan ciertas herramientas en una semana. Las variables contempladas para cada estudiante fueron el rendimiento académico, el género, la beca, el semestre, las materias reprobadas y la frecuencia de uso de seis herramientas digitales (cada una por separado). A partir de los datos recolectados, se elaboró un modelo, cuyos resultados permiten afirmar que el rendimiento académico aumenta cuando hay cambios en alguna variable independiente y las demás se mantienen constantes. Se concluye que la beca y el uso de herramientas digitales contribuyen a un mejor rendimiento académico, pero se advierte que la implementación de estas tecnologías en el aula debe ser bien planificada. 
 
 ## Análisis estadísticos
-
+Tablas
 ```{r}
 df$curricular_units_1st_sem_grade <- as.double(df$curricular_units_1st_sem_grade)
 
@@ -394,11 +375,14 @@ tabla_1 <- tabla_1 %>%
 kable(tabla_1)
 
 ```
+
 ```{r}
 kable(sum_qualification)
 ```
+
 ### Análisis descriptivo
-```{r eval=FALSE}
+Gráfica
+```{r, eval=FALSE}
 df %>%count(scholarship_holder, target) %>% 
   ggplot(aes(x=scholarship_holder, y = target, fill = n))+
   geom_tile()+ 
@@ -410,11 +394,6 @@ df %>%count(scholarship_holder, target) %>%
         plot.title = element_text(hjust = 0.5))
 
 ```
-
-
-
-
-?plot()
 
 ### Propuesta métodologica
 

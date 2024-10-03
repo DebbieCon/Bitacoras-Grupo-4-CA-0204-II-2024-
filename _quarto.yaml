@@ -5,7 +5,8 @@ project:
 lang: es
 
 book:
-  title: "Bitácoras Grupo #4, CA-204 (II-2024)"
+  title: "Análisis de la interacción de los factores sociales, económicos, académicos y familiares en la trayectoria de un estudiante"
+  subtitle: "Bitácoras Grupo #4, CA-204 (II-2024)"
   author: "Debbie Con, Andrey Prado, Aarón Retana"
   date: today
   search: true

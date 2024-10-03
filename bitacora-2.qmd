@@ -4,7 +4,6 @@ editor:
     wrap: 72
 ---
 
-<<<<<<< HEAD
 # Bitácora 2: Análisis Descriptivo de los Datos
 Aquí se cargan los paquetes
 ```{r, echo=TRUE,message=FALSE, warning=FALSE}
@@ -108,6 +107,29 @@ df <- df %>%
     nacionality ==21  ~ "Colombia",
     TRUE ~ NA
   ))
+
+df <- df %>% 
+  mutate(course=case_when(
+    course ==1  ~ "Biofuel Production Technologies",
+    course ==2  ~ "Animation and Multimedia Design",
+    course ==3  ~ "Social Service (evening attendance)",
+    course ==4  ~ "Agronomy",
+    course ==5  ~ "Communication Design",
+    course ==6  ~ "Veterinary Nursing",
+    course ==7  ~ "Informatics Engineering",
+    course ==8  ~ "Equiniculture",
+    course ==9  ~ "Managment",
+    course ==10  ~ "Social Service",
+    course ==11  ~ "Tourism",
+    course ==12  ~ "Nursing",
+    course ==13  ~ "Oral Hygiene",
+    course ==14  ~ "Advertising and Marketing Managment",
+    course ==15  ~ "Journalism and Communication",
+    course ==16  ~ "Basic Education",
+    course ==17  ~ "Management (evening attendance)",
+    TRUE ~ NA
+  ))
+
 df <- df %>% 
   mutate(mothers_qualification=case_when(
     mothers_qualification== 1 ~ "Educación Secundaria",
@@ -315,6 +337,10 @@ target_parents_qualification
 print(target_parents_qualification,n=90)
 
 target_parents_qualification$mothers_qualification <- str_wrap(target_parents_qualification$mothers_qualification, width = 10)
+
+df$curricular_units_2nd_sem_grade <-
+  ifelse(df$curricular_units_2nd_sem_grade>25, NA, df$curricular_units_2nd_sem_grade)
+
 
 
 ```
@@ -552,8 +578,37 @@ Tablas
 ```{r}
 df$curricular_units_1st_sem_grade <- as.double(df$curricular_units_1st_sem_grade)
 
+tabla_1 <- df %>% 
+  group_by(nacionality) %>% 
+  summarise(
+    Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+    N = n()
+  ) %>%
+  filter(!is.na(nacionality)) %>%
+  arrange(desc(N))
+
+kable(tabla_1)
+```
+
 ```{r}
 kable(sum_qualification)
+```
+
+```{r}
+tabla_2 <- df %>% group_by(target) %>% 
+  summarise(
+    cantidad = n(),
+    Promedio_Nota_Primer_Semestre = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Promedio_Nota_Segundo_Semestre = mean(curricular_units_2nd_sem_grade, na.rm=TRUE),
+    Desviación_Estándar_Primer_Semestre = sd(curricular_units_1st_sem_credited, na.rm=TRUE),
+    Desviación_Estándar_Segundo_Semestre = sd(curricular_units_2nd_sem_credited, na.rm=TRUE)        
+          ) %>% 
+  filter(!is.na(cantidad)) %>% 
+  arrange(desc(cantidad))
+
+kable(tabla_2)
 ```
 
 ### Análisis descriptivo
@@ -572,7 +627,7 @@ df %>%count(scholarship_holder, target) %>%
 ```
 
 ### Análisis descriptivo
-
+?group_by
 ### Propuesta métodologica
 
 ### Construcción de fichas de resultados

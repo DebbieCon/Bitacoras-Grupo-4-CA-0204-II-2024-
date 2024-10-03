@@ -1,0 +1,165 @@
+---
+title: "La trayectoria estudiantil y sus factores determinantes"
+subtitle: "Grupo #4"
+author: "Debbie Con, Andrey Prado, Aarón Retana"
+format: 
+  revealjs: 
+   theme: moon
+   transition: slide
+---
+
+## Información general
+
+::: incremental
+-   **Tema:** Análisis de la interacción de los factores sociales, económicos, académicos y familiares en la trayectoria de un estudiante
+
+-   **Pregunta:** ¿De qué manera interactúan los factores sociales, económicos, académicos y familiares en la trayectoria académica de un estudiante?
+:::
+
+## BASE DE DATOS {.scrollable}
+
+-   **Información general**
+    -   registros: 4424
+    -   columnas: 37
+        -   target: estado del estudiante
+        -   estado civil
+        -   nacionalidad
+        -   deudas
+        -   poseedor de beca
+        -   edad
+        -   nota (admisión, primer semestre, segundo semestre)
+        -   créditos aprobados
+        -   PIB
+        -   nivel educativo y ocupacion de los padres de familia
+
+## BASE DE DATOS
+
+::: incremental
+-   **¿Porqué nuestra base de datos responde a nuestra pregunta?**\
+    \
+    La base de datos presenta variables que describen factores familiares, económicos, sociales y demográficos de los estudiantes, los cuales son clave para responder a la pregunta de investigación, ya que según la literatura son los más influyentes sobre el éxito académico.
+:::
+
+## GRÁFICOS {.scrollable}
+
+**Gráfica 1**
+\
+
+``` r
+ggplot(target_parents_qualification, aes(x = mothers_qualification, y = fathers_qualification, fill = count)) + geom_tile() + 
+scale_fill_gradient(low="#AAE48D", high = "#2B7308", guide = "colorbar" )+ 
+facet_wrap(~ target) + 
+labs(
+  x = "Nivel educativo de la madre",
+  y = "Nivel educativo del padre", 
+  fill = "Frecuencia")+ 
+  theme_bw()+theme( axis.text.x = element_text(size = 7) )
+```
+\
+![](Images/grafica1.png){fig-align="center" width="800" height="370"}
+
+
+\
+
+**Gráfica 2**
+
+``` r
+df %>%count(tuition_fees_up_to_date, target) %>% 
+  ggplot(aes(x=target, y = n, fill = tuition_fees_up_to_date))+
+  geom_col(position = "dodge") + 
+  theme_classic()+
+  labs(
+    x = "Tipo de Estudiante",
+    y = "Frecuencia",
+    fill = "Cuotas al día",
+    title = "Deudor en Cuotas Escolares según el tipo de estudiante"
+  ) +
+  scale_fill_manual(values = c("Si" = "#A2CD5A","No"="red"))+
+  theme(legend.position = "bottom", 
+        panel.border = element_rect(colour = "black", fill = NA),
+        plot.title = element_text(hjust = 0.5))
+```
+
+\
+
+![](Images/grafica2.png){fig-align="center" width="800" height="370"}
+
+\
+
+**Gráfica 3**
+
+``` r
+df %>%count(scholarship_holder, target) %>% 
+  ggplot(aes(x=scholarship_holder, y = target, fill = n))+
+  geom_tile()+ 
+  theme_classic() + 
+  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca") + 
+  scale_fill_continuous(low = "skyblue", high = "darkblue")+
+  theme(legend.position = "right",
+        panel.border = element_rect(colour = "black", fill=NA),
+        plot.title = element_text(hjust = 0.5))
+```
+
+\
+
+![](Images/grafica3.png){fig-align="center" width="800" height="370"}
+
+\
+
+**Gráfica 4**
+
+``` r
+df %>%
+count(international, target) %>% 
+ggplot(aes(x=target, y = n, fill = international))+ 
+geom_col(position = "stack") + theme_classic()+ 
+labs( x = "Tipo de Estudiante", 
+y = "Frecuencia", 
+fill = "Internacional",
+title = "Tipo de Estudiante según Nacionalidad" ) + 
+scale_fill_manual(values = c("Si" = "#CD5555","No"="#BFEFFF"))+ 
+theme(legend.position = "bottom", panel.border = element_rect(colour = "black", fill = NA), plot.title = element_text(hjust = 0.5))
+```
+
+\
+
+![](Images/grafica4.png){fig-align="center" width="800" height="370"} 
+
+\
+**Gráfica 5**
+\
+
+``` r
+ggplot(target_parents_qualification, aes(x = mothers_qualification, y = fathers_qualification, fill = count))+ geom_tile()+ 
+scale_fill_gradient(low="#AAE48D", high = "#2B7308", guide = "colorbar" )+ 
+facet_wrap(~ target) + 
+labs(
+  x = "Nivel educativo de la madre",
+  y = "Nivel educativo del padre", 
+  fill = "Frecuencia")+ 
+  theme_bw()+theme( axis.text.x = element_text(size = 7) )
+```
+![](Images/grafica5.png){fig-align="center" width="800" height="370"}
+\
+**Gráfica 6**
+\
+
+``` r
+ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
+  geom_density(alpha=0.5, color=NA)+
+  labs(
+    x = "Créditos aprobados en el primer semestre",
+    y = "Densidad",
+    fill = "Categoría del estudiante",
+    title = "Gráfica 6. Distribución de créditos aprobados en primer \n 
+    semestre por tipo de estudiante",
+  ) +theme_minimal()
+```
+![](Images/grafica6.png){fig-align="center" width="800" height="370"}
+
+
+## ¿QUÉ MÁS NOS GUSTARÍA DESCUBRIR?
+
+Queremos encontrar más relaciones relevantes entre variables que no hayamos considerado hasta el momento y que nos proporcionen insumos para llegar a una respuesta más completa de la pregunta de investigación planteada.
+
+

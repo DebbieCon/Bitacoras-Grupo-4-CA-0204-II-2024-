@@ -15,7 +15,6 @@ library(rmarkdown)
 
 df <- reknitrdf <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
-glimpse(df)
 
 df <- df %>%
   mutate(marital_status = case_when(
@@ -448,3 +447,5 @@ df <- df %>%
    arrange(desc(N))
  
  kable(tabla_1)
+
+ 

@@ -904,7 +904,7 @@ Año: 2013 (@una_heredia)
 
 ### Construcción de la UVE de Gowin
 
-![UVE_Gowin](/Images/UVE_Gowin.png "Figura 1. UVE Heurística")
+![Gráfica 1](/Images/grafica_1.png "Figura 1. UVE Heurística")
 
 #### Teorías o principios
 

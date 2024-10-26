@@ -160,9 +160,13 @@ ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
 
 ## ¿QUÉ MÁS NOS GUSTARÍA DESCUBRIR?
 
+
 ::: incremental
 
 Queremos encontrar más relaciones relevantes entre variables que no hayamos considerado hasta el momento y que nos proporcionen insumos para llegar a una respuesta más completa de la pregunta de investigación planteada.
 
 :::
+
+Queremos encontrar más relaciones relevantes entre variables que no hayamos considerado hasta el momento y que nos proporcionen insumos para llegar a una respuesta más completa de la pregunta de investigación planteada.
+
 

@@ -602,6 +602,8 @@ kable(sum_qualification)
 
 ```{r}
 df$curricular_units_1st_sem_grade <- as.double(df$curricular_units_1st_sem_grade)
+```
+
 ```{r}
 df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
 df$curricular_units_2nd_sem_grade <- as.integer(df$curricular_units_2nd_sem_grade)
@@ -622,10 +624,10 @@ tabla_2 <- df %>% group_by(target) %>%
           ) %>% 
   filter(!is.na(cantidad)) %>% 
   arrange(desc(cantidad))
+```
+
 ### Análisis descriptivo
 
-<<<<<<< HEAD
-=======
 ![Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes](/Images/grafica1.png)
 \\ 
 ![Gráfica 2. Relación entre persona deudora y resultado académico](/Images/grafica2.png)

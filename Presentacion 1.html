@@ -8,7 +8,11 @@
 <link href="Presentacion 1_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="Presentacion 1_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="Presentacion 1_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<<<<<<< HEAD
   <meta name="generator" content="quarto-1.4.555">
+=======
+  <meta name="generator" content="quarto-1.5.57">
+>>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
 
   <meta name="author" content="Debbie Con, Andrey Prado, Aarón Retana">
   <title>La trayectoria estudiantil y sus factores determinantes</title>
@@ -42,7 +46,11 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
+<<<<<<< HEAD
     pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+=======
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+>>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -552,7 +560,13 @@ La base de datos presenta variables que describen factores familiares, económic
 </section>
 <section id="qué-más-nos-gustaría-descubrir" class="slide level2">
 <h2>¿QUÉ MÁS NOS GUSTARÍA DESCUBRIR?</h2>
+<<<<<<< HEAD
 <p>Queremos encontrar más relaciones relevantes entre variables que no hayamos considerado hasta el momento y que nos proporcionen insumos para llegar a una respuesta más completa de la pregunta de investigación planteada.</p>
+=======
+<div>
+<p>Queremos encontrar más relaciones relevantes entre variables que no hayamos considerado hasta el momento y que nos proporcionen insumos para llegar a una respuesta más completa de la pregunta de investigación planteada.</p>
+</div>
+>>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
@@ -801,6 +815,7 @@ La base de datos presenta variables que describen factores familiares, económic
         }
         return false;
       }
+<<<<<<< HEAD
       const clipboard = new window.ClipboardJS('.code-copy-button', {
         text: function(trigger) {
           const codeEl = trigger.previousElementSibling.cloneNode(true);
@@ -813,6 +828,9 @@ La base de datos presenta variables que describen factores familiares, económic
         }
       });
       clipboard.on('success', function(e) {
+=======
+      const onCopySuccess = function(e) {
+>>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -844,7 +862,33 @@ La base de datos presenta variables que describen factores familiares, económic
         }, 1000);
         // clear code selection
         e.clearSelection();
+<<<<<<< HEAD
       });
+=======
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+>>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -852,7 +896,11 @@ La base de datos presenta variables que describen factores familiares, económic
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
+<<<<<<< HEAD
      	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+=======
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+>>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

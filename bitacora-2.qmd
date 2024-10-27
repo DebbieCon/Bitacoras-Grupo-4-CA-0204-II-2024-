@@ -3,10 +3,24 @@ editor:
   markdown: 
     wrap: 72
 fig-cap-location: bottom
+execute:
+  freeze: auto
+  cache: true
 ---
- Bitácora 2: Análisis Descriptivo de los Datos
- En esta bitácora se realizará el manejo de la base de datos seleccionada en la anterior bitácora, para ello se cargarán los respectivos paquetes de Rstudio y se hará una limpieza de datos.\
- El siguiente código muestra los paquetes y librerias necesarios, así como la inserción de la base de dats.
+
+# Bitácora 2: Análisis Descriptivo de los Datos
+## Historial de Commits
+![](/Images/b2_1.jpg)
+![](/Images/b2_2.jpg)
+![](/Images/b2_3.jpg)
+![](/Images/b2_4.jpg)
+![](/Images/b2_5.jpg)
+![](/Images/b2_6.jpg)
+![](/Images/b2_7.jpg)
+![](/Images/b2_8.jpg)
+Durante esta segunda bitácora se realizará un análisis descriptivo de la base de datos propuesta en la anterior bitácora. A continuación se mostrará el código necesario para cargar los paquetes y limpiar las variables de la base de datos.
+\
+A continuación se presentan los paquetes necesarios, así como la inserción de la base de datos al repositorio, también la aplicación de la función "clean_names()" necesaria para el correcto manejo de los datos.
 ```{r, echo=TRUE,message=FALSE, warning=FALSE}
 library(rmarkdown)
 library(knitr)
@@ -19,13 +33,12 @@ library(hrbrthemes)
 library(ggplot2)
 library(hrbrthemes)
 library(stringr)
-library(knitr)
 library(forcats)
 library(babynames)
 df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
 ```
-El siguiente código muestra las modificaciones realizadas a las distintas variables de la base de datos.
+  A continuación se presenta el código necesario para limpiar las variables necesarias de la base de datos para crear las tablas y gráficos necesarios.
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(marital_status = case_when(
@@ -274,11 +287,7 @@ target_parents_qualification$mothers_qualification <- str_wrap(target_parents_qu
 
 
 ```
-```{r}
-view(df)
-```
 
-# Bitácora 2: Planificación y Análisis
 
 
 ## Parte de planificación
@@ -527,7 +536,22 @@ planificada.\
 
 
 ## Análisis estadísticos
-```{r}
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
+tabla_1 <- df %>% 
+  group_by(nacionality) %>% 
+  summarise(
+    Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+    N = n()
+  ) %>%
+  filter(!is.na(nacionality)) %>%
+  arrange(desc(N))
+
+kable(tabla_1)
+```
+
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
 sum_mothers_qualification<-df %>% 
   mutate(mothers_qualification=fct_collapse(mothers_qualification, 
    "Primaria completada" = c("7º Año (Antiguo)","7º Año de Escolaridad", 
@@ -600,11 +624,14 @@ kable(sum_qualification)
 
 
 
-```{r}
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
 df$curricular_units_1st_sem_grade <- as.double(df$curricular_units_1st_sem_grade)
+<<<<<<< HEAD
+=======
 ```
 
 ```{r}
+>>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
 df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
 df$curricular_units_2nd_sem_grade <- as.integer(df$curricular_units_2nd_sem_grade)
 
@@ -624,9 +651,18 @@ tabla_2 <- df %>% group_by(target) %>%
           ) %>% 
   filter(!is.na(cantidad)) %>% 
   arrange(desc(cantidad))
+<<<<<<< HEAD
+
+kable(t(tabla_2))
 ```
 
+
+=======
+```
+
+>>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
 ### Análisis descriptivo
+
 
 ![Gráfica 1. Comparación del nivel educativo de los padres y el estado de los estudiantes](/Images/grafica1.png)
 \\ 
@@ -638,13 +674,13 @@ tabla_2 <- df %>% group_by(target) %>%
 \\
 ![Gráfica 5. Distribución de edad de admisión por categoría de estudiante](/Images/grafica5.png)
 \\
-![Gráfica 5. Distribución de créditos aprobados en primer semestre por tipo de estudiante](/Images/grafica6.png)
+![Gráfica 6. Distribución de créditos aprobados en primer semestre por tipo de estudiante](/Images/grafica6.png)
 
 
 
 ### Propuesta métodologica
 
-```{r eval=FALSE}
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
 target_parents_qualification<-df %>% 
   mutate(mothers_qualification=fct_collapse(mothers_qualification,
                                             "Primaria completada" = c("7º Año (Antiguo)","7º Año de Escolaridad", 
@@ -697,17 +733,18 @@ target_parents_qualification<-df %>%
 
 target_parents_qualification$mothers_qualification <- str_wrap(target_parents_qualification$mothers_qualification, width = 10)
 
-ggplot(target_parents_qualification, aes(x = mothers_qualification, y = fathers_qualification, fill = count)) + 
+p <- ggplot(target_parents_qualification, aes(x = mothers_qualification, y = fathers_qualification, fill = count)) + 
   geom_tile() + scale_fill_gradient(low="#AAE48D",
                                     high = "#2B7308",
                                     guide = "colorbar" )+
   facet_wrap(~ target) + labs(x = "Nivel educativo de la madre", y = "Nivel educativo del padre", fill = "Frecuencia")+theme_bw() + theme(axis.text.x = element_text(angle=90,hjust=1), size = 6)
+print(p)
 
 ```
 
 
-```{r eval=FALSE}
-df %>%count(tuition_fees_up_to_date, target) %>% 
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
+p<- df %>%count(tuition_fees_up_to_date, target) %>% 
   ggplot(aes(x=target, y = n, fill = tuition_fees_up_to_date))+
   geom_col(position = "dodge") + 
   theme_classic()+
@@ -721,10 +758,11 @@ df %>%count(tuition_fees_up_to_date, target) %>%
   theme(legend.position = "bottom", 
         panel.border = element_rect(colour = "black", fill = NA),
         plot.title = element_text(hjust = 0.5))
+print(p)
 ```
 
-```{r eval=FALSE}
-df %>%count(scholarship_holder, target) %>% 
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
+p <- df %>%count(scholarship_holder, target) %>% 
   ggplot(aes(x=scholarship_holder, y = target, fill = n))+
   geom_tile()+ 
   theme_classic() + 
@@ -733,10 +771,11 @@ df %>%count(scholarship_holder, target) %>%
   theme(legend.position = "right",
         panel.border = element_rect(colour = "black", fill=NA),
         plot.title = element_text(hjust = 0.5))
+print(p)
 ```
 
-```{r eval=FALSE}
-df %>%count(international, target) %>% 
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
+p<-df %>%count(international, target) %>% 
   ggplot(aes(x=target, y = n, fill = international))+
   geom_col(position = "stack") + 
   theme_classic()+
@@ -750,10 +789,11 @@ df %>%count(international, target) %>%
   theme(legend.position = "bottom", 
         panel.border = element_rect(colour = "black", fill = NA),
         plot.title = element_text(hjust = 0.5))
+print(p)
 ```
 
-```{r eval=FALSE}
-ggplot(df, aes(x = age_at_enrollment, fill = target))+
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
+p<-ggplot(df, aes(x = age_at_enrollment, fill = target))+
   geom_density(alpha=0.6, color=NA)+
   labs(
     x = "Edad de ingreso a la universidad",
@@ -761,10 +801,11 @@ ggplot(df, aes(x = age_at_enrollment, fill = target))+
     fill = "Categoría del estudiante",
     title = "Densidades de edad de admisión por categoría de estudiante"
   )
+print(p)
 ```
 
-```{r eval=FALSE}
-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
+```{r, echo=TRUE,message=FALSE, warning=FALSE}
+p<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
   geom_density(alpha=0.6, color=NA)+
   labs(
     x = "Créditos aprobados en el primer semestre",
@@ -772,6 +813,7 @@ ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
     fill = "Categoría del estudiante",
     title = "Densidades de créditos aprobados en primer semestre por tipo de estudiante",
   ) +cowplot::theme_cowplot()
+print(p)
 ```
 
 >>>>>>> 0b57ea27c309c4f6e8c2aad840bcf39b1465adfa
@@ -781,7 +823,7 @@ Estas variables son importantes para el objetivo en el área de los factores eco
 
 Esta tabla muestra el nivel de estudios resumidos en 8 categorías, mostrando la completitud o no de cada nivel educativo más si se desconoce, si ha recibido cursos complementarios y si no saben leer y escribir. Para cada de estas categorías enumera la cantidad de estudiantes cuyos padres tienen este nivel educativo
 
-#### Tabla de estudiante por nacionalidad  y nota del primer semestre 
+##### Tabla de estudiante por nacionalidad  y nota del primer semestre 
 Las variables de nacionalidad y nota del primer semestre son importantes para la presente investigación dado que un posible factor que afecta la decisión de permanecer en la universidad es el ser un estudiante internacional o nacional y la nota del primer semestre. Esto dado que si un estudiante internacional puede tener problemas para adaptarse a su nuevo hogar y cuenta con menor apoyo de sus familia y amigos. Lo que puede afectar sus notas. La manera en que cada estudiante se adapta es esencial en determinar si continúa en sus estudios o no. Una nota más baja tiende a relacionarse con desmotivación mientras que una alta muestra motivación y una buena adaptabilidad. 
 
 

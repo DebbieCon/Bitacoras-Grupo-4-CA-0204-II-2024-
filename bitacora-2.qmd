@@ -653,9 +653,6 @@ kable(t(tabla_2))
 ```
 
 
-```
-
-
 ### Análisis descriptivo
 
 

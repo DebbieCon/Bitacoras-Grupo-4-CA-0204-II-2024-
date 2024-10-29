@@ -34,7 +34,6 @@ library(ggplot2)
 library(hrbrthemes)
 library(stringr)
 library(forcats)
-library(babynames)
 df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
 ```
@@ -626,12 +625,9 @@ kable(sum_qualification)
 
 ```{r, echo=TRUE,message=FALSE, warning=FALSE}
 df$curricular_units_1st_sem_grade <- as.double(df$curricular_units_1st_sem_grade)
-<<<<<<< HEAD
-=======
 ```
 
 ```{r}
->>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
 df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
 df$curricular_units_2nd_sem_grade <- as.integer(df$curricular_units_2nd_sem_grade)
 
@@ -651,16 +647,10 @@ tabla_2 <- df %>% group_by(target) %>%
           ) %>% 
   filter(!is.na(cantidad)) %>% 
   arrange(desc(cantidad))
-<<<<<<< HEAD
 
 kable(t(tabla_2))
 ```
 
-
-=======
-```
-
->>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6
 ### Análisis descriptivo
 
 
@@ -816,7 +806,6 @@ p<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
 print(p)
 ```
 
->>>>>>> 0b57ea27c309c4f6e8c2aad840bcf39b1465adfa
 #### Tabla de nivel de estudios del padre y de la madre 
 Estas variables son importantes para el objetivo en el área de los factores económicos y sociales. Un nivel educativo más alto tiende a implicar un nivel socioeconómico tan bien más alto, por lo que dado la literatura elegida ha mostrado que es uno de los factores determinantes al estudiante elegir si continuar con su carrera o no. Del mismo modo, de manera más social que los padres tengan un nivel educativo mayor podría actuar como motivación a los hijos en su travesía educativa. Así como el apoyo a seguir por el camino de los estudios; un apoyo tanto económico como motivacional.
 

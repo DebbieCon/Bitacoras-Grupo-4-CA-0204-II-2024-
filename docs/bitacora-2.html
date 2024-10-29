@@ -7,7 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
+<<<<<<< HEAD
 <title>2&nbsp; Bitácora 2: Análisis Descriptivo de los Datos – Análisis de la interacción de los factores sociales, económicos, académicos y familiares en la trayectoria de un estudiante</title>
+=======
+<title>Análisis de la interacción de los factores sociales, económicos, académicos y familiares en la trayectoria de un estudiante - 2&nbsp; Bitácora 2: Análisis Descriptivo de los Datos</title>
+>>>>>>> 70b89f76a8010b9379a62fbe547232e1d49138d1
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +37,11 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
+<<<<<<< HEAD
 pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+=======
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+>>>>>>> 70b89f76a8010b9379a62fbe547232e1d49138d1
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -1045,7 +1053,11 @@ A continuación se presentan los paquetes necesarios, así como la inserción de
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>curricular_units_1st_sem_grade <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(df<span class="sc">$</span>curricular_units_1st_sem_grade)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>curricular_units_2nd_sem_grade <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(df<span class="sc">$</span>curricular_units_2nd_sem_grade)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
+<<<<<<< HEAD
 <pre><code>Warning: NAs introducidos por coerción</code></pre>
+=======
+<pre><code>Warning: NAs introduzidos por coerção</code></pre>
+>>>>>>> 70b89f76a8010b9379a62fbe547232e1d49138d1
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>curricular_units_2nd_sem_grade <span class="ot">&lt;-</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(df<span class="sc">$</span>curricular_units_2nd_sem_grade<span class="sc">&gt;</span><span class="dv">25</span>, <span class="cn">NA</span>, df<span class="sc">$</span>curricular_units_2nd_sem_grade)</span>

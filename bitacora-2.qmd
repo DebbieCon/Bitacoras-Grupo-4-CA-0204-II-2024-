@@ -728,7 +728,7 @@ p <- ggplot(target_parents_qualification, aes(x = mothers_qualification, y = fat
   geom_tile() + scale_fill_gradient(low="#AAE48D",
                                     high = "#2B7308",
                                     guide = "colorbar" )+
-  facet_wrap(~ target) + labs(x = "Nivel educativo de la madre", y = "Nivel educativo del padre", fill = "Frecuencia")+theme_bw() + theme(axis.text.x = element_text(angle=90,hjust=1), size = 6)
+  facet_wrap(~ target) + labs(x = "Nivel educativo de la madre", y = "Nivel educativo del padre", fill = "Frecuencia", caption = "Elaboración propia, Fuente: Realinho, et al (2022)")+theme_bw() + theme(axis.text.x = element_text(angle=90,hjust=1), size = 6)
 print(p)
 
 ```
@@ -743,7 +743,8 @@ p<- df %>%count(tuition_fees_up_to_date, target) %>%
     x = "Tipo de Estudiante",
     y = "Frecuencia",
     fill = "Cuotas al día",
-    title = "Deudor en Cuotas Escolares según el tipo de estudiante"
+    title = "Deudor en Cuotas Escolares según el tipo de estudiante",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   ) +
   scale_fill_manual(values = c("Si" = "#A2CD5A","No"="red"))+
   theme(legend.position = "bottom", 
@@ -757,7 +758,7 @@ p <- df %>%count(scholarship_holder, target) %>%
   ggplot(aes(x=scholarship_holder, y = target, fill = n))+
   geom_tile()+ 
   theme_classic() + 
-  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca") + 
+  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca", caption = "Elaboración propia, Fuente: Realinho, et al (2022)") + 
   scale_fill_continuous(low = "skyblue", high = "darkblue")+
   theme(legend.position = "right",
         panel.border = element_rect(colour = "black", fill=NA),
@@ -774,7 +775,8 @@ p<-df %>%count(international, target) %>%
     x = "Tipo de Estudiante",
     y = "Frecuencia",
     fill = "Internacional",
-    title = "Tipo de Estudiante según Nacionalidad"
+    title = "Tipo de Estudiante según Nacionalidad",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   ) +
   scale_fill_manual(values = c("Si" = "#CD5555","No"="#BFEFFF"))+
   theme(legend.position = "bottom", 
@@ -790,7 +792,8 @@ p<-ggplot(df, aes(x = age_at_enrollment, fill = target))+
     x = "Edad de ingreso a la universidad",
     y = "Densidad",
     fill = "Categoría del estudiante",
-    title = "Densidades de edad de admisión por categoría de estudiante"
+    title = "Densidades de edad de admisión por categoría de estudiante",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   )
 print(p)
 ```
@@ -803,6 +806,7 @@ p<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
     y = "Densidad",
     fill = "Categoría del estudiante",
     title = "Densidades de créditos aprobados en primer semestre por tipo de estudiante",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   ) +cowplot::theme_cowplot()
 print(p)
 ```

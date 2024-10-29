@@ -1,0 +1,18 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+fig-cap-location: bottom
+execute:
+  freeze: auto
+  cache: true
+---
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(janitor)
+
+df <- read_csv2("base_datos/universidades_europeas.csv")
+df <- df %>% clean_names()
+```
+

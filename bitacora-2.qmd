@@ -651,10 +651,7 @@ tabla_2 <- df %>% group_by(target) %>%
 kable(t(tabla_2))
 ```
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 70b89f76a8010b9379a62fbe547232e1d49138d1
 ### Análisis descriptivo
 
 

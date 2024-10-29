@@ -1,25 +1,20 @@
-install.packages("tidyverse")
+
 library(tidyverse)
-install.packages("cowplot")
+
 library(cowplot)
 library(dplyr)
-install.packages("janitor")
+
 library(janitor)
 library(readr)
-install.packages("hrbrthemes")
 library(hrbrthemes)
 df <- read_csv2("base_datos/universidades_europeas.csv")
 library(ggplot2)
-install.packages("hrbrthemes")
 library(hrbrthemes)
 library(stringr)
 library(knitr)
-install.packages("babynames")
-library(babynames)
 library(forcats)
-library(waffle)
 
-df <- reknitrdf <- read_csv2("base_datos/universidades_europeas.csv")
+
 view(df)
 df <- df %>% clean_names()
 
@@ -62,6 +57,69 @@ df <- df %>%
     TRUE ~ NA
   ))
 view(df)
+
+
+#GRAFICO GENDER-TARGET (BIT 3)
+df<- df %>%  
+  mutate (gender = case_when(
+    gender == "0" ~ "Mujer", 
+    gender == "1" ~ "Hombre",
+    TRUE ~ NA
+  ))
+  
+df %>% ggplot(aes(fill=gender, x = target))+geom_bar(stat="count")+
+  theme_classic()+labs(
+    x="Tipo de estudiante",
+    y= "Cantidad de estudiantes",
+    fill="Género",
+    title = "Tipo de estudiante por género"
+)+scale_fill_manual(values = c("Mujer"="lightblue", "Hombre" = "forestgreen"))+
+  scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
+  
+#GRAFICO BECAS-NOTAS (BIT 3)
+
+df <- df %>%
+  mutate(
+    curricular_units_1st_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", curricular_units_1st_sem_grade)) %>%
+      round(2))
+
+
+df <- df %>%
+  mutate(
+    curricular_units_2nd_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", curricular_units_2nd_sem_grade)) %>%
+      round(2))
+
+df %>% 
+  ggplot(aes(x=curricular_units_1st_sem_grade, y=target, color=target))+
+  geom_violin()+theme_classic()+labs(
+    x="Notas del primer semestre",
+    y="Tipo de estudiante",
+    title="Notas del primer semestre por tipo de estudiante",
+    color="Tipo de estudiante"
+  )+scale_x_continuous(limits = c(0, 20))+guides(color = "none") 
+
+
+df %>% 
+  ggplot(aes(x=curricular_units_2nd_sem_grade, y=target, color=target))+
+  geom_violin()+theme_classic()+labs(
+    x="Notas del segundo semestre",
+    y="Tipo de estudiante",
+    title="Notas del segundo semestre por tipo de estudiante",
+    color="Tipo de estudiante"
+  )+scale_x_continuous(limits = c(0, 20))+guides(color = "none") 
+
+df %>% 
+  filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,  
+        curricular_units_2nd_sem_grade < 20,curricular_units_1st_sem_grade > 10, target %in% c("Graduado", "Desertor")) %>% 
+  ggplot(aes(x=curricular_units_1st_sem_grade, y=curricular_units_2nd_sem_grade,colour =target))+
+  geom_point()+theme_classic()+labs(
+    x="Nota del primer semestre",
+    y="Nota del segundo semestre",
+    title = "Notas de los primeros dos semestres por tipo de estudiante",
+    color="Tipo de estudiante"
+  )
+
+
 
 df %>% 
   mutate(debtor = ifelse(debtor == 1, "Si", "No")) %>% 

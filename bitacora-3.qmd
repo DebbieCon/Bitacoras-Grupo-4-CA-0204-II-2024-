@@ -20,11 +20,13 @@ library(janitor)
 library(dplyr)
 library(ggplot2)
 library(knitr)
+library(ggridges)
+library(treemapify)
 
 df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
 ```
-
+grafica uno
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% 
@@ -228,7 +230,7 @@ grafica_uno<-ggplot(target_parents_qualification, aes(x = mothers_qualification,
 print(grafica_uno)
 
 ```
-
+grafica dos 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(tuition_fees_up_to_date = case_when(
@@ -257,7 +259,7 @@ print(grafica_dos)
 
 
 
-
+grafica tres 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(scholarship_holder = case_when(
@@ -279,7 +281,7 @@ print(grafica_tres)
 ```
 
 
-
+grafica cuatro
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(international = case_when(
@@ -304,7 +306,7 @@ grafica_cuatro<-df %>%count(international, target) %>%
         plot.title = element_text(hjust = 0.5))
 print(grafica_cuatro)
 ```
-
+grafica cinco
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafico_cinco<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target))+
   geom_density(alpha=0.6, color=NA)+
@@ -318,11 +320,7 @@ grafico_cinco<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target
 print(grafico_cinco)
 ```
 
-
-
-
-
-
+grafica seis 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 df<- df %>%  
@@ -332,53 +330,190 @@ df<- df %>%
     TRUE ~ NA
   ))
   
-grafico_siete<-df %>% ggplot(aes(fill=gender, x = target))+geom_bar(stat="count")+
+grafico_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
   theme_classic()+labs(
     x="Tipo de estudiante",
     y= "Cantidad de estudiantes",
     fill="Género",
-    title = "Gráfica 6. Distribución de estudiantes según su género.")+
+    title = "Gráfica 6. Distribución de estudiantes según su género.",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+    )+
   scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
-print(grafico_siete)
+print(grafico_seis)
 ```
-
-
+grafica siete
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(
     curricular_units_1st_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", curricular_units_1st_sem_grade)) %>%
       round(2))
 
-
 df <- df %>%
   mutate(
     curricular_units_2nd_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", curricular_units_2nd_sem_grade)) %>%
       round(2))
-grafico_ocho<-df %>% 
-  filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,  
-        curricular_units_2nd_sem_grade < 20,curricular_units_1st_sem_grade > 10, target %in% c("Graduado", "Desertor")) %>% 
-  ggplot(aes(x=curricular_units_1st_sem_grade, y=curricular_units_2nd_sem_grade,colour =target))+
+
+grafico_siete<-df %>% 
+filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,  
+        curricular_units_2nd_sem_grade < 20,curricular_units_1st_sem_grade > 10,
+        target %in% c("Graduado", "Desertor")) %>% 
+  ggplot(aes(x=curricular_units_1st_sem_grade, y=curricular_units_2nd_sem_grade,
+             colour =target))+
   geom_point()+theme_classic()+labs(
     x="Nota del primer semestre",
     y="Nota del segundo semestre",
-    title = "Gráfica 7. Dispersión de promedios del primer año lectivo\n según la categoría del estudiante",
+    title = "Gráfica 7. Dispersión de promedios del primer año lectivo\n 
+    según la categoría del estudiante",
     color="Tipo de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   )
-print(grafico_ocho)
+print(grafico_siete)
 ```
 
+grafica ocho 
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
-- **Nombre de su hallazgo/resultado:** Vínculo entre las notas del primer año y la decisión de continuar sus estudios superiores o desertar \
+df <- df %>%
+  mutate(displaced = case_when(
+    displaced == 0 ~ "No desplazado",
+    displaced == 1 ~ "Desplazado",
+    TRUE ~ NA
+  ))
 
-- **Resumen en una oración:** Entre más alta sea la nota tanto del primer como del segundo semestre, es más posible que el estudiante se gradúe. \
+df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Graduado", "Matriculado")) 
 
-- **Principal característica:** Se considera la nota promedio de cada semestre, donde la nota más alta es 20 puntos\
+data_summary <- df %>%
+  group_by(displaced, target) %>%
+  summarise(count = n()) %>%
+  ungroup()
 
-- **Problemas o posibles desafíos:** En esta gráfica solo se consideran las notas del primer año, lo que no es significativo al rendimiento académico a través de toda la vida universitaria de cada estudiante. Las adaptaciones de cada persona a un ambiente nuevo, dado que es el primer año, varían. Solo considerar estas dos calificaciones puede ser insuficiente para analizar problemas en el desempeño académico \
+grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target, 
+                         label = paste(target, "\n", count),
+                         subgroup = displaced)) +
+  geom_treemap(alpha = 0.8) +
+  geom_treemap_text(colour = "white", place = "centre", size = 10)+
+  facet_wrap(~displaced) +
+  labs(
+    title = "Distribución de estudiantes según categoría y desplazamiento",
+    fill = "Estado",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+  ) +
+  theme_minimal()+
+  theme(legend.position="none")
 
-- **Resumen en un párrafo:** Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Es decir, aquellos estudiantes con notas más bajas son más propensos a abandonar la educación superior.  Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico si forma parte de la decisión que es desertar. Además, Landeta, et al (2011) propone que el promedio (nota) y el género son las variables con una mayor correlación conforme al rendimiento académico. 
+print(grafica_ocho)
+```
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
+df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Matriculado", "Graduado")) 
+
+grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
+  geom_boxplot(alpha = 0.7)+
+  labs(
+    x = "Nota de admisión",
+    y = "Categoría del estudiante",
+    title = "Distribución de las notas de admisión por categoría",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+  )+
+  theme_minimal()+
+  theme(legend.position="none")
+
+print(grafica_nueve)
+```
+grafica 10 
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Graduado", 
+                                         "Matriculado"))
+
+grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
+  geom_density_ridges(rel_min_height = 0.02, scale = 3, color=NA, alpha=0.7)+
+  xlim(15, 50)+
+  labs(
+    x = "Edad de ingreso a la universidad",
+    y = "Categoría del estudiante",
+    title = "Densidades de edad de admisión por categoría de estudiante",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+  )+
+  theme_minimal()+
+  theme(legend.position="none")
+  print(grafica_diez)
+```
+tabla 4
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+tabla_cuatro <- df %>%  group_by(target) %>% 
+  summarise(
+    Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+    N = n()
+  )
+tabla_cuatro <- tabla_cuatro %>%  filter(!is.na(target)) %>% 
+  arrange(desc(N))
+
+kable(tabla_cuatro)
+
+```
+tabla 5
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+
+df <- df %>% mutate(gender = case_when(
+  gender == 0 ~ "Femenino",
+  gender == 1 ~ "Masculino",
+  TRUE ~ NA))
+
+tabla_cinco <- df %>%  group_by(gender) %>% 
+  summarise(
+    N = n(),
+    Media_I = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Mediana_I = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar_I = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+    Media_II = mean(curricular_units_2nd_sem_grade, na.rm=TRUE),
+    Mediana_II = median(curricular_units_2nd_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar_II = sd(curricular_units_2nd_sem_grade, na.rm = TRUE)
+  )
+tabla_cinco <- tabla_cinco %>%  filter(!is.na(gender)) %>% 
+  arrange(desc(N))
+
+kable(tabla_cinco)
+
+```
+tabla seis 
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+
+ df <- df %>% 
+   mutate(course=case_when(
+     course ==33  ~ "Biofuel Production Technologies",
+     course ==171  ~ "Animation and Multimedia Design",
+     course ==8014  ~ "Social Service (evening attendance)",
+     course ==9003  ~ "Agronomy",
+     course ==9070  ~ "Communication Design",
+     course ==9085  ~ "Veterinary Nursing",
+     course ==9119  ~ "Informatics Engineering",
+     course ==9130  ~ "Equiniculture",
+     course ==9147  ~ "Managment",
+     course ==9238  ~ "Social Service",
+     course ==9254  ~ "Tourism",
+     course ==9500  ~ "Nursing",
+     course ==9556~ "Oral Hygiene",
+     course ==9670  ~ "Advertising and Marketing Managment",
+     course ==9773  ~ "Journalism and Communication",
+     course ==9853  ~ "Basic Education",
+     course ==9991  ~ "Management (evening attendance)",
+     TRUE ~ NA
+   ))
+ 
+tabla_seis <- df %>% group_by(course) %>% 
+  summarise(cantidad = n(),
+            desertor = sum(target == "Desertor"),
+            graduado = sum(target == "Graduado"),
+            matriculado = sum(target == "Matriculado"))
+tabla_seis <- tabla_seis %>%
+  filter(!is.na(course)) %>%
+  arrange(desc(cantidad))
+
+
+kable(tabla_seis)
+```
 
 #### Construcción de fichas de resultados
 

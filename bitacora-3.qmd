@@ -591,8 +591,19 @@ kable(tabla_seis)
 
 - **Problemas o posibles desafíos:**  Fue necesario limitar el alcance del gráfico a un máximo de 50 años, pues de no hacerlo era más difícil apreciar el comportamiento de los datos en rangos más relevantes y reducidos, como el de 17 a 25 años. Además, solo la categoría de desertor tenía una densidad perceptible para valores más altos que 50.\
 
-- **Resumen en un párrafo:**La representación mediante un gráfico tipo ridgeline de la densidad de las edades de admisión a la universidad según la categoría del estudiante revela tendencias significativas. Un resultado predecible es el hecho de que en todos los grupos, la mayor densidad ocurre entre los 18 y los 20 años, lo cual no es sorprendente dado que una gran cantidad de los estudiantes que ingresan a las universidades acaban de concluir los estudios secundarios. Más interesante es la distribución de la densidad del grupo de desertores, que son la categoría con mayor densidad después de los 25 años y los únicos con una densidad apreciable más allá de los 42 años. Por el contrario, la gran mayoría de los estudiantes graduados o matriculados entraron a la universidad con menos de 25 años.\
+- **Resumen en un párrafo:**La representación mediante el gráfico #10 tipo ridgeline de la densidad de las edades de admisión a la universidad según la categoría del estudiante revela tendencias significativas. Un resultado predecible es el hecho de que en todos los grupos, la mayor densidad ocurre entre los 18 y los 20 años, lo cual no es sorprendente dado que una gran cantidad de los estudiantes que ingresan a las universidades acaban de concluir los estudios secundarios. Más interesante es la distribución de la densidad del grupo de desertores, que son la categoría con mayor densidad después de los 25 años y los únicos con una densidad apreciable más allá de los 42 años. Por el contrario, la gran mayoría de los estudiantes graduados o matriculados entraron a la universidad con menos de 25 años.\
 
+5. **FICHA 11**\
+
+- **Nombre de su hallazgo/resultado:** Diferencias entre las notas de estudiantes graduados, desertores y matriculados.\
+
+- **Resumen en una oración:**  Los estudiantes graduados presentan una media de notas en el primer semestre significativamente mayor que los desertores y matriculados.\
+
+- **Principal característica:** Se considera el promedio ponderado al final del primer semestre junto con las materias reprobadas.\
+
+- **Problemas o posibles desafíos:**  Hay una amplia variabilidad en las notas, especialmente con los graduados que presentan una desviación estándar relativamente grande a comparación de su media y mediana, lo cual sugiere que existen algunos impactos complementarios que afectan el desempeño.\
+
+- **Resumen en un párrafo:**En el análisis de las notas entre estudiantes graduados, desertores y matriculados, se puede observar que son los graduados los que presentan una mayor media de notas en el primer semestre y los desertores la más baja lo cual sugiere que el impacto que tienen estas notas puede afectar el desempeño a futuro del estudiante llegando a la conclusión de desertar sus estudios. La desviación estándar de los graduados sugiere que hay algunas personas con notas bastante altas que se graduaron así como personas que presentan notas suficientes para graduarse pero no sobresalientes. Los datos de los estudiantes matriculados es el que se mantiene más consistente siendo este un grupo más interesante de analizar.\
 
 *Tabla 2*
 

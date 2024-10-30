@@ -617,6 +617,18 @@ kable(tabla_seis)
 
 - **Resumen en un párrafo:** El análisis muestra que las estudiantes del género femenino tienen un rendimiento superior académicamente al de los estudiantes masculinos en ambos semestres sin embargo presentan una mayor desviación estándar lo cual puede significar varios aspectos los cuales se deben profundizar. Las desviaciones de los estudiantes masculinos son significativamente inferiores que las de las estudiantes femeninas significando así que se tiene un registro más consistente en sus notas. Note que además no se está separando la información según el tipo de estudiante y dado que hay más estudiantes femeninos graduados que masculinos esto justifica muy bien la diferencia entre estas características.\
 
+8. **FICHA 13**\
+
+- **Nombre de su hallazgo/resultado:**  Clasificación de los estudiantes según la materia cursada.\
+
+- **Resumen en una oración:**  Muestra la cantidad de estudiantes en diferentes cursos y su clasificación según su deserción o graduación.\
+
+- **Principal característica:** Se destacan los cursos con mayor deserción en el área de administración y enfermería.\
+
+- **Problemas o posibles desafíos:**Hay cursos que presentan una muy baja cantidad de estudiantes y por otra parte otros cursos presentan una muy alta cantidad de estudiantes como el de enfermería por lo que la variabilidad de los datos resulta un desafío para identificar los factores que generan la deserción estudiantil.\
+
+- **Resumen en un párrafo:** La tabla proporciona los registros de los estudiantes que cursaron algunas materias según sus carreras y muestran el resultado en la categoría del estudiante al culminar el curso, donde algunos de estos deciden desertar la carrera universitaria y otros deciden continuar. Podemos observar que los cursos con mayor cantidad de estudiantes matriculados son enfermería y administración siendo este último el de mayor porcentaje de deserción. Se observan que los cursos con mayor cantidad de personas graduadas son enfermería y servicio social mientras que además de administración es en el área de enfermería y comunicación donde se encuentra la mayor deserción estudiantil.\
+
 *Tabla 2*
 
 #### Ordenamiento de los elementos de reporte

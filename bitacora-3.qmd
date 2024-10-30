@@ -26,7 +26,7 @@ library(treemapify)
 df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
 ```
-grafica uno
+Este es un gráfico de tipo heatmap que muestra la frecuencia de cada combinación de niveles académicos de padre y madre del estudiante, un color más oscuro significa mayor cantidad de observaciones de ese tipo. Además, está facetado por la categoría del estudiante (graduado, desertor o matriculado).
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% 
@@ -230,7 +230,9 @@ grafica_uno<-ggplot(target_parents_qualification, aes(x = mothers_qualification,
 print(grafica_uno)
 
 ```
-grafica dos 
+
+Este es un gráfico de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo. 
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(tuition_fees_up_to_date = case_when(

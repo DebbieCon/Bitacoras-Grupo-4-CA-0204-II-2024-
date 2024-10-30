@@ -532,7 +532,6 @@ kable(tabla_seis)
 #### Construcción de fichas de resultados
 
 1.**FICHA 6**  \
-*gráfica 7*\
 
 - **Nombre de su hallazgo/resultado:** Relación significativa entre el género de los estudiantes y su permanencia en la carrera\
 
@@ -542,11 +541,11 @@ kable(tabla_seis)
 
 - **Problemas o posibles desafíos:** Al considerar sólo dos géneros, existe una parte de la población que queda totalmente fuera del estudio. Además, el análisis de este resultado considera una investigación mucho más social y cultural. Esto dado que distintas culturas y constructos sociales imponen ciertas restricciones y expectativas ante la educación para cada género.\
 
-- **Resumen en un párrafo:** Este gráfico ilustra si el género juega un papel fundamental en la educación superior. Se puede concluir que de las personas graduadas la mayor cantidad son mujeres. La diferencia de este número es significativa en comparación de los hombres en la misma categoría. Según la investigación realizada por Landeta, et al (2011) una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres. Exactamente lo que está siendo visualizado en el gráfico. Además, se entiende que no hay una diferencia significativa entre géneros a la hora de desertar.\
+- **Resumen en un párrafo:** El gráfico #6 ilustra si el género juega un papel fundamental en la educación superior. Se puede concluir que de las personas graduadas la mayor cantidad son mujeres. La diferencia de este número es significativa en comparación de los hombres en la misma categoría. Según la investigación realizada por Landeta, et al (2011) una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres. Exactamente lo que está siendo visualizado en el gráfico. Además, se entiende que no hay una diferencia significativa entre géneros a la hora de desertar.\
 
 
 2. **FICHA 7**\
-*gráfica 8*\
+
 - **Nombre de su hallazgo/resultado:** Vínculo entre las notas del primer año y la decisión de continuar sus estudios superiores o desertar \
 
 - **Resumen en una oración:** Entre más alta sea la nota tanto del primer como del segundo semestre, es más posible que el estudiante se gradúe. \
@@ -555,9 +554,21 @@ kable(tabla_seis)
 
 - **Problemas o posibles desafíos:** En esta gráfica solo se consideran las notas del primer año, lo que no es significativo al rendimiento académico a través de toda la vida universitaria de cada estudiante. Las adaptaciones de cada persona a un ambiente nuevo, dado que es el primer año, varían. Solo considerar estas dos calificaciones puede ser insuficiente para analizar problemas en el desempeño académico \
 
-- **Resumen en un párrafo:** Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Es decir, aquellos estudiantes con notas más bajas son más propensos a abandonar la educación superior.  Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico si forma parte de la decisión que es desertar. Además, Landeta, et al (2011) propone que el promedio (nota) y el género son las variables con una mayor correlación conforme al rendimiento académico. 
+- **Resumen en un párrafo:** Basado en el gráfico #7, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Es decir, aquellos estudiantes con notas más bajas son más propensos a abandonar la educación superior.  Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico si forma parte de la decisión que es desertar. Además, Landeta, et al (2011) propone que el promedio (nota) y el género son las variables con una mayor correlación conforme al rendimiento académico.\
 
-3. **FICHA 11**\
+3. **FICHA 8**\
+
+- **Nombre de su hallazgo/resultado:** Incidencia sobre la permanencia en la carrera de la necesidad de desplazamiento a la universidad.\
+
+- **Resumen en una oración:** hay una mayor proporción de graduados en el grupo de estudiantes que necesitaron desplazarse para asistir a la universidad.\
+
+- **Principal característica:** usar un gráfico facetado de tipo treemap facilita la interpretación visual y el análisis cuantitativo de la distribución de estudiantes graduados, matriculados y desertores según un criterio binario (tuvo la necesidad de desplazarse para asistir a la universidad o no). \
+
+- **Problemas o posibles desafíos:** la frecuencia absoluta de estudiantes desplazados es mayor que la de no desplazados, por lo que mayores cifras en cierta categoría no necesariamente indican una tendencia. Sin embargo, esto se mitiga con el componente visual del gráfico, pues el área que ocupa cada categoría ilustra el porcentaje que representa en su respectivo grupo.\
+
+- **Resumen en un párrafo:** Agrupando los estudiantes entre aquellos que tuvieron que desplazarse para asistir a la universidad y los que no, luego clasificándolos por su estado en la carrera (graduado, matriculado o desertor) y representando estos datos en el gráfico #8 facetado de tipo treemap, se revelaron comportamientos interesantes. Primero, es destacable que entre los desplazados existe una menor cantidad de desertores que en los no desplazados, aunque en términos absolutos existen más estudiantes del primer grupo que del segundo. Otro resultado llamativo es que, dentro de los desplazados, la categoría de estudiantes graduados representan alrededor del 54,57%, mientras que en los no desplazados, los graduados componen el 44,29%. Lo anterior parece indicar que existe una mayor probabilidad de graduarse entre los estudiantes que tuvieron que mudarse para recibir una educación superior. Esto contradice los resultados de Lobos y Rodríguez (2022), quienes argumentan que los costos de alquiler y transporte son algunos de los principales obstáculos que enfrentan los estudiantes para continuar con su carrera.\
+ 
+
 *Tabla 2*
 
 #### Ordenamiento de los elementos de reporte

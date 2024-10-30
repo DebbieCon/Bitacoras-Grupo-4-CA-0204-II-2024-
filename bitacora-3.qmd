@@ -25,6 +25,7 @@ library(tidyverse)
 library(janitor)
 library(dplyr)
 library(ggplot2)
+library(knitr)
 
 df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
@@ -105,17 +106,71 @@ print(grafico_ocho)
 - **Resumen en un párrafo:** Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Es decir, aquellos estudiantes con notas más bajas son más propensos a abandonar la educación superior.  Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico si forma parte de la decisión que es desertar. Además, Landeta, et al (2011) propone que el promedio (nota) y el género son las variables con una mayor correlación conforme al rendimiento académico. 
 
 
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+tabla_2 <- df %>%  group_by(target) %>% 
+  summarise(
+    Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+    Cantidad = n()
+  )
+tabla_2 <- tabla_2 %>%  filter(!is.na(target)) %>% 
+  arrange(desc(Cantidad))
+
+tabla2 <- kable(
+  tabla_2,
+  caption = "Elaboración Propia. Fuente: Realinho, et al (2022)",
+  
+  
+)
+
+tabla2
+
+```
+-**Nombre de su hallazgo/resultado:** Diferencias entre las notas de estudiantes graduados, desertores y matriculados.
+
+-**Resumen en una oración:** Los estudiantes graduados presentan una media de notas en el primer semestre significativamente mayor que los desertores y matriculados. 
+-**Principal Característica:** Se considera el promedio ponderado al final del primer semestre junto con las materias reprobadas.
+-**PRoblemas o posibles desafíos:** Hay una amplia variabilidad en las notas, especialmente con los graduados que presentan una desviación estándar relativamente grande a comparación de su media y mediana, lo cual sugiere que existen algunos impactos complementarios que afectan el desempeño.
+
+-**Resumen en un párrafo:** En el análisis de las notas entre estudiantes graduados, desertores y matriculados, se puede observar que son los graduados los que presentan una mayor media de notas en el primer semestre y los desertores la más baja lo cual sugiere que el impacto que tienen estas notas puede afectar el desempeño a futuro del estudiante llegando a la conclusión de desertar sus estudios. La desviación estándar de los graduados sugiere que hay algunas personas con notas bastante altas que se graduaron así como personas que presentan notas suficientes para graduarse pero no sobresalientes. Los datos de los estudiantes matriculados es el que se mantiene más consistente siendo este un grupo más interesante de analizar. 
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+
+tabla3<-df %>%  group_by(gender) %>% 
+  summarise(
+    Cantidad = n(),
+    Prom1 = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Med1 = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Sd1 = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+    Prom2 = mean(curricular_units_2nd_sem_grade, na.rm=TRUE),
+    Med2 = median(curricular_units_2nd_sem_grade, na.rm=TRUE),
+    Sd2 = sd(curricular_units_2nd_sem_grade, na.rm = TRUE)
+  )
+tabla_3 <- kable(
+  tabla3,
+  caption = "Elaboración Propia. Fuente: Realinho, et al (2022)",
+  
+  
+)
+
+tabla_3
+
+
+```
+
+-**Nombre de su hallazgo/resultado:** Comparación del desempeño académico en un año entre géneros.
+
+-**Resumen en una oración:** Las estudiantes del género femenino presentan una media de notas más alta que los estudiantes masculinos en un año lectivo.
+
+-**Principal Característica:** Se considera el promedio ponderado total por semestre de los estudiantes, considerando tanto graduados, desertores y matriculados.
+
+-**PRoblemas o posibles desafíos:** Se tiene aproximadamente el doble de registros de estudiantes femeninas que masculinos lo cual puede generar una escasez de información por parte del género masculino. 
+
+-**Resumen en un párrafo:** El análisis muestra que las estudiantes del género femenino tienen un rendimiento superior académicamente al de los estudiantes masculinos en ambos semestres sin embargo presentan una mayor desviación estándar lo cual puede significar varios aspectos los cuales se deben profundizar. Las desviaciones de los estudiantes masculinos son significativamente inferiores que las de las estudiantes femeninas significando así que se tiene un registro más consistente en sus notas. Note que además no se está separando la información según el tipo de estudiante y dado que hay más estudiantes femeninos graduados que masculinos esto justifica muy bien la diferencia entre estas características.
+
 #### Construcción de fichas de resultados
 
-1.**FICHA 6**  \
-*gráfica 7*\
-
-2. **FICHA 7**\
-*gráfica 8*\
-
-
-3. **FICHA 11**\
-*Tabla 2*
 
 #### Ordenamiento de los elementos de reporte
 

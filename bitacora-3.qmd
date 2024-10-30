@@ -721,3 +721,7 @@ El resultado que ofrece el Gráfico #10 es de tipo social, pues muestra la influ
 Finalmente, la tabla 5 brinda resultados sobre los cursos con mayor asistencia, así como la cantidad de estudiantes que acabaron matriculados, graduados o desertando. Podemos observar que los cursos con mayor cantidad de estudiantes matriculados son enfermería y administración siendo este último el de mayor porcentaje de deserción. Se observa que los cursos con mayor cantidad de personas graduadas son enfermería y servicio social mientras que además de administración es en el área de enfermería y comunicación donde se encuentra la mayor deserción estudiantil. 
 
 ## Parte de reflexión
+
+Basado en las metodologías empleadas y los resultados obtenidos hasta el momento, se propone la siguiente versión actualizada de la UVE de Gowin:
+
+![UVE Actualizada](/Images/UVE_Actualizada.png)

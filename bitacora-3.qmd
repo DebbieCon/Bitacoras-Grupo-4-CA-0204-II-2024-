@@ -450,7 +450,9 @@ grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
   theme(legend.position="none")
   print(grafica_diez)
 ```
-tabla 4
+
+Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 tabla_cuatro <- df %>%  group_by(target) %>% 
   summarise(
@@ -465,7 +467,9 @@ tabla_cuatro <- tabla_cuatro %>%  filter(!is.na(target)) %>%
 kable(tabla_cuatro)
 
 ```
-tabla 5
+
+Similarmente, esta tabla recuenta la cantidad de estudiantes por género y calcula las medidas de tendencia central para la nota de cada grupo en los primeros dos semestres de universidad. 
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 tabla_cinco <- df %>%  group_by(gender) %>% 
@@ -484,7 +488,10 @@ tabla_cinco <- tabla_cinco %>%  filter(!is.na(gender)) %>%
 kable(tabla_cinco)
 
 ```
-tabla seis 
+
+La última tabla recopila las cifras correspondientes a la cantidad de estudiantes presentes en cada curso contemplado en la base de datos, así como qué número de estudiantes pertenecen a cada categoría de la variable objetivo por curso. 
+
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
  df <- df %>% 

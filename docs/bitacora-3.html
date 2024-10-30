@@ -252,9 +252,10 @@ A continuación, se presentan gráficas y tablas con su respectivo código. Cons
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">"base_datos/universidades_europeas.csv"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">clean_names</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">"base_datos/universidades_europeas.csv"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">clean_names</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
@@ -265,55 +266,195 @@ A continuación, se presentan gráficas y tablas con su respectivo código. Cons
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  ))</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#GRAFICO GENDER-TARGET (BIT 3)</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>df<span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span> (<span class="at">gender =</span> <span class="fu">case_when</span>(</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"Mujer"</span>, </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"Hombre"</span>,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>grafico_siete<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>gender, <span class="at">x =</span> target))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"count"</span>)<span class="sc">+</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Tipo de estudiante"</span>,</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span> <span class="st">"Cantidad de estudiantes"</span>,</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span><span class="st">"Género"</span>,</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Tipo de estudiante por género"</span>,</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Elaboración propia, Fuente: Realinho, et al (2022)"</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>)<span class="sc">+</span><span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Mujer"</span><span class="ot">=</span><span class="st">"lightblue"</span>, <span class="st">"Hombre"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>))<span class="sc">+</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(<span class="fu">table</span>(df<span class="sc">$</span>target)), <span class="at">by =</span> <span class="dv">200</span>))</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_siete)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="bitacora-3_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">case_when</span>(</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Educación Secundaria"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"Licenciatura"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"Grado"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="st">"Master"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">5</span><span class="sc">~</span> <span class="st">"Doctorado"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">9</span> <span class="sc">~</span> <span class="st">"12º Año de Escolaridad"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">10</span><span class="sc">~</span> <span class="st">"11º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">11</span><span class="sc">~</span> <span class="st">"7º Año (Antiguo)"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">12</span><span class="sc">~</span> <span class="st">"11º Año de Escolaridad"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">13</span><span class="sc">~</span> <span class="st">"2º Año del curso complementario de secundaria"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">14</span><span class="sc">~</span> <span class="st">"10º Año de Escolaridad"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">18</span> <span class="sc">~</span> <span class="st">"Curso de comercio general"</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">19</span><span class="sc">~</span> <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) </span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="st">    o Equiv."</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">20</span><span class="sc">~</span> <span class="st">"Curso Complementario de Secundaria"</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">22</span><span class="sc">~</span> <span class="st">"Curso técnico-profesional"</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">25</span><span class="sc">~</span> <span class="st">"Curso Complementario de Secundaria - No </span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="st">    Concluido"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">27</span><span class="sc">~</span> <span class="st">"7º Año de Escolaridad"</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">29</span><span class="sc">~</span> <span class="st">"9º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">30</span><span class="sc">~</span> <span class="st">"8º Año de Escolaridad"</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">31</span><span class="sc">~</span> <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">33</span><span class="sc">~</span> <span class="st">"Contabilidad y Administración Suplementaria"</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">34</span><span class="sc">~</span> <span class="st">"Desconocido"</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">35</span><span class="sc">~</span> <span class="st">"No sabe leer ni escribir"</span>,</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">36</span><span class="sc">~</span> <span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">37</span><span class="sc">~</span> <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">38</span><span class="sc">~</span> <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="st">    Equiv."</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">39</span><span class="sc">~</span> <span class="st">"Curso de especialización tecnológica"</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">40</span><span class="sc">~</span> <span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">41</span><span class="sc">~</span> <span class="st">"Curso de estudios superiores especializados"</span>,</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">42</span><span class="sc">~</span> <span class="st">"Curso técnico superior profesional"</span>,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">43</span><span class="sc">~</span> <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">44</span><span class="sc">~</span> <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>,</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Desconocido"</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification=</span><span class="fu">case_when</span>(</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Educación Secundaria"</span>,</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    fathers_qualification  <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"Licenciatura"</span>,</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"Grado"</span>,</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="st">"Master"</span>,</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">5</span><span class="sc">~</span><span class="st">"Doctorado"</span>,</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">9</span> <span class="sc">~</span> <span class="st">"12º Año de Escolaridad"</span>,</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">10</span><span class="sc">~</span> <span class="st">"11º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">11</span><span class="sc">~</span> <span class="st">"7º Año (Antiguo)"</span>,</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">12</span><span class="sc">~</span> <span class="st">"11º Año de Escolaridad"</span>,</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">13</span><span class="sc">~</span> <span class="st">"2º Año del curso complementario de secundaria"</span>,</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">14</span><span class="sc">~</span> <span class="st">"10º Año de Escolaridad"</span>,</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">18</span> <span class="sc">~</span> <span class="st">"Curso de comercio general"</span>,</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">19</span><span class="sc">~</span> <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) </span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="st">    o Equiv."</span>,</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">20</span><span class="sc">~</span> <span class="st">"Curso Complementario de Secundaria"</span>,</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">22</span><span class="sc">~</span> <span class="st">"Curso técnico-profesional"</span>,</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">25</span><span class="sc">~</span> <span class="st">"Curso Complementario de Secundaria - No </span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="st">    Concluido"</span>,</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">27</span><span class="sc">~</span> <span class="st">"7º Año de Escolaridad"</span>,</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">29</span><span class="sc">~</span> <span class="st">"9º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">30</span><span class="sc">~</span> <span class="st">"8º Año de Escolaridad"</span>,</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">31</span><span class="sc">~</span> <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">33</span><span class="sc">~</span> <span class="st">"Contabilidad y Administración Suplementaria"</span>,</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">34</span><span class="sc">~</span> <span class="st">"Desconocido"</span>,</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">35</span><span class="sc">~</span> <span class="st">"No sabe leer ni escribir"</span>,</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">36</span><span class="sc">~</span> <span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">37</span><span class="sc">~</span> <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>,</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">38</span><span class="sc">~</span> <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o </span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="st">    Equiv."</span>,</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">39</span><span class="sc">~</span> <span class="st">"Curso de especialización tecnológica"</span>,</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">40</span><span class="sc">~</span> <span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">41</span><span class="sc">~</span> <span class="st">"Curso de estudios superiores especializados"</span>,</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">42</span><span class="sc">~</span> <span class="st">"Curso técnico superior profesional"</span>,</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">43</span><span class="sc">~</span> <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">44</span><span class="sc">~</span> <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>,</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Desconocido"</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>mothers_qualification<span class="ot">&lt;-</span><span class="fu">as.factor</span>(df<span class="sc">$</span>mothers_qualification)</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>fathers_qualification<span class="ot">&lt;-</span><span class="fu">as.factor</span>(df<span class="sc">$</span>fathers_qualification)</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>sum_mothers_qualification<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">fct_collapse</span>(mothers_qualification, </span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Primaria completada"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"7º Año (Antiguo)"</span>,<span class="st">"7º Año de Escolaridad"</span>, </span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>),</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Primaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>, </span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>),</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Secundaria completada"</span> <span class="ot">=</span><span class="fu">c</span>(<span class="st">"Educación Secundaria"</span>, <span class="st">"12º Año de Escolaridad"</span>, </span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Curso Complementario de Secundaria"</span>),</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Secundaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="st">"11º Año de Escolaridad - No   Completado"</span>,<span class="st">"11º Año de Escolaridad"</span>,<span class="st">"2º Año del </span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="st">curso complementario de secundaria"</span>,<span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) </span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="st">o Equiv."</span>, <span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,<span class="st">"9º Año de </span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="st">Escolaridad - No Completado"</span>,<span class="st">"8º Año de Escolaridad"</span>,<span class="st">"10º Año de Escolaridad"</span>),</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Universidad completada"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Licenciatura"</span>,<span class="st">"Grado"</span>,<span class="st">"Master"</span>,<span class="st">"Doctorado"</span>,</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,<span class="st">"Educación Superior - Grado </span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="st">(1º Ciclo)"</span>,<span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span> ),</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Cursos complementarios"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Curso de comercio general"</span>, <span class="st">"Curso </span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="st">técnico-profesional"</span>, <span class="st">"Curso General de Administración y Comercio"</span>,<span class="st">"Contabilidad</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="st">y Administración Suplementaria"</span>,<span class="st">"Curso de especialización tecnológica"</span>,<span class="st">"Curso </span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="st">de estudios superiores especializados"</span>, <span class="st">"Curso técnico superior profesional"</span>),</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>    <span class="st">"No sabe leer ni escribir"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No sabe leer ni escribir"</span>)</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">fct_lump</span>(mothers_qualification, <span class="at">n=</span><span class="dv">9</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mothers_qualification, <span class="at">sort=</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">nivel_educativo_madre=</span>n)</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>sum_fathers_qualification<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification=</span><span class="fu">fct_collapse</span>(fathers_qualification, </span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Primaria completada"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"7º Año (Antiguo)"</span>,<span class="st">"7º Año de Escolaridad"</span>, </span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>),</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Primaria no completado"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>),</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Secundaria completada"</span> <span class="ot">=</span><span class="fu">c</span>(<span class="st">"Educación Secundaria"</span>, <span class="st">"12º Año de Escolaridad"</span>,</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="st">"Curso Complementario de Secundaria"</span>),</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Secundaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>, </span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="st">"11º Año de Escolaridad - No Completado"</span>,<span class="st">"11º Año de Escolaridad"</span>,</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="st">"2º Año del curso complementario de secundaria"</span>,</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>, <span class="st">"Curso Complementario de </span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="st">Secundaria - No Concluido"</span>,<span class="st">"9º Año de Escolaridad - No Completado"</span>,<span class="st">"8º</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="st">Año de Escolaridad"</span>,<span class="st">"10º Año de Escolaridad"</span>),</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Universidad completada"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Licenciatura"</span>,<span class="st">"Grado"</span>,<span class="st">"Master"</span>,<span class="st">"Doctorado"</span>,</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,<span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a><span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span> ),</span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Cursos complementarios"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Curso de comercio general"</span>, <span class="st">"Curso </span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="st">técnico-profesional"</span>, <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="st">"Contabilidad y Administración Suplementaria"</span>,<span class="st">"Curso de especialización </span></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a><span class="st">tecnológica"</span>, <span class="st">"Curso de estudios superiores especializados"</span>, <span class="st">"Curso técnico </span></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="st">superior profesional"</span>),</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>      <span class="st">"No sabe leer ni escribir"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No sabe leer ni escribir"</span>)</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification=</span><span class="fu">fct_lump</span>(fathers_qualification, <span class="at">n=</span><span class="dv">9</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(fathers_qualification, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">nivel_educativo_padre=</span>n)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_1st_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_1st_sem_grade)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sum_fathers_qualification<span class="ot">&lt;-</span>sum_fathers_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">nivel_de_estudios=</span>fathers_qualification)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>sum_mothers_qualification<span class="ot">&lt;-</span>sum_mothers_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">nivel_de_estudios=</span>mothers_qualification)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_2nd_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_2nd_sem_grade)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>grafico_ocho<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(curricular_units_1st_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_2nd_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>,  </span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        curricular_units_2nd_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_1st_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>, target <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Graduado"</span>, <span class="st">"Desertor"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>curricular_units_1st_sem_grade, <span class="at">y=</span>curricular_units_2nd_sem_grade,<span class="at">colour =</span>target))<span class="sc">+</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Nota del primer semestre"</span>,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Nota del segundo semestre"</span>,</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Notas de los primeros dos semestres por tipo de estudiante"</span>,</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">color=</span><span class="st">"Tipo de estudiante"</span>,</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Elaboración propia, Fuente: Realinho, et al (2022)"</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_ocho)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>sum_qualification<span class="ot">&lt;-</span>sum_mothers_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(sum_fathers_qualification, <span class="at">by=</span><span class="st">"nivel_de_estudios"</span>) </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>target_parents_qualification<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">fct_collapse</span>(mothers_qualification,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Primaria completada"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"7º Año (Antiguo)"</span>,<span class="st">"7º Año de Escolaridad"</span>, </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Primaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>, <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>),</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Secundaria completada"</span> <span class="ot">=</span><span class="fu">c</span>(<span class="st">"Educación Secundaria"</span>, <span class="st">"12º Año de Escolaridad"</span>, <span class="st">"Curso Complementario de Secundaria"</span>),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>       <span class="st">"Secundaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,<span class="st">"11º Año de Escolaridad - No Completado"</span>,<span class="st">"11º Año de Escolaridad"</span>,<span class="st">"2º Año del curso complementario de secundaria"</span>,<span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>,<span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,<span class="st">"9º Año de Escolaridad - No Completado"</span>, <span class="st">"8º Año de Escolaridad"</span>,<span class="st">"10º Año de Escolaridad"</span>),</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Universidad completada"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Licenciatura"</span>,<span class="st">"Grado"</span>,<span class="st">"Master"</span>,<span class="st">"Doctorado"</span>, <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,<span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,<span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span> ),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Cursos complementarios"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Curso de comercio general"</span>, <span class="st">"Curso técnico-profesional"</span>, <span class="st">"Curso General de Administración y Comercio"</span>,<span class="st">"Contabilidad y Administración Suplementaria"</span>,<span class="st">"Curso de especialización tecnológica"</span>, <span class="st">"Curso de estudios superiores especializados"</span>, <span class="st">"Curso técnico superior profesional"</span>),</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>       <span class="st">"No sabe leer ni escribir"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No sabe leer ni escribir"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification=</span><span class="fu">fct_collapse</span>(fathers_qualification,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Primaria completada"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"7º Año (Antiguo)"</span>,<span class="st">"7º Año de Escolaridad"</span>, <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>),</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Primaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,<span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>),</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>       <span class="st">"Secundaria completada"</span> <span class="ot">=</span><span class="fu">c</span>(<span class="st">"Educación Secundaria"</span>, <span class="st">"12º Año de Escolaridad"</span>,<span class="st">"Curso Complementario de Secundaria"</span>),</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>       <span class="st">"Secundaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,<span class="st">"11º Año de Escolaridad - No Completado"</span>,<span class="st">"11º Año de Escolaridad"</span>, <span class="st">"2º Año del curso complementario de secundaria"</span>, <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>, <span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,<span class="st">"9º Año de Escolaridad - No Completado"</span>, <span class="st">"8º Año de Escolaridad"</span>,<span class="st">"10º Año de Escolaridad"</span>),</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>       <span class="st">"Universidad completada"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Licenciatura"</span>,<span class="st">"Grado"</span>,<span class="st">"Master"</span>,<span class="st">"Doctorado"</span>,<span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,<span class="st">"Educación Superior - Grado (1º Ciclo)"</span>, <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>),</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Cursos complementarios"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Curso de comercio general"</span>, <span class="st">"Curso técnico-profesional"</span>, <span class="st">"Curso General de Administración y Comercio"</span>,<span class="st">"Contabilidad y Administración Suplementaria"</span>,<span class="st">"Curso de especialización tecnológica"</span>, <span class="st">"Curso de estudios superiores especializados"</span>, <span class="st">"Curso técnico superior profesional"</span>),</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">"No sabe leer ni escribir"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No sabe leer ni escribir"</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(target, mothers_qualification, fathers_qualification) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count=</span><span class="fu">n</span>())</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>grafica_uno<span class="ot">&lt;-</span><span class="fu">ggplot</span>(target_parents_qualification, <span class="fu">aes</span>(<span class="at">x =</span> mothers_qualification, <span class="at">y =</span> fathers_qualification, <span class="at">fill =</span> count)) <span class="sc">+</span> </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span> <span class="fu">scale_fill_gradient</span>(<span class="at">low=</span><span class="st">"#AAE48D"</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">high =</span> <span class="st">"#2B7308"</span>,</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">guide =</span> <span class="st">"colorbar"</span> )<span class="sc">+</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> target) <span class="sc">+</span> <span class="fu">labs</span>(</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Nivel educativo de la madre"</span>,</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Nivel educativo del padre"</span>, </span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Frecuencia"</span>, <span class="at">title=</span><span class="st">"Gráfica 1. Comparación del nivel </span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="st">    educativo de los padres y</span><span class="sc">\n</span><span class="st"> el estado de los estudiantes"</span>,</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Elaboración propia, Fuente: Realinho, et al (2022)"</span>)<span class="sc">+</span><span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">6</span>,<span class="at">angle=</span><span class="dv">90</span>,<span class="at">hjust=</span><span class="dv">1</span>))</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_uno)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -322,11 +463,31 @@ A continuación, se presentan gráficas y tablas con su respectivo código. Cons
 </div>
 </div>
 </div>
-<section id="construcción-de-fichas-de-resultados" class="level4" data-number="3.1.1.1">
-<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="construcción-de-fichas-de-resultados"><span class="header-section-number">3.1.1.1</span> Construcción de fichas de resultados</h4>
-<p>1.<strong>FICHA 6</strong><br>
-<em>gráfica 7</em><br>
-</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#GRAFICO GENDER-TARGET (BIT 3)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df<span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span> (<span class="at">gender =</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"Mujer"</span>, </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"Hombre"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>grafico_siete<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>gender, <span class="at">x =</span> target))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"count"</span>)<span class="sc">+</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Tipo de estudiante"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span> <span class="st">"Cantidad de estudiantes"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span><span class="st">"Género"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gráfica 6. Distribución de estudiantes según su género."</span>)<span class="sc">+</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(<span class="fu">table</span>(df<span class="sc">$</span>target)), <span class="at">by =</span> <span class="dv">200</span>))</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_siete)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="bitacora-3_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <ul>
 <li><p><strong>Nombre de su hallazgo/resultado:</strong> Relación significativa entre el género de los estudiantes y su permanencia en la carrera<br>
 </p></li>
@@ -339,11 +500,37 @@ A continuación, se presentan gráficas y tablas con su respectivo código. Cons
 <li><p><strong>Resumen en un párrafo:</strong> Este gráfico ilustra si el género juega un papel fundamental en la educación superior. Se puede concluir que de las personas graduadas la mayor cantidad son mujeres. La diferencia de este número es significativa en comparación de los hombres en la misma categoría. Según la investigación realizada por Landeta, et al (2011) una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres. Exactamente lo que está siendo visualizado en el gráfico. Además, se entiende que no hay una diferencia significativa entre géneros a la hora de desertar.<br>
 </p></li>
 </ul>
-<ol start="2" type="1">
-<li><strong>FICHA 7</strong><br>
-<em>gráfica 8</em><br>
-</li>
-</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_1st_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_1st_sem_grade)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_2nd_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_2nd_sem_grade)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>grafico_ocho<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(curricular_units_1st_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_2nd_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>,  </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        curricular_units_2nd_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_1st_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>, target <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Graduado"</span>, <span class="st">"Desertor"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>curricular_units_1st_sem_grade, <span class="at">y=</span>curricular_units_2nd_sem_grade,<span class="at">colour =</span>target))<span class="sc">+</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Nota del primer semestre"</span>,</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Nota del segundo semestre"</span>,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gráfica 7. Dispersión de promedios del primer año lectivo</span><span class="sc">\n</span><span class="st"> según la categoría del estudiante"</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">color=</span><span class="st">"Tipo de estudiante"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Elaboración propia, Fuente: Realinho, et al (2022)"</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_ocho)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="bitacora-3_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <ul>
 <li><p><strong>Nombre de su hallazgo/resultado:</strong> Vínculo entre las notas del primer año y la decisión de continuar sus estudios superiores o desertar<br>
 </p></li>
@@ -355,6 +542,18 @@ A continuación, se presentan gráficas y tablas con su respectivo código. Cons
 </p></li>
 <li><p><strong>Resumen en un párrafo:</strong> Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Es decir, aquellos estudiantes con notas más bajas son más propensos a abandonar la educación superior. Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico si forma parte de la decisión que es desertar. Además, Landeta, et al (2011) propone que el promedio (nota) y el género son las variables con una mayor correlación conforme al rendimiento académico.</p></li>
 </ul>
+<section id="construcción-de-fichas-de-resultados" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="construcción-de-fichas-de-resultados"><span class="header-section-number">3.1.1.1</span> Construcción de fichas de resultados</h4>
+<p>1.<strong>FICHA 6</strong><br>
+<em>gráfica 7</em><br>
+</p>
+<ol start="2" type="1">
+<li><p><strong>FICHA 7</strong><br>
+<em>gráfica 8</em><br>
+</p></li>
+<li><p><strong>FICHA 11</strong><br>
+<em>Tabla 2</em></p></li>
+</ol>
 </section>
 <section id="ordenamiento-de-los-elementos-de-reporte" class="level4" data-number="3.1.1.2">
 <h4 data-number="3.1.1.2" class="anchored" data-anchor-id="ordenamiento-de-los-elementos-de-reporte"><span class="header-section-number">3.1.1.2</span> Ordenamiento de los elementos de reporte</h4>

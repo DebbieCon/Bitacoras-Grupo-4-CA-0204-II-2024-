@@ -346,7 +346,7 @@ grafico_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
 print(grafico_seis)
 ```
 
-Este gráfico de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación. 
+Este gráfico de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.    
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -401,7 +401,7 @@ grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target,
   geom_treemap_text(colour = "white", place = "centre", size = 10)+
   facet_wrap(~displaced) +
   labs(
-    title = "Distribución de estudiantes según categoría y desplazamiento",
+    title = "Gráfica 8.Distribución de estudiantes según categoría y desplazamiento",
     fill = "Estado",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   ) +
@@ -422,7 +422,7 @@ grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
   labs(
     x = "Nota de admisión",
     y = "Categoría del estudiante",
-    title = "Distribución de las notas de admisión por categoría",
+    title = "Gráfica 9.Distribución de las notas de admisión por categoría",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   )+
   theme_minimal()+
@@ -443,7 +443,7 @@ grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
   labs(
     x = "Edad de ingreso a la universidad",
     y = "Categoría del estudiante",
-    title = "Densidades de edad de admisión por categoría de estudiante",
+    title = "Gráfica 10.Densidades de edad de admisión por categoría de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   )+
   theme_minimal()+

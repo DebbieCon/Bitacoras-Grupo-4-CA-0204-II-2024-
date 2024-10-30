@@ -307,7 +307,9 @@ grafica_cuatro<-df %>%count(international, target) %>%
         plot.title = element_text(hjust = 0.5))
 print(grafica_cuatro)
 ```
-grafica cinco
+
+El gráfico mostrado es de tipo densidad y es útil para mostrar la distribución de los créditos aprobados en el primer semestre según la categorías de la variable objetivo. Como existe una superposición significativa de las densidades, fue necesario reducir la opacidad. 
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafico_cinco<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target))+
   geom_density(alpha=0.6, color=NA)+
@@ -321,7 +323,8 @@ grafico_cinco<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target
 print(grafico_cinco)
 ```
 
-grafica seis 
+Nuevamente se presenta un gráfico de barras sobre frecuencia absoluta que segmenta las categorías de la variable objetivo por una variable binaria diferenciada por color, en este caso el género.  
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 df<- df %>%  

@@ -345,7 +345,9 @@ grafico_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
   scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
 print(grafico_seis)
 ```
-grafica siete
+
+Este gráfico de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación. 
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(
@@ -374,7 +376,9 @@ filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,
 print(grafico_siete)
 ```
 
-grafica ocho 
+Este es un gráfico de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado). 
+
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 df <- df %>%

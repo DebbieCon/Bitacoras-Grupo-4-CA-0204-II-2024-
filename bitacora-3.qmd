@@ -581,6 +581,19 @@ kable(tabla_seis)
 - **Resumen en un párrafo:**Al graficar la distribución de las notas de admisión según la categoría final del estudiante mediante un diagrama de cajas, se obtuvo un resultado previsible, aunque tal vez la tendencia no es tan fuerte como se esperaba. Es evidente que el valor de la mediana para los estudiantes graduados es mayor que el de los demás grupos. Además, en el tercer cuartil de la categoría de graduados están contenidos valores más altos que en las otras dos. Estos resultados concuerdan con los hallazgos de Montero, Villalobos y Valverde (2007), que determinaron que el promedio de admisión tiene una relación positiva con el desempeño académico más adelante en la carrera. Sin embargo, la similitud de los “bigotes” entre las tres clasificaciones, lo cual indica una variabilidad similar de los valores en los tres grupos, así como la presencia de valores atípicos muy altos entre los desertores, hacen cuestionar la firmeza de esta tendencia. \
 
 
+5. **FICHA 10**\
+
+- **Nombre de su hallazgo/resultado:** Influencia de la edad de ingreso a la universidad sobre la permanencia en la carrera.\
+
+- **Resumen en una oración:** Una menor edad al momento de entrar a la universidad se relaciona con una mayor posibilidad de permanecer en la carrera.\
+
+- **Principal característica:** Un gráfico de densidad de tipo ridgeline es más apropiado que uno convencional para distinguir la distribución de las categorías dada la concentración de los datos en la franja de 17 a 23 años.\
+
+- **Problemas o posibles desafíos:**  Fue necesario limitar el alcance del gráfico a un máximo de 50 años, pues de no hacerlo era más difícil apreciar el comportamiento de los datos en rangos más relevantes y reducidos, como el de 17 a 25 años. Además, solo la categoría de desertor tenía una densidad perceptible para valores más altos que 50.\
+
+- **Resumen en un párrafo:**La representación mediante un gráfico tipo ridgeline de la densidad de las edades de admisión a la universidad según la categoría del estudiante revela tendencias significativas. Un resultado predecible es el hecho de que en todos los grupos, la mayor densidad ocurre entre los 18 y los 20 años, lo cual no es sorprendente dado que una gran cantidad de los estudiantes que ingresan a las universidades acaban de concluir los estudios secundarios. Más interesante es la distribución de la densidad del grupo de desertores, que son la categoría con mayor densidad después de los 25 años y los únicos con una densidad apreciable más allá de los 42 años. Por el contrario, la gran mayoría de los estudiantes graduados o matriculados entraron a la universidad con menos de 25 años.\
+
+
 *Tabla 2*
 
 #### Ordenamiento de los elementos de reporte

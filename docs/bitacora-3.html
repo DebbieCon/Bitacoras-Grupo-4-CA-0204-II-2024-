@@ -520,22 +520,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#GRAFICO GENDER-TARGET (BIT 3)</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df<span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span> (<span class="at">gender =</span> <span class="fu">case_when</span>(</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"Mujer"</span>, </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"Hombre"</span>,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>grafico_siete<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>gender, <span class="at">x =</span> target))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"count"</span>)<span class="sc">+</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Tipo de estudiante"</span>,</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span> <span class="st">"Cantidad de estudiantes"</span>,</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span><span class="st">"Género"</span>,</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gráfica 6. Distribución de estudiantes según su género."</span>)<span class="sc">+</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(<span class="fu">table</span>(df<span class="sc">$</span>target)), <span class="at">by =</span> <span class="dv">200</span>))</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_siete)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">international =</span> <span class="fu">case_when</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    international <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    international <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Si"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>grafica_cuatro<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span><span class="fu">count</span>(international, target) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>target, <span class="at">y =</span> n, <span class="at">fill =</span> international))<span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"stack"</span>) <span class="sc">+</span> </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Tipo de Estudiante"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Frecuencia"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Internacional"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gráfica 4. Comparación en la frecuencia del estado de los</span><span class="sc">\n</span><span class="st">estudiantes según su nacionalidad"</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Si"</span> <span class="ot">=</span> <span class="st">"#CD5555"</span>,<span class="st">"No"</span><span class="ot">=</span><span class="st">"#BFEFFF"</span>))<span class="sc">+</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, </span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="cn">NA</span>),</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_cuatro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -544,45 +550,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<ul>
-<li><p><strong>Nombre de su hallazgo/resultado:</strong> Relación significativa entre el género de los estudiantes y su permanencia en la carrera<br>
-</p></li>
-<li><p><strong>Resumen en una oración:</strong> la cantidad de estudiantes mujeres graduadas es significativamente mayor a la cantidad de estudiantes hombres graduados<br>
-</p></li>
-<li><p><strong>Principal característica:</strong> En este gráfico se observan dos variables categóricas, el género y el tipo de estudiante<br>
-</p></li>
-<li><p><strong>Problemas o posibles desafíos:</strong> Al considerar sólo dos géneros, existe una parte de la población que queda totalmente fuera del estudio. Además, el análisis de este resultado considera una investigación mucho más social y cultural. Esto dado que distintas culturas y constructos sociales imponen ciertas restricciones y expectativas ante la educación para cada género.<br>
-</p></li>
-<li><p><strong>Resumen en un párrafo:</strong> Este gráfico ilustra si el género juega un papel fundamental en la educación superior. Se puede concluir que de las personas graduadas la mayor cantidad son mujeres. La diferencia de este número es significativa en comparación de los hombres en la misma categoría. Según la investigación realizada por Landeta, et al (2011) una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres. Exactamente lo que está siendo visualizado en el gráfico. Además, se entiende que no hay una diferencia significativa entre géneros a la hora de desertar.<br>
-</p></li>
-</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_1st_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_1st_sem_grade)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_2nd_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_2nd_sem_grade)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>grafico_ocho<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(curricular_units_1st_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_2nd_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>,  </span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        curricular_units_2nd_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_1st_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>, target <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Graduado"</span>, <span class="st">"Desertor"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>curricular_units_1st_sem_grade, <span class="at">y=</span>curricular_units_2nd_sem_grade,<span class="at">colour =</span>target))<span class="sc">+</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Nota del primer semestre"</span>,</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Nota del segundo semestre"</span>,</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gráfica 7. Dispersión de promedios del primer año lectivo</span><span class="sc">\n</span><span class="st"> según la categoría del estudiante"</span>,</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">color=</span><span class="st">"Tipo de estudiante"</span>,</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Elaboración propia, Fuente: Realinho, et al (2022)"</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_ocho)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>grafico_cinco<span class="ot">&lt;-</span><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> curricular_units_1st_sem_approved, <span class="at">fill=</span>target))<span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha=</span><span class="fl">0.6</span>, <span class="at">color=</span><span class="cn">NA</span>)<span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Créditos aprobados en el primer semestre"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Densidad"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Categoría del estudiante"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Densidades de créditos aprobados en primer semestre por tipo de estudiante"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Elaboración propia, Fuente: Realinho, et al (2022)"</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span>cowplot<span class="sc">::</span><span class="fu">theme_cowplot</span>()</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_cinco)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="bitacora-3_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df<span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span> (<span class="at">gender =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"Mujer"</span>, </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"Hombre"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>grafico_siete<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>gender, <span class="at">x =</span> target))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"count"</span>)<span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Tipo de estudiante"</span>,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span> <span class="st">"Cantidad de estudiantes"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span><span class="st">"Género"</span>,</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gráfica 6. Distribución de estudiantes según su género."</span>)<span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(<span class="fu">table</span>(df<span class="sc">$</span>target)), <span class="at">by =</span> <span class="dv">200</span>))</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_siete)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="bitacora-3_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_1st_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_1st_sem_grade)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_2nd_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_2nd_sem_grade)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>grafico_ocho<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(curricular_units_1st_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_2nd_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>,  </span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        curricular_units_2nd_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_1st_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>, target <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Graduado"</span>, <span class="st">"Desertor"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>curricular_units_1st_sem_grade, <span class="at">y=</span>curricular_units_2nd_sem_grade,<span class="at">colour =</span>target))<span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Nota del primer semestre"</span>,</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Nota del segundo semestre"</span>,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gráfica 7. Dispersión de promedios del primer año lectivo</span><span class="sc">\n</span><span class="st"> según la categoría del estudiante"</span>,</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">color=</span><span class="st">"Tipo de estudiante"</span>,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Elaboración propia, Fuente: Realinho, et al (2022)"</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_ocho)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="bitacora-3_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -603,12 +640,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>1.<strong>FICHA 6</strong><br>
 <em>gráfica 7</em><br>
 </p>
-<ol start="2" type="1">
-<li><p><strong>FICHA 7</strong><br>
-<em>gráfica 8</em><br>
+<ul>
+<li><p><strong>Nombre de su hallazgo/resultado:</strong> Relación significativa entre el género de los estudiantes y su permanencia en la carrera<br>
 </p></li>
-<li><p><strong>FICHA 11</strong><br>
-<em>Tabla 2</em></p></li>
+<li><p><strong>Resumen en una oración:</strong> la cantidad de estudiantes mujeres graduadas es significativamente mayor a la cantidad de estudiantes hombres graduados<br>
+</p></li>
+<li><p><strong>Principal característica:</strong> En este gráfico se observan dos variables categóricas, el género y el tipo de estudiante<br>
+</p></li>
+<li><p><strong>Problemas o posibles desafíos:</strong> Al considerar sólo dos géneros, existe una parte de la población que queda totalmente fuera del estudio. Además, el análisis de este resultado considera una investigación mucho más social y cultural. Esto dado que distintas culturas y constructos sociales imponen ciertas restricciones y expectativas ante la educación para cada género.<br>
+</p></li>
+<li><p><strong>Resumen en un párrafo:</strong> Este gráfico ilustra si el género juega un papel fundamental en la educación superior. Se puede concluir que de las personas graduadas la mayor cantidad son mujeres. La diferencia de este número es significativa en comparación de los hombres en la misma categoría. Según la investigación realizada por Landeta, et al (2011) una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres. Exactamente lo que está siendo visualizado en el gráfico. Además, se entiende que no hay una diferencia significativa entre géneros a la hora de desertar.<br>
+</p></li>
+</ul>
+<ol start="2" type="1">
+<li><strong>FICHA 7</strong><br>
+<em>gráfica 8</em><br>
+</li>
+</ol>
+<ul>
+<li><p><strong>Nombre de su hallazgo/resultado:</strong> Vínculo entre las notas del primer año y la decisión de continuar sus estudios superiores o desertar<br>
+</p></li>
+<li><p><strong>Resumen en una oración:</strong> Entre más alta sea la nota tanto del primer como del segundo semestre, es más posible que el estudiante se gradúe.<br>
+</p></li>
+<li><p><strong>Principal característica:</strong> Se considera la nota promedio de cada semestre, donde la nota más alta es 20 puntos<br>
+</p></li>
+<li><p><strong>Problemas o posibles desafíos:</strong> En esta gráfica solo se consideran las notas del primer año, lo que no es significativo al rendimiento académico a través de toda la vida universitaria de cada estudiante. Las adaptaciones de cada persona a un ambiente nuevo, dado que es el primer año, varían. Solo considerar estas dos calificaciones puede ser insuficiente para analizar problemas en el desempeño académico<br>
+</p></li>
+<li><p><strong>Resumen en un párrafo:</strong> Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Es decir, aquellos estudiantes con notas más bajas son más propensos a abandonar la educación superior. Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico si forma parte de la decisión que es desertar. Además, Landeta, et al (2011) propone que el promedio (nota) y el género son las variables con una mayor correlación conforme al rendimiento académico.</p></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>FICHA 11</strong><br>
+<em>Tabla 2</em></li>
 </ol>
 </section>
 <section id="ordenamiento-de-los-elementos-de-reporte" class="level4" data-number="3.1.1.2">

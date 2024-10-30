@@ -625,10 +625,6 @@ kable(sum_qualification)
 
 ```{r, echo=TRUE,message=FALSE, warning=FALSE}
 df$curricular_units_1st_sem_grade <- as.double(df$curricular_units_1st_sem_grade)
-<<<<<<< HEAD
-
-=======
->>>>>>> 4ff0a7406c25938be210650f23505fc2bbca817a
 ```
 
 ```{r}

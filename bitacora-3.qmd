@@ -259,9 +259,8 @@ grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>%
 print(grafica_dos)
 ```
 
+Este es otro gráfico de tipo heatmap, pero que ilustra la cantidad de estudiantes hallados en cada uno de los subgrupos generados al combinar la variable objetivo con una variable binaria (poseedor de beca o no). 
 
-
-grafica tres 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(scholarship_holder = case_when(
@@ -282,8 +281,8 @@ grafica_tres<-df %>%count(scholarship_holder, target) %>%
 print(grafica_tres)
 ```
 
+Este es un gráfico de barras adicional que visualiza la frecuencia absoluta de estudiantes nacionales e internacionales y los distingue con colores dentro de cada categoría de la variable objetivo. 
 
-grafica cuatro
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(international = case_when(

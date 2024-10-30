@@ -477,24 +477,23 @@ tabla seis
 
  df <- df %>% 
    mutate(course=case_when(
-     course ==33  ~ "Biofuel Production Technologies",
-     course ==171  ~ "Animation and Multimedia Design",
-     course ==8014  ~ "Social Service (evening attendance)",
-     course ==9003  ~ "Agronomy",
-     course ==9070  ~ "Communication Design",
-     course ==9085  ~ "Veterinary Nursing",
-     course ==9119  ~ "Informatics Engineering",
-     course ==9130  ~ "Equiniculture",
-     course ==9147  ~ "Managment",
-     course ==9238  ~ "Social Service",
-     course ==9254  ~ "Tourism",
-     course ==9500  ~ "Nursing",
-     course ==9556~ "Oral Hygiene",
-     course ==9670  ~ "Advertising and Marketing Managment",
-     course ==9773  ~ "Journalism and Communication",
-     course ==9853  ~ "Basic Education",
-     course ==9991  ~ "Management (evening attendance)",
-     TRUE ~ NA
+     course ==33  ~ "Tecnologías de producción de biocombustibles",
+     course ==171  ~ "Animación y Diseño Multimedia",
+     course ==8014  ~ "Servicio Social (asistencia nocturna)",
+     course ==9003  ~ "Agronomía",
+     course ==9070  ~ "Diseño de comunicación",
+     course ==9085  ~ "Enfermería Veterinaria",
+     course ==9119  ~ "Ingeniería Informática",
+     course ==9130  ~ "Equinicultura",
+     course ==9147  ~ "Administración",
+     course ==9238  ~ "Servicio Social",
+     course ==9254  ~ "Turismo",
+     course ==9500  ~ "Enfermería",
+     course ==9556~ "Odontología",
+     course ==9670  ~ "Gerencia de Publicidad y Marketing",
+     course ==9773  ~ "Periodismo y Comunicación",
+     course ==9853  ~ "Educación básica",
+     course ==9991  ~ "Administración (asistencia nocturna)"
    ))
  
 tabla_seis <- df %>% group_by(course) %>% 

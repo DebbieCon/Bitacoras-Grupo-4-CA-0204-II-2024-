@@ -1,0 +1,225 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [unreleased]
+
+### 🚀 Features
+
+- Actualiza el sitio con correcciones
+- Añadi imagenes
+- Imágenes en carpeta
+- Actualiza la bitácora 1 a versión final
+- Agregar Bitacora 2
+- Agrega archivo .R
+- Cambio de Rama
+- Añade paquetes y 3 gráficos
+- Agrega Base de Datos
+- Grafico de nivel educativo padres y educacion del estudiante
+- Grafico estudiantes y permanencia
+- Esqueleto bitacora 2
+- Pegar resumenes y intento tabla
+- Fichas de 3-10
+- Gráfica nueva
+- Merge
+- Resuelve conflicto
+- Gráfico Nacionalidad-Nota
+- Arreglos Git
+- Arreglos y Cambios realizados
+- Intento de subir gráficas
+- Contrastes y tabla literaria
+- Añade Gráficas y Arregal Estructura Quarto
+- Formato
+- Correccion tabla
+- Fichas resultado
+- Estructura quarto
+- Tabla nueva
+- Tabla Nueva Arreglada
+- Tabla nueva
+- Agrega nombres de autores a resúmenes
+- Ageregar espacios en fichas
+- Agrega enlaces de literatura
+- Añade Gráficas
+- Añade otra gráfica
+- Nuevas Gráficas
+- Grafica extra
+- Cambios en conflictos
+- Anadir files
+- Añade presentación
+- Presentacion
+- Formato
+- Formato
+- Arregla quarto
+- Errores
+- Resuelve conflicto bitácora 2
+- Bitacora 3
+- Anadir bit-3
+- Correcciones bit-2
+- Primeros 2 graficos y fichas
+- Bit-3
+- Bit 2
+- Arregla conflictos
+- Conflictos
+- Añade gráficas
+- Resuelve conflictos
+- Grafica uno
+- Cambios generales
+- Grafica uno
+- Añade cita de Montero
+- Grafica dos y tres
+- Grafica cuatro y cinco
+- Graficas y tablas
+- Graficas y tablas
+
+### 🐛 Bug Fixes
+
+- Arreglos
+- Resuelve Conflicto
+- Formato
+- Tamano grafico
+- Graficas
+- Arregla Conflicto
+- Arreglos tabla
+- Arregla Estructura de Todo
+- Arregla estructura
+- Conflictos
+- Tabla y grafica
+- Merge
+- Formato fichas
+- Merge
+- Conflictos
+- Arreglo pagina
+- Arreglar pagina
+- Pagina
+- Cambio en numeracion
+- Arreglo conflicto
+
+### ⚙️ Miscellaneous Tasks
+
+- Cambios en bitácora
+- Actualiza sitio
+- Corrige código
+
+## [Bitacora-1] - 2024-09-05
+
+### 🚀 Features
+
+- Agrega documento
+- Agrega proyecto de R
+- Agrega archivo del índice
+- Agrega archivo de referencias
+- Prueba
+- Agrega nombres
+- Borrar pruebas
+- Titulos añadidos
+- Algunas definiciones añadidas
+- Molde para argumentacion de la pregunta
+- Agregué Tensiones
+- Pregunta #2
+- Formato Reformulación Pregunta
+- Referencia y Ficha de Literatura
+- Introducción al Análisis de Datos
+- Intento de Arreglo de errores
+- Bibliografía nueva
+- Añadi definicion de la idea
+- Bibliografía nueva
+- Bibliografía nueva
+- Arreglo
+- Arreglos a bitácora
+- Añadi conceptos
+- Añadi una tension
+- Añadi las 4 preguntas
+- Merge
+- Bibliografía nueva
+- Preguntas añadidas en seccion respectiva
+- Tension 2 y 3
+- Añadi nombre y seccion de teorias
+- Arreglo bibliografía
+- Errores en url referencias
+- Bibliografía Urie Bronfenbrenner
+- Error en commits
+- Actualiza el sitio web
+- Agrega imagen de la UVE al sitio
+- Agrega contraargumentos de primera pregunta
+- Agrega argumentos de primera pregunta
+- Agrega contraargumentos de segunda pregunta
+- Añade contraargumentos de tercera pregunta
+- Añade argumentos de tercera pregunta
+- Agrega contraargumentos de cuarta pregunta
+- Incorpora argumentos de la cuarta pregunta
+- Agrega ficha de literatura 1
+- Agrega ficha de literatura 2
+- Agrega argumentos de la segunda pregunta
+- Añade las conclusiones de la argumentación de cada pregunta
+- Añadi primera teoria
+- Añadi segunda teoria
+- Agrega Bibliografía
+- Añadi parte datos
+- Añadi Datos
+- Añadi ficha 3
+- Añadi referencias
+- Añadi citas en fichas
+- Añade referencias base de datos
+- Añadi prregunta investigacion y subtitulo
+- Agrega primera parte del resumen
+- Segunda parte de resumen
+- Parte final del resumen
+- Añadi introduccion
+- Correccion introduccion
+- Correcion introduciion (2)
+- Correcion cita en resumen
+- Actualiza el contenido del sitio
+- Actualiza los contenidos del sitio
+
+### 🐛 Bug Fixes
+
+- Cambiar nombre de la carpeta a docs
+- Coreccion error doc
+- Elimina carpeta doc duplicada
+- Borrar pruebas
+- Tildes
+- Error en Formato
+- Correcciones formato preguntas
+- Correcciones formato
+- Arreglos al Quarto
+- Cambio de Base de Datos
+- Arreglar formato
+- Eliminar Sección
+- Correccion parentesis
+- Correccion formato titulos
+- Coreccion nombre de seccion introduccion
+- Mejoras formato (area fichas literatura)
+- Arreglo cita factor_académico
+- Formato teorias o principios
+- Error bibliografía
+- Errores en el url
+- Formato conceptos
+- Corrección de enlace del repositorio
+- Agrega source a repo-actions
+- Arreglé error references.bib
+- Corrección Formato
+- Arregle Cambios
+- Arregla conflicto
+- Corregi cita
+- Arregla menciones de la referencias
+- Formato cita en teoria 2
+- Correccion escritura de definicion
+- Coreccion de errores ortograficos y redaccion
+- Correcciones formato
+
+### ⚙️ Miscellaneous Tasks
+
+- Agrega configuración de pre-commit
+- Actualiza sitio
+- Agrega archivo de formato de quarto
+- Argumentación pregunta 2
+- Formato e Introducción del Análisis de Datos
+- Carpeta para imágenes
+- Arreglar formato documento
+- Error
+- Eliminar chapter referencias
+- Modifica gitignore para incluir docs
+- Actualiza el sitio web
+- Actualiza el sitio web posterior a nuevo render
+
+<!-- generated by git-cliff -->

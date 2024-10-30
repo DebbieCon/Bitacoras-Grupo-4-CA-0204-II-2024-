@@ -12,13 +12,7 @@ execute:
 
 ## Parte de planificación
 ### Análisis de modelación
-
-La metodología de esta investigación se basa en el análisis descriptivo de la base de datos seleccionada mediante gráficas y tablas. En este caso, la base elegida trata de las características de un grupo de estudiantes europeos en función a si estos completaron su educación superior o no. Con esto en mente, se quiere definir los factores en el área social, familiar, académica y económica que lleva a la persona estudiante a decidir terminar de ser el caso con sus estudios de carrera. 
-Primeramente, la base de datos es cargada y se inicia la limpieza de la misma. Las variables categóricas que ofrece la base fueron simplificadas a números, cada uno con su respectivo significado. Para el posterior análisis de estas variables, se decide cambiar cada uno de estos valores numéricos con su significado. Las variables a las que se les aplicó este cambio incluyen: el estado civil, el horario de clase, si tiene o no deuda, si tiene o no beca, si paga su matrícula a tiempo, si es un estudiante internacional, la nacionalidad, la carrera, la calificación educativa tanto del padre como el de la madre y el género.
-Luego, se realizan los gráficos a analizar. La gráfica uno trata de comparar el nivel educativo de la madre y el padre con respecto a si su hija o hijo completó sus estudios o no. Esto con el fin de determinar si el nivel educativo de su entorno familiar tiene impacto en si la persona prioriza sus estudios o no. La segunda gráfica, muestra si tener alguna deuda con el centro educativo impacta la decisión de desertar, esto con respecto al factor económico. Asimismo, la gráfica tres, también del área económica y además del área social busca visualizar el impacto que tienen las becas con respecto al tipo de estudiante (graduado, desertor, matriculado). La gráfica cuatro, tiene como intención identificar si ser una persona internacional, y por lo tanto cambiar su entorno tanto familiar como social tiene una repercusión significativa en el estudiante. El gráfico cinco toma la nota de admisión y es comparada respectivamente  con el tipo de estudiante. Esto para contemplar el factor académico tal como lo quiere analizar la gráfica seis y siete. La gráfica compara el género y el tipo, mientras que la gráfica siete cuenta con las notas del primer año. Además, se contempló si el vivir en un lugar lejano aumentar o disminuir la cantidad de graduados para así posteriormente analizar los factores económicos, familiares y sociales que esto contempla. Las últimas dos gráficas se relacionan en contemplan la admisión al centro educativo, uno contempla la nota y la otra la edad para principalmente relacionar los factores sociales y académicos. 
-Posteriormente, se recopiló la información en tablas. La tabla acerca del nivel de estudios del padre y de la madre ya que se tiende a indicar que un nivel educativo más alto implica un nivel socioeconómico más alto y por lo tanto ser parte esencial de los factores a contemplar en la decisión de continuar o no los estudios. Seguidamente se presenta la tabla de estudiante por nacionalidad y nota del primer semestre con la intención de evaluar si esta condición participa en un mejor o peor rendimiento académico y por ende una eventual educación terminada. La tercera tabla presentada considera el estado del estudiante y sus notas del primer y segundo semestre, para así determinar la trayectoria académica del estudiante. Para las dos últimas tablas, se consideró la gráfica seis y siete respectivamente y se añadieron mediaciones tales como la media, mediana, desviación estándar para cada una.   
-A continuación, se presentan gráficas y tablas con su respectivo código. Considere que estas son continuación de aquellas en la bitácora número dos. 
-
+ 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -235,6 +229,52 @@ print(grafica_uno)
 
 ```
 
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df <- df %>%
+  mutate(tuition_fees_up_to_date = case_when(
+    tuition_fees_up_to_date == 0 ~ "No",
+    tuition_fees_up_to_date == 1 ~ "Si",
+    TRUE ~ NA
+  ))
+
+
+grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>% 
+  ggplot(aes(x=target, y = n, fill = tuition_fees_up_to_date))+
+  geom_col(position = "dodge") + 
+  theme_classic()+
+  labs(
+    x = "Tipo de Estudiante",
+    y = "Frecuencia",
+    fill = "Cuotas al día",
+    title = "Gráfica 2. Relación entre persona deudora y resultado académico"
+  ) +
+  scale_fill_manual(values = c("Si" = "#A2CD5A","No"="red"))+
+  theme(legend.position = "bottom", 
+        panel.border = element_rect(colour = "black", fill = NA),
+        plot.title = element_text(hjust = 0.5))
+print(grafica_dos)
+```
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df <- df %>%
+  mutate(scholarship_holder = case_when(
+    scholarship_holder == 0 ~ "No",
+    scholarship_holder == 1 ~ "Si",
+    TRUE ~ NA
+  ))
+
+grafica_tres<-df %>%count(scholarship_holder, target) %>% 
+  ggplot(aes(x=scholarship_holder, y = target, fill = n))+
+  geom_tile()+ 
+  theme_classic() + 
+  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Gráfica 3. Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca") + 
+  scale_fill_continuous(low = "skyblue", high = "darkblue")+
+  theme(legend.position = "right",
+        panel.border = element_rect(colour = "black", fill=NA),
+        plot.title = element_text(hjust = 0.5))
+print(grafica_tres)
+```
+
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
@@ -304,71 +344,17 @@ print(grafico_ocho)
 - **Resumen en un párrafo:** Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Es decir, aquellos estudiantes con notas más bajas son más propensos a abandonar la educación superior.  Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico si forma parte de la decisión que es desertar. Además, Landeta, et al (2011) propone que el promedio (nota) y el género son las variables con una mayor correlación conforme al rendimiento académico. 
 
 
-```{r, echo = TRUE, message=FALSE, warning=FALSE}
-tabla_2 <- df %>%  group_by(target) %>% 
-  summarise(
-    Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
-    Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
-    DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
-    Cantidad = n()
-  )
-tabla_2 <- tabla_2 %>%  filter(!is.na(target)) %>% 
-  arrange(desc(Cantidad))
-
-tabla2 <- kable(
-  tabla_2,
-  caption = "Elaboración Propia. Fuente: Realinho, et al (2022)",
-  
-  
-)
-
-tabla2
-
-```
--**Nombre de su hallazgo/resultado:** Diferencias entre las notas de estudiantes graduados, desertores y matriculados.
-
--**Resumen en una oración:** Los estudiantes graduados presentan una media de notas en el primer semestre significativamente mayor que los desertores y matriculados. 
--**Principal Característica:** Se considera el promedio ponderado al final del primer semestre junto con las materias reprobadas.
--**PRoblemas o posibles desafíos:** Hay una amplia variabilidad en las notas, especialmente con los graduados que presentan una desviación estándar relativamente grande a comparación de su media y mediana, lo cual sugiere que existen algunos impactos complementarios que afectan el desempeño.
-
--**Resumen en un párrafo:** En el análisis de las notas entre estudiantes graduados, desertores y matriculados, se puede observar que son los graduados los que presentan una mayor media de notas en el primer semestre y los desertores la más baja lo cual sugiere que el impacto que tienen estas notas puede afectar el desempeño a futuro del estudiante llegando a la conclusión de desertar sus estudios. La desviación estándar de los graduados sugiere que hay algunas personas con notas bastante altas que se graduaron así como personas que presentan notas suficientes para graduarse pero no sobresalientes. Los datos de los estudiantes matriculados es el que se mantiene más consistente siendo este un grupo más interesante de analizar. 
-
-```{r, echo = TRUE, message=FALSE, warning=FALSE}
-
-tabla3<-df %>%  group_by(gender) %>% 
-  summarise(
-    Cantidad = n(),
-    Prom1 = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
-    Med1 = median(curricular_units_1st_sem_grade, na.rm=TRUE),
-    Sd1 = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
-    Prom2 = mean(curricular_units_2nd_sem_grade, na.rm=TRUE),
-    Med2 = median(curricular_units_2nd_sem_grade, na.rm=TRUE),
-    Sd2 = sd(curricular_units_2nd_sem_grade, na.rm = TRUE)
-  )
-tabla_3 <- kable(
-  tabla3,
-  caption = "Elaboración Propia. Fuente: Realinho, et al (2022)",
-  
-  
-)
-
-tabla_3
-
-
-```
-
--**Nombre de su hallazgo/resultado:** Comparación del desempeño académico en un año entre géneros.
-
--**Resumen en una oración:** Las estudiantes del género femenino presentan una media de notas más alta que los estudiantes masculinos en un año lectivo.
-
--**Principal Característica:** Se considera el promedio ponderado total por semestre de los estudiantes, considerando tanto graduados, desertores y matriculados.
-
--**PRoblemas o posibles desafíos:** Se tiene aproximadamente el doble de registros de estudiantes femeninas que masculinos lo cual puede generar una escasez de información por parte del género masculino. 
-
--**Resumen en un párrafo:** El análisis muestra que las estudiantes del género femenino tienen un rendimiento superior académicamente al de los estudiantes masculinos en ambos semestres sin embargo presentan una mayor desviación estándar lo cual puede significar varios aspectos los cuales se deben profundizar. Las desviaciones de los estudiantes masculinos son significativamente inferiores que las de las estudiantes femeninas significando así que se tiene un registro más consistente en sus notas. Note que además no se está separando la información según el tipo de estudiante y dado que hay más estudiantes femeninos graduados que masculinos esto justifica muy bien la diferencia entre estas características.
-
 #### Construcción de fichas de resultados
 
+1.**FICHA 6**  \
+*gráfica 7*\
+
+2. **FICHA 7**\
+*gráfica 8*\
+
+
+3. **FICHA 11**\
+*Tabla 2*
 
 #### Ordenamiento de los elementos de reporte
 

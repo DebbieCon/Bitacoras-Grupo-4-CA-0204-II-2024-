@@ -466,7 +466,7 @@ df <- df %>%
     TRUE ~ "Otros"
   ))
 
-<<<<<<< HEAD
+
 df$curricular_units_1st_sem_grade <-
   ifelse(df$curricular_units_1st_sem_grade>25, NA, df$curricular_units_1st_sem_grade)
 df$curricular_units_2nd_sem_grade <-
@@ -610,7 +610,7 @@ ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
     title = "Gráfica 6. Distribución de créditos aprobados en primer \n 
     semestre por tipo de estudiante",
   ) +theme_minimal()
-=======
+
  tabla_1 <- df %>% 
    group_by(nacionality) %>% 
    summarise(
@@ -624,6 +624,3 @@ ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
    arrange(desc(N))
  
  kable(tabla_1)
-
- 
->>>>>>> d520b29c49279c9280f86f89d05a7b8ae548a6b6

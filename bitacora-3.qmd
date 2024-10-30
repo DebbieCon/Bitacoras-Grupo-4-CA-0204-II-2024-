@@ -567,7 +567,19 @@ kable(tabla_seis)
 - **Problemas o posibles desafíos:** la frecuencia absoluta de estudiantes desplazados es mayor que la de no desplazados, por lo que mayores cifras en cierta categoría no necesariamente indican una tendencia. Sin embargo, esto se mitiga con el componente visual del gráfico, pues el área que ocupa cada categoría ilustra el porcentaje que representa en su respectivo grupo.\
 
 - **Resumen en un párrafo:** Agrupando los estudiantes entre aquellos que tuvieron que desplazarse para asistir a la universidad y los que no, luego clasificándolos por su estado en la carrera (graduado, matriculado o desertor) y representando estos datos en el gráfico #8 facetado de tipo treemap, se revelaron comportamientos interesantes. Primero, es destacable que entre los desplazados existe una menor cantidad de desertores que en los no desplazados, aunque en términos absolutos existen más estudiantes del primer grupo que del segundo. Otro resultado llamativo es que, dentro de los desplazados, la categoría de estudiantes graduados representan alrededor del 54,57%, mientras que en los no desplazados, los graduados componen el 44,29%. Lo anterior parece indicar que existe una mayor probabilidad de graduarse entre los estudiantes que tuvieron que mudarse para recibir una educación superior. Esto contradice los resultados de Lobos y Rodríguez (2022), quienes argumentan que los costos de alquiler y transporte son algunos de los principales obstáculos que enfrentan los estudiantes para continuar con su carrera.\
- 
+
+4. **FICHA 9**\
+
+- **Nombre de su hallazgo/resultado:** Importancia de la nota de admisión sobre la probabilidad de que un estudiante se gradúe.\
+
+- **Resumen en una oración:** La mediana de las notas de admisión de los estudiantes graduados fue más alta que la de aquellos que desertaron o siguen matriculados. \
+
+- **Principal característica:** El uso de un diagrama de caja permite visualizar fácilmente el comportamiento de la nota de admisión en las tres categorías de estudiantes, incluyendo los cuartiles y los valores atípicos.\
+
+- **Problemas o posibles desafíos:**  La existencia de valores atípicos muy altos en la categoría de desertor demuestra que este resultado es solo una tendencia general y no una garantía de que una mejor nota de admisión implique graduarse.\
+
+- **Resumen en un párrafo:**Al graficar la distribución de las notas de admisión según la categoría final del estudiante mediante un diagrama de cajas, se obtuvo un resultado previsible, aunque tal vez la tendencia no es tan fuerte como se esperaba. Es evidente que el valor de la mediana para los estudiantes graduados es mayor que el de los demás grupos. Además, en el tercer cuartil de la categoría de graduados están contenidos valores más altos que en las otras dos. Estos resultados concuerdan con los hallazgos de Montero, Villalobos y Valverde (2007), que determinaron que el promedio de admisión tiene una relación positiva con el desempeño académico más adelante en la carrera. Sin embargo, la similitud de los “bigotes” entre las tres clasificaciones, lo cual indica una variabilidad similar de los valores en los tres grupos, así como la presencia de valores atípicos muy altos entre los desertores, hacen cuestionar la firmeza de esta tendencia. \
+
 
 *Tabla 2*
 

@@ -378,7 +378,6 @@ print(grafico_siete)
 
 Este es un gráfico de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado). 
 
-
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 df <- df %>%
@@ -411,6 +410,9 @@ grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target,
 
 print(grafica_ocho)
 ```
+
+Este gráfico de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Matriculado", "Graduado")) 
@@ -428,7 +430,9 @@ grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
 
 print(grafica_nueve)
 ```
-grafica 10 
+
+Este es un gráfico de densidad tipo ridgeline, el cual muestra las densidades de la edad al momento de ingreso a la universidad para cada categoría de la variable objetivo. 
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Graduado", 
                                          "Matriculado"))

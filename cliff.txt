@@ -70,6 +70,31 @@ All notable changes to this project will be documented in this file.
 - Grafica cuatro y cinco
 - Graficas y tablas
 - Graficas y tablas
+- Logs.txt
+- Describe gráficas 1 y 2
+- Describe gráficas 3 y 4
+- Describe gráficas 5 y 6
+- Describe gráficas 7 y 8
+- Describe gráficas 9 y 10
+- Agrega descripción de tablas
+- Agrega tabla de elementos de reporte
+- Agrega tabla ordenada de elementos de reporte
+- Agrega intro a parte de escritura
+- Agrega metodología a parte de escritura
+- Agrega y corrige fichas de resultados
+- Agrega ficha 9
+- Agrega ficha 10
+- Agrega ficha 11
+- Agrega ficha 12
+- Agrega ficha 13
+- Añade resultados a sección de escritura
+- Coreccion codigo
+- Cambio idioma
+- Agrega UVE actualizada
+- Uve
+- Correcciones nombre
+- Agrega sección de cambios y mejoras
+- Correciones fichas
 
 ### 🐛 Bug Fixes
 

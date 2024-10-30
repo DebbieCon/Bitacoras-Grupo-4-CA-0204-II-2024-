@@ -1,4 +1,73 @@
-1549e7d (2024-10-30, 00:08) [Debbie Con] (HEAD -> main, origin/main, origin/HEAD) feat: graficas y tablas
+2a36c2f (2024-10-30, 01:50) [Debbie Con] (HEAD -> main, origin/main, origin/HEAD) feat: correciones fichas
+77f9c55 (2024-10-30, 01:49) [Debbie Con] feat: correcciones nombre
+ 13 files changed, 19 insertions(+), 12 deletions(-)
+
+743bbdf (2024-10-30, 01:45) [Aaron Retana] feat: agrega sección de cambios y mejoras
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+401ca48 (2024-10-30, 01:33) [Debbie Con] feat: uve
+06faa00 (2024-10-30, 01:32) [Debbie Con] feat: cambio idioma
+ 4 files changed, 362 insertions(+), 89 deletions(-)
+
+a24d63a (2024-10-30, 01:31) [Aaron Retana] feat: agrega UVE actualizada
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+f3b34a9 (2024-10-30, 01:24) [Debbie Con] feat: coreccion codigo
+adfc7b5 (2024-10-30, 01:23) [Debbie Con] feat: logs.txt
+ 3 files changed, 788 insertions(+), 18 deletions(-)
+
+d745485 (2024-10-30, 01:21) [Aaron Retana] feat: añade resultados a sección de escritura
+ 1 file changed, 29 insertions(+)
+
+a0e5214 (2024-10-30, 01:12) [Aaron Retana] feat: agrega ficha 13
+ 1 file changed, 12 insertions(+)
+
+2bbd3f5 (2024-10-30, 01:09) [Aaron Retana] feat: agrega ficha 12
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+3d6cc60 (2024-10-30, 01:06) [Aaron Retana] feat: agrega ficha 11
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+23d6ad0 (2024-10-30, 01:02) [Aaron Retana] feat: agrega ficha 10
+ 1 file changed, 13 insertions(+)
+
+f13ce81 (2024-10-30, 01:00) [Aaron Retana] feat: agrega ficha 9
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+38d0695 (2024-10-30, 00:57) [Aaron Retana] feat: agrega y corrige fichas de resultados
+ 1 file changed, 16 insertions(+), 5 deletions(-)
+
+a9b1fe1 (2024-10-30, 00:50) [Aaron Retana] feat: agrega metodología a parte de escritura
+ 1 file changed, 8 insertions(+)
+
+1973713 (2024-10-30, 00:49) [Aaron Retana] feat: agrega intro a parte de escritura
+ 1 file changed, 20 insertions(+)
+
+088f938 (2024-10-30, 00:45) [Aaron Retana] feat: agrega tabla ordenada de elementos de reporte
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+cdb60a1 (2024-10-30, 00:39) [Aaron Retana] feat: agrega tabla de elementos de reporte
+ 1 file changed, 17 insertions(+)
+
+8cc9b25 (2024-10-30, 00:22) [Aaron Retana] feat: agrega descripción de tablas
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+
+8877b0b (2024-10-30, 00:20) [Aaron Retana] feat: describe gráficas 9 y 10
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+922c08a (2024-10-30, 00:18) [Aaron Retana] feat: describe gráficas 7 y 8
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+a4a4e4a (2024-10-30, 00:16) [Aaron Retana] feat: describe gráficas 5 y 6
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+8fb56d2 (2024-10-30, 00:14) [Aaron Retana] feat: describe gráficas 3 y 4
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+555e545 (2024-10-30, 00:12) [Aaron Retana] feat: describe gráficas 1 y 2
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+1549e7d (2024-10-30, 00:08) [Debbie Con] feat: graficas y tablas
  4 files changed, 44 insertions(+), 34 deletions(-)
 
 8aa825a (2024-10-30, 00:03) [Debbie Con] feat: graficas y tablas

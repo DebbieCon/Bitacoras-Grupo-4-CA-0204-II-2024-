@@ -456,11 +456,6 @@ kable(tabla_cuatro)
 tabla 5
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
-df <- df %>% mutate(gender = case_when(
-  gender == 0 ~ "Femenino",
-  gender == 1 ~ "Masculino",
-  TRUE ~ NA))
-
 tabla_cinco <- df %>%  group_by(gender) %>% 
   summarise(
     N = n(),

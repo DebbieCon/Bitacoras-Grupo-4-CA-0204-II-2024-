@@ -725,3 +725,8 @@ Finalmente, la tabla 5 brinda resultados sobre los cursos con mayor asistencia, 
 Basado en las metodologías empleadas y los resultados obtenidos hasta el momento, se propone la siguiente versión actualizada de la UVE de Gowin:
 
 ![UVE Actualizada](/Images/UVE_Actualizada.png)
+
+### Correcciones y mejoras desde la bitácora anterior:
+- Descripción para cada gráfica y tabla. \
+- Captions con la fuente y autoría de cada gráfico y tabla. \
+- Metodología correcta en UVE de Gowin. \

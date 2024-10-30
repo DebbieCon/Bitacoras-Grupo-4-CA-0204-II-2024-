@@ -508,7 +508,7 @@ La última tabla recopila las cifras correspondientes a la cantidad de estudiant
      course ==9238  ~ "Servicio Social",
      course ==9254  ~ "Turismo",
      course ==9500  ~ "Enfermería",
-     course ==9556~ "Odontología",
+     course ==9556  ~ "Odontología",
      course ==9670  ~ "Gerencia de Publicidad y Marketing",
      course ==9773  ~ "Periodismo y Comunicación",
      course ==9853  ~ "Educación básica",
@@ -516,13 +516,14 @@ La última tabla recopila las cifras correspondientes a la cantidad de estudiant
    ))
  
 tabla_seis <- df %>% group_by(course) %>% 
-  summarise(cantidad = n(),
-            desertor = sum(target == "Desertor"),
-            graduado = sum(target == "Graduado"),
-            matriculado = sum(target == "Matriculado"))
+  summarise(Cantidad = n(),
+            Desertor = sum(target == "Desertor"),
+            Graduado = sum(target == "Graduado"),
+            Matriculado = sum(target == "Matriculado"))
 tabla_seis <- tabla_seis %>%
   filter(!is.na(course)) %>%
-  arrange(desc(cantidad))
+  rename(Curso = course) %>%
+  arrange(desc(Cantidad))
 
 
 kable(tabla_seis)

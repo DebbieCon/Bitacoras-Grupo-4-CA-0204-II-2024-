@@ -29,6 +29,7 @@ library(ggplot2)
 df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
 ```
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% 
   mutate(target = case_when(
@@ -51,12 +52,20 @@ grafico_siete<-df %>% ggplot(aes(fill=gender, x = target))+geom_bar(stat="count"
     x="Tipo de estudiante",
     y= "Cantidad de estudiantes",
     fill="Género",
-    title = "Tipo de estudiante por género",
-    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-)+scale_fill_manual(values = c("Mujer"="lightblue", "Hombre" = "forestgreen"))+
+    title = "Gráfica 6. Distribución de estudiantes según su género.")+
   scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
 print(grafico_siete)
 ```
+
+- **Nombre de su hallazgo/resultado:** Relación significativa entre el género de los estudiantes y su permanencia en la carrera\
+
+- **Resumen en una oración:** la cantidad de estudiantes mujeres graduadas es significativamente mayor a la cantidad de estudiantes hombres graduados  \
+
+- **Principal característica:** En este gráfico se observan dos variables categóricas,  el género y el tipo de estudiante\
+
+- **Problemas o posibles desafíos:** Al considerar sólo dos géneros, existe una parte de la población que queda totalmente fuera del estudio. Además, el análisis de este resultado considera una investigación mucho más social y cultural. Esto dado que distintas culturas y constructos sociales imponen ciertas restricciones y expectativas ante la educación para cada género.\
+
+- **Resumen en un párrafo:** Este gráfico ilustra si el género juega un papel fundamental en la educación superior. Se puede concluir que de las personas graduadas la mayor cantidad son mujeres. La diferencia de este número es significativa en comparación de los hombres en la misma categoría. Según la investigación realizada por Landeta, et al (2011) una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres. Exactamente lo que está siendo visualizado en el gráfico. Además, se entiende que no hay una diferencia significativa entre géneros a la hora de desertar.\
 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
@@ -77,33 +86,13 @@ grafico_ocho<-df %>%
   geom_point()+theme_classic()+labs(
     x="Nota del primer semestre",
     y="Nota del segundo semestre",
-    title = "Notas de los primeros dos semestres por tipo de estudiante",
+    title = "Gráfica 7. Dispersión de promedios del primer año lectivo\n según la categoría del estudiante",
     color="Tipo de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   )
 print(grafico_ocho)
 ```
 
-
-
-
-#### Construcción de fichas de resultados
-
-1.**FICHA 6**  \
-*gráfica 7*\
-
-- **Nombre de su hallazgo/resultado:** Relación significativa entre el género de los estudiantes y su permanencia en la carrera\
-
-- **Resumen en una oración:** la cantidad de estudiantes mujeres graduadas es significativamente mayor a la cantidad de estudiantes hombres graduados  \
-
-- **Principal característica:** En este gráfico se observan dos variables categóricas,  el género y el tipo de estudiante\
-
-- **Problemas o posibles desafíos:** Al considerar sólo dos géneros, existe una parte de la población que queda totalmente fuera del estudio. Además, el análisis de este resultado considera una investigación mucho más social y cultural. Esto dado que distintas culturas y constructos sociales imponen ciertas restricciones y expectativas ante la educación para cada género.\
-
-- **Resumen en un párrafo:** Este gráfico ilustra si el género juega un papel fundamental en la educación superior. Se puede concluir que de las personas graduadas la mayor cantidad son mujeres. La diferencia de este número es significativa en comparación de los hombres en la misma categoría. Según la investigación realizada por Landeta, et al (2011) una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres. Exactamente lo que está siendo visualizado en el gráfico. Además, se entiende que no hay una diferencia significativa entre géneros a la hora de desertar.\
-
-2. **FICHA 7**\
-*gráfica 8*\
 
 - **Nombre de su hallazgo/resultado:** Vínculo entre las notas del primer año y la decisión de continuar sus estudios superiores o desertar \
 
@@ -114,6 +103,19 @@ print(grafico_ocho)
 - **Problemas o posibles desafíos:** En esta gráfica solo se consideran las notas del primer año, lo que no es significativo al rendimiento académico a través de toda la vida universitaria de cada estudiante. Las adaptaciones de cada persona a un ambiente nuevo, dado que es el primer año, varían. Solo considerar estas dos calificaciones puede ser insuficiente para analizar problemas en el desempeño académico \
 
 - **Resumen en un párrafo:** Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Es decir, aquellos estudiantes con notas más bajas son más propensos a abandonar la educación superior.  Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico si forma parte de la decisión que es desertar. Además, Landeta, et al (2011) propone que el promedio (nota) y el género son las variables con una mayor correlación conforme al rendimiento académico. 
+
+
+#### Construcción de fichas de resultados
+
+1.**FICHA 6**  \
+*gráfica 7*\
+
+2. **FICHA 7**\
+*gráfica 8*\
+
+
+3. **FICHA 11**\
+*Tabla 2*
 
 #### Ordenamiento de los elementos de reporte
 

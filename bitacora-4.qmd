@@ -1,51 +1,31 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+fig-cap-location: bottom
+execute:
+  freeze: auto
+  cache: true
+---
+# Bitacora 4
 
+## Graficas y tablas 
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 library(tidyverse)
-
-library(cowplot)
-library(dplyr)
-
 library(janitor)
-library(readr)
-library(hrbrthemes)
-df <- read_csv2("base_datos/universidades_europeas.csv")
+library(dplyr)
 library(ggplot2)
-library(hrbrthemes)
-library(stringr)
 library(knitr)
-library(forcats)
+library(ggridges)
+library(treemapify)
 
-
+df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
-view(df)
+```
+Este es un gráfico de tipo heatmap que muestra la frecuencia de cada combinación de niveles académicos de padre y madre del estudiante, un color más oscuro significa mayor cantidad de observaciones de ese tipo. Además, está facetado por la categoría del estudiante (graduado, desertor o matriculado).
 
-df <- df %>%
-  mutate(marital_status = case_when(
-    marital_status == 1 ~ "Soltero",
-    marital_status == 2 ~ "Casado",
-    marital_status == 3 ~ "Viudo",
-    marital_status == 4 ~ "Divorciado",
-    marital_status == 5 ~ "Unión Libre",
-    marital_status == 6 ~ "Separado",
-    TRUE ~ NA
-  ))
-
-df <- df %>%
-  mutate(daytime_evening_attendance = case_when(
-    daytime_evening_attendance == 0 ~ "Tarde",
-    daytime_evening_attendance == 1 ~ "Mañana",
-    TRUE ~ NA
-  ))
-
-df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
-df$marital_status <- as.factor(df$marital_status)
-
-df <- df %>%
-  mutate(debtor = case_when(
-    debtor == 0 ~ "No",
-    debtor == 1 ~ "Si",
-    TRUE ~ NA
-  ))
-
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% 
   mutate(target = case_when(
     target == "Dropout" ~ "Desertor",
@@ -54,152 +34,6 @@ df <- df %>%
     TRUE ~ NA
   ))
 
-#GRAFICO GENDER-TARGET (BIT 3)
-df<- df %>%  
-  mutate (gender = case_when(
-    gender == "0" ~ "Mujer", 
-    gender == "1" ~ "Hombre",
-    TRUE ~ NA
-  ))
-  
-df %>% ggplot(aes(fill=gender, x = target))+geom_bar(stat="count")+
-  theme_classic()+labs(
-    x="Tipo de estudiante",
-    y= "Cantidad de estudiantes",
-    fill="Género",
-    title = "Tipo de estudiante por género"
-)+scale_fill_manual(values = c("Mujer"="lightblue", "Hombre" = "forestgreen"))+
-  scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
-  
-#GRAFICO BECAS-NOTAS (BIT 3)
-
-df <- df %>%
-  mutate(
-    curricular_units_1st_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", 
-    curricular_units_1st_sem_grade)) %>%
-      round(2))
-
-
-df <- df %>%
-  mutate(
-    curricular_units_2nd_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", 
-    curricular_units_2nd_sem_grade)) %>%
-      round(2))
-
-df %>% 
-  ggplot(aes(x=curricular_units_1st_sem_grade, y=target, color=target))+
-  geom_violin()+theme_classic()+labs(
-    x="Notas del primer semestre",
-    y="Tipo de estudiante",
-    title="Notas del primer semestre por tipo de estudiante",
-    color="Tipo de estudiante"
-  )+scale_x_continuous(limits = c(0, 20))+guides(color = "none") 
-
-
-df %>% 
-  ggplot(aes(x=curricular_units_2nd_sem_grade, y=target, color=target))+
-  geom_violin()+theme_classic()+labs(
-    x="Notas del segundo semestre",
-    y="Tipo de estudiante",
-    title="Notas del segundo semestre por tipo de estudiante",
-    color="Tipo de estudiante"
-  )+scale_x_continuous(limits = c(0, 20))+guides(color = "none") 
-
-df %>% 
-  filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,  
-        curricular_units_2nd_sem_grade < 20,curricular_units_1st_sem_grade > 10,
-        target %in% c("Graduado", "Desertor")) %>% 
-  ggplot(aes(x=curricular_units_1st_sem_grade, y=curricular_units_2nd_sem_grade,
-             colour =target))+
-  geom_point()+theme_classic()+labs(
-    x="Nota del primer semestre",
-    y="Nota del segundo semestre",
-    title = "Notas de los primeros dos semestres por tipo de estudiante",
-    color="Tipo de estudiante"
-  )
-
-
-
-df %>% 
-  mutate(debtor = ifelse(debtor == 1, "Si", "No")) %>% 
-  count(debtor, target) %>% 
-  ggplot(aes(x = target, y = n, fill = debtor)) + 
-  geom_col(position = "dodge") + 
-  theme_classic() + 
-  labs(
-    x = "Tipo de Estudiante",
-    y = "Frecuencia",
-    fill = "Deudor",
-    title = "Deudor o no Deudor según Categoría del Estudiante"
-  ) + 
-    scale_fill_manual(values = c("Si" = "blue", "No" = "red")) + 
-  theme(legend.position = "bottom", 
-        panel.border = element_rect(colour = "black", fill = NA),
-        plot.title = element_text(hjust = 0.5))
-
-df <- df %>%
-  mutate(scholarship_holder = case_when(
-    scholarship_holder == 0 ~ "No",
-    scholarship_holder == 1 ~ "Si",
-    TRUE ~ NA
-  ))
-
-df %>%count(scholarship_holder, target) %>% 
-  ggplot(aes(x=scholarship_holder, y = target, fill = n))+
-  geom_tile()+ 
-  theme_classic() + 
-  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante",
-       fill = "Frecuencia", title = "Gráfica 3. Frecuencia de Estudiantes 
-       Graduados, Matriculados \n o Desertores según su categoría de beca") + 
-  scale_fill_continuous(low = "skyblue", high = "darkblue")+
-  theme(legend.position = "right",
-        panel.border = element_rect(colour = "black", fill=NA),
-        plot.title = element_text(hjust = 0.5))
-
-df <- df %>%
-  mutate(tuition_fees_up_to_date = case_when(
-    tuition_fees_up_to_date == 0 ~ "No",
-    tuition_fees_up_to_date == 1 ~ "Si",
-    TRUE ~ NA
-  ))
-
-
-df %>%count(tuition_fees_up_to_date, target) %>% 
-  ggplot(aes(x=target, y = n, fill = tuition_fees_up_to_date))+
-  geom_col(position = "dodge") + 
-  theme_classic()+
-  labs(
-    x = "Tipo de Estudiante",
-    y = "Frecuencia",
-    fill = "Cuotas al día",
-    title = "Gráfica 2. Relación entre persona deudora y resultado académico"
-  ) +
-  scale_fill_manual(values = c("Si" = "#A2CD5A","No"="red"))+
-  theme(legend.position = "bottom", 
-        panel.border = element_rect(colour = "black", fill = NA),
-        plot.title = element_text(hjust = 0.5))
-
-df <- df %>%
-  mutate(international = case_when(
-    international == 0 ~ "No",
-    international == 1 ~ "Si",
-    TRUE ~ NA
-  ))
-
-df %>%count(international, target) %>% 
-  ggplot(aes(x=target, y = n, fill = international))+
-  geom_col(position = "stack") + 
-  theme_classic()+
-  labs(
-    x = "Tipo de Estudiante",
-    y = "Frecuencia",
-    fill = "Internacional",
-    title = "Gráfica 4. Comparación en la frecuencia del estado de los\nestudiantes según su nacionalidad"
-  ) +
-  scale_fill_manual(values = c("Si" = "#CD5555","No"="#BFEFFF"))+
-  theme(legend.position = "bottom", 
-        panel.border = element_rect(colour = "black", fill = NA),
-        plot.title = element_text(hjust = 0.5))
 
 df <- df %>% 
   mutate(mothers_qualification=case_when(
@@ -431,26 +265,23 @@ target_parents_qualification<-df %>%
   )) %>% 
   group_by(target, mothers_qualification, fathers_qualification) %>% 
   summarise(count=n())
+```
 
-target_parents_qualification
-print(target_parents_qualification,n=100)
-
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 target_parents_qualification$mothers_qualification <- str_wrap(target_parents_qualification$mothers_qualification, width = 10)
 
 target_parents_qualification<- target_parents_qualification %>% 
   filter(target %in% c("Graduado", "Desertor"))
-print(target_parents_qualification,n=90)
 
 target_parents_qualification <- target_parents_qualification %>% 
   filter(mothers_qualification != "Desconocido", 
          fathers_qualification != "Desconocido")
-print(target_parents_qualification,n=90)
-
-target_parents_qualification$mothers_qualification
-target_parents_qualification$fathers_qualification
 
 target_parents_qualification <- target_parents_qualification %>% 
   mutate(mothers_qualification = str_replace_all(mothers_qualification, "\\n", " "))
+```
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 target_parents_qualification <- target_parents_qualification %>% 
   mutate(mothers_qualification=fct_relevel(mothers_qualification, 
@@ -467,14 +298,11 @@ target_parents_qualification <- target_parents_qualification %>%
                                            "Educación Secundaria", 
                                            "Educación Técnico-Profesional",
                                            "Educación Universitaria" ))
+```
 
-levels(target_parents_qualification$mothers_qualification)
-levels(target_parents_qualification$fathers_qualification)
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
-view(target_parents_qualification)
-
-##PARENTS QUALIFICATION GRAFICA 
-ggplot(target_parents_qualification, 
+grafica_uno<-ggplot(target_parents_qualification, 
     aes(x = mothers_qualification, y = fathers_qualification, fill = count)) + 
   geom_tile() + scale_fill_gradient(low="#AAE48D",
                                     high = "#2B7308",
@@ -486,210 +314,304 @@ ggplot(target_parents_qualification,
                               de los padres y el tipo de estudiante")+
   theme_bw()+theme(plot.title = element_text(hjust = 0.5),
                    axis.text.x = element_text(size=8,angle=90,hjust=1))
-
-##Hora de clase → target 
-
-view(df)
-
-df<- df %>% 
-  mutate(daytime_evening_attendance = case_when(
-    daytime_evening_attendance == 1 ~ "Mañana",
-    daytime_evening_attendance == 0 ~ "Noche",
-    TRUE ~ "Otros"
-  ))
-ggplot(df, aes(fill = daytime_evening_attendance, x = target))+geom_bar()+
-  scale_fill_manual(values = c("Noche"= "#CD5555", "Mañana"= "#A2CD5A"))+
-       labs(x="Estado del estudiante",y="Cantidad de estudiantes", 
-       fill= "Horario de clases",
- title = "Gráfica #. Estado del estudiante y horario de clases")
-+theme_bw()
+print(grafica_uno)
+```
 
 
-df <- df %>% 
-  mutate(nacionality = case_when(
-    nacionality == 1 ~ "Portugal",
-    nacionality ==2  ~ "Alemania",
-    nacionality ==3  ~ "España",
-    nacionality ==4  ~ "Italia",
-    nacionality ==5  ~ "Países Bajos",
-    nacionality ==6  ~ "Inglaterra",
-    nacionality ==7  ~ "Lituania",
-    nacionality ==8  ~ "Angola",
-    nacionality ==9  ~ "Cabo Verde",
-    nacionality ==10  ~ "Guinea",
-    nacionality ==11  ~ "Mozambique",
-    nacionality ==12  ~ "Santo Tomé",
-    nacionality ==13  ~ "Turquía",
-    nacionality ==14  ~ "Brasil",
-    nacionality ==15  ~ "Rumania",
-    nacionality ==16  ~ "Maldovia",
-    nacionality ==17  ~ "México",
-    nacionality ==18  ~ "Ucrania",
-    nacionality ==19  ~ "Rusia",
-    nacionality ==20  ~ "Cuba",
-    nacionality ==21  ~ "Colombia",
-    TRUE ~ "Otros"
+Este es un gráfico de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo. 
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df <- df %>%
+  mutate(tuition_fees_up_to_date = case_when(
+    tuition_fees_up_to_date == 0 ~ "No",
+    tuition_fees_up_to_date == 1 ~ "Si",
+    TRUE ~ NA
   ))
 
 
-df$curricular_units_1st_sem_grade <-
-  ifelse(df$curricular_units_1st_sem_grade>25, NA, df$curricular_units_1st_sem_grade)
-df$curricular_units_2nd_sem_grade <-
-  ifelse(df$curricular_units_2nd_sem_grade>25, NA, df$curricular_units_2nd_sem_grade)
-df %>% group_by(international) %>% 
-  summarise(
-    N=n()
+grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>% 
+  ggplot(aes(x=target, y = n, fill = tuition_fees_up_to_date))+
+  geom_col(position = "dodge") + 
+  theme_classic()+
+  labs(
+    x = "Tipo de Estudiante",
+    y = "Frecuencia",
+    fill = "Cuotas al día",
+    title = "Gráfica 2. Relación entre persona deudora y resultado académico"
+  ) +
+  scale_fill_manual(values = c("Si" = "#A2CD5A","No"="red"))+
+  theme(legend.position = "bottom", 
+        panel.border = element_rect(colour = "black", fill = NA),
+        plot.title = element_text(hjust = 0.5))
+print(grafica_dos)
+```
+
+Este es otro gráfico de tipo heatmap, pero que ilustra la cantidad de estudiantes hallados en cada uno de los subgrupos generados al combinar la variable objetivo con una variable binaria (poseedor de beca o no). 
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df <- df %>%
+  mutate(scholarship_holder = case_when(
+    scholarship_holder == 0 ~ "No",
+    scholarship_holder == 1 ~ "Si",
+    TRUE ~ NA
+  ))
+
+grafica_tres<-df %>%count(scholarship_holder, target) %>% 
+  ggplot(aes(x=scholarship_holder, y = target, fill = n))+
+  geom_tile()+ 
+  theme_classic() + 
+  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Gráfica 3. Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca") + 
+  scale_fill_continuous(low = "skyblue", high = "darkblue")+
+  theme(legend.position = "right",
+        panel.border = element_rect(colour = "black", fill=NA),
+        plot.title = element_text(hjust = 0.5))
+print(grafica_tres)
+```
+
+Este es un gráfico de barras adicional que visualiza la frecuencia absoluta de estudiantes nacionales e internacionales y los distingue con colores dentro de cada categoría de la variable objetivo. 
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df <- df %>%
+  mutate(international = case_when(
+    international == 0 ~ "No",
+    international == 1 ~ "Si",
+    TRUE ~ NA
+  ))
+
+grafica_cuatro<-df %>%count(international, target) %>% 
+  ggplot(aes(x=target, y = n, fill = international))+
+  geom_col(position = "stack") + 
+  theme_classic()+
+  labs(
+    x = "Tipo de Estudiante",
+    y = "Frecuencia",
+    fill = "Internacional",
+    title = "Gráfica 4. Comparación en la frecuencia del estado de los\nestudiantes según su nacionalidad"
+  ) +
+  scale_fill_manual(values = c("Si" = "#CD5555","No"="#BFEFFF"))+
+  theme(legend.position = "bottom", 
+        panel.border = element_rect(colour = "black", fill = NA),
+        plot.title = element_text(hjust = 0.5))
+print(grafica_cuatro)
+```
+
+El gráfico mostrado es de tipo densidad y es útil para mostrar la distribución de los créditos aprobados en el primer semestre según la categorías de la variable objetivo. Como existe una superposición significativa de las densidades, fue necesario reducir la opacidad. 
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+grafico_cinco<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target))+
+  geom_density(alpha=0.6, color=NA)+
+  labs(
+    x = "Créditos aprobados en el primer semestre",
+    y = "Densidad",
+    fill = "Categoría del estudiante",
+    title = "Densidades de créditos aprobados en primer semestre por tipo de estudiante",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+  ) +cowplot::theme_cowplot()
+print(grafico_cinco)
+```
+
+Nuevamente se presenta un gráfico de barras sobre frecuencia absoluta que segmenta las categorías de la variable objetivo por una variable binaria diferenciada por color, en este caso el género.  
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+
+df<- df %>%  
+  mutate (gender = case_when(
+    gender == "0" ~ "Mujer", 
+    gender == "1" ~ "Hombre",
+    TRUE ~ NA
+  ))
+  
+grafico_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
+  theme_classic()+labs(
+    x="Tipo de estudiante",
+    y= "Cantidad de estudiantes",
+    fill="Género",
+    title = "Gráfica 6. Distribución de estudiantes según su género.",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+    )+
+  scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
+print(grafico_seis)
+```
+
+Este gráfico de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.    
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df <- df %>%
+  mutate(
+    curricular_units_1st_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", curricular_units_1st_sem_grade)) %>%
+      round(2))
+
+df <- df %>%
+  mutate(
+    curricular_units_2nd_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", curricular_units_2nd_sem_grade)) %>%
+      round(2))
+
+grafico_siete<-df %>% 
+filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,  
+        curricular_units_2nd_sem_grade < 20,curricular_units_1st_sem_grade > 10,
+        target %in% c("Graduado", "Desertor")) %>% 
+  ggplot(aes(x=curricular_units_1st_sem_grade, y=curricular_units_2nd_sem_grade,
+             colour =target))+
+  geom_point()+theme_classic()+labs(
+    x="Nota del primer semestre",
+    y="Nota del segundo semestre",
+    title = "Gráfica 7. Dispersión de promedios del primer año lectivo\n 
+    según la categoría del estudiante",
+    color="Tipo de estudiante",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   )
-df$curricular_units_1st_sem_grade <- as.integer(df$curricular_units_1st_sem_grade)
-df$curricular_units_2nd_sem_grade <- as.integer(df$curricular_units_2nd_sem_grade)
+print(grafico_siete)
+```
 
+Este es un gráfico de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado). 
 
-df_gr <- df %>% 
-  filter(nacionality != "Otros" & !is.na(nacionality))
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
+df <- df %>%
+  mutate(displaced = case_when(
+    displaced == 0 ~ "No desplazado",
+    displaced == 1 ~ "Desplazado",
+    TRUE ~ NA
+  ))
 
-df_gr %>% 
-  mutate(nacionality = as.factor(nacionality)) %>% 
-  mutate(nacionality = fct_lump(nacionality, n = 3)) %>% 
-  mutate(nacionality = fct_collapse(nacionality, "Otros" = c(NA, "Other"))) %>% 
-  mutate(nacionality = fct_reorder(nacionality, curricular_units_1st_sem_grade)) %>% 
-  group_by(nacionality) %>% 
-  ggplot(aes(x=nacionality,y=curricular_units_1st_sem_grade, fill = nacionality)) + 
-  geom_boxplot(outlier.color = "red", outlier.size = 2) + 
+df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Graduado", "Matriculado")) 
+
+data_summary <- df %>%
+  group_by(displaced, target) %>%
+  summarise(count = n()) %>%
+  ungroup()
+
+grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target, 
+                         label = paste(target, "\n", count),
+                         subgroup = displaced)) +
+  geom_treemap(alpha = 0.8) +
+  geom_treemap_text(colour = "white", place = "centre", size = 10)+
+  facet_wrap(~displaced) +
   labs(
-    title = "Promedio del Primer Semestre en \nFunción de la Nacionalidad",
-    x = "Nacionalidad",
-    fill = "Nacionalidad",
-    y = "Promedio Ponderado"
-  ) + 
-  theme_minimal() + 
-  theme(plot.title=element_text(hjust=0.5),legend.position="bottom",axis.text.x = element_text(angle=90,hjust=1))
+    title = "Gráfica 8.Distribución de estudiantes según categoría y desplazamiento",
+    fill = "Estado",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+  ) +
+  theme_minimal()+
+  theme(legend.position="none")
 
+print(grafica_ocho)
+```
 
-df_gr %>% 
-  mutate(nacionality = as.factor(nacionality)) %>% 
-  mutate(nacionality = fct_lump(nacionality, n = 3)) %>% 
-  mutate(nacionality = fct_collapse(nacionality, "Otros" = c(NA, "Other"))) %>% 
-  mutate(nacionality = fct_reorder(nacionality, curricular_units_1st_sem_grade)) %>% 
-  group_by(nacionality) %>% 
-  ggplot(aes(x=nacionality,y=curricular_units_1st_sem_grade, fill = nacionality)) + 
-  geom_boxplot(outlier.color = "red", outlier.size = 2) + 
+Este gráfico de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+
+df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Matriculado", "Graduado")) 
+
+grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
+  geom_boxplot(alpha = 0.7)+
   labs(
-    title = "Promedio del Primer Semestre en \nFunción de la Nacionalidad",
-    x = "Nacionalidad",
-    fill = "Nacionalidad",
-    y = "Promedio Ponderado"
-  ) + 
-  theme_minimal() + 
-  theme(plot.title=element_text(hjust=0.5),legend.position="bottom",axis.text.x = element_text(angle=90,hjust=1)) +
-  scale_x_discrete(drop = FALSE)
+    x = "Nota de admisión",
+    y = "Categoría del estudiante",
+    title = "Gráfica 9.Distribución de las notas de admisión por categoría",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+  )+
+  theme_minimal()+
+  theme(legend.position="none")
 
-df_gr %>% 
-  mutate(nacionality = as.factor(nacionality)) %>% 
-  mutate(nacionality = fct_lump(nacionality, n = 3)) %>% 
-  mutate(nacionality = fct_collapse(nacionality, "Otros" = c(NA, "Other"))) %>% 
-  mutate(nacionality = fct_reorder(nacionality, curricular_units_1st_sem_grade)) %>% 
-  group_by(nacionality) %>% 
-  ggplot(aes(x=nacionality,y=curricular_units_1st_sem_grade, fill = nacionality)) + 
-  geom_boxplot(outlier.color = "red", outlier.size = 2) + 
+print(grafica_nueve)
+```
+
+Este es un gráfico de densidad tipo ridgeline, el cual muestra las densidades de la edad al momento de ingreso a la universidad para cada categoría de la variable objetivo. 
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Graduado", 
+                                         "Matriculado"))
+
+grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
+  geom_density_ridges(rel_min_height = 0.02, scale = 3, color=NA, alpha=0.7)+
+  xlim(15, 50)+
   labs(
-    title = "Promedio del Primer Semestre en \nFunción de la Nacionalidad",
-    x = "Nacionalidad",
-    fill = "Nacionalidad",
-    y = "Promedio Ponderado"
-  ) + 
-  theme_minimal() + 
-  theme(plot.title=element_text(hjust=0.5),legend.position="bottom",
-        axis.text.x = element_text(angle=90,hjust=1)) +
-  scale_x_discrete(labels = unique(df_gr$nacionality))
+    x = "Edad de ingreso a la universidad",
+    y = "Categoría del estudiante",
+    title = "Gráfica 10.Densidades de edad de admisión por categoría de estudiante",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+  )+
+  theme_minimal()+
+  theme(legend.position="none")
+  print(grafica_diez)
+```
 
-df$curricular_units_1st_sem_grade <- as.double(df$curricular_units_1st_sem_grade)
-df$curricular_units_2nd_sem_grade <- as.double(df$curricular_units_2nd_sem_grade)
+Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
 
-
-
-tabla_1 <- df %>% 
-  group_by(nacionality) %>% 
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+tabla_cuatro <- df %>%  group_by(target) %>% 
   summarise(
     Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
     Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
     DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
     N = n()
-  ) %>%
-  filter(!is.na(nacionality)) %>%
+  )
+tabla_cuatro <- tabla_cuatro %>%  filter(!is.na(target)) %>% 
   arrange(desc(N))
 
-kable(tabla_1)
-glimpse(df)
+kable(tabla_cuatro)
 
+```
 
-df <- df %>% 
-  mutate(course=case_when(
-    course ==1  ~ "Biofuel Production Technologies",
-    course ==2  ~ "Animation and Multimedia Design",
-    course ==3  ~ "Social Service (evening attendance)",
-    course ==4  ~ "Agronomy",
-    course ==5  ~ "Communication Design",
-    course ==6  ~ "Veterinary Nursing",
-    course ==7  ~ "Informatics Engineering",
-    course ==8  ~ "Equiniculture",
-    course ==9  ~ "Managment",
-    course ==10  ~ "Social Service",
-    course ==11  ~ "Tourism",
-    course ==12  ~ "Nursing",
-    course ==13  ~ "Oral Hygiene",
-    course ==14  ~ "Advertising and Marketing Managment",
-    course ==15  ~ "Journalism and Communication",
-    course ==16  ~ "Basic Education",
-    course ==17  ~ "Management (evening attendance)",
-    TRUE ~ NA
-  ))
-view(df)
+Similarmente, esta tabla recuenta la cantidad de estudiantes por género y calcula las medidas de tendencia central para la nota de cada grupo en los primeros dos semestres de universidad. 
 
-tabla_2 <- df %>% group_by(target) %>% 
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+
+tabla_cinco <- df %>%  group_by(gender) %>% 
   summarise(
-    cantidad = n(),
-    Promedio_Nota_Primer_Semestre = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
-    Promedio_Nota_Segundo_Semestre = mean(curricular_units_2nd_sem_grade, na.rm=TRUE),
-    Desviación_Estándar_Primer_Semestre = sd(curricular_units_1st_sem_credited, na.rm=TRUE),
-    Desviación_Estándar_Segundo_Semestre = sd(curricular_units_2nd_sem_credited, na.rm=TRUE)        
-          ) %>% 
-  filter(!is.na(cantidad)) %>% 
-  arrange(desc(cantidad))
+    N = n(),
+    Media_I = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
+    Mediana_I = median(curricular_units_1st_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar_I = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
+    Media_II = mean(curricular_units_2nd_sem_grade, na.rm=TRUE),
+    Mediana_II = median(curricular_units_2nd_sem_grade, na.rm=TRUE),
+    DesviaciónEstándar_II = sd(curricular_units_2nd_sem_grade, na.rm = TRUE)
+  )
+tabla_cinco <- tabla_cinco %>%  filter(!is.na(gender)) %>% 
+  arrange(desc(N))
 
-kable(t(tabla_2))
+kable(tabla_cinco)
 
-ggplot(df, aes(x = age_at_enrollment, fill = target))+
-  geom_density(alpha=0.4, color="grey")+
-  labs(
-    x = "Edad de ingreso a la universidad",
-    y = "Densidad",
-    fill = "Categoría del estudiante",
-    title = "Gráfica 5. Distribución de edad de admisión por categoría de estudiante"
-  )+theme_minimal()+theme(plot.title = element_text(hjust = 0,5))
+```
 
-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
-  geom_density(alpha=0.5, color=NA)+
-  labs(
-    x = "Créditos aprobados en el primer semestre",
-    y = "Densidad",
-    fill = "Categoría del estudiante",
-    title = "Gráfica 6. Distribución de créditos aprobados en primer \n 
-    semestre por tipo de estudiante",
-  ) +theme_minimal()
+La última tabla recopila las cifras correspondientes a la cantidad de estudiantes presentes en cada curso contemplado en la base de datos, así como qué número de estudiantes pertenecen a cada categoría de la variable objetivo por curso. 
 
- tabla_1 <- df %>% 
-   group_by(nacionality) %>% 
-   summarise(
-     Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
-     Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
-     DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
-     N = n()
-   )
- tabla_1 <- tabla_1 %>%
-   filter(!is.na(nacionality)) %>%
-   arrange(desc(N))
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+
+ df <- df %>% 
+   mutate(course=case_when(
+     course ==33  ~ "Tecnologías de producción de biocombustibles",
+     course ==171  ~ "Animación y Diseño Multimedia",
+     course ==8014  ~ "Servicio Social (asistencia nocturna)",
+     course ==9003  ~ "Agronomía",
+     course ==9070  ~ "Diseño de comunicación",
+     course ==9085  ~ "Enfermería Veterinaria",
+     course ==9119  ~ "Ingeniería Informática",
+     course ==9130  ~ "Equinicultura",
+     course ==9147  ~ "Administración",
+     course ==9238  ~ "Servicio Social",
+     course ==9254  ~ "Turismo",
+     course ==9500  ~ "Enfermería",
+     course ==9556  ~ "Odontología",
+     course ==9670  ~ "Gerencia de Publicidad y Marketing",
+     course ==9773  ~ "Periodismo y Comunicación",
+     course ==9853  ~ "Educación básica",
+     course ==9991  ~ "Administración (asistencia nocturna)"
+   ))
  
- kable(tabla_1)
+tabla_seis <- df %>% group_by(course) %>% 
+  summarise(Cantidad = n(),
+            Desertor = sum(target == "Desertor"),
+            Graduado = sum(target == "Graduado"),
+            Matriculado = sum(target == "Matriculado"))
+tabla_seis <- tabla_seis %>%
+  filter(!is.na(course)) %>%
+  rename(Curso = course) %>%
+  arrange(desc(Cantidad))
 
- 
+
+kable(tabla_seis)
+```

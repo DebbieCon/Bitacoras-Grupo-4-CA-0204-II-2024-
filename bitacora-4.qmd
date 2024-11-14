@@ -9,7 +9,7 @@ execute:
 ---
 # Bitacora 4
 
-## Graficas y tablas 
+## Parte de planificación
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 library(tidyverse)

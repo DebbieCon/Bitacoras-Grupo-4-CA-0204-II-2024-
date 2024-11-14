@@ -300,6 +300,7 @@ target_parents_qualification <- target_parents_qualification %>%
                                            "Educación Universitaria" ))
 ```
 
+:::{#fig-grafica_uno}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 grafica_uno<-ggplot(target_parents_qualification, 
@@ -316,10 +317,10 @@ grafica_uno<-ggplot(target_parents_qualification,
                    axis.text.x = element_text(size=8,angle=90,hjust=1))
 print(grafica_uno)
 ```
-
+:::
 
 Este es un gráfico de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo. 
-
+@fig-grafica_uno
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(tuition_fees_up_to_date = case_when(
@@ -327,8 +328,10 @@ df <- df %>%
     tuition_fees_up_to_date == 1 ~ "Si",
     TRUE ~ NA
   ))
+```
 
-
+:::{#fig-grafica_dos}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>% 
   ggplot(aes(x=target, y = n, fill = tuition_fees_up_to_date))+
   geom_col(position = "dodge") + 
@@ -345,6 +348,7 @@ grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>%
         plot.title = element_text(hjust = 0.5))
 print(grafica_dos)
 ```
+:::
 
 Este es otro gráfico de tipo heatmap, pero que ilustra la cantidad de estudiantes hallados en cada uno de los subgrupos generados al combinar la variable objetivo con una variable binaria (poseedor de beca o no). 
 
@@ -355,7 +359,10 @@ df <- df %>%
     scholarship_holder == 1 ~ "Si",
     TRUE ~ NA
   ))
+```
 
+:::{#fig-grafica_tres}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafica_tres<-df %>%count(scholarship_holder, target) %>% 
   ggplot(aes(x=scholarship_holder, y = target, fill = n))+
   geom_tile()+ 
@@ -367,6 +374,7 @@ grafica_tres<-df %>%count(scholarship_holder, target) %>%
         plot.title = element_text(hjust = 0.5))
 print(grafica_tres)
 ```
+:::
 
 Este es un gráfico de barras adicional que visualiza la frecuencia absoluta de estudiantes nacionales e internacionales y los distingue con colores dentro de cada categoría de la variable objetivo. 
 
@@ -377,7 +385,10 @@ df <- df %>%
     international == 1 ~ "Si",
     TRUE ~ NA
   ))
+```
 
+:::{#fig-grafica_cuatro}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafica_cuatro<-df %>%count(international, target) %>% 
   ggplot(aes(x=target, y = n, fill = international))+
   geom_col(position = "stack") + 
@@ -394,9 +405,11 @@ grafica_cuatro<-df %>%count(international, target) %>%
         plot.title = element_text(hjust = 0.5))
 print(grafica_cuatro)
 ```
+:::
 
 El gráfico mostrado es de tipo densidad y es útil para mostrar la distribución de los créditos aprobados en el primer semestre según la categorías de la variable objetivo. Como existe una superposición significativa de las densidades, fue necesario reducir la opacidad. 
 
+:::{#fig-grafica_cinco}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafico_cinco<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target))+
   geom_density(alpha=0.6, color=NA)+
@@ -404,11 +417,12 @@ grafico_cinco<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target
     x = "Créditos aprobados en el primer semestre",
     y = "Densidad",
     fill = "Categoría del estudiante",
-    title = "Densidades de créditos aprobados en primer semestre por tipo de estudiante",
+    title = "Gráfica 4.Densidades de créditos aprobados en primer semestre \npor tipo de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
   ) +cowplot::theme_cowplot()
 print(grafico_cinco)
 ```
+:::
 
 Nuevamente se presenta un gráfico de barras sobre frecuencia absoluta que segmenta las categorías de la variable objetivo por una variable binaria diferenciada por color, en este caso el género.  
 
@@ -420,7 +434,10 @@ df<- df %>%
     gender == "1" ~ "Hombre",
     TRUE ~ NA
   ))
-  
+```
+
+:::{#fig-grafica_seis}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafico_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
   theme_classic()+labs(
     x="Tipo de estudiante",
@@ -432,6 +449,7 @@ grafico_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
   scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
 print(grafico_seis)
 ```
+:::
 
 Este gráfico de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.    
 
@@ -445,7 +463,10 @@ df <- df %>%
   mutate(
     curricular_units_2nd_sem_grade = as.numeric(gsub("(\\d+\\.\\d+).*", "\\1", curricular_units_2nd_sem_grade)) %>%
       round(2))
+```
 
+:::{#fig-grafica_siete}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafico_siete<-df %>% 
 filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,  
         curricular_units_2nd_sem_grade < 20,curricular_units_1st_sem_grade > 10,
@@ -462,6 +483,7 @@ filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,
   )
 print(grafico_siete)
 ```
+:::
 
 Este es un gráfico de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado). 
 
@@ -480,7 +502,10 @@ data_summary <- df %>%
   group_by(displaced, target) %>%
   summarise(count = n()) %>%
   ungroup()
+```
 
+:::{#fig-grafica_ocho}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target, 
                          label = paste(target, "\n", count),
                          subgroup = displaced)) +
@@ -497,9 +522,11 @@ grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target,
 
 print(grafica_ocho)
 ```
+:::
 
 Este gráfico de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
 
+:::{#fig-grafica_nueva}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Matriculado", "Graduado")) 
@@ -517,13 +544,17 @@ grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
 
 print(grafica_nueve)
 ```
+:::
 
 Este es un gráfico de densidad tipo ridgeline, el cual muestra las densidades de la edad al momento de ingreso a la universidad para cada categoría de la variable objetivo. 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Graduado", 
                                          "Matriculado"))
+```
 
+:::{#fig-grafica_diez}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
   geom_density_ridges(rel_min_height = 0.02, scale = 3, color=NA, alpha=0.7)+
   xlim(15, 50)+
@@ -537,9 +568,11 @@ grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
   theme(legend.position="none")
   print(grafica_diez)
 ```
+:::
 
 Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
 
+:::{#fig-tabla_cuatro}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 tabla_cuatro <- df %>%  group_by(target) %>% 
   summarise(
@@ -552,11 +585,12 @@ tabla_cuatro <- tabla_cuatro %>%  filter(!is.na(target)) %>%
   arrange(desc(N))
 
 kable(tabla_cuatro)
-
 ```
+:::
 
 Similarmente, esta tabla recuenta la cantidad de estudiantes por género y calcula las medidas de tendencia central para la nota de cada grupo en los primeros dos semestres de universidad. 
 
+:::{#fig-tabla_cinco}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 tabla_cinco <- df %>%  group_by(gender) %>% 
@@ -575,6 +609,7 @@ tabla_cinco <- tabla_cinco %>%  filter(!is.na(gender)) %>%
 kable(tabla_cinco)
 
 ```
+:::
 
 La última tabla recopila las cifras correspondientes a la cantidad de estudiantes presentes en cada curso contemplado en la base de datos, así como qué número de estudiantes pertenecen a cada categoría de la variable objetivo por curso. 
 
@@ -601,7 +636,10 @@ La última tabla recopila las cifras correspondientes a la cantidad de estudiant
      course ==9853  ~ "Educación básica",
      course ==9991  ~ "Administración (asistencia nocturna)"
    ))
- 
+```
+
+:::{#fig-tabla_seis}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 tabla_seis <- df %>% group_by(course) %>% 
   summarise(Cantidad = n(),
             Desertor = sum(target == "Desertor"),
@@ -612,6 +650,6 @@ tabla_seis <- tabla_seis %>%
   rename(Curso = course) %>%
   arrange(desc(Cantidad))
 
-
 kable(tabla_seis)
 ```
+:::

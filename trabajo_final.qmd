@@ -1,0 +1,9 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+fig-cap-location: bottom
+execute:
+  freeze: auto
+  cache: true
+---

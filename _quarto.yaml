@@ -20,6 +20,7 @@ book:
     - "bitacora-1.qmd"
     - "bitacora-2.qmd"
     - "bitacora-3.qmd"
+    - "bitacora-4.qmd"
 
 bibliography: references.bib
 

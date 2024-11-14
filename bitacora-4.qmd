@@ -517,19 +517,21 @@ grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target,
     title = "Gráfica 8.Distribución de estudiantes según categoría y desplazamiento",
     fill = "Estado",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  ) + scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))
-  theme_minimal()+ theme(legend.position="none")
+  )+ scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))+ theme_minimal()+theme(legend.position="none")
 
 print(grafica_ocho)
 ```
 :::
 Este gráfico de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
 
-:::{#fig-grafica_nueva}
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Matriculado", "Graduado")) 
+```
 
+:::{#fig-grafica_nueva}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
   geom_boxplot(alpha = 0.7)+
   labs(
@@ -537,7 +539,7 @@ grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
     y = "Categoría del estudiante",
     title = "Gráfica 9.Distribución de las notas de admisión por categoría",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  )+  scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))
+  )+scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))+
   theme_minimal()+
   theme(legend.position="none")
 
@@ -562,7 +564,7 @@ grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
     y = "Categoría del estudiante",
     title = "Gráfica 10.Densidades de edad de admisión por categoría de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  )+ scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))
+  )+ scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))+
   theme_minimal()+
   theme(legend.position="none")
   print(grafica_diez)
@@ -578,15 +580,19 @@ df<- df %>%
   ))
 ```
 
+
+Este gráfico de barras relaciona las variables categóricas del horario en el cuál se reciben las clases y si el estudiante completo su educación, está en proceso de o no lo hizo. El horario de clases se muestra por el color, uno siendo para clases diurnas y el otro para nocturnas.
+
 :::{#fig-grafica_once}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
-ggplot(df, aes(fill = daytime_evening_attendance, x = target))+geom_bar()+
-  scale_fill_manual(values = c("Noche"= "#CD5555", "Mañana"= "#A9CDD7"))+
-       labs(x="Estado del estudiante",y="Cantidad de estudiantes", 
-       fill= "Horario de clases",
- title = "Gráfica 11. Estado del estudiante y horario de clases")
-+theme_minimal()+theme_classic()
 
+grafica_once<-ggplot(df, aes(fill = daytime_evening_attendance, x = target))+geom_bar()+
+  scale_fill_manual(values = c("Noche"= "#CD5555", "Mañana"= "#A9CDD7"))+
+       labs(x="Estado del estudiante",
+            y="Cantidad de estudiantes", fill= "Horario de clases",
+  title = "Gráfica 11. Estado del estudiante y horario de clases")+theme_classic()
+
+print(grafica_once)
 ```
 :::
 
@@ -673,3 +679,13 @@ tabla_seis <- tabla_seis %>%
 kable(tabla_seis)
 ```
 :::
+
+## Fichas
+Nombre de su hallazgo/resultado: Relación entre el estado del estudiante y el horario en el cual recibe sus clases 
+Resumen en una oración: Los estudiantes en horarios diurnos se gradúan con mayor frecuencia.
+Principal característica: se comparan dos variables categóricas, donde se realiza un conteo de cuántos estudiantes llevaron clases diurnas o nocturnas conforme el tipo de estudiante que son (graduado, matriculado, desertor).
+Problemas o posibles desafíos: Las razones por las cuales el estudiante decide o no recibir clases en la noche o mañana son desconocidas. Se pueden inferir ciertas razones por las cuales esto sucede pero no se conoce con total certeza ya que no es parte de los datos proporcionados. Esto genera cierto grado de error al asumir ciertos factores. 
+Resumen en un párrafo: 
+La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia. 
+
+

@@ -300,12 +300,7 @@ target_parents_qualification <- target_parents_qualification %>%
                                            "Educación Universitaria" ))
 
 ```
-```{r, echo = TRUE, message=FALSE, warning=FALSE, results='hide'}
 
-levels(target_parents_qualification$mothers_qualification)
-
-levels(target_parents_qualification$fathers_qualification)
-```
 
 :::{#fig-grafica_uno}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
@@ -651,6 +646,31 @@ grafica_doce<-df %>% ggplot(aes(x=marital_status, fill=marital_status))+
     panel.border = element_rect(color="grey90", fill=NA)
   )
 print(grafica_doce)
+```
+:::
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+df_ordenAplicacion <- df %>%
+  filter(application_order > 0) %>%
+  count(application_order, target)
+
+```
+
+
+:::{#fig-grafica-trece}
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+grafica_trece <- ggplot(df_ordenAplicacion, aes(x = application_order, y=n))+
+  geom_point(size=3,color="blue", fill="lightblue",shape=21)+
+  geom_segment(aes(x=application_order, xend= application_order, y=0, yend=n), alpha = 0.5)+
+  scale_x_discrete(limits = as.character(1:9))+
+  scale_y_continuous(breaks = c(250, 750, 1250))+
+  facet_wrap(~target)+
+  labs(
+    x = "Prioridad de la universidad para el estudiante",
+    y = "Frecuencia",
+    title = "Cantidad de estudiantes por orden de aplicación y categoría"
+  )
+print(grafica_trece)
 ```
 :::
 

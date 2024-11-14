@@ -9,7 +9,7 @@ execute:
 ---
 # Bitacora 4
 
-## Parte de Planificación 
+## Graficas y tablas 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -297,10 +297,11 @@ target_parents_qualification <- target_parents_qualification %>%
                                            "Educación Primaria",
                                            "Educación Secundaria", 
                                            "Educación Técnico-Profesional",
-                                           "Educación Universitaria" ))
+                                           "Educación Universitaria"))
 
+levels(target_parents_qualification$mothers_qualification)
+levels(target_parents_qualification$fathers_qualification)
 ```
-
 
 :::{#fig-grafica_uno}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
@@ -314,8 +315,7 @@ grafica_uno<-ggplot(target_parents_qualification,
                               y = "Nivel educativo del padre",
                               fill = "Frecuencia", 
                               title="Gráfica 1. Comparación del nivel educativo 
-                              de los padres y el tipo de estudiante",
-                              caption = "Elaboración propia, Fuente: Realinho, et al (2022)")+
+                              de los padres y el tipo de estudiante")+
   theme_bw()+theme(plot.title = element_text(hjust = 0.5),
                    axis.text.x = element_text(size=8,angle=90,hjust=1))
 print(grafica_uno)
@@ -343,8 +343,7 @@ grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>%
     x = "Tipo de Estudiante",
     y = "Frecuencia",
     fill = "Cuotas al día",
-    title = "Gráfica 2. Relación entre persona deudora y resultado académico",
-    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+    title = "Gráfica 2. Relación entre persona deudora y resultado académico"
   ) +
   scale_fill_manual(values = c("Si" = "#A2CD5A","No"="#CD5555"))+
   theme(legend.position = "bottom", 
@@ -371,8 +370,7 @@ grafica_tres<-df %>%count(scholarship_holder, target) %>%
   ggplot(aes(x=scholarship_holder, y = target, fill = n))+
   geom_tile()+ 
   theme_classic() + 
-  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Gráfica 3. Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca",
-       caption = "Elaboración propia, Fuente: Realinho, et al (2022)") + 
+  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Gráfica 3. Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca") + 
   scale_fill_continuous(low = "skyblue", high = "darkblue")+
   theme(legend.position = "right",
         panel.border = element_rect(colour = "black", fill=NA),
@@ -402,8 +400,7 @@ grafica_cuatro<-df %>%count(international, target) %>%
     x = "Tipo de Estudiante",
     y = "Frecuencia",
     fill = "Internacional",
-    title = "Gráfica 4. Comparación en la frecuencia del estado de los\nestudiantes según su nacionalidad",
-    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+    title = "Gráfica 4. Comparación en la frecuencia del estado de los\nestudiantes según su nacionalidad"
   ) +
   scale_fill_manual(values = c("Si" = "#CD5555","No"="#BFEFFF"))+
   theme(legend.position = "bottom", 
@@ -457,7 +454,7 @@ print(grafico_seis)
 ```
 :::
 
-Esta figura de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20. 
+Esta figura de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.    
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -596,85 +593,13 @@ grafica_once<-ggplot(df, aes(fill = daytime_evening_attendance, x = target))+geo
   scale_fill_manual(values = c("Noche"= "#CD5555", "Mañana"= "#A9CDD7"))+
        labs(x="Estado del estudiante",
             y="Cantidad de estudiantes", fill= "Horario de clases",
-  title = "Gráfica 11. Estado del estudiante y horario de clases",
-  caption = "Elaboración propia, Fuente: Realinho, et al (2022)")+theme_classic()
+  title = "Gráfica 11. Estado del estudiante y horario de clases")+theme_classic()
 
 print(grafica_once)
 ```
 :::
 
-La siguiente figura muestra la relación entre el estado civil del estudiante y su progreso académico mostrando una predominancia significativa de los estudiantes solteros en las tres categorías, para la realización de este gráfico se tomo como persona con pareja a los pertenecientes a las categorías de casados y unión libre, como persona sin pareja a los de las categorías de viudo, separado y divorciado y se mantuvo la categoría de soltero por si sola por su predominancia.
-
-```{r, echo=TRUE, message=FALSE, warning=FALSE}
-df <- df %>%
-  mutate(marital_status = case_when(
-    marital_status == 1 ~ "Soltero",
-    marital_status == 2 ~ "Casado",
-    marital_status == 3 ~ "Viudo",
-    marital_status == 4 ~ "Divorciado",
-    marital_status == 5 ~ "Unión Libre",
-    marital_status == 6 ~ "Separado",
-    TRUE ~ NA
-  ))
-
-df$marital_status <- as.factor(df$marital_status)
-
-df$marital_status <- fct_collapse(df$marital_status,
-                                     "Pareja" = c("Unión Libre", "Casado"),
-                                     "Sin Pareja" = c("Viudo", "Separado", "Divorciado"),
-                                     "Soltero" = c("Soltero"))
-
-```
-:::{#fig-grafica_doce}
-```{r, echo=TRUE, message=FALSE, warning=FALSE}
-grafica_doce<-df %>% ggplot(aes(x=marital_status, fill=marital_status))+
-  facet_wrap(~target)+
-  geom_bar()+
-  theme_minimal()+
-  labs(title= "Gráfica 12. Distribución de Estado Civil por Rendimiento Académico",
-       x = "Estado Civil",
-       y= "Cantidad de Estudiantes",
-       caption = "Elaboración propia, Fuente: Realinho, et al (2022)")+
-  scale_fill_manual(values = c("Sin Pareja"= "#CD5555", "Pareja"= "#A9CDD7", "Soltero" = "#A2CD5A"))+
-  theme(
-    plot.title = element_text(hjust = 0.5,size=14,face="bold"),
-    axis.title = element_text(size=12),
-    axis.text.x = element_text(angle =90, hjust=1),
-    legend.position = "none",
-    strip.text = element_text(size=12,face="bold"),
-    panel.grid.minor = element_blank(),
-    panel.border = element_rect(color="grey90", fill=NA)
-  )
-print(grafica_doce)
-```
-:::
-
-```{r, echo=TRUE, message=FALSE, warning=FALSE}
-df_ordenAplicacion <- df %>%
-  filter(application_order > 0) %>%
-  count(application_order, target)
-
-```
-
-
-:::{#fig-grafica-trece}
-```{r, echo=TRUE, message=FALSE, warning=FALSE}
-grafica_trece <- ggplot(df_ordenAplicacion, aes(x = application_order, y=n))+
-  geom_point(size=3,color="blue", fill="lightblue",shape=21)+
-  geom_segment(aes(x=application_order, xend= application_order, y=0, yend=n), alpha = 0.5)+
-  scale_x_discrete(limits = as.character(1:9))+
-  scale_y_continuous(breaks = c(250, 750, 1250))+
-  facet_wrap(~target)+
-  labs(
-    x = "Prioridad de la universidad para el estudiante",
-    y = "Frecuencia",
-    title = "Cantidad de estudiantes por orden de aplicación y categoría"
-  )
-print(grafica_trece)
-```
-:::
-
-Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. Este cuadro contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
+Este cuadro contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
 
 :::{#tbl-tabla_cuatro}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
@@ -683,10 +608,10 @@ tabla_cuatro <- df %>%  group_by(target) %>%
     Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
     Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
     DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
-    Cantidad = n()
+    N = n()
   )
 tabla_cuatro <- tabla_cuatro %>%  filter(!is.na(target)) %>% 
-  arrange(desc(Cantidad))
+  arrange(desc(N))
 
 kable(tabla_cuatro)
 ```
@@ -772,32 +697,5 @@ kable(tabla_seis)
 
 - **Resumen en un párrafo:** 
 La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia.\
-
-2. **FICHA 15**\
-
-- **Nombre de su hallazgo/resultado:** Relación entre Estado Civil y Rendimiento Académico.\
-
-- **Resumen en una oración:** Los estudiantes solteros tienen una mayor representación en todas las categorías de rendimiento académico, especialmente entre los estudiantes graduados.\
-
-- **Principal Característica:** La categoría de estudiantes solteros domina significativamente en cada nivel de rendimiento académico.\
-
-- **Problemas o posibles desafíos:** Falta de diversidad en el estado civil podría sesgar los resultados.\
-
-- **Resumen en un párrafo:** El gráfico muestra la distribución del estado civil de los estudiantes en relación con su rendimiento académico, categorizado como desertor, graduado o matriculado. Se observa que los estudiantes solteros son predominantes en cada categoría especialmente entre los graduados, lo que sugiere una posible correlación entre el estado civil y el éxito académico.\
-
-3. **FICHA 16**\
-
-- **Nombre de su hallazgo/resultado:** Independencia entre el orden aplicación del estudiante y su permanencia en la carrera.\
-
-- **Resumen en una oración:** No existe una relación clara entre la prioridad que le dio el estudiante a la universidad en que fue admitido y su permanencia en la carrera.\
-
-- **Principal Característica:** este resultado fue obtenido a partir de un gráfico de tipo “lollipop” (combinación de geom_point y geom_segment), facetado por la variable objetivo y que muestra la frecuencia absoluta de estudiantes en cada categoría.\
-
-- **Problemas o posibles desafíos:** las muestras para las prioridades más bajas (mayores que 4) son muy pequeñas, por lo que se debe ser precavido al tratar de establecer patrones.\
-
-- **Resumen en un párrafo:**Se generó un gráfico de tipo lollipop, tomando como eje horizontal cada uno de los nueve valores de la variable categórica “Orden de aplicación” y como eje vertical la frecuencia absoluta de estudiantes en cada valor. Es importante aclarar que el valor de “Orden de aplicación” corresponde al puesto que ocupaba la universidad analizada en una lista de universidades a las que aplicó cada estudiante. Luego, el gráfico se separó en tres facetas según la variable objetivo (graduado, desertor o matriculado) para identificar las tendencias en cada grupo. De esta manera, se logró determinar que los comportamientos de cada valor de prioridad son muy similares, existiendo más graduados que desertores y más desertores que matriculados para todos los valores. Esto implica que el rendimiento académico no se vio afectado por la prioridad que tenía esta universidad respecto a otras para cada estudiante.
-\
-
-Con estas 3 fichas de resultados adicionales, se considera que todas las relaciones entre variables pertinentes para esta investigación han sido cubiertas de forma satisfactoria. Aunque la base de datos escogida contiene otras variables que no forman parte de ningún gráfico, tabla o resultado, su ausencia es una decisión consciente y no una omisión. Algunas de ellas no forman parte del enfoque definido para este estudio, como la tasa de desempleo, el producto interno bruto y la inflación; los cuales son indicadores macroeconómicos que no pueden entenderse como características personales de un estudiante que influyan sobre su rendimiento. Otras variables como el modo de aplicación o las unidades curriculares de cada semestre sin considerar evaluaciones, no se consideraron relevantes según la bibliografía consultada. Por otro lado, analizar las relaciones entre variables sin conectarlas con la variable objetivo, por ejemplo vincular género con edad, habría generado resultados de carácter socioeconómico o demográfico sin que se pudieran extraer conclusiones sobre su impacto en el rendimiento académico, que es el principal objetivo de este trabajo. 
 
 

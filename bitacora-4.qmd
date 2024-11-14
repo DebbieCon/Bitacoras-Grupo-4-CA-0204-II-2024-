@@ -480,7 +480,7 @@ filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,
     según la categoría del estudiante",
     color="Tipo de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  )+scale_fill_manual(values = c("Desertor"= "#A2CD5A", "Graduado"="#CD5555"))+theme_classic()
+  )+theme_classic()
 
 print(grafico_siete)
 ```

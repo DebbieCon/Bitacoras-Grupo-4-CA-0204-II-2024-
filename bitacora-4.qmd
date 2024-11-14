@@ -765,6 +765,18 @@ La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiant
 
 - **Resumen en un párrafo:** El gráfico muestra la distribución del estado civil de los estudiantes en relación con su rendimiento académico, categorizado como desertor, graduado o matriculado. Se observa que los estudiantes solteros son predominantes en cada categoría especialmente entre los graduados, lo que sugiere una posible correlación entre el estado civil y el éxito académico.\
 
+3. **FICHA 16**\
+
+- **Nombre de su hallazgo/resultado:** Independencia entre el orden aplicación del estudiante y su permanencia en la carrera.\
+
+- **Resumen en una oración:** No existe una relación clara entre la prioridad que le dio el estudiante a la universidad en que fue admitido y su permanencia en la carrera.\
+
+- **Principal Característica:** este resultado fue obtenido a partir de un gráfico de tipo “lollipop” (combinación de geom_point y geom_segment), facetado por la variable objetivo y que muestra la frecuencia absoluta de estudiantes en cada categoría.\
+
+- **Problemas o posibles desafíos:** las muestras para las prioridades más bajas (mayores que 4) son muy pequeñas, por lo que se debe ser precavido al tratar de establecer patrones.\
+
+- **Resumen en un párrafo:**Se generó un gráfico de tipo lollipop, tomando como eje horizontal cada uno de los nueve valores de la variable categórica “Orden de aplicación” y como eje vertical la frecuencia absoluta de estudiantes en cada valor. Es importante aclarar que el valor de “Orden de aplicación” corresponde al puesto que ocupaba la universidad analizada en una lista de universidades a las que aplicó cada estudiante. Luego, el gráfico se separó en tres facetas según la variable objetivo (graduado, desertor o matriculado) para identificar las tendencias en cada grupo. De esta manera, se logró determinar que los comportamientos de cada valor de prioridad son muy similares, existiendo más graduados que desertores y más desertores que matriculados para todos los valores. Esto implica que el rendimiento académico no se vio afectado por la prioridad que tenía esta universidad respecto a otras para cada estudiante.
+\
 
 
 

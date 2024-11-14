@@ -23,7 +23,8 @@ library(treemapify)
 df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
 ```
-Esta es una figura de tipo heatmap que muestra la frecuencia de cada combinación de niveles académicos de padre y madre del estudiante, un color más oscuro significa mayor cantidad de observaciones de ese tipo. Además, está facetado por la categoría del estudiante (graduado, desertor o matriculado).
+
+Esta es una gráfica de tipo heatmap que muestra la frecuencia de cada combinación de niveles académicos de padre y madre del estudiante, un color más oscuro significa mayor cantidad de observaciones de ese tipo. Además, está facetado por la categoría del estudiante (graduado, desertor o matriculado).
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% 
@@ -282,7 +283,6 @@ target_parents_qualification <- target_parents_qualification %>%
 ```
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
-
 target_parents_qualification <- target_parents_qualification %>% 
   mutate(mothers_qualification=fct_relevel(mothers_qualification, 
                                            "No sabe leer ni escribir",
@@ -298,9 +298,6 @@ target_parents_qualification <- target_parents_qualification %>%
                                            "Educación Secundaria", 
                                            "Educación Técnico-Profesional",
                                            "Educación Universitaria"))
-
-levels(target_parents_qualification$mothers_qualification)
-levels(target_parents_qualification$fathers_qualification)
 ```
 
 :::{#fig-grafica_uno}
@@ -322,7 +319,7 @@ print(grafica_uno)
 ```
 :::
 
-Esta es una figura de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo. 
+Esta es una gráfica de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo. 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -353,7 +350,7 @@ print(grafica_dos)
 ```
 :::
 
-Esta es otra figura de tipo heatmap, pero que ilustra la cantidad de estudiantes hallados en cada uno de los subgrupos generados al combinar la variable objetivo con una variable binaria (poseedor de beca o no). 
+Esta es otra gráfica de tipo heatmap, pero que ilustra la cantidad de estudiantes hallados en cada uno de los subgrupos generados al combinar la variable objetivo con una variable binaria (poseedor de beca o no). 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -379,7 +376,7 @@ print(grafica_tres)
 ```
 :::
 
-Esta es una figura de barras adicional que visualiza la frecuencia absoluta de estudiantes nacionales e internacionales y los distingue con colores dentro de cada categoría de la variable objetivo. 
+Esta es una gráfica de barras adicional que visualiza la frecuencia absoluta de estudiantes nacionales e internacionales y los distingue con colores dentro de cada categoría de la variable objetivo. 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -410,7 +407,7 @@ print(grafica_cuatro)
 ```
 :::
 
-La figura mostrado es de tipo densidad y es útil para mostrar la distribución de los créditos aprobados en el primer semestre según la categorías de la variable objetivo. Como existe una superposición significativa de las densidades, fue necesario reducir la opacidad. 
+La gráfica mostrado es de tipo densidad y es útil para mostrar la distribución de los créditos aprobados en el primer semestre según la categorías de la variable objetivo. Como existe una superposición significativa de las densidades, fue necesario reducir la opacidad. 
 
 :::{#fig-grafica_cinco}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
@@ -427,7 +424,7 @@ print(grafico_cinco)
 ```
 :::
 
-Nuevamente se presenta una figura de barras sobre frecuencia absoluta que segmenta las categorías de la variable objetivo por una variable binaria diferenciada por color, en este caso el género.  
+Nuevamente se presenta una gráfica de barras sobre frecuencia absoluta que segmenta las categorías de la variable objetivo por una variable binaria diferenciada por color, en este caso el género.  
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
@@ -454,7 +451,7 @@ print(grafico_seis)
 ```
 :::
 
-Esta figura de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.    
+Esta gráfica de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.    
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -489,7 +486,7 @@ print(grafico_siete)
 ```
 :::
 
-Esta es una figura de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado). 
+Esta es una gráfica de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado). 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
@@ -525,8 +522,8 @@ grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target,
 print(grafica_ocho)
 ```
 :::
-Esta figura de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
 
+Esta gráfica de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
@@ -550,7 +547,7 @@ print(grafica_nueve)
 ```
 :::
 
-Esta es una figura de densidad tipo ridgeline, el cual muestra las densidades de la edad al momento de ingreso a la universidad para cada categoría de la variable objetivo. 
+Esta es una gráfica de densidad tipo ridgeline, el cual muestra las densidades de la edad al momento de ingreso a la universidad para cada categoría de la variable objetivo. 
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Graduado", 
@@ -599,9 +596,7 @@ print(grafica_once)
 ```
 :::
 
-<<<<<<< HEAD
-Este cuadro contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
-=======
+
 La siguiente figura muestra la relación entre el estado civil del estudiante y su progreso académico mostrando una predominancia significativa de los estudiantes solteros en las tres categorías, para la realización de este gráfico se tomo como persona con pareja a los pertenecientes a las categorías de casados y unión libre, como persona sin pareja a los de las categorías de viudo, separado y divorciado y se mantuvo la categoría de soltero por si sola por su predominancia.
 
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
@@ -624,6 +619,7 @@ df$marital_status <- fct_collapse(df$marital_status,
                                      "Soltero" = c("Soltero"))
 
 ```
+
 :::{#fig-grafica_doce}
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
 grafica_doce<-df %>% ggplot(aes(x=marital_status, fill=marital_status))+
@@ -652,7 +648,6 @@ print(grafica_doce)
 df_ordenAplicacion <- df %>%
   filter(application_order > 0) %>%
   count(application_order, target)
-
 ```
 
 
@@ -674,8 +669,8 @@ print(grafica_trece)
 ```
 :::
 
-Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. Este cuadro contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
->>>>>>> d671de077fd3e79def4e2a71d3a6e2b59f00f890
+Este cuadro contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
+
 
 :::{#tbl-tabla_cuatro}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
@@ -774,8 +769,7 @@ kable(tabla_seis)
 - **Resumen en un párrafo:** 
 La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia.\
 
-<<<<<<< HEAD
-=======
+
 2. **FICHA 15**\
 
 - **Nombre de su hallazgo/resultado:** Relación entre Estado Civil y Rendimiento Académico.\
@@ -804,6 +798,6 @@ La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiant
 Con estas 3 fichas de resultados adicionales, se considera que todas las relaciones entre variables pertinentes para esta investigación han sido cubiertas de forma satisfactoria. Aunque la base de datos escogida contiene otras variables que no forman parte de ningún gráfico, tabla o resultado, su ausencia es una decisión consciente y no una omisión. Algunas de ellas no forman parte del enfoque definido para este estudio, como la tasa de desempleo, el producto interno bruto y la inflación; los cuales son indicadores macroeconómicos que no pueden entenderse como características personales de un estudiante que influyan sobre su rendimiento. Otras variables como el modo de aplicación o las unidades curriculares de cada semestre sin considerar evaluaciones, no se consideraron relevantes según la bibliografía consultada. Por otro lado, analizar las relaciones entre variables sin conectarlas con la variable objetivo, por ejemplo vincular género con edad, habría generado resultados de carácter socioeconómico o demográfico sin que se pudieran extraer conclusiones sobre su impacto en el rendimiento académico, que es el principal objetivo de este trabajo. 
 
 ## Parte de escritura
->>>>>>> d671de077fd3e79def4e2a71d3a6e2b59f00f890
+
 
 ### Conclusión

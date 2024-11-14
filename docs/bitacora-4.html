@@ -944,7 +944,7 @@ Figura&nbsp;4.11
 </figure>
 </div>
 <p>Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad.</p>
-<div id="fig-tabla_cuatro">
+<div id="tbl-tabla_cuatro" class="anchored">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tabla_cuatro <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  <span class="fu">group_by</span>(target) <span class="sc">%&gt;%</span> </span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
@@ -996,7 +996,7 @@ Figura&nbsp;4.11
 </div>
 </div>
 <p>Similarmente, esta tabla recuenta la cantidad de estudiantes por género y calcula las medidas de tendencia central para la nota de cada grupo en los primeros dos semestres de universidad.</p>
-<div id="fig-tabla_cinco">
+<div id="tbl-tabla_cinco" class="anchored">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>tabla_cinco <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
@@ -1085,7 +1085,7 @@ Figura&nbsp;4.11
 <span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9991</span>  <span class="sc">~</span> <span class="st">"Administración (asistencia nocturna)"</span></span>
 <span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>   ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="fig-tabla_seis">
+<div id="tbl-tabla_seis" class="anchored">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>tabla_seis <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(course) <span class="sc">%&gt;%</span> </span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad =</span> <span class="fu">n</span>(),</span>
@@ -1244,7 +1244,22 @@ Figura&nbsp;4.11
 </section>
 <section id="fichas" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="fichas"><span class="header-section-number">4.2</span> Fichas</h2>
-<p>Nombre de su hallazgo/resultado: Relación entre el estado del estudiante y el horario en el cual recibe sus clases Resumen en una oración: Los estudiantes en horarios diurnos se gradúan con mayor frecuencia. Principal característica: se comparan dos variables categóricas, donde se realiza un conteo de cuántos estudiantes llevaron clases diurnas o nocturnas conforme el tipo de estudiante que son (graduado, matriculado, desertor). Problemas o posibles desafíos: Las razones por las cuales el estudiante decide o no recibir clases en la noche o mañana son desconocidas. Se pueden inferir ciertas razones por las cuales esto sucede pero no se conoce con total certeza ya que no es parte de los datos proporcionados. Esto genera cierto grado de error al asumir ciertos factores. Resumen en un párrafo: La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia.</p>
+<ol type="1">
+<li><strong>FICHA 14</strong><br>
+</li>
+</ol>
+<ul>
+<li><p><strong>Nombre de su hallazgo/resultado:</strong> Relación entre el estado del estudiante y el horario en el cual recibe sus clases<br>
+</p></li>
+<li><p><strong>Resumen en una oración:</strong> Los estudiantes en horarios diurnos se gradúan con mayor frecuencia.<br>
+</p></li>
+<li><p><strong>Principal característica:</strong> se comparan dos variables categóricas, donde se realiza un conteo de cuántos estudiantes llevaron clases diurnas o nocturnas conforme el tipo de estudiante que son (graduado, matriculado, desertor).<br>
+</p></li>
+<li><p><strong>Problemas o posibles desafíos:</strong> Las razones por las cuales el estudiante decide o no recibir clases en la noche o mañana son desconocidas. Se pueden inferir ciertas razones por las cuales esto sucede pero no se conoce con total certeza ya que no es parte de los datos proporcionados. Esto genera cierto grado de error al asumir ciertos factores.<br>
+</p></li>
+<li><p><strong>Resumen en un párrafo:</strong> La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia.<br>
+</p></li>
+</ul>
 
 
 </section>

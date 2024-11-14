@@ -598,7 +598,7 @@ print(grafica_once)
 
 Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
 
-:::{#fig-tabla_cuatro}
+:::{#tbl-tabla_cuatro}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 tabla_cuatro <- df %>%  group_by(target) %>% 
   summarise(
@@ -616,7 +616,7 @@ kable(tabla_cuatro)
 
 Similarmente, esta tabla recuenta la cantidad de estudiantes por género y calcula las medidas de tendencia central para la nota de cada grupo en los primeros dos semestres de universidad. 
 
-:::{#fig-tabla_cinco}
+:::{#tbl-tabla_cinco}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 tabla_cinco <- df %>%  group_by(gender) %>% 
@@ -664,7 +664,7 @@ La última tabla recopila las cifras correspondientes a la cantidad de estudiant
    ))
 ```
 
-:::{#fig-tabla_seis}
+:::{#tbl-tabla_seis}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 tabla_seis <- df %>% group_by(course) %>% 
   summarise(Cantidad = n(),
@@ -681,11 +681,18 @@ kable(tabla_seis)
 :::
 
 ## Fichas
-Nombre de su hallazgo/resultado: Relación entre el estado del estudiante y el horario en el cual recibe sus clases 
-Resumen en una oración: Los estudiantes en horarios diurnos se gradúan con mayor frecuencia.
-Principal característica: se comparan dos variables categóricas, donde se realiza un conteo de cuántos estudiantes llevaron clases diurnas o nocturnas conforme el tipo de estudiante que son (graduado, matriculado, desertor).
-Problemas o posibles desafíos: Las razones por las cuales el estudiante decide o no recibir clases en la noche o mañana son desconocidas. Se pueden inferir ciertas razones por las cuales esto sucede pero no se conoce con total certeza ya que no es parte de los datos proporcionados. Esto genera cierto grado de error al asumir ciertos factores. 
-Resumen en un párrafo: 
-La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia. 
+
+1. **FICHA 14**\
+
+- **Nombre de su hallazgo/resultado:** Relación entre el estado del estudiante y el horario en el cual recibe sus clases\
+
+- **Resumen en una oración:** Los estudiantes en horarios diurnos se gradúan con mayor frecuencia.\
+
+- **Principal característica:** se comparan dos variables categóricas, donde se realiza un conteo de cuántos estudiantes llevaron clases diurnas o nocturnas conforme el tipo de estudiante que son (graduado, matriculado, desertor).\
+
+- **Problemas o posibles desafíos:** Las razones por las cuales el estudiante decide o no recibir clases en la noche o mañana son desconocidas. Se pueden inferir ciertas razones por las cuales esto sucede pero no se conoce con total certeza ya que no es parte de los datos proporcionados. Esto genera cierto grado de error al asumir ciertos factores.\
+
+- **Resumen en un párrafo:** 
+La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia.\
 
 

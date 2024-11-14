@@ -531,7 +531,6 @@ df <- df %>%
     TRUE ~ "Otros"
   ))
 
-
 df$curricular_units_1st_sem_grade <-
   ifelse(df$curricular_units_1st_sem_grade>25, NA, df$curricular_units_1st_sem_grade)
 df$curricular_units_2nd_sem_grade <-
@@ -623,27 +622,7 @@ kable(tabla_1)
 glimpse(df)
 
 
-df <- df %>% 
-  mutate(course=case_when(
-    course ==1  ~ "Biofuel Production Technologies",
-    course ==2  ~ "Animation and Multimedia Design",
-    course ==3  ~ "Social Service (evening attendance)",
-    course ==4  ~ "Agronomy",
-    course ==5  ~ "Communication Design",
-    course ==6  ~ "Veterinary Nursing",
-    course ==7  ~ "Informatics Engineering",
-    course ==8  ~ "Equiniculture",
-    course ==9  ~ "Managment",
-    course ==10  ~ "Social Service",
-    course ==11  ~ "Tourism",
-    course ==12  ~ "Nursing",
-    course ==13  ~ "Oral Hygiene",
-    course ==14  ~ "Advertising and Marketing Managment",
-    course ==15  ~ "Journalism and Communication",
-    course ==16  ~ "Basic Education",
-    course ==17  ~ "Management (evening attendance)",
-    TRUE ~ NA
-  ))
+
 view(df)
 
 tabla_2 <- df %>% group_by(target) %>% 
@@ -691,5 +670,113 @@ ggplot(df, aes(x = curricular_units_1st_sem_approved, fill = target))+
    arrange(desc(N))
  
  kable(tabla_1)
-
  
+ 
+ 
+ 
+ sum_mothers_qualification<-df %>% 
+   mutate(mothers_qualification=fct_collapse(mothers_qualification, 
+                                             "Primaria completada" = c("7º Año (Antiguo)","7º Año de Escolaridad", 
+                                                                       "Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."),
+                                             "Primaria no completado"=c("Sabe leer sin tener el 4º Año de Escolaridad", 
+                                                                        "Educación Básica 1º Ciclo (4º/5º Año) o Equiv."),
+                                             "Secundaria completada" =c("Educación Secundaria", "12º Año de Escolaridad", 
+                                                                        "Curso Complementario de Secundaria"),
+                                             "Secundaria no completado"=c("9 - 12mo Año de Escolaridad - No Completado",
+                                                                          "11º Año de Escolaridad - No Completado",
+                                                                          "11º Año de Escolaridad", 
+                                                                          "2º Año del curso complementario de secundaria",
+                                                                          "Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv.", 
+                                                                          "Curso Complementario de Secundaria - No Concluido",
+                                                                          "9º Año de Escolaridad - No Completado",
+                                                                          "8º Año de Escolaridad","10º Año de Escolaridad"),
+                                             "Universidad completada"=c("Licenciatura","Grado","Master","Doctorado", 
+                                                                        "Educación Superior - Máster (2º Ciclo)","Educación Superior - Grado (1º Ciclo)",
+                                                                        "Educación Superior - Doctorado (3º Ciclo)" ),
+                                             "Cursos complementarios"= c("Curso de comercio general", "Curso técnico-profesional", 
+                                                                         "Curso General de Administración y Comercio","Contabilidad y Administración Suplementaria", 
+                                                                         "Curso de especialización tecnológica", "Curso de estudios superiores especializados", 
+                                                                         "Curso técnico superior profesional"),
+                                             "No sabe leer ni escribir" = c("No sabe leer ni escribir")
+   )) %>% 
+   mutate(mothers_qualification=fct_lump(mothers_qualification, n=9)) %>% 
+   count(mothers_qualification, sort=TRUE) %>% 
+   rename(nivel_educativo_madre=n)
+ 
+ sum_fathers_qualification<-df %>% 
+   mutate(fathers_qualification=fct_collapse(fathers_qualification, 
+                                             "Primaria completada" = c("7º Año (Antiguo)","7º Año de Escolaridad", 
+                                                                       "Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."),
+                                             "Primaria no completado"=c("Sabe leer sin tener el 4º Año de Escolaridad",
+                                                                        "Educación Básica 1º Ciclo (4º/5º Año) o Equiv."),
+                                             "Secundaria completada" =c("Educación Secundaria", "12º Año de Escolaridad", 
+                                                                        "Curso Complementario de Secundaria"  ),
+                                             "Secundaria no completado"=c("9 - 12mo Año de Escolaridad - No Completado", 
+                                                                          "11º Año de Escolaridad - No Completado","11º Año de Escolaridad", 
+                                                                          "2º Año del curso complementario de secundaria", 
+                                                                          "Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv.", 
+                                                                          "Curso Complementario de Secundaria - No Concluido",
+                                                                          "9º Año de Escolaridad - No Completado",
+                                                                          "8º Año de Escolaridad","10º Año de Escolaridad"),
+                                             "Universidad completada"=c("Licenciatura","Grado","Master","Doctorado", 
+                                                                        "Educación Superior - Máster (2º Ciclo)","Educación Superior - Grado (1º Ciclo)",
+                                                                        "Educación Superior - Doctorado (3º Ciclo)" ),
+                                             "Cursos complementarios"= c("Curso de comercio general", "Curso técnico-profesional", 
+                                                                         "Curso General de Administración y Comercio","Contabilidad y Administración Suplementaria",
+                                                                         "Curso de especialización tecnológica", "Curso de estudios superiores especializados", 
+                                                                         "Curso técnico superior profesional"),
+                                             "No sabe leer ni escribir" = c("No sabe leer ni escribir")
+   )) %>% 
+   mutate(fathers_qualification=fct_lump(fathers_qualification, n=9)) %>% 
+   count(fathers_qualification, sort = TRUE) %>% 
+   rename(nivel_educativo_padre=n)
+ 
+ sum_fathers_qualification<-sum_fathers_qualification %>% 
+   rename(nivel_de_estudios=fathers_qualification)
+ 
+ sum_mothers_qualification<-sum_mothers_qualification %>% 
+   rename(nivel_de_estudios=mothers_qualification)
+ 
+ sum_qualification<-sum_mothers_qualification %>% 
+   left_join(sum_fathers_qualification, by="nivel_de_estudios") 
+ 
+ kable(sum_qualification)
+
+ df <- df %>% 
+   mutate(course=case_when(
+     course ==33  ~ "Biofuel Production Technologies",
+     course ==171  ~ "Animation and Multimedia Design",
+     course ==8014  ~ "Social Service (evening attendance)",
+     course ==9003  ~ "Agronomy",
+     course ==9070  ~ "Communication Design",
+     course ==9085  ~ "Veterinary Nursing",
+     course ==9119  ~ "Informatics Engineering",
+     course ==9130  ~ "Equiniculture",
+     course ==9147  ~ "Managment",
+     course ==9238  ~ "Social Service",
+     course ==9254  ~ "Tourism",
+     course ==9500  ~ "Nursing",
+     course ==9556~ "Oral Hygiene",
+     course ==9670  ~ "Advertising and Marketing Managment",
+     course ==9773  ~ "Journalism and Communication",
+     course ==9853  ~ "Basic Education",
+     course ==9991  ~ "Management (evening attendance)",
+     TRUE ~ NA
+   ))
+ 
+ 
+
+tabla_4 <- df %>% group_by(course) %>% 
+  summarise(cantidad = n(),
+            desertor = sum(target == "Desertor"),
+            graduado = sum(target == "Graduado"),
+            matriculado = sum(target == "Matriculado"))
+tabla_4 <- tabla_4 %>%
+  filter(!is.na(course)) %>%
+  arrange(desc(cantidad))
+
+
+
+kable(tabla_4)
+ 
+  

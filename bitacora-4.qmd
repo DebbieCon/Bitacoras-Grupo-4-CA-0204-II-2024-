@@ -320,7 +320,7 @@ print(grafica_uno)
 :::
 
 Este es un gráfico de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo. 
-@fig-grafica_uno
+
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
   mutate(tuition_fees_up_to_date = case_when(
@@ -342,7 +342,7 @@ grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>%
     fill = "Cuotas al día",
     title = "Gráfica 2. Relación entre persona deudora y resultado académico"
   ) +
-  scale_fill_manual(values = c("Si" = "#A2CD5A","No"="red"))+
+  scale_fill_manual(values = c("Si" = "#A2CD5A","No"="#CD5555"))+
   theme(legend.position = "bottom", 
         panel.border = element_rect(colour = "black", fill = NA),
         plot.title = element_text(hjust = 0.5))
@@ -419,7 +419,7 @@ grafico_cinco<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target
     fill = "Categoría del estudiante",
     title = "Gráfica 4.Densidades de créditos aprobados en primer semestre \npor tipo de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  ) +cowplot::theme_cowplot()
+  )+ scale_fill_manual(values = c("Matriculado"= "#83B8c6", "Graduado"= "#CD5555", "Desertor"="#A2CD5A"))+cowplot::theme_cowplot()
 print(grafico_cinco)
 ```
 :::
@@ -445,7 +445,7 @@ grafico_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
     fill="Género",
     title = "Gráfica 6. Distribución de estudiantes según su género.",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-    )+
+    )+scale_fill_manual(values = c("Hombre"= "#FD8A8A", "Mujer"= "#A9CDD7"))+
   scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
 print(grafico_seis)
 ```
@@ -473,14 +473,15 @@ filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,
         target %in% c("Graduado", "Desertor")) %>% 
   ggplot(aes(x=curricular_units_1st_sem_grade, y=curricular_units_2nd_sem_grade,
              colour =target))+
-  geom_point()+theme_classic()+labs(
+  geom_point()+labs(
     x="Nota del primer semestre",
     y="Nota del segundo semestre",
     title = "Gráfica 7. Dispersión de promedios del primer año lectivo\n 
     según la categoría del estudiante",
     color="Tipo de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  )
+  )+scale_fill_manual(values = c("Desertor"= "#A2CD5A", "Graduado"="#CD5555"))+theme_classic()
+
 print(grafico_siete)
 ```
 :::
@@ -516,14 +517,12 @@ grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target,
     title = "Gráfica 8.Distribución de estudiantes según categoría y desplazamiento",
     fill = "Estado",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  ) +
-  theme_minimal()+
-  theme(legend.position="none")
+  ) + scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))
+  theme_minimal()+ theme(legend.position="none")
 
 print(grafica_ocho)
 ```
 :::
-
 Este gráfico de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
 
 :::{#fig-grafica_nueva}
@@ -538,7 +537,7 @@ grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
     y = "Categoría del estudiante",
     title = "Gráfica 9.Distribución de las notas de admisión por categoría",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  )+
+  )+  scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))
   theme_minimal()+
   theme(legend.position="none")
 
@@ -563,10 +562,31 @@ grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
     y = "Categoría del estudiante",
     title = "Gráfica 10.Densidades de edad de admisión por categoría de estudiante",
     caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
-  )+
+  )+ scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))
   theme_minimal()+
   theme(legend.position="none")
   print(grafica_diez)
+```
+:::
+
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+df<- df %>% 
+  mutate(daytime_evening_attendance = case_when(
+    daytime_evening_attendance == 1 ~ "Mañana",
+    daytime_evening_attendance == 0 ~ "Noche",
+    TRUE ~ "Otros"
+  ))
+```
+
+:::{#fig-grafica_once}
+```{r, echo = TRUE, message=FALSE, warning=FALSE}
+ggplot(df, aes(fill = daytime_evening_attendance, x = target))+geom_bar()+
+  scale_fill_manual(values = c("Noche"= "#CD5555", "Mañana"= "#A9CDD7"))+
+       labs(x="Estado del estudiante",y="Cantidad de estudiantes", 
+       fill= "Horario de clases",
+ title = "Gráfica 11. Estado del estudiante y horario de clases")
++theme_minimal()+theme_classic()
+
 ```
 :::
 

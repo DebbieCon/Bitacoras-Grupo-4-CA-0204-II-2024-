@@ -9,7 +9,7 @@ execute:
 ---
 # Bitácora 4: Revisión y depuración final
 
-## Parte de Planificación 
+## Parte de planificación
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -23,7 +23,12 @@ library(treemapify)
 df <- read_csv2("base_datos/universidades_europeas.csv")
 df <- df %>% clean_names()
 ```
+<<<<<<< HEAD
 Este es un gráfico de tipo heatmap que muestra la frecuencia de cada combinación de niveles académicos de padre y madre del estudiante, un color más oscuro significa mayor cantidad de observaciones de ese tipo. Además, está facetado por la categoría del estudiante (graduado, desertor o matriculado).
+=======
+
+Esta es una gráfica de tipo heatmap que muestra la frecuencia de cada combinación de niveles académicos de padre y madre del estudiante, un color más oscuro significa mayor cantidad de observaciones de ese tipo. Además, está facetado por la categoría del estudiante (graduado, desertor o matriculado).
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% 
@@ -282,7 +287,6 @@ target_parents_qualification <- target_parents_qualification %>%
 ```
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
-
 target_parents_qualification <- target_parents_qualification %>% 
   mutate(mothers_qualification=fct_relevel(mothers_qualification, 
                                            "No sabe leer ni escribir",
@@ -297,8 +301,12 @@ target_parents_qualification <- target_parents_qualification %>%
                                            "Educación Primaria",
                                            "Educación Secundaria", 
                                            "Educación Técnico-Profesional",
+<<<<<<< HEAD
                                            "Educación Universitaria" ))
 
+=======
+                                           "Educación Universitaria"))
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 ```
 
 :::{#fig-grafica_uno}
@@ -313,15 +321,18 @@ grafica_uno<-ggplot(target_parents_qualification,
                               y = "Nivel educativo del padre",
                               fill = "Frecuencia", 
                               title="Gráfica 1. Comparación del nivel educativo 
-                              de los padres y el tipo de estudiante",
-                              caption = "Elaboración propia, Fuente: Realinho, et al (2022)")+
+                              de los padres y el tipo de estudiante")+
   theme_bw()+theme(plot.title = element_text(hjust = 0.5),
                    axis.text.x = element_text(size=8,angle=90,hjust=1))
 print(grafica_uno)
 ```
 :::
 
+<<<<<<< HEAD
 Este es un gráfico de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo. 
+=======
+Esta es una gráfica de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo. 
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -342,8 +353,7 @@ grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>%
     x = "Tipo de Estudiante",
     y = "Frecuencia",
     fill = "Cuotas al día",
-    title = "Gráfica 2. Relación entre persona deudora y resultado académico",
-    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+    title = "Gráfica 2. Relación entre persona deudora y resultado académico"
   ) +
   scale_fill_manual(values = c("Si" = "#A2CD5A","No"="#CD5555"))+
   theme(legend.position = "bottom", 
@@ -353,7 +363,11 @@ print(grafica_dos)
 ```
 :::
 
+<<<<<<< HEAD
 Este es otro gráfico de tipo heatmap, pero que ilustra la cantidad de estudiantes hallados en cada uno de los subgrupos generados al combinar la variable objetivo con una variable binaria (poseedor de beca o no). 
+=======
+Esta es otra gráfica de tipo heatmap, pero que ilustra la cantidad de estudiantes hallados en cada uno de los subgrupos generados al combinar la variable objetivo con una variable binaria (poseedor de beca o no). 
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -370,8 +384,7 @@ grafica_tres<-df %>%count(scholarship_holder, target) %>%
   ggplot(aes(x=scholarship_holder, y = target, fill = n))+
   geom_tile()+ 
   theme_classic() + 
-  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Gráfica 3. Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca",
-       caption = "Elaboración propia, Fuente: Realinho, et al (2022)") + 
+  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia", title = "Gráfica 3. Frecuencia de Estudiantes Graduados, Matriculados \n o Desertores según su categoría de beca") + 
   scale_fill_continuous(low = "skyblue", high = "darkblue")+
   theme(legend.position = "right",
         panel.border = element_rect(colour = "black", fill=NA),
@@ -380,7 +393,11 @@ print(grafica_tres)
 ```
 :::
 
+<<<<<<< HEAD
 Este es un gráfico de barras adicional que visualiza la frecuencia absoluta de estudiantes nacionales e internacionales y los distingue con colores dentro de cada categoría de la variable objetivo. 
+=======
+Esta es una gráfica de barras adicional que visualiza la frecuencia absoluta de estudiantes nacionales e internacionales y los distingue con colores dentro de cada categoría de la variable objetivo. 
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -401,8 +418,7 @@ grafica_cuatro<-df %>%count(international, target) %>%
     x = "Tipo de Estudiante",
     y = "Frecuencia",
     fill = "Internacional",
-    title = "Gráfica 4. Comparación en la frecuencia del estado de los\nestudiantes según su nacionalidad",
-    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+    title = "Gráfica 4. Comparación en la frecuencia del estado de los\nestudiantes según su nacionalidad"
   ) +
   scale_fill_manual(values = c("Si" = "#CD5555","No"="#BFEFFF"))+
   theme(legend.position = "bottom", 
@@ -412,7 +428,11 @@ print(grafica_cuatro)
 ```
 :::
 
+<<<<<<< HEAD
 El gráfico mostrado es de tipo densidad y es útil para mostrar la distribución de los créditos aprobados en el primer semestre según la categorías de la variable objetivo. Como existe una superposición significativa de las densidades, fue necesario reducir la opacidad. 
+=======
+La gráfica mostrado es de tipo densidad y es útil para mostrar la distribución de los créditos aprobados en el primer semestre según la categorías de la variable objetivo. Como existe una superposición significativa de las densidades, fue necesario reducir la opacidad. 
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 :::{#fig-grafica_cinco}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
@@ -429,7 +449,11 @@ print(grafico_cinco)
 ```
 :::
 
+<<<<<<< HEAD
 Nuevamente se presenta un gráfico de barras sobre frecuencia absoluta que segmenta las categorías de la variable objetivo por una variable binaria diferenciada por color, en este caso el género.  
+=======
+Nuevamente se presenta una gráfica de barras sobre frecuencia absoluta que segmenta las categorías de la variable objetivo por una variable binaria diferenciada por color, en este caso el género.  
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
@@ -456,7 +480,11 @@ print(grafico_seis)
 ```
 :::
 
+<<<<<<< HEAD
 Este gráfico de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.    
+=======
+Esta gráfica de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota  la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.    
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>%
@@ -491,7 +519,11 @@ print(grafico_siete)
 ```
 :::
 
+<<<<<<< HEAD
 Este es un gráfico de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado). 
+=======
+Esta es una gráfica de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado). 
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
@@ -527,15 +559,19 @@ grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target,
 print(grafica_ocho)
 ```
 :::
+<<<<<<< HEAD
 Este gráfico de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
+=======
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
+Esta gráfica de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Matriculado", "Graduado")) 
 ```
 
-:::{#fig-grafica_nueva}
+:::{#fig-grafica_nueve}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
   geom_boxplot(alpha = 0.7)+
@@ -552,7 +588,11 @@ print(grafica_nueve)
 ```
 :::
 
+<<<<<<< HEAD
 Este es un gráfico de densidad tipo ridgeline, el cual muestra las densidades de la edad al momento de ingreso a la universidad para cada categoría de la variable objetivo. 
+=======
+Esta es una gráfica de densidad tipo ridgeline, el cual muestra las densidades de la edad al momento de ingreso a la universidad para cada categoría de la variable objetivo. 
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 df <- df %>% mutate(target = fct_relevel(target, "Desertor", "Graduado", 
@@ -595,12 +635,12 @@ grafica_once<-ggplot(df, aes(fill = daytime_evening_attendance, x = target))+geo
   scale_fill_manual(values = c("Noche"= "#CD5555", "Mañana"= "#A9CDD7"))+
        labs(x="Estado del estudiante",
             y="Cantidad de estudiantes", fill= "Horario de clases",
-  title = "Gráfica 11. Estado del estudiante y horario de clases",
-  caption = "Elaboración propia, Fuente: Realinho, et al (2022)")+theme_classic()
+  title = "Gráfica 11. Estado del estudiante y horario de clases")+theme_classic()
 
 print(grafica_once)
 ```
 :::
+
 
 La siguiente figura muestra la relación entre el estado civil del estudiante y su progreso académico mostrando una predominancia significativa de los estudiantes solteros en las tres categorías, para la realización de este gráfico se tomo como persona con pareja a los pertenecientes a las categorías de casados y unión libre, como persona sin pareja a los de las categorías de viudo, separado y divorciado y se mantuvo la categoría de soltero por si sola por su predominancia.
 
@@ -624,6 +664,7 @@ df$marital_status <- fct_collapse(df$marital_status,
                                      "Soltero" = c("Soltero"))
 
 ```
+
 :::{#fig-grafica_doce}
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
 grafica_doce<-df %>% ggplot(aes(x=marital_status, fill=marital_status))+
@@ -648,7 +689,37 @@ print(grafica_doce)
 ```
 :::
 
+<<<<<<< HEAD
 Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
+=======
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+df_ordenAplicacion <- df %>%
+  filter(application_order > 0) %>%
+  count(application_order, target)
+```
+
+
+:::{#fig-grafica_trece}
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+grafica_trece <- ggplot(df_ordenAplicacion, aes(x = application_order, y=n))+
+  geom_point(size=3,color="blue", fill="lightblue",shape=21)+
+  geom_segment(aes(x=application_order, xend= application_order, y=0, yend=n), alpha = 0.5)+
+  scale_x_discrete(limits = as.character(1:9))+
+  scale_y_continuous(breaks = c(250, 750, 1250))+
+  facet_wrap(~target)+
+  labs(
+    x = "Prioridad de la universidad para el estudiante",
+    y = "Frecuencia",
+    title = "Cantidad de estudiantes por orden de aplicación y categoría",
+    caption = "Elaboración propia, Fuente: Realinho, et al (2022)"
+  )
+print(grafica_trece)
+```
+:::
+
+Este cuadro contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
+
+>>>>>>> ba89fa95a1de18d8d7b2337ab908a8b6e601d3b7
 
 :::{#tbl-tabla_cuatro}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
@@ -657,10 +728,10 @@ tabla_cuatro <- df %>%  group_by(target) %>%
     Media = mean(curricular_units_1st_sem_grade, na.rm=TRUE),
     Mediana = median(curricular_units_1st_sem_grade, na.rm=TRUE),
     DesviaciónEstándar = sd(curricular_units_1st_sem_grade, na.rm = TRUE),
-    Cantidad = n()
+    N = n()
   )
 tabla_cuatro <- tabla_cuatro %>%  filter(!is.na(target)) %>% 
-  arrange(desc(Cantidad))
+  arrange(desc(N))
 
 kable(tabla_cuatro)
 ```
@@ -747,6 +818,7 @@ kable(tabla_seis)
 - **Resumen en un párrafo:** 
 La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia.\
 
+
 2. **FICHA 15**\
 
 - **Nombre de su hallazgo/resultado:** Relación entre Estado Civil y Rendimiento Académico.\
@@ -759,6 +831,49 @@ La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiant
 
 - **Resumen en un párrafo:** El gráfico muestra la distribución del estado civil de los estudiantes en relación con su rendimiento académico, categorizado como desertor, graduado o matriculado. Se observa que los estudiantes solteros son predominantes en cada categoría especialmente entre los graduados, lo que sugiere una posible correlación entre el estado civil y el éxito académico.\
 
+3. **FICHA 16**\
+
+- **Nombre de su hallazgo/resultado:** Independencia entre el orden aplicación del estudiante y su permanencia en la carrera.\
+
+- **Resumen en una oración:** No existe una relación clara entre la prioridad que le dio el estudiante a la universidad en que fue admitido y su permanencia en la carrera.\
+
+- **Principal Característica:** este resultado fue obtenido a partir de un gráfico de tipo “lollipop” (combinación de geom_point y geom_segment), facetado por la variable objetivo y que muestra la frecuencia absoluta de estudiantes en cada categoría.\
+
+- **Problemas o posibles desafíos:** las muestras para las prioridades más bajas (mayores que 4) son muy pequeñas, por lo que se debe ser precavido al tratar de establecer patrones.\
+
+- **Resumen en un párrafo:**Se generó un gráfico de tipo lollipop, tomando como eje horizontal cada uno de los nueve valores de la variable categórica “Orden de aplicación” y como eje vertical la frecuencia absoluta de estudiantes en cada valor. Es importante aclarar que el valor de “Orden de aplicación” corresponde al puesto que ocupaba la universidad analizada en una lista de universidades a las que aplicó cada estudiante. Luego, el gráfico se separó en tres facetas según la variable objetivo (graduado, desertor o matriculado) para identificar las tendencias en cada grupo. De esta manera, se logró determinar que los comportamientos de cada valor de prioridad son muy similares, existiendo más graduados que desertores y más desertores que matriculados para todos los valores. Esto implica que el rendimiento académico no se vio afectado por la prioridad que tenía esta universidad respecto a otras para cada estudiante.
+\
+
+Con estas 3 fichas de resultados adicionales, se considera que todas las relaciones entre variables pertinentes para esta investigación han sido cubiertas de forma satisfactoria. Aunque la base de datos escogida contiene otras variables que no forman parte de ningún gráfico, tabla o resultado, su ausencia es una decisión consciente y no una omisión. Algunas de ellas no forman parte del enfoque definido para este estudio, como la tasa de desempleo, el producto interno bruto y la inflación; los cuales son indicadores macroeconómicos que no pueden entenderse como características personales de un estudiante que influyan sobre su rendimiento. Otras variables como el modo de aplicación o las unidades curriculares de cada semestre sin considerar evaluaciones, no se consideraron relevantes según la bibliografía consultada. Por otro lado, analizar las relaciones entre variables sin conectarlas con la variable objetivo, por ejemplo vincular género con edad, habría generado resultados de carácter socioeconómico o demográfico sin que se pudieran extraer conclusiones sobre su impacto en el rendimiento académico, que es el principal objetivo de este trabajo. 
+
+## Parte de escritura
+
+### Escribir, escribir, escribir
+
+#### Conclusión
+Durante la presente investigación se propuso identificar y analizar los factores sociales, económicos, académicos y familiares que influyen sobre la decisión de abandonar o continuar los estudios universitarios de los estudiantes. Se tomó un estudio realizado en una universidad europea sobre la permanencia de los estudiantes en la carrera o el abandono de sus estudios universitarios, para así realizar un análisis cuantitativo y gráfico acerca de estos factores. Según la literatura sobre la educación superior se encontraron muchas relaciones de estos factores y teorías al respecto. Se consideró este tema de investigación debido a la necesidad de comprender mejor el desarrollo del capital humano en la educación superior. A su vez se quiere estudiar cómo mejorar las condiciones de educación para muchas personas, considerando el tiempo que demandan las responsabilidades laborales o familiares, así como el desplazamiento al centro educativo. \
+
+Se realizó un análisis cuantitativo que se basó en la visualización de datos mediante el uso de las herramientas vistas en el curso “Herramientas de Ciencia de Datos I”, como el manejo de una base de datos y la graficación con tidyverse y otras librerías de R. Se tomó una base de datos que contaba con 4424 registros de estudiantes europeos donde se consideraban más de 20 variables macroeconómicas, microeconómicas, sociales, familiares, entre otras. Entre estas variables se encontraron algunos patrones que pueden responder las preguntas planteadas. \
+
+Con respecto a los factores académicos se encontró una fuerte relación entre las notas del primer semestre y las notas de admisión de los estudiantes con la probabilidad de graduación de los mismos, ya que son aquellos quienes obtienen mejores notas o no reprueban algún curso los que continúan su trayectoria académica y en la mayoría de casos se consigue la graduación. Este comportamiento coincide con las teorías consultadas, en particular con Garbanzo Vargas (2013) y Montero Rojas, Villalobos Palma, y Valverde Bermúdez (2007). Para los factores económicos se identificaron problemas que enfrentan los estudiantes como el ser poseedor de una beca socioeconómica o poder mantener sus cuotas escolares pagadas para poder continuar con sus estudios. El acceso a las becas mostró una clara influencia en la permanencia estudiantil ya que se encontró que los estudiantes becados presentaron una mayor proporción de graduaciones que los que no las portaban, dicho comportamiento se respalda con los hallazgos de Lobos Rivera y Rodríguez Vásquez (2023), pues los autores muestran que los gastos de transporte, matrícula, alimentación y demás son la principal causa del abandono de los estudios universitarios. \
+
+Al aplicar la metodología propuesta se encontró un resultado inesperado donde se contradecía la literatura al respecto, ya que los gráficos mostraron que los estudiantes que se necesitan desplazar de su hogar para poder estudiar muestran mayores tasas de graduación que los que no necesitan desplazarse. Por el contrario, según la teoría muchos factores económicos, sociales y familiares que conlleva el no desplazamiento pueden ayudar al estudiante, por ejemplo el estar cerca de su familia o no tener diversos gastos como los expuestos anteriormente.\
+
+Para las futuras investigaciones sobre la deserción estudiantil se recomienda incluir análisis que se compongan de la trayectoria completa del estudiante o de no ser posible agregar al menos un semestre más de estudios para estudiar cómo han evolucionado los factores anteriormente expuestos en la vida del estudiante. Se consideran como variables importantes la satisfacción estudiantil al completar los semestres para conocer el deseo del estudiante de seguir con la carrera seleccionada, algunas variables cualitativas como la motivación pueden revelar aún más información. Se pueden agregar estudios específicos de algunas áreas ya que se sabe que el área de letras y ciencias básicas son las que poseen una mayor tasa de deserción estudiantil en la mayoría de universidades. Para investigadores con mayor experiencia o conocimiento se puede incorporar un análisis multinivel donde se estudian las interacciones de los factores por separado para obtener un mismo resultado. Finalmente, este proyecto de investigación contribuye a llenar un vacío en la literatura al proporcionar un análisis de múltiples factores utilizando una base de datos actual y descubriendo una contradicción en la teoría al describir el impacto de los desplazamientos de los estudiantes. Estos descubrimientos y aportes abren líneas de investigación y cuestionan algunos supuestos sobre la deserción estudiantil.
 
 
+#### Introducción
+La educación es el motor de cualquier sociedad, sirve como mecanismo para expandir el conocimiento y enriquecer la cultura. A su vez, es una herramienta capaz de combatir la pobreza, mejorar la salud y lograr la igualdad de género. Sin embargo, una problemática creciente es la cantidad de personas que no completan sus estudios, ya sean de primaria, secundaria o educación superior. De estos niveles educativos, el abandono de la educación superior es el eje central de esta investigación. \
 
+La formación de profesionales es un peldaño fundamental en el crecimiento económico y exploración del conocimiento para cualquier nación por lo que la permanencia en los centros de educación universitaria es fundamental. No obstante, no es un trabajo sencillo encontrar las causas del abandono de esta etapa de la educación para de esta manera ayudar a contrarrestarlas. Es así, que se busca analizar la manera en que los factores sociales, económicos, académicos y familiares influyen en la trayectoria académica de la persona estudiante. \
+
+El contexto actual de la educación superior revela que a pesar de los esfuerzos por incrementar las tasas de graduación, la deserción sigue siendo un desafío significativo. La literatura existente sugiere que el nivel educativo de los padres, la estabilidad económica, el rendimiento académico anterior, el género, la movilidad geográfica, entre otros factores son clave para que el estudiante tome la decisión de desertar o continuar con sus estudios. Sin embargo, algunas fuentes son contradictorias acerca de qué tanta influencia tienen en tal decisión, lo que abre un espacio para un análisis más detallado, contextualizado y aplicado. Este trabajo se propone contribuir al conocimiento existente mediante un análisis tanto cualitativo como cuantitativo entre las variables brindadas por una base de datos de estudiantes en una universidad europea entre el 2008 y el 2018.\
+
+Mediante los datos provenientes de la base mencionada, que abarca información tanto demográfica, académica y socioeconómica de los estudiantes se pretende descubrir patrones y correlaciones que permitan entender mejor las razones detrás de la permanencia o abandono de la educación superior. Principalmente, se pretende reconocer aquellos factores que tienen mayor incidencia sobre el abandono de los estudios. El objetivo es identificar las variables críticas que afectan la decisión de continuar o no la carrera universitaria para tener una base con la cual se pueden crear estrategias efectivas en contra de la deserción universitaria. Para lograrlo, se empleará un análisis estadístico basado en la visualización de datos mediante gráficas y tablas.\
+
+Para la disminución de este fenómeno es fundamental fomentar el diálogo entre las instituciones gubernamentales y educativas ya que los factores que influyen en la deserción estudiantil están estrechamente interconectados. Se busca promover la reflexión para incentivar la mejora y expansión de las políticas y ayudas existentes en torno a este problema. Es importante que estas medidas reconozcan que la deserción no es el resultado de un único factor, sino una combinación de varios, por lo que se requiere planes integrales que aborden la complejidad del tema atacando múltiples factores simultáneamente. 
+
+#### Resumen
+Existen múltiples factores externos que pueden influir sobre el desempeño académico de un estudiante. El propósito de esta investigación es analizar la interacción de las variables sociales, económicas, académicas y familiares en la trayectoria académica de un estudiante universitario. Para abordar el objetivo planteado, se realizó un análisis exploratorio de una base de datos elaborada por Realinho, et. al (2022). Esta base contiene información sobre las características socioeconómicas y académicas de 4424 estudiantes que ingresaron a una universidad en Portugal entre 2008 y 2018. El principal programa utilizado fue RStudio, donde se generaron múltiples tablas y gráficos que estudian la relación entre el rendimiento académico y las variables relevantes según la literatura. Se encontró que factores económicos como el goce de una beca y la puntualidad en los pagos de las cuotas tienen una fuerte relación con la permanencia del estudiante en la carrera. Asimismo, características demográficas como la edad de ingreso a la universidad y el género resultaron ser significativas sobre el rendimiento. Otros factores académicos, como el promedio de admisión a la universidad y las calificaciones obtenidas en los primeros dos semestres se identificaron como indicadores del rendimiento futuro del estudiante. Por otro lado, se observó que los antecedentes académicos del núcleo familiar del estudiante no son determinantes para su desempeño. Así, se concluye que el rendimiento académico de los estudiantes universitarios es un fenómeno complejo vinculado a diversas variables interconectadas. Finalmente, se propone que futuras investigaciones contemplen la posibilidad de ampliar el análisis de este tema mediante la aplicación de métodos estadísticos de carácter numérico. 
+
+#### Referencias

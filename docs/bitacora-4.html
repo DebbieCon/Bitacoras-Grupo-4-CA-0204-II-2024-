@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Análisis de la interacción de los factores sociales, económicos, académicos y familiares en la trayectoria de un estudiante - 4&nbsp; Bitácora 4: Revisión y depuración final</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./trabajo_final.html" rel="next">
+<link href="./bitacora-3.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bitacora-4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bitácora 4: Revisión y depuración final</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Análisis de la interacción de los factores sociales, económicos, académicos y familiares en la trayectoria de un estudiante</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/DebbieCon/Bitacoras-Grupo-4-CA-0204-II-2024-" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Descargar" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descargar"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./Análisis-de-la-interacción-de-los-factores-sociales,-económicos,-académicos-y-familiares-en-la-trayectoria-de-un-estudiante.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Descargar PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./Análisis-de-la-interacción-de-los-factores-sociales,-económicos,-académicos-y-familiares-en-la-trayectoria-de-un-estudiante.epub">
+              <i class="bi bi-bi-journal pe-1"></i>
+            Descargar ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="Compartir" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Compartir"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bitacora-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bitácora 1: Planificación y Pregunta de Investigación</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bitacora-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bitácora 2: Análisis Descriptivo de los Datos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bitacora-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bitácora 3: Experimentos y Modelaje</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bitacora-4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bitácora 4: Revisión y depuración final</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trabajo_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ordenamiento final</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#parte-de-planificación" id="toc-parte-de-planificación" class="nav-link active" data-scroll-target="#parte-de-planificación"><span class="header-section-number">4.1</span> Parte de planificación</a></li>
+  <li><a href="#fichas" id="toc-fichas" class="nav-link" data-scroll-target="#fichas"><span class="header-section-number">4.2</span> Fichas</a></li>
+  <li><a href="#parte-de-escritura" id="toc-parte-de-escritura" class="nav-link" data-scroll-target="#parte-de-escritura"><span class="header-section-number">4.3</span> Parte de escritura</a>
+  <ul class="collapse">
+  <li><a href="#escribir-escribir-escribir" id="toc-escribir-escribir-escribir" class="nav-link" data-scroll-target="#escribir-escribir-escribir"><span class="header-section-number">4.3.1</span> Escribir, escribir, escribir</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/DebbieCon/Bitacoras-Grupo-4-CA-0204-II-2024-/edit/main/bitacora-4.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/DebbieCon/Bitacoras-Grupo-4-CA-0204-II-2024-/blob/main/bitacora-4.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bitácora 4: Revisión y depuración final</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="parte-de-planificación" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="parte-de-planificación"><span class="header-section-number">4.1</span> Parte de planificación</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(treemapify)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">"base_datos/universidades_europeas.csv"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">clean_names</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Este es un gráfico de tipo heatmap que muestra la frecuencia de cada combinación de niveles académicos de padre y madre del estudiante, un color más oscuro significa mayor cantidad de observaciones de ese tipo. Además, está facetado por la categoría del estudiante (graduado, desertor o matriculado).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">target =</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    target <span class="sc">==</span> <span class="st">"Dropout"</span> <span class="sc">~</span> <span class="st">"Desertor"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    target <span class="sc">==</span> <span class="st">"Enrolled"</span> <span class="sc">~</span> <span class="st">"Matriculado"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    target <span class="sc">==</span> <span class="st">"Graduate"</span> <span class="sc">~</span> <span class="st">"Graduado"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">case_when</span>(</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Educación Secundaria"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"Licenciatura"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"Grado"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="st">"Master"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">5</span><span class="sc">~</span> <span class="st">"Doctorado"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span> <span class="dv">9</span> <span class="sc">~</span> <span class="st">"12º Año de Escolaridad"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">10</span><span class="sc">~</span> <span class="st">"11º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">11</span><span class="sc">~</span> <span class="st">"7º Año (Antiguo)"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">12</span><span class="sc">~</span> <span class="st">"11º Año de Escolaridad"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">13</span><span class="sc">~</span> <span class="st">"2º Año del curso complementario de secundaria"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">14</span><span class="sc">~</span> <span class="st">"10º Año de Escolaridad"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">18</span> <span class="sc">~</span> <span class="st">"Curso de comercio general"</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">19</span><span class="sc">~</span> <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">20</span><span class="sc">~</span> <span class="st">"Curso Complementario de Secundaria"</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">22</span><span class="sc">~</span> <span class="st">"Curso técnico-profesional"</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">25</span><span class="sc">~</span> <span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">27</span><span class="sc">~</span> <span class="st">"7º Año de Escolaridad"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">29</span><span class="sc">~</span> <span class="st">"9º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">30</span><span class="sc">~</span> <span class="st">"8º Año de Escolaridad"</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">31</span><span class="sc">~</span> <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">33</span><span class="sc">~</span> <span class="st">"Contabilidad y Administración Suplementaria"</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">34</span><span class="sc">~</span> <span class="st">"Desconocido"</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">35</span><span class="sc">~</span> <span class="st">"No sabe leer ni escribir"</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">36</span><span class="sc">~</span> <span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">37</span><span class="sc">~</span> <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>,</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">38</span><span class="sc">~</span> <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">39</span><span class="sc">~</span> <span class="st">"Curso de especialización tecnológica"</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">40</span><span class="sc">~</span> <span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">41</span><span class="sc">~</span> <span class="st">"Curso de estudios superiores especializados"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">42</span><span class="sc">~</span> <span class="st">"Curso técnico superior profesional"</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">43</span><span class="sc">~</span> <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    mothers_qualification<span class="sc">==</span><span class="dv">44</span><span class="sc">~</span> <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>,</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Desconocido"</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification=</span><span class="fu">case_when</span>(</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Educación Secundaria"</span>,</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    fathers_qualification  <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"Licenciatura"</span>,</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"Grado"</span>,</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="st">"Master"</span>,</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">5</span><span class="sc">~</span><span class="st">"Doctorado"</span>,</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    fathers_qualification <span class="sc">==</span> <span class="dv">9</span> <span class="sc">~</span> <span class="st">"12º Año de Escolaridad"</span>,</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">10</span><span class="sc">~</span> <span class="st">"11º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">11</span><span class="sc">~</span> <span class="st">"7º Año (Antiguo)"</span>,</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">12</span><span class="sc">~</span> <span class="st">"11º Año de Escolaridad"</span>,</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">13</span><span class="sc">~</span> <span class="st">"2º Año del curso complementario de secundaria"</span>,</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">14</span><span class="sc">~</span> <span class="st">"10º Año de Escolaridad"</span>,</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">18</span> <span class="sc">~</span> <span class="st">"Curso de comercio general"</span>,</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">19</span><span class="sc">~</span> <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>,</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">20</span><span class="sc">~</span> <span class="st">"Curso Complementario de Secundaria"</span>,</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">22</span><span class="sc">~</span> <span class="st">"Curso técnico-profesional"</span>,</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">25</span><span class="sc">~</span> <span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">27</span><span class="sc">~</span> <span class="st">"7º Año de Escolaridad"</span>,</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">29</span><span class="sc">~</span> <span class="st">"9º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">30</span><span class="sc">~</span> <span class="st">"8º Año de Escolaridad"</span>,</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">31</span><span class="sc">~</span> <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">33</span><span class="sc">~</span> <span class="st">"Contabilidad y Administración Suplementaria"</span>,</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">34</span><span class="sc">~</span> <span class="st">"Desconocido"</span>,</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">35</span><span class="sc">~</span> <span class="st">"No sabe leer ni escribir"</span>,</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">36</span><span class="sc">~</span> <span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">37</span><span class="sc">~</span> <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>,</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">38</span><span class="sc">~</span> <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>,</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">39</span><span class="sc">~</span> <span class="st">"Curso de especialización tecnológica"</span>,</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">40</span><span class="sc">~</span> <span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">41</span><span class="sc">~</span> <span class="st">"Curso de estudios superiores especializados"</span>,</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">42</span><span class="sc">~</span> <span class="st">"Curso técnico superior profesional"</span>,</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">43</span><span class="sc">~</span> <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>    fathers_qualification<span class="sc">==</span><span class="dv">44</span><span class="sc">~</span> <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>,</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Desconocido"</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>mothers_qualification<span class="ot">&lt;-</span><span class="fu">as.factor</span>(df<span class="sc">$</span>mothers_qualification)</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>fathers_qualification<span class="ot">&lt;-</span><span class="fu">as.factor</span>(df<span class="sc">$</span>fathers_qualification)</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>sum_mothers_qualification<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">fct_collapse</span>(mothers_qualification, </span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Primaria completada"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"7º Año (Antiguo)"</span>,<span class="st">"7º Año de Escolaridad"</span>, </span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>),</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Primaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>, </span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>),</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Secundaria completada"</span> <span class="ot">=</span><span class="fu">c</span>(<span class="st">"Educación Secundaria"</span>, </span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>            <span class="st">"12º Año de Escolaridad"</span>, <span class="st">"Curso Complementario de Secundaria"</span>),</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Secundaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>            <span class="st">"11º Año de Escolaridad - No Completado"</span>,<span class="st">"11º Año de Escolaridad"</span>, </span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>            <span class="st">"2º Año del curso complementario de secundaria"</span>,</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>, </span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>            <span class="st">"9º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>            <span class="st">"8º Año de Escolaridad"</span>,<span class="st">"10º Año de Escolaridad"</span>),</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Universidad completada"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Licenciatura"</span>,<span class="st">"Grado"</span>,<span class="st">"Master"</span>,<span class="st">"Doctorado"</span>, </span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>),</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>     <span class="st">"Cursos complementarios"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Curso de comercio general"</span>,</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Curso técnico-profesional"</span>, </span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Contabilidad y Administración Suplementaria"</span>, </span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Curso de especialización tecnológica"</span>, </span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Curso de estudios superiores especializados"</span>, </span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Curso técnico superior profesional"</span>),</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>     <span class="st">"No sabe leer ni escribir"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No sabe leer ni escribir"</span>)</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">fct_lump</span>(mothers_qualification, <span class="at">n=</span><span class="dv">9</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mothers_qualification, <span class="at">sort=</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">nivel_educativo_madre=</span>n)</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>sum_fathers_qualification<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification=</span><span class="fu">fct_collapse</span>(fathers_qualification, </span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Primaria completada"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"7º Año (Antiguo)"</span>,<span class="st">"7º Año de Escolaridad"</span>, </span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>),</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Primaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>),</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Secundaria completada"</span> <span class="ot">=</span><span class="fu">c</span>(<span class="st">"Educación Secundaria"</span>, <span class="st">"12º Año de Escolaridad"</span>, </span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Curso Complementario de Secundaria"</span>),</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Secundaria no completado"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>, </span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>   <span class="st">"11º Año de Escolaridad - No Completado"</span>,<span class="st">"11º Año de Escolaridad"</span>, </span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2º Año del curso complementario de secundaria"</span>, </span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>, </span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>    <span class="st">"9º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>    <span class="st">"8º Año de Escolaridad"</span>,<span class="st">"10º Año de Escolaridad"</span>),</span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Universidad completada"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Licenciatura"</span>,<span class="st">"Grado"</span>,<span class="st">"Master"</span>,<span class="st">"Doctorado"</span>, </span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,</span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,</span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>),</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cursos complementarios"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Curso de comercio general"</span>, </span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Curso técnico-profesional"</span>, <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Contabilidad y Administración Suplementaria"</span>,</span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Curso de especialización tecnológica"</span>,</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Curso de estudios superiores especializados"</span>, </span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Curso técnico superior profesional"</span>),</span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>    <span class="st">"No sabe leer ni escribir"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No sabe leer ni escribir"</span>)</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification=</span><span class="fu">fct_lump</span>(fathers_qualification, <span class="at">n=</span><span class="dv">9</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(fathers_qualification, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">nivel_educativo_padre=</span>n)</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>sum_fathers_qualification<span class="ot">&lt;-</span>sum_fathers_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">nivel_de_estudios=</span>fathers_qualification)</span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>sum_mothers_qualification<span class="ot">&lt;-</span>sum_mothers_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">nivel_de_estudios=</span>mothers_qualification)</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>sum_qualification<span class="ot">&lt;-</span>sum_mothers_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(sum_fathers_qualification, <span class="at">by=</span><span class="st">"nivel_de_estudios"</span>) </span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>target_parents_qualification<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">fct_collapse</span>(mothers_qualification,</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Educación Primaria"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"7º Año (Antiguo)"</span>,<span class="st">"7º Año de Escolaridad"</span>, </span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>, </span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,</span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>),</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Educación Secundaria"</span> <span class="ot">=</span><span class="fu">c</span>(<span class="st">"Educación Secundaria"</span>, </span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>           <span class="st">"12º Año de Escolaridad"</span>, </span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Curso Complementario de Secundaria"</span>,</span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>           <span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>, </span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>           <span class="st">"11º Año de Escolaridad - No Completado"</span>,<span class="st">"11º Año de Escolaridad"</span>, </span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>           <span class="st">"2º Año del curso complementario de secundaria"</span>, </span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>, </span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,</span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>           <span class="st">"9º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>           <span class="st">"8º Año de Escolaridad"</span>,<span class="st">"10º Año de Escolaridad"</span>),</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Educación Universitaria"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Licenciatura"</span>,<span class="st">"Grado"</span>,<span class="st">"Master"</span>,<span class="st">"Doctorado"</span>, </span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Educación Superior - Grado (1º Ciclo)"</span>, </span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>),</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Educación Técnico-Profesional"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Curso de comercio general"</span>, </span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Curso técnico-profesional"</span>,</span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Contabilidad y Administración Suplementaria"</span>,</span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Curso de especialización tecnológica"</span>,</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Curso de estudios superiores especializados"</span>, </span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Curso técnico superior profesional"</span>),</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>  <span class="st">"No sabe leer ni escribir"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No sabe leer ni escribir"</span>)</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification=</span><span class="fu">fct_collapse</span>(fathers_qualification,</span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>     <span class="st">"Educación Primaria"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"7º Año (Antiguo)"</span>,<span class="st">"7º Año de Escolaridad"</span>, </span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv."</span>, </span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Sabe leer sin tener el 4º Año de Escolaridad"</span>,</span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Educación Básica 1º Ciclo (4º/5º Año) o Equiv."</span>),</span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>     </span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Educación Secundaria"</span> <span class="ot">=</span><span class="fu">c</span>(<span class="st">"Educación Secundaria"</span>, <span class="st">"12º Año de Escolaridad"</span>, </span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Curso Complementario de Secundaria"</span>, </span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>          <span class="st">"9 - 12mo Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>          <span class="st">"11º Año de Escolaridad - No Completado"</span>,</span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>          <span class="st">"11º Año de Escolaridad"</span>, </span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>          <span class="st">"2º Año del curso complementario de secundaria"</span>, </span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Educación Básica 3º Ciclo (9º/10º/11º Año) o Equiv."</span>, </span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Curso Complementario de Secundaria - No Concluido"</span>,</span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>          <span class="st">"9º Año de Escolaridad - No Completado"</span>, <span class="st">"8º Año de Escolaridad"</span>,</span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>          <span class="st">"10º Año de Escolaridad"</span>),</span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>     <span class="st">"Educación Universitaria"</span><span class="ot">=</span><span class="fu">c</span>(<span class="st">"Licenciatura"</span>,<span class="st">"Grado"</span>,<span class="st">"Master"</span>,<span class="st">"Doctorado"</span>, </span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Educación Superior - Máster (2º Ciclo)"</span>,</span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Educación Superior - Grado (1º Ciclo)"</span>,</span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Educación Superior - Doctorado (3º Ciclo)"</span>),</span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>     <span class="st">"Educación Técnico-Profesional"</span><span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Curso de comercio general"</span>, </span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Curso técnico-profesional"</span>, </span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Curso General de Administración y Comercio"</span>,</span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Contabilidad y Administración Suplementaria"</span>,</span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Curso de especialización tecnológica"</span>,</span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Curso de estudios superiores especializados"</span>, </span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a>         <span class="st">"Curso técnico superior profesional"</span>),</span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a>      <span class="st">"No sabe leer ni escribir"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No sabe leer ni escribir"</span>)</span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(target, mothers_qualification, fathers_qualification) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count=</span><span class="fu">n</span>())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>target_parents_qualification<span class="sc">$</span>mothers_qualification <span class="ot">&lt;-</span> <span class="fu">str_wrap</span>(target_parents_qualification<span class="sc">$</span>mothers_qualification, <span class="at">width =</span> <span class="dv">10</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>target_parents_qualification<span class="ot">&lt;-</span> target_parents_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(target <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Graduado"</span>, <span class="st">"Desertor"</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>target_parents_qualification <span class="ot">&lt;-</span> target_parents_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(mothers_qualification <span class="sc">!=</span> <span class="st">"Desconocido"</span>, </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>         fathers_qualification <span class="sc">!=</span> <span class="st">"Desconocido"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>target_parents_qualification <span class="ot">&lt;-</span> target_parents_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification =</span> <span class="fu">str_replace_all</span>(mothers_qualification, <span class="st">"</span><span class="sc">\\</span><span class="st">n"</span>, <span class="st">" "</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>target_parents_qualification <span class="ot">&lt;-</span> target_parents_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mothers_qualification=</span><span class="fu">fct_relevel</span>(mothers_qualification, </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"No sabe leer ni escribir"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Educación Primaria"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Educación Secundaria"</span>, </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Educación Técnico-Profesional"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Educación Universitaria"</span> ))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>target_parents_qualification <span class="ot">&lt;-</span> target_parents_qualification <span class="sc">%&gt;%</span> </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fathers_qualification =</span><span class="fu">fct_relevel</span>(fathers_qualification, </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"No sabe leer ni escribir"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Educación Primaria"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Educación Secundaria"</span>, </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Educación Técnico-Profesional"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Educación Universitaria"</span> ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>grafica_uno<span class="ot">&lt;-</span><span class="fu">ggplot</span>(target_parents_qualification, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> mothers_qualification, <span class="at">y =</span> fathers_qualification, <span class="at">fill =</span> count)) <span class="sc">+</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span> <span class="fu">scale_fill_gradient</span>(<span class="at">low=</span><span class="st">"#AAE48D"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">high =</span> <span class="st">"#2B7308"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">guide =</span> <span class="st">"colorbar"</span> )<span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> target) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Nivel educativo de la madre"</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                              <span class="at">y =</span> <span class="st">"Nivel educativo del padre"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                              <span class="at">fill =</span> <span class="st">"Frecuencia"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                          )<span class="sc">+</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span><span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                   <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>,<span class="at">angle=</span><span class="dv">90</span>,<span class="at">hjust=</span><span class="dv">1</span>))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_uno)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_uno" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_uno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_uno-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_uno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.1: Comparación del nivel educativo de los padres y el tipo de estudiante. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Este es un gráfico de barras que recuenta la frecuencia absoluta de estudiantes que están al día o atrasados con los pagos de las cuotas, los identifica con colores distintos y los separa según su categoría de la variable objetivo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">tuition_fees_up_to_date =</span> <span class="fu">case_when</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    tuition_fees_up_to_date <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    tuition_fees_up_to_date <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Si"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>grafica_dos<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span><span class="fu">count</span>(tuition_fees_up_to_date, target) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>target, <span class="at">y =</span> n, <span class="at">fill =</span> tuition_fees_up_to_date))<span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Tipo de Estudiante"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Frecuencia"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Cuotas al día"</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Si"</span> <span class="ot">=</span> <span class="st">"#A2CD5A"</span>,<span class="st">"No"</span><span class="ot">=</span><span class="st">"#CD5555"</span>))<span class="sc">+</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="cn">NA</span>),</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_dos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_dos" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_dos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_dos-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_dos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.2: Relación entre persona deudora y resultado académico. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Este es otro gráfico de tipo heatmap, pero que ilustra la cantidad de estudiantes hallados en cada uno de los subgrupos generados al combinar la variable objetivo con una variable binaria (poseedor de beca o no).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">scholarship_holder =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    scholarship_holder <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    scholarship_holder <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Si"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>grafica_tres<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span><span class="fu">count</span>(scholarship_holder, target) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>scholarship_holder, <span class="at">y =</span> target, <span class="at">fill =</span> n))<span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>()<span class="sc">+</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Poseedor de Beca Socioeconómica"</span>, <span class="at">y =</span> <span class="st">"Tipo de Estudiante"</span>, <span class="at">fill =</span> <span class="st">"Frecuencia"</span>) <span class="sc">+</span> </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_continuous</span>(<span class="at">low =</span> <span class="st">"skyblue"</span>, <span class="at">high =</span> <span class="st">"darkblue"</span>)<span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">fill=</span><span class="cn">NA</span>),</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_tres)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_tres" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_tres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_tres-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_tres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.3: Frecuencia de Estudiantes Graduados, Matriculados o Desertores según su categoría de beca. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Este es un gráfico de barras adicional que visualiza la frecuencia absoluta de estudiantes nacionales e internacionales y los distingue con colores dentro de cada categoría de la variable objetivo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">international =</span> <span class="fu">case_when</span>(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    international <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No"</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    international <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Si"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>grafica_cuatro<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span><span class="fu">count</span>(international, target) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>target, <span class="at">y =</span> n, <span class="at">fill =</span> international))<span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"stack"</span>) <span class="sc">+</span> </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Tipo de Estudiante"</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Frecuencia"</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Internacional"</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Si"</span> <span class="ot">=</span> <span class="st">"#CD5555"</span>,<span class="st">"No"</span><span class="ot">=</span><span class="st">"#BFEFFF"</span>))<span class="sc">+</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="cn">NA</span>),</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_cuatro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_cuatro" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_cuatro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_cuatro-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_cuatro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.4: Comparación en la frecuencia del estado de los estudiantes según su nacionalidad. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>El gráfico mostrado es de tipo densidad y es útil para mostrar la distribución de los créditos aprobados en el primer semestre según la categorías de la variable objetivo. Como existe una superposición significativa de las densidades, fue necesario reducir la opacidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>grafico_cinco<span class="ot">&lt;-</span><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> curricular_units_1st_sem_approved, <span class="at">fill=</span>target))<span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha=</span><span class="fl">0.6</span>, <span class="at">color=</span><span class="cn">NA</span>)<span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Créditos aprobados en el primer semestre"</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Densidad"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Categoría del estudiante"</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Matriculado"</span><span class="ot">=</span> <span class="st">"#83B8c6"</span>, <span class="st">"Graduado"</span><span class="ot">=</span> <span class="st">"#CD5555"</span>, <span class="st">"Desertor"</span><span class="ot">=</span><span class="st">"#A2CD5A"</span>))<span class="sc">+</span>cowplot<span class="sc">::</span><span class="fu">theme_cowplot</span>()</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_cinco)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_cinco" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_cinco-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_cinco-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_cinco-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.5: Densidades de créditos aprobados en primer semestre por tipo de estudiante. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>:::</p>
+<p>Nuevamente se presenta un gráfico de barras sobre frecuencia absoluta que segmenta las categorías de la variable objetivo por una variable binaria diferenciada por color, en este caso el género.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df<span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span> (<span class="at">gender =</span> <span class="fu">case_when</span>(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"Mujer"</span>, </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    gender <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"Hombre"</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>grafico_seis<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>gender, <span class="at">x=</span>target))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"count"</span>)<span class="sc">+</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Tipo de estudiante"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span> <span class="st">"Cantidad de estudiantes"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span><span class="st">"Género"</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    )<span class="sc">+</span><span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Hombre"</span><span class="ot">=</span> <span class="st">"#FD8A8A"</span>, <span class="st">"Mujer"</span><span class="ot">=</span> <span class="st">"#A9CDD7"</span>))<span class="sc">+</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(<span class="fu">table</span>(df<span class="sc">$</span>target)), <span class="at">by =</span> <span class="dv">200</span>))</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_seis)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_seis" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_seis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_seis-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_seis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.6: Distribución de estudiantes según su género. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Este gráfico de estilo scatter genera puntos en el plano cuyas coordenadas corresponden a las notas del primer y segundo semestre. El color de cada punto denota la categoría de la variable objetivo a la que pertenece cada observación.Para apreciar mejor la información y recortar datos no relevantes, se expone solo las notas de 10 a 20.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_1st_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_1st_sem_grade)) <span class="sc">%&gt;%</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">curricular_units_2nd_sem_grade =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"(</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d+).*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, curricular_units_2nd_sem_grade)) <span class="sc">%&gt;%</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">round</span>(<span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>grafico_siete<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(curricular_units_1st_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_2nd_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>,  </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        curricular_units_2nd_sem_grade <span class="sc">&lt;</span> <span class="dv">20</span>,curricular_units_1st_sem_grade <span class="sc">&gt;</span> <span class="dv">10</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        target <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Graduado"</span>, <span class="st">"Desertor"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>curricular_units_1st_sem_grade, <span class="at">y=</span>curricular_units_2nd_sem_grade,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">colour =</span>target))<span class="sc">+</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">labs</span>(</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Nota del primer semestre"</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Nota del segundo semestre"</span>,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">color=</span><span class="st">"Tipo de estudiante"</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">+</span><span class="fu">theme_classic</span>()</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico_siete)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_siete" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_siete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_siete-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_siete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.7: Dispersión de promedios del primer año lectivo según la categoría del estudiante. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Este es un gráfico de tipo treemap que ilustra las proporciones de estudiantes graduados, matriculados y desertores dentro de dos grandes grupos creados a partir de una distinción por variable binaria (desplazado o no desplazado).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">displaced =</span> <span class="fu">case_when</span>(</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    displaced <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No desplazado"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    displaced <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Desplazado"</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">target =</span> <span class="fu">fct_relevel</span>(target, <span class="st">"Desertor"</span>, <span class="st">"Graduado"</span>, <span class="st">"Matriculado"</span>)) </span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>data_summary <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(displaced, target) <span class="sc">%&gt;%</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>grafica_ocho<span class="ot">&lt;-</span><span class="fu">ggplot</span>(data_summary, <span class="fu">aes</span>(<span class="at">area =</span> count, <span class="at">fill =</span> target, </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">label =</span> <span class="fu">paste</span>(target, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>, count),</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">subgroup =</span> displaced)) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treemap</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treemap_text</span>(<span class="at">colour =</span> <span class="st">"white"</span>, <span class="at">place =</span> <span class="st">"centre"</span>, <span class="at">size =</span> <span class="dv">10</span>)<span class="sc">+</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>displaced) <span class="sc">+</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Estado"</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Matriculado"</span><span class="ot">=</span><span class="st">"#A9CDD7"</span>, <span class="st">"Desertor"</span><span class="ot">=</span> <span class="st">"#A2CD5A"</span>, <span class="st">"Graduado"</span><span class="ot">=</span><span class="st">"#CD5555"</span>))<span class="sc">+</span> <span class="fu">theme_minimal</span>()<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_ocho)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_ocho" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_ocho-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_ocho-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_ocho-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.8: Distribución de estudiantes según categoría y desplazamiento. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Este gráfico de tipo boxplot o diagrama de caja ilustra la distribución de las notas de admisión para cada categoría de la variable objetivo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">target =</span> <span class="fu">fct_relevel</span>(target, <span class="st">"Desertor"</span>, <span class="st">"Matriculado"</span>, <span class="st">"Graduado"</span>)) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>grafica_nueve<span class="ot">&lt;-</span><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> admission_grade, <span class="at">y =</span> target, <span class="at">fill =</span> target))<span class="sc">+</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>)<span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Nota de admisión"</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Categoría del estudiante"</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">+</span><span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Matriculado"</span><span class="ot">=</span><span class="st">"#A9CDD7"</span>, <span class="st">"Desertor"</span><span class="ot">=</span> <span class="st">"#A2CD5A"</span>, <span class="st">"Graduado"</span><span class="ot">=</span><span class="st">"#CD5555"</span>))<span class="sc">+</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_nueve)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_nueve" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_nueve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_nueve-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_nueve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.9: Distribución de las notas de admisión por categoría. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Este es un gráfico de densidad tipo ridgeline, el cual muestra las densidades de la edad al momento de ingreso a la universidad para cada categoría de la variable objetivo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">target =</span> <span class="fu">fct_relevel</span>(target, <span class="st">"Desertor"</span>, <span class="st">"Graduado"</span>, </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>                                         <span class="st">"Matriculado"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>grafica_diez<span class="ot">&lt;-</span><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> age_at_enrollment, <span class="at">y =</span> target, <span class="at">fill =</span> target))<span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges</span>(<span class="at">rel_min_height =</span> <span class="fl">0.02</span>, <span class="at">scale =</span> <span class="dv">3</span>, <span class="at">color=</span><span class="cn">NA</span>, <span class="at">alpha=</span><span class="fl">0.7</span>)<span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">15</span>, <span class="dv">50</span>)<span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Edad de ingreso a la universidad"</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Categoría del estudiante"</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Matriculado"</span><span class="ot">=</span><span class="st">"#A9CDD7"</span>, <span class="st">"Desertor"</span><span class="ot">=</span> <span class="st">"#A2CD5A"</span>, <span class="st">"Graduado"</span><span class="ot">=</span><span class="st">"#CD5555"</span>))<span class="sc">+</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(grafica_diez)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_diez" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_diez-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_diez-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_diez-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.10: Densidades de edad de admisión por categoría de estudiante. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df<span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">daytime_evening_attendance =</span> <span class="fu">case_when</span>(</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    daytime_evening_attendance <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Mañana"</span>,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    daytime_evening_attendance <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Noche"</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Otros"</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Este gráfico de barras relaciona las variables categóricas del horario en el cuál se reciben las clases y si el estudiante completo su educación, está en proceso de o no lo hizo. El horario de clases se muestra por el color, uno siendo para clases diurnas y el otro para nocturnas.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>grafica_once<span class="ot">&lt;-</span><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">fill =</span> daytime_evening_attendance, <span class="at">x =</span> target))<span class="sc">+</span><span class="fu">geom_bar</span>()<span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Noche"</span><span class="ot">=</span> <span class="st">"#CD5555"</span>, <span class="st">"Mañana"</span><span class="ot">=</span> <span class="st">"#A9CDD7"</span>))<span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Estado del estudiante"</span>,</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">y=</span><span class="st">"Cantidad de estudiantes"</span>, <span class="at">fill=</span> <span class="st">"Horario de clases"</span>)<span class="sc">+</span><span class="fu">theme_classic</span>()</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_once)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_once" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_once-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_once-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_once-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.11: Estado del estudiante y horario de clases. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>La siguiente figura muestra la relación entre el estado civil del estudiante y su progreso académico mostrando una predominancia significativa de los estudiantes solteros en las tres categorías, para la realización de este gráfico se tomo como persona con pareja a los pertenecientes a las categorías de casados y unión libre, como persona sin pareja a los de las categorías de viudo, separado y divorciado y se mantuvo la categoría de soltero por si sola por su predominancia.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">marital_status =</span> <span class="fu">case_when</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    marital_status <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Soltero"</span>,</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    marital_status <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"Casado"</span>,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    marital_status <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"Viudo"</span>,</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    marital_status <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="st">"Divorciado"</span>,</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    marital_status <span class="sc">==</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">"Unión Libre"</span>,</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    marital_status <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">"Separado"</span>,</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>marital_status <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>marital_status)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>marital_status <span class="ot">&lt;-</span> <span class="fu">fct_collapse</span>(df<span class="sc">$</span>marital_status,</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Pareja"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unión Libre"</span>, <span class="st">"Casado"</span>),</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Sin Pareja"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Viudo"</span>, <span class="st">"Separado"</span>, <span class="st">"Divorciado"</span>),</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Soltero"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Soltero"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>grafica_doce<span class="ot">&lt;-</span>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>marital_status, <span class="at">fill=</span>marital_status))<span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>target)<span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Estado Civil"</span>,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span> <span class="st">"Cantidad de Estudiantes"</span>)<span class="sc">+</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Sin Pareja"</span><span class="ot">=</span> <span class="st">"#CD5555"</span>, <span class="st">"Pareja"</span><span class="ot">=</span> <span class="st">"#A9CDD7"</span>, <span class="st">"Soltero"</span> <span class="ot">=</span> <span class="st">"#A2CD5A"</span>))<span class="sc">+</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>,<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">12</span>),</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span><span class="dv">90</span>, <span class="at">hjust=</span><span class="dv">1</span>),</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">12</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color=</span><span class="st">"grey90"</span>, <span class="at">fill=</span><span class="cn">NA</span>)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_doce)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_doce" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_doce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_doce-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_doce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.12: Distribución de Estado Civil por Rendimiento Académico. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Esta tabla contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>df_ordenAplicacion <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(application_order <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(application_order, target)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>grafica_trece <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df_ordenAplicacion, <span class="fu">aes</span>(<span class="at">x =</span> application_order, <span class="at">y=</span>n))<span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>,<span class="at">color=</span><span class="st">"blue"</span>, <span class="at">fill=</span><span class="st">"lightblue"</span>,<span class="at">shape=</span><span class="dv">21</span>)<span class="sc">+</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x=</span>application_order, <span class="at">xend=</span> application_order, <span class="at">y=</span><span class="dv">0</span>, <span class="at">yend=</span>n), <span class="at">alpha =</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">limits =</span> <span class="fu">as.character</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>))<span class="sc">+</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">250</span>, <span class="dv">750</span>, <span class="dv">1250</span>))<span class="sc">+</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>target)<span class="sc">+</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Prioridad de la universidad para el estudiante"</span>,</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Frecuencia"</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafica_trece)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-grafica_trece" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafica_trece-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bitacora-4_files/figure-html/fig-grafica_trece-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafica_trece-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.13: Cantidad de estudiantes por orden de aplicación y categoría. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>:::</p>
+<p>Este cuadro contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tabla_cuatro <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  <span class="fu">group_by</span>(target) <span class="sc">%&gt;%</span> </span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Media =</span> <span class="fu">mean</span>(curricular_units_1st_sem_grade, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mediana =</span> <span class="fu">median</span>(curricular_units_1st_sem_grade, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    DesviaciónEstándar <span class="ot">=</span> <span class="fu">sd</span>(curricular_units_1st_sem_grade, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">N =</span> <span class="fu">n</span>()</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>tabla_cuatro <span class="ot">&lt;-</span> tabla_cuatro <span class="sc">%&gt;%</span>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(target)) <span class="sc">%&gt;%</span> </span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(N))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(tabla_cuatro))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-tablacuatro" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-tablacuatro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">target</th>
+<th style="text-align: right;">Media</th>
+<th style="text-align: right;">Mediana</th>
+<th style="text-align: right;">DesviaciónEstándar</th>
+<th style="text-align: right;">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Graduado</td>
+<td style="text-align: right;">13.962906</td>
+<td style="text-align: right;">12.9</td>
+<td style="text-align: right;">15.278949</td>
+<td style="text-align: right;">2209</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Desertor</td>
+<td style="text-align: right;">7.458248</td>
+<td style="text-align: right;">10.8</td>
+<td style="text-align: right;">8.562162</td>
+<td style="text-align: right;">1421</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Matriculado</td>
+<td style="text-align: right;">11.148388</td>
+<td style="text-align: right;">12.0</td>
+<td style="text-align: right;">5.266920</td>
+<td style="text-align: right;">794</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-tablacuatro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.1: Estadísticas de las notas del primer semestre según el tipo de estudiante. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Similarmente, esta tabla recuenta la cantidad de estudiantes por género y calcula las medidas de tendencia central para la nota de cada grupo en los primeros dos semestres de universidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>tabla_cinco <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">N =</span> <span class="fu">n</span>(),</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Media_I =</span> <span class="fu">mean</span>(curricular_units_1st_sem_grade, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mediana_I =</span> <span class="fu">median</span>(curricular_units_1st_sem_grade, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    DesviaciónEstándar<span class="at">_I =</span> <span class="fu">sd</span>(curricular_units_1st_sem_grade, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Media_II =</span> <span class="fu">mean</span>(curricular_units_2nd_sem_grade, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mediana_II =</span> <span class="fu">median</span>(curricular_units_2nd_sem_grade, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    DesviaciónEstándar<span class="at">_II =</span> <span class="fu">sd</span>(curricular_units_2nd_sem_grade, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>tabla_cinco <span class="ot">&lt;-</span> tabla_cinco <span class="sc">%&gt;%</span>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(gender)) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(N))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(tabla_cinco))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-tablacinco" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-tablacinco-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 5%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 21%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">gender</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Media_I</th>
+<th style="text-align: right;">Mediana_I</th>
+<th style="text-align: right;">DesviaciónEstándar_I</th>
+<th style="text-align: right;">Media_II</th>
+<th style="text-align: right;">Mediana_II</th>
+<th style="text-align: right;">DesviaciónEstándar_II</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mujer</td>
+<td style="text-align: right;">2868</td>
+<td style="text-align: right;">12.241307</td>
+<td style="text-align: right;">12.4</td>
+<td style="text-align: right;">13.433039</td>
+<td style="text-align: right;">13.632374</td>
+<td style="text-align: right;">12.33</td>
+<td style="text-align: right;">20.73809</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hombre</td>
+<td style="text-align: right;">1556</td>
+<td style="text-align: right;">9.759627</td>
+<td style="text-align: right;">11.8</td>
+<td style="text-align: right;">9.971996</td>
+<td style="text-align: right;">9.424743</td>
+<td style="text-align: right;">11.57</td>
+<td style="text-align: right;">11.66548</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-tablacinco-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.2: Análisis estadístico de las notas en el primer y segundo semestre. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>La última tabla recopila las cifras correspondientes a la cantidad de estudiantes presentes en cada curso contemplado en la base de datos, así como qué número de estudiantes pertenecen a cada categoría de la variable objetivo por curso.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a> df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">course=</span><span class="fu">case_when</span>(</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">33</span>  <span class="sc">~</span> <span class="st">"Tecnologías de producción de biocombustibles"</span>,</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">171</span>  <span class="sc">~</span> <span class="st">"Animación y Diseño Multimedia"</span>,</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">8014</span>  <span class="sc">~</span> <span class="st">"Servicio Social (asistencia nocturna)"</span>,</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9003</span>  <span class="sc">~</span> <span class="st">"Agronomía"</span>,</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9070</span>  <span class="sc">~</span> <span class="st">"Diseño de comunicación"</span>,</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9085</span>  <span class="sc">~</span> <span class="st">"Enfermería Veterinaria"</span>,</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9119</span>  <span class="sc">~</span> <span class="st">"Ingeniería Informática"</span>,</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9130</span>  <span class="sc">~</span> <span class="st">"Equinicultura"</span>,</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9147</span>  <span class="sc">~</span> <span class="st">"Administración"</span>,</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9238</span>  <span class="sc">~</span> <span class="st">"Servicio Social"</span>,</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9254</span>  <span class="sc">~</span> <span class="st">"Turismo"</span>,</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9500</span>  <span class="sc">~</span> <span class="st">"Enfermería"</span>,</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9556</span>  <span class="sc">~</span> <span class="st">"Odontología"</span>,</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9670</span>  <span class="sc">~</span> <span class="st">"Gerencia de Publicidad y Marketing"</span>,</span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9773</span>  <span class="sc">~</span> <span class="st">"Periodismo y Comunicación"</span>,</span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9853</span>  <span class="sc">~</span> <span class="st">"Educación básica"</span>,</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>     course <span class="sc">==</span><span class="dv">9991</span>  <span class="sc">~</span> <span class="st">"Administración (asistencia nocturna)"</span></span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>   ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>tabla_seis <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(course) <span class="sc">%&gt;%</span> </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad =</span> <span class="fu">n</span>(),</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">Desertor =</span> <span class="fu">sum</span>(target <span class="sc">==</span> <span class="st">"Desertor"</span>),</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">Graduado =</span> <span class="fu">sum</span>(target <span class="sc">==</span> <span class="st">"Graduado"</span>),</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">Matriculado =</span> <span class="fu">sum</span>(target <span class="sc">==</span> <span class="st">"Matriculado"</span>))</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>tabla_seis <span class="ot">&lt;-</span> tabla_seis <span class="sc">%&gt;%</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(course)) <span class="sc">%&gt;%</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Curso =</span> course) <span class="sc">%&gt;%</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Cantidad))</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tabla_seis)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 53%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Curso</th>
+<th style="text-align: right;">Cantidad</th>
+<th style="text-align: right;">Desertor</th>
+<th style="text-align: right;">Graduado</th>
+<th style="text-align: right;">Matriculado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Enfermería</td>
+<td style="text-align: right;">766</td>
+<td style="text-align: right;">118</td>
+<td style="text-align: right;">548</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Administración</td>
+<td style="text-align: right;">380</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">138</td>
+<td style="text-align: right;">108</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Servicio Social</td>
+<td style="text-align: right;">355</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">248</td>
+<td style="text-align: right;">42</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Enfermería Veterinaria</td>
+<td style="text-align: right;">337</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">172</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Periodismo y Comunicación</td>
+<td style="text-align: right;">331</td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">196</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Administración (asistencia nocturna)</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gerencia de Publicidad y Marketing</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Turismo</td>
+<td style="text-align: right;">252</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">41</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Diseño de comunicación</td>
+<td style="text-align: right;">226</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">42</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Animación y Diseño Multimedia</td>
+<td style="text-align: right;">215</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Servicio Social (asistencia nocturna)</td>
+<td style="text-align: right;">215</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Agronomía</td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Educación básica</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ingeniería Informática</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Equinicultura</td>
+<td style="text-align: right;">141</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Odontología</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tecnologías de producción de biocombustibles</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(tabla_seis))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-tablaseis" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-tablaseis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Curso</th>
+<th style="text-align: right;">Cantidad</th>
+<th style="text-align: right;">Desertor</th>
+<th style="text-align: right;">Graduado</th>
+<th style="text-align: right;">Matriculado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Enfermería</td>
+<td style="text-align: right;">766</td>
+<td style="text-align: right;">118</td>
+<td style="text-align: right;">548</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Administración</td>
+<td style="text-align: right;">380</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">138</td>
+<td style="text-align: right;">108</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Servicio Social</td>
+<td style="text-align: right;">355</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">248</td>
+<td style="text-align: right;">42</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Enfermería Veterinaria</td>
+<td style="text-align: right;">337</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">172</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Periodismo y Comunicación</td>
+<td style="text-align: right;">331</td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">196</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Administración (asistencia nocturna)</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">54</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-tablaseis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4.3: Distribución de Estudiantes según el curso. Elaboración propia. <span class="citation" data-cites="data">Realinho et&nbsp;al. (<a href="#ref-data" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="fichas" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="fichas"><span class="header-section-number">4.2</span> Fichas</h2>
+<ol type="1">
+<li><strong>FICHA 14</strong><br>
+</li>
+</ol>
+<ul>
+<li><p><strong>Nombre de su hallazgo/resultado:</strong> Relación entre el estado del estudiante y el horario en el cual recibe sus clases<br>
+</p></li>
+<li><p><strong>Resumen en una oración:</strong> Los estudiantes en horarios diurnos se gradúan con mayor frecuencia.<br>
+</p></li>
+<li><p><strong>Principal característica:</strong> se comparan dos variables categóricas, donde se realiza un conteo de cuántos estudiantes llevaron clases diurnas o nocturnas conforme el tipo de estudiante que son (graduado, matriculado, desertor).<br>
+</p></li>
+<li><p><strong>Problemas o posibles desafíos:</strong> Las razones por las cuales el estudiante decide o no recibir clases en la noche o mañana son desconocidas. Se pueden inferir ciertas razones por las cuales esto sucede pero no se conoce con total certeza ya que no es parte de los datos proporcionados. Esto genera cierto grado de error al asumir ciertos factores.<br>
+</p></li>
+<li><p><strong>Resumen en un párrafo:</strong> La cantidad de estudiantes graduados es mucho mayor que la cantidad de estudiantes que han desertado. Sin embargo, la cantidad de personas que tomaron clases nocturnas es la misma en ambas categorías. Por lo tanto, se puede decir que aquellos que reciben clases diurnas se gradúan con mayor frecuencia. Una posible causa de esto, es que los estudiantes de horario nocturno toman clases a esta hora debido a otras responsabilidades como por ejemplo un trabajo o una familia.<br>
+</p></li>
+</ul>
+<ol start="2" type="1">
+<li><strong>FICHA 15</strong><br>
+</li>
+</ol>
+<ul>
+<li><p><strong>Nombre de su hallazgo/resultado:</strong> Relación entre Estado Civil y Rendimiento Académico.<br>
+</p></li>
+<li><p><strong>Resumen en una oración:</strong> Los estudiantes solteros tienen una mayor representación en todas las categorías de rendimiento académico, especialmente entre los estudiantes graduados.<br>
+</p></li>
+<li><p><strong>Principal Característica:</strong> La categoría de estudiantes solteros domina significativamente en cada nivel de rendimiento académico.<br>
+</p></li>
+<li><p><strong>Problemas o posibles desafíos:</strong> Falta de diversidad en el estado civil podría sesgar los resultados.<br>
+</p></li>
+<li><p><strong>Resumen en un párrafo:</strong> El gráfico muestra la distribución del estado civil de los estudiantes en relación con su rendimiento académico, categorizado como desertor, graduado o matriculado. Se observa que los estudiantes solteros son predominantes en cada categoría especialmente entre los graduados, lo que sugiere una posible correlación entre el estado civil y el éxito académico.<br>
+</p></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>FICHA 16</strong><br>
+</li>
+</ol>
+<ul>
+<li><p><strong>Nombre de su hallazgo/resultado:</strong> Independencia entre el orden aplicación del estudiante y su permanencia en la carrera.<br>
+</p></li>
+<li><p><strong>Resumen en una oración:</strong> No existe una relación clara entre la prioridad que le dio el estudiante a la universidad en que fue admitido y su permanencia en la carrera.<br>
+</p></li>
+<li><p><strong>Principal Característica:</strong> este resultado fue obtenido a partir de un gráfico de tipo “lollipop” (combinación de geom_point y geom_segment), facetado por la variable objetivo y que muestra la frecuencia absoluta de estudiantes en cada categoría.<br>
+</p></li>
+<li><p><strong>Problemas o posibles desafíos:</strong> las muestras para las prioridades más bajas (mayores que 4) son muy pequeñas, por lo que se debe ser precavido al tratar de establecer patrones.<br>
+</p></li>
+<li><p><strong>Resumen en un párrafo:</strong>Se generó un gráfico de tipo lollipop, tomando como eje horizontal cada uno de los nueve valores de la variable categórica “Orden de aplicación” y como eje vertical la frecuencia absoluta de estudiantes en cada valor. Es importante aclarar que el valor de “Orden de aplicación” corresponde al puesto que ocupaba la universidad analizada en una lista de universidades a las que aplicó cada estudiante. Luego, el gráfico se separó en tres facetas según la variable objetivo (graduado, desertor o matriculado) para identificar las tendencias en cada grupo. De esta manera, se logró determinar que los comportamientos de cada valor de prioridad son muy similares, existiendo más graduados que desertores y más desertores que matriculados para todos los valores. Esto implica que el rendimiento académico no se vio afectado por la prioridad que tenía esta universidad respecto a otras para cada estudiante.<br>
+</p></li>
+</ul>
+<p>Con estas 3 fichas de resultados adicionales, se considera que todas las relaciones entre variables pertinentes para esta investigación han sido cubiertas de forma satisfactoria. Aunque la base de datos escogida contiene otras variables que no forman parte de ningún gráfico, tabla o resultado, su ausencia es una decisión consciente y no una omisión. Algunas de ellas no forman parte del enfoque definido para este estudio, como la tasa de desempleo, el producto interno bruto y la inflación; los cuales son indicadores macroeconómicos que no pueden entenderse como características personales de un estudiante que influyan sobre su rendimiento. Otras variables como el modo de aplicación o las unidades curriculares de cada semestre sin considerar evaluaciones, no se consideraron relevantes según la bibliografía consultada. Por otro lado, analizar las relaciones entre variables sin conectarlas con la variable objetivo, por ejemplo vincular género con edad, habría generado resultados de carácter socioeconómico o demográfico sin que se pudieran extraer conclusiones sobre su impacto en el rendimiento académico, que es el principal objetivo de este trabajo.</p>
+</section>
+<section id="parte-de-escritura" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="parte-de-escritura"><span class="header-section-number">4.3</span> Parte de escritura</h2>
+<section id="escribir-escribir-escribir" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="escribir-escribir-escribir"><span class="header-section-number">4.3.1</span> Escribir, escribir, escribir</h3>
+<section id="conclusión" class="level4" data-number="4.3.1.1">
+<h4 data-number="4.3.1.1" class="anchored" data-anchor-id="conclusión"><span class="header-section-number">4.3.1.1</span> Conclusión</h4>
+<p>Durante la presente investigación se propuso identificar y analizar los factores sociales, económicos, académicos y familiares que influyen sobre la decisión de abandonar o continuar los estudios universitarios de los estudiantes. Se tomó un estudio realizado en una universidad europea sobre la permanencia de los estudiantes en la carrera o el abandono de sus estudios universitarios, para así realizar un análisis cuantitativo y gráfico acerca de estos factores. Según la literatura sobre la educación superior se encontraron muchas relaciones de estos factores y teorías al respecto. Se consideró este tema de investigación debido a la necesidad de comprender mejor el desarrollo del capital humano en la educación superior. A su vez se quiere estudiar cómo mejorar las condiciones de educación para muchas personas, considerando el tiempo que demandan las responsabilidades laborales o familiares, así como el desplazamiento al centro educativo.<br>
+</p>
+<p>Se realizó un análisis cuantitativo que se basó en la visualización de datos mediante el uso de las herramientas vistas en el curso “Herramientas de Ciencia de Datos I”, como el manejo de una base de datos y la graficación con tidyverse y otras librerías de R. Se tomó una base de datos que contaba con 4424 registros de estudiantes europeos donde se consideraban más de 20 variables macroeconómicas, microeconómicas, sociales, familiares, entre otras. Entre estas variables se encontraron algunos patrones que pueden responder las preguntas planteadas.<br>
+</p>
+<p>Con respecto a los factores académicos se encontró una fuerte relación entre las notas del primer semestre y las notas de admisión de los estudiantes con la probabilidad de graduación de los mismos, ya que son aquellos quienes obtienen mejores notas o no reprueban algún curso los que continúan su trayectoria académica y en la mayoría de casos se consigue la graduación. Este comportamiento coincide con las teorías consultadas, en particular con Garbanzo Vargas (2013) y Montero Rojas, Villalobos Palma, y Valverde Bermúdez (2007). Para los factores económicos se identificaron problemas que enfrentan los estudiantes como el ser poseedor de una beca socioeconómica o poder mantener sus cuotas escolares pagadas para poder continuar con sus estudios. El acceso a las becas mostró una clara influencia en la permanencia estudiantil ya que se encontró que los estudiantes becados presentaron una mayor proporción de graduaciones que los que no las portaban, dicho comportamiento se respalda con los hallazgos de Lobos Rivera y Rodríguez Vásquez (2023), pues los autores muestran que los gastos de transporte, matrícula, alimentación y demás son la principal causa del abandono de los estudios universitarios.<br>
+</p>
+<p>Al aplicar la metodología propuesta se encontró un resultado inesperado donde se contradecía la literatura al respecto, ya que los gráficos mostraron que los estudiantes que se necesitan desplazar de su hogar para poder estudiar muestran mayores tasas de graduación que los que no necesitan desplazarse. Por el contrario, según la teoría muchos factores económicos, sociales y familiares que conlleva el no desplazamiento pueden ayudar al estudiante, por ejemplo el estar cerca de su familia o no tener diversos gastos como los expuestos anteriormente.<br>
+</p>
+<p>Para las futuras investigaciones sobre la deserción estudiantil se recomienda incluir análisis que se compongan de la trayectoria completa del estudiante o de no ser posible agregar al menos un semestre más de estudios para estudiar cómo han evolucionado los factores anteriormente expuestos en la vida del estudiante. Se consideran como variables importantes la satisfacción estudiantil al completar los semestres para conocer el deseo del estudiante de seguir con la carrera seleccionada, algunas variables cualitativas como la motivación pueden revelar aún más información. Se pueden agregar estudios específicos de algunas áreas ya que se sabe que el área de letras y ciencias básicas son las que poseen una mayor tasa de deserción estudiantil en la mayoría de universidades. Para investigadores con mayor experiencia o conocimiento se puede incorporar un análisis multinivel donde se estudian las interacciones de los factores por separado para obtener un mismo resultado. Finalmente, este proyecto de investigación contribuye a llenar un vacío en la literatura al proporcionar un análisis de múltiples factores utilizando una base de datos actual y descubriendo una contradicción en la teoría al describir el impacto de los desplazamientos de los estudiantes. Estos descubrimientos y aportes abren líneas de investigación y cuestionan algunos supuestos sobre la deserción estudiantil.</p>
+</section>
+<section id="introducción" class="level4" data-number="4.3.1.2">
+<h4 data-number="4.3.1.2" class="anchored" data-anchor-id="introducción"><span class="header-section-number">4.3.1.2</span> Introducción</h4>
+<p>La educación es el motor de cualquier sociedad, sirve como mecanismo para expandir el conocimiento y enriquecer la cultura. A su vez, es una herramienta capaz de combatir la pobreza, mejorar la salud y lograr la igualdad de género. Sin embargo, una problemática creciente es la cantidad de personas que no completan sus estudios, ya sean de primaria, secundaria o educación superior. De estos niveles educativos, el abandono de la educación superior es el eje central de esta investigación.<br>
+</p>
+<p>La formación de profesionales es un peldaño fundamental en el crecimiento económico y exploración del conocimiento para cualquier nación por lo que la permanencia en los centros de educación universitaria es fundamental. No obstante, no es un trabajo sencillo encontrar las causas del abandono de esta etapa de la educación para de esta manera ayudar a contrarrestarlas. Es así, que se busca analizar la manera en que los factores sociales, económicos, académicos y familiares influyen en la trayectoria académica de la persona estudiante.<br>
+</p>
+<p>El contexto actual de la educación superior revela que a pesar de los esfuerzos por incrementar las tasas de graduación, la deserción sigue siendo un desafío significativo. La literatura existente sugiere que el nivel educativo de los padres, la estabilidad económica, el rendimiento académico anterior, el género, la movilidad geográfica, entre otros factores son clave para que el estudiante tome la decisión de desertar o continuar con sus estudios. Sin embargo, algunas fuentes son contradictorias acerca de qué tanta influencia tienen en tal decisión, lo que abre un espacio para un análisis más detallado, contextualizado y aplicado. Este trabajo se propone contribuir al conocimiento existente mediante un análisis tanto cualitativo como cuantitativo entre las variables brindadas por una base de datos de estudiantes en una universidad europea entre el 2008 y el 2018.<br>
+</p>
+<p>Mediante los datos provenientes de la base mencionada, que abarca información tanto demográfica, académica y socioeconómica de los estudiantes se pretende descubrir patrones y correlaciones que permitan entender mejor las razones detrás de la permanencia o abandono de la educación superior. Principalmente, se pretende reconocer aquellos factores que tienen mayor incidencia sobre el abandono de los estudios. El objetivo es identificar las variables críticas que afectan la decisión de continuar o no la carrera universitaria para tener una base con la cual se pueden crear estrategias efectivas en contra de la deserción universitaria. Para lograrlo, se empleará un análisis estadístico basado en la visualización de datos mediante gráficas y tablas.<br>
+</p>
+<p>Para la disminución de este fenómeno es fundamental fomentar el diálogo entre las instituciones gubernamentales y educativas ya que los factores que influyen en la deserción estudiantil están estrechamente interconectados. Se busca promover la reflexión para incentivar la mejora y expansión de las políticas y ayudas existentes en torno a este problema. Es importante que estas medidas reconozcan que la deserción no es el resultado de un único factor, sino una combinación de varios, por lo que se requiere planes integrales que aborden la complejidad del tema atacando múltiples factores simultáneamente.</p>
+</section>
+<section id="resumen" class="level4" data-number="4.3.1.3">
+<h4 data-number="4.3.1.3" class="anchored" data-anchor-id="resumen"><span class="header-section-number">4.3.1.3</span> Resumen</h4>
+<p>Existen múltiples factores externos que pueden influir sobre el desempeño académico de un estudiante. El propósito de esta investigación es analizar la interacción de las variables sociales, económicas, académicas y familiares en la trayectoria académica de un estudiante universitario. Para abordar el objetivo planteado, se realizó un análisis exploratorio de una base de datos elaborada por Realinho, et. al (2022). Esta base contiene información sobre las características socioeconómicas y académicas de 4424 estudiantes que ingresaron a una universidad en Portugal entre 2008 y 2018. El principal programa utilizado fue RStudio, donde se generaron múltiples tablas y gráficos que estudian la relación entre el rendimiento académico y las variables relevantes según la literatura. Se encontró que factores económicos como el goce de una beca y la puntualidad en los pagos de las cuotas tienen una fuerte relación con la permanencia del estudiante en la carrera. Asimismo, características demográficas como la edad de ingreso a la universidad y el género resultaron ser significativas sobre el rendimiento. Otros factores académicos, como el promedio de admisión a la universidad y las calificaciones obtenidas en los primeros dos semestres se identificaron como indicadores del rendimiento futuro del estudiante. Por otro lado, se observó que los antecedentes académicos del núcleo familiar del estudiante no son determinantes para su desempeño. Así, se concluye que el rendimiento académico de los estudiantes universitarios es un fenómeno complejo vinculado a diversas variables interconectadas. Finalmente, se propone que futuras investigaciones contemplen la posibilidad de ampliar el análisis de este tema mediante la aplicación de métodos estadísticos de carácter numérico.</p>
+</section>
+<section id="referencias" class="level4" data-number="4.3.1.4">
+<h4 data-number="4.3.1.4" class="anchored" data-anchor-id="referencias"><span class="header-section-number">4.3.1.4</span> Referencias</h4>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-data" class="csl-entry" role="listitem">
+Realinho, Valemtim, Jorge Machado, Luís Baptista, y Monica Martins. 2022. <span>«Predicting Student Dropout and Academic Success»</span>. <em>Data</em> 7 (11). <a href="https://doi.org/10.3390/data7110146">https://doi.org/10.3390/data7110146</a>.
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./bitacora-3.html" class="pagination-link" aria-label="Bitácora 3: Experimentos y Modelaje">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bitácora 3: Experimentos y Modelaje</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./trabajo_final.html" class="pagination-link" aria-label="Ordenamiento final">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ordenamiento final</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/DebbieCon/Bitacoras-Grupo-4-CA-0204-II-2024-/edit/main/bitacora-4.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/DebbieCon/Bitacoras-Grupo-4-CA-0204-II-2024-/blob/main/bitacora-4.qmd" class="toc-action"><i class="bi empty"></i>Ver el código</a></li></ul></div></div></div></footer></body></html>

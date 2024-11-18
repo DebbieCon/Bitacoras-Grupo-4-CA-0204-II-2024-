@@ -7,7 +7,7 @@ execute:
   freeze: auto
   cache: true
 ---
-# Bitácora 3
+# Bitácora 3: Experimentos y Modelaje
 
 
 ## Parte de planificación

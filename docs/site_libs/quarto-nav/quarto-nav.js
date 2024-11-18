@@ -5,51 +5,9 @@ const headroomChanged = new CustomEvent("quarto-hrChanged", {
   composed: false,
 });
 
-<<<<<<< HEAD
-const announceDismiss = () => {
-  const annEl = window.document.getElementById("quarto-announcement");
-  if (annEl) {
-    annEl.remove();
-
-    const annId = annEl.getAttribute("data-announcement-id");
-    window.localStorage.setItem(`quarto-announce-${annId}`, "true");
-  }
-};
-
-const announceRegister = () => {
-  const annEl = window.document.getElementById("quarto-announcement");
-  if (annEl) {
-    const annId = annEl.getAttribute("data-announcement-id");
-    const isDismissed =
-      window.localStorage.getItem(`quarto-announce-${annId}`) || false;
-    if (isDismissed) {
-      announceDismiss();
-      return;
-    } else {
-      annEl.classList.remove("hidden");
-    }
-
-    const actionEl = annEl.querySelector(".quarto-announcement-action");
-    if (actionEl) {
-      actionEl.addEventListener("click", function (e) {
-        e.preventDefault();
-        // Hide the bar immediately
-        announceDismiss();
-      });
-    }
-  }
-};
-
 window.document.addEventListener("DOMContentLoaded", function () {
   let init = false;
 
-  announceRegister();
-
-=======
-window.document.addEventListener("DOMContentLoaded", function () {
-  let init = false;
-
->>>>>>> a794868b41214f6688b1e08dacff90bb7c6c030b
   // Manage the back to top button, if one is present.
   let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const scrollDownBuffer = 5;

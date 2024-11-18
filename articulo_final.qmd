@@ -439,29 +439,23 @@ grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>%
         panel.border = element_rect(colour = "black", fill = NA),
         plot.title = element_text(hjust = 0.5))
 
-grafica_tres<-df %>%count(scholarship_holder, target) %>% 
+grafica_tres<-df %>%count(scholarship_holder, target) %>%
   ggplot(aes(x=scholarship_holder, y = target, fill = n))+
   geom_tile()+ 
   theme_classic() + 
   labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia") + 
   scale_fill_continuous(low = "skyblue", high = "darkblue")+
-  theme(legend.position = "right",
-        panel.border = element_rect(colour = "black", fill=NA),
+  theme(panel.border = element_rect(colour = "black", fill=NA),
         plot.title = element_text(hjust = 0.5))
 
-grafica_cuatro<-df %>%count(international, target) %>% 
-  ggplot(aes(x=target, y = n, fill = international))+
-  geom_col(position = "stack") + 
-  theme_classic()+
+grafica_cuatro<-ggplot(df, aes(x = curricular_units_1st_sem_approved, fill=target))+
+  geom_density(alpha=0.6, color=NA)+
   labs(
-    x = "Tipo de Estudiante",
-    y = "Frecuencia",
-    fill = "Internacional"
-  ) +
-  scale_fill_manual(values = c("Si" = "#CD5555","No"="#BFEFFF"))+
-  theme(legend.position = "bottom", 
-        panel.border = element_rect(colour = "black", fill = NA),
-        plot.title = element_text(hjust = 0.5))
+    x = "Créditos aprobados",
+    y = "Densidad",
+    fill = "Categoría del estudiante"
+  )+ scale_fill_manual(values = c("Matriculado"= "#83B8c6", "Graduado"= "#CD5555", "Desertor"="#A2CD5A"))+cowplot::theme_cowplot() + theme(legend.position = "bottom")
+
 
 grafica_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
   theme_classic()+labs(
@@ -469,7 +463,7 @@ grafica_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
     y= "Cantidad de estudiantes",
     fill="Género"
     )+scale_fill_manual(values = c("Hombre"= "#FD8A8A", "Mujer"= "#A9CDD7"))+
-  scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))
+  scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))+ theme(legend.position = "bottom")
 
 grafica_siete<-df %>% 
 filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,  
@@ -512,8 +506,8 @@ grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
   theme_minimal()+
   theme(legend.position="none")
 
-social <- grafica_seis + grafica_diez
-economico <- (grafica_dos | grafica_tres)/grafica_ocho
+social <- grafica_seis | grafica_diez
+economico <- (grafica_dos | grafica_ocho)/grafica_tres
 academico <- (grafica_cuatro | grafica_siete)/grafica_nueve
 familiar <- grafica_uno
 ```
@@ -550,16 +544,55 @@ El tipo de datos que se plantean en la base de datos resulta de gran interés se
 ## Resultados
 
 El objetivo de esta sección de resultados es presentar un desglose de los hallazgos obtenidos a partir de la metodología descrita anteriormente, la cual consiste en gráficos de diferentes estilos que exploran las relaciones entre las distintas variables que ofrece la base de datos escogida. De esta manera, es posible aproximarse a una respuesta más concreta para la pregunta de investigación planteada inicialmente, es decir, la identificación de los factores sociales, económicos, académicos y familiares que tienen un mayor impacto en la trayectoria académica de un estudiante, especialmente en cuanto a la decisión de concluir los estudios universitarios o abandonarlos. También, se busca comparar y contrastar los resultados propios de este estudio con los argumentos propuestos por otros autores, para así contribuir al conocimiento general del tema e incluso hallar vacíos en la literatura existente.\
-```{r, echo = TRUE, message=FALSE, warning=FALSE}
-grafica_seis
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| label: fig-soc
+#| fig-cap: "Factores Sociales que influyen en la deserción estudiantil. Elaboración Propia @data"
+
+print(social)
+
 ```
 
 
 
 
 
-La @fig-soc cubre los resultados más significativos en cuanto al ámbito social, donde se observaron dos tendencias relacionadas al género del estudiante y su edad al ingresar a la universidad. La @fig-soc-1 se enfoca en la relación significativa entre el género de los estudiantes y su permanencia en la carrera. En este gráfico de barras segmentado se observan dos variables categóricas: el género y el tipo de estudiante, lo cual permitió apreciar que la cantidad de estudiantes mujeres graduadas es significativamente mayor a la cantidad de estudiantes hombres graduados. Según la investigación realizada por @factores_desempeño una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres, lo que encaja con este gráfico. Sin embargo, es importante notar que no hay una diferencia significativa entre géneros dentro de la categoría de desertor. Otra consideración pertinente es que al tomar en cuenta sólo dos géneros, existe una parte de la población que queda totalmente fuera del estudio, pero este problema viene desde el origen de los datos. \
-Por otro lado, la @fig-soc-2 muestra la influencia de la edad de ingreso a la universidad sobre la permanencia en la carrera. Para esto, se representaron las edades de admisión a la universidad según la categoría del estudiante, mediante un gráfico de densidades tipo ridgeline. Un resultado predecible es el hecho de que en todos los grupos, la mayor densidad ocurre entre los 18 y los 20 años, lo cual no es sorprendente dado que una gran cantidad de los estudiantes que ingresan a las universidades acaban de concluir los estudios secundarios. Más interesante es la distribución de la densidad del grupo de desertores, que son la categoría con mayor densidad después de los 25 años y los únicos con una densidad apreciable más allá de los 42 años. Por el contrario, la gran mayoría de los estudiantes graduados o matriculados entraron a la universidad con menos de 25 años. Lejos de una cuestión meramente etaria, estas tendencias pueden ser resultado de factores socioeconómicos, ya que es posible que los estudiantes que ingresan a una edad más avanzada se vean obligados a abandonar los estudios por responsabilidades laborales o familiares, razones que resalta @jovenes, especialmente en mujeres. Por otro lado, los estudiantes más jóvenes probablemente carecen de estas obligaciones y hasta reciben apoyo de sus familiares.\
+La @fig-soc cubre los resultados más significativos en cuanto al ámbito social, donde se observaron dos tendencias relacionadas al género del estudiante y su edad al ingresar a la universidad. La figura de la izquierda se enfoca en la relación significativa entre el género de los estudiantes y su permanencia en la carrera. En este gráfico de barras segmentado se observan dos variables categóricas: el género y el tipo de estudiante, lo cual permitió apreciar que la cantidad de estudiantes mujeres graduadas es significativamente mayor a la cantidad de estudiantes hombres graduados. Según la investigación realizada por @factores_desempeño una de las variables con mayor influencia en el rendimiento académico probó ser el género, siendo las mujeres aquellas con un rendimiento académico mayor en comparación de sus compañeros hombres, lo que encaja con este gráfico. Sin embargo, es importante notar que no hay una diferencia significativa entre géneros dentro de la categoría de desertor. Otra consideración pertinente es que al tomar en cuenta sólo dos géneros, existe una parte de la población que queda totalmente fuera del estudio, pero este problema viene desde el origen de los datos. \
+Por otro lado, la figura de la derecha muestra la influencia de la edad de ingreso a la universidad sobre la permanencia en la carrera. Para esto, se representaron las edades de admisión a la universidad según la categoría del estudiante, mediante un gráfico de densidades tipo ridgeline. Un resultado predecible es el hecho de que en todos los grupos, la mayor densidad ocurre entre los 18 y los 20 años, lo cual no es sorprendente dado que una gran cantidad de los estudiantes que ingresan a las universidades acaban de concluir los estudios secundarios. Más interesante es la distribución de la densidad del grupo de desertores, que son la categoría con mayor densidad después de los 25 años y los únicos con una densidad apreciable más allá de los 42 años. Por el contrario, la gran mayoría de los estudiantes graduados o matriculados entraron a la universidad con menos de 25 años. Lejos de una cuestión meramente etaria, estas tendencias pueden ser resultado de factores socioeconómicos, ya que es posible que los estudiantes que ingresan a una edad más avanzada se vean obligados a abandonar los estudios por responsabilidades laborales o familiares, razones que resalta @jovenes, especialmente en mujeres. Por otro lado, los estudiantes más jóvenes probablemente carecen de estas obligaciones y hasta reciben apoyo de sus familiares.\
+
+
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#| label: fig-eco
+#| fig-cap: "Factores Económicos que influyen en la deserción estudiantil"
+
+print(economico)
+```
+La @fig-eco reúne los principales hallazgos dentro de los factores económicos, conformada por gráficas que permiten visualizar el efecto sobre la permanencia en la carrera de: la capacidad de pago puntual de las cuotas escolares, el goce de una beca y la necesidad de desplazarse a la universidad. De izquierda a derecha, el primer gráfico, aborda la relación entre el cumplimiento de las cuotas escolares y la permanencia del estudiante en la carrera. Al plantear un gráfico de barras que muestra si un estudiante es deudor en cuotas escolares según su categoría (desertor, graduado o matriculado) se revela una fuerte tendencia. En los estudiantes graduados, ninguno o casi ninguno es deudor de cuotas escolares, lo cual es esperable dado que ya concluyeron sus estudios. Asimismo, es posible que la puntualidad de los pagos sea un requisito para los estudiantes matriculados. Sin embargo, lo más relevante es que en los estudiantes desertores existe una parte significativa de la población que es deudora, lo que muestra que la imposibilidad de pagar las cuotas escolares por dificultades económicas puede ser un factor de peso en la decisión de abandonar la carrera. Este hallazgo es consistente con @Lobos. \
+La figura de en medio ilustra el impacto de la obtención de una beca socioeconómica en la permanencia en la universidad. Esta gráfica de tipo heatmap muestra la frecuencia absoluta de cada combinación de las dos variables categóricas escogidas: tipo de estudiante y si es poseedor de beca. La conclusión es clara, pues dentro del grupo de los estudiantes poseedores de beca, los estudiantes graduados son los más numerosos, mientras que en los estudiantes sin beca, la diferencia entre las tres categorías no es tan significativa. Nuevamente se puede deducir que  la situación económica que enfrenta cada estudiante tiene un gran impacto en su decisión de continuar con su carrera universitaria o no. Esta relación es recurrente en el material bibliográfico y ha sido estudiada en títulos como el de Sistemas Ecológicos de Urie Bronfenbrenner. \
+La última figura describe la incidencia sobre la permanencia en la carrera de la necesidad de desplazamiento a la universidad. Agrupando los estudiantes entre aquellos que tuvieron que desplazarse para asistir a la universidad y los que no, luego clasificándolos por su estado en la carrera (graduado, matriculado o desertor) y representando estos datos en un gráfico facetado de tipo treemap, se revelaron comportamientos interesantes. Primero, es destacable que entre los desplazados existe una menor cantidad de desertores que en los no desplazados, aunque en términos absolutos existen más estudiantes del primer grupo que del segundo. Otro resultado llamativo es que, dentro de los desplazados, la categoría de estudiantes graduados representan alrededor del 54,57%, mientras que en los no desplazados, los graduados componen el 44,29%. Lo anterior parece indicar que existe una mayor probabilidad de graduarse entre los estudiantes que tuvieron que mudarse para recibir una educación superior. Esto contradice los resultados de @Lobos, quienes argumentan que los costos de alquiler y transporte son algunos de los principales obstáculos que enfrentan los estudiantes para continuar con su carrera. 
+
+
+
+
+
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#| label: fig-aca
+#| fig-cap: "Factores Académicos que influyen en la deserción estudiantil"
+
+print(academico)
+```
+
+
+
+La @fig-aca abarca los factores académicos que mostraron consecuencias más marcadas sobre la trayectoria académica de los estudiantes universitarios. Comenzando con la primer figura de izquierda a derecha, esta muestra la relación entre los créditos aprobados en el primer semestre de educación universitaria y la permanencia. Al visualizar la densidad de los créditos aprobados en el primer semestre por categoría de estudiante se evidencian patrones claros sobre el impacto de las primeras evaluaciones universitarias en el estudiante. Primero, los estudiantes con pocos créditos aprobados en el primer semestre son más propensos a ser desertores. De hecho, la mayor densidad de desertores ocurre cuando no se aprobó ningún crédito. Por otro lado, la máxima densidad de estudiantes graduados se da en un valor de créditos aprobados más elevado. Esto insinúa que existe una relación positiva entre créditos aprobados en primer semestre y la posibilidad de graduarse. Por lo tanto, las primeras experiencias con la evaluación universitaria son importantes para las decisiones del estudiante. No obstante, puede que sea necesario evaluar créditos aprobados contra créditos matriculados, pues la proporción entre estas variables es más representativa del “éxito” en el primer semestre que la cantidad absoluta de créditos aprobados. \
+En cuanto a la segunda figura, esta proporciona información sobre el vínculo entre las notas del primer año y la decisión de continuar sus estudios superiores o desertar. Mientras que la gráfica anterior era de tipo densidad y sólo consideraba las notas del primer semestre, la presente amplía el rango de calificaciones al primer año de carrera y utiliza una representación scatter para asociar las notas de los primeros dos semestres y la categoría del estudiante. Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Por lo tanto, se reafirma que aquellos estudiantes con notas más bajas al inicio de su carrera son más propensos a abandonar la educación superior.  Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por @martinez-otero, como por @Lobos. Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico sí forma parte de la decisión que es desertar.\
+En la tercera figura, se presenta la importancia de la nota de admisión sobre la probabilidad de que un estudiante se gradúe. Al graficar la distribución de las notas de admisión según la categoría final del estudiante mediante un diagrama de cajas, se obtuvo un resultado previsible, aunque tal vez la tendencia no es tan fuerte como se esperaba. Es evidente que el valor de la mediana para los estudiantes graduados es mayor que el de los demás grupos. Además, en el tercer cuartil de la categoría de graduados se alcanzan valores más altos que en las otras dos. Similarmente, en el segundo cuartil de los desertores están contenidas notas más bajas que en las otras categorías. Estos resultados concuerdan con los hallazgos de @Montero, que determinaron que el promedio de admisión tiene una relación positiva con el desempeño académico más adelante en la carrera. Sin embargo, la similitud de los “bigotes” entre las tres clasificaciones (lo cual indica una variabilidad similar de los valores en los tres grupos), así como la presencia de valores atípicos muy altos entre los desertores, hacen cuestionar la firmeza de esta tendencia. 
 
 
 
@@ -568,49 +601,12 @@ Por otro lado, la @fig-soc-2 muestra la influencia de la edad de ingreso a la un
 
 
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#| label: fig-fam
+#| fig-cap: "Factores Familiares que influyen en la deserción estudiantil"
 
-La @fig-eco reúne los principales hallazgos dentro de los factores económicos, conformada por gráficas que permiten visualizar el efecto sobre la permanencia en la carrera de: la capacidad de pago puntual de las cuotas escolares, el goce de una beca y la necesidad de desplazarse a la universidad. De izquierda a derecha, el @fig-eco-1, aborda la relación entre el cumplimiento de las cuotas escolares y la permanencia del estudiante en la carrera. Al plantear un gráfico de barras que muestra si un estudiante es deudor en cuotas escolares según su categoría (desertor, graduado o matriculado) se revela una fuerte tendencia. En los estudiantes graduados, ninguno o casi ninguno es deudor de cuotas escolares, lo cual es esperable dado que ya concluyeron sus estudios. Asimismo, es posible que la puntualidad de los pagos sea un requisito para los estudiantes matriculados. Sin embargo, lo más relevante es que en los estudiantes desertores existe una parte significativa de la población que es deudora, lo que muestra que la imposibilidad de pagar las cuotas escolares por dificultades económicas puede ser un factor de peso en la decisión de abandonar la carrera. Este hallazgo es consistente con @Lobos. \
-La @fig-eco-2 ilustra el impacto de la obtención de una beca socioeconómica en la permanencia en la universidad. Esta gráfica de tipo heatmap muestra la frecuencia absoluta de cada combinación de las dos variables categóricas escogidas: tipo de estudiante y si es poseedor de beca. La conclusión es clara, pues dentro del grupo de los estudiantes poseedores de beca, los estudiantes graduados son los más numerosos, mientras que en los estudiantes sin beca, la diferencia entre las tres categorías no es tan significativa. Nuevamente se puede deducir que  la situación económica que enfrenta cada estudiante tiene un gran impacto en su decisión de continuar con su carrera universitaria o no. Esta relación es recurrente en el material bibliográfico y ha sido estudiada en títulos como el de Sistemas Ecológicos de Urie Bronfenbrenner. \
-La @fig-eco-3 describe la incidencia sobre la permanencia en la carrera de la necesidad de desplazamiento a la universidad. Agrupando los estudiantes entre aquellos que tuvieron que desplazarse para asistir a la universidad y los que no, luego clasificándolos por su estado en la carrera (graduado, matriculado o desertor) y representando estos datos en un gráfico facetado de tipo treemap, se revelaron comportamientos interesantes. Primero, es destacable que entre los desplazados existe una menor cantidad de desertores que en los no desplazados, aunque en términos absolutos existen más estudiantes del primer grupo que del segundo. Otro resultado llamativo es que, dentro de los desplazados, la categoría de estudiantes graduados representan alrededor del 54,57%, mientras que en los no desplazados, los graduados componen el 44,29%. Lo anterior parece indicar que existe una mayor probabilidad de graduarse entre los estudiantes que tuvieron que mudarse para recibir una educación superior. Esto contradice los resultados de @Lobos, quienes argumentan que los costos de alquiler y transporte son algunos de los principales obstáculos que enfrentan los estudiantes para continuar con su carrera. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-La @fig-aca abarca los factores académicos que mostraron consecuencias más marcadas sobre la trayectoria académica de los estudiantes universitarios. Comenzando con la @fig-aca-1, esta muestra la relación entre los créditos aprobados en el primer semestre de educación universitaria y la permanencia. Al visualizar la densidad de los créditos aprobados en el primer semestre por categoría de estudiante se evidencian patrones claros sobre el impacto de las primeras evaluaciones universitarias en el estudiante. Primero, los estudiantes con pocos créditos aprobados en el primer semestre son más propensos a ser desertores. De hecho, la mayor densidad de desertores ocurre cuando no se aprobó ningún crédito. Por otro lado, la máxima densidad de estudiantes graduados se da en un valor de créditos aprobados más elevado. Esto insinúa que existe una relación positiva entre créditos aprobados en primer semestre y la posibilidad de graduarse. Por lo tanto, las primeras experiencias con la evaluación universitaria son importantes para las decisiones del estudiante. No obstante, puede que sea necesario evaluar créditos aprobados contra créditos matriculados, pues la proporción entre estas variables es más representativa del “éxito” en el primer semestre que la cantidad absoluta de créditos aprobados. \
-En cuanto a la @fig-aca-2, esta proporciona información sobre el vínculo entre las notas del primer año y la decisión de continuar sus estudios superiores o desertar. Mientras que la gráfica anterior era de tipo densidad y sólo consideraba las notas del primer semestre, la presente amplía el rango de calificaciones al primer año de carrera y utiliza una representación scatter para asociar las notas de los primeros dos semestres y la categoría del estudiante. Basado en este gráfico, es posible concluir que los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Por lo tanto, se reafirma que aquellos estudiantes con notas más bajas al inicio de su carrera son más propensos a abandonar la educación superior.  Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por @martinez-Otero, como por @Lobos. Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico sí forma parte de la decisión que es desertar.\
-En la @fig-aca-3, se presenta la importancia de la nota de admisión sobre la probabilidad de que un estudiante se gradúe. Al graficar la distribución de las notas de admisión según la categoría final del estudiante mediante un diagrama de cajas, se obtuvo un resultado previsible, aunque tal vez la tendencia no es tan fuerte como se esperaba. Es evidente que el valor de la mediana para los estudiantes graduados es mayor que el de los demás grupos. Además, en el tercer cuartil de la categoría de graduados se alcanzan valores más altos que en las otras dos. Similarmente, en el segundo cuartil de los desertores están contenidas notas más bajas que en las otras categorías. Estos resultados concuerdan con los hallazgos de @Montero, que determinaron que el promedio de admisión tiene una relación positiva con el desempeño académico más adelante en la carrera. Sin embargo, la similitud de los “bigotes” entre las tres clasificaciones (lo cual indica una variabilidad similar de los valores en los tres grupos), así como la presencia de valores atípicos muy altos entre los desertores, hacen cuestionar la firmeza de esta tendencia. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(familiar)
+```
 
 
 

@@ -21,7 +21,6 @@ book:
     - "bitacora-2.qmd"
     - "bitacora-3.qmd"
     - "bitacora-4.qmd"
-    - "trabajo_final.qmd"
 
 bibliography: references.bib
 

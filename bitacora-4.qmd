@@ -6,6 +6,7 @@ fig-cap-location: bottom
 execute:
   freeze: auto
   cache: true
+bibliography: references.bib
 ---
 # Bitacora 4
 
@@ -672,7 +673,7 @@ print(grafica_trece)
 Este cuadro contiene la frecuencia absoluta de cada categoría de la variable objetivo y calcula la media, mediana y desviación estándar de las calificaciones obtenidas por los estudiantes en el primer semestre de universidad. 
 
 
-:::{#tbl-tabla_cuatro}
+:::{#fig-tabla_cuatro}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 tabla_cuatro <- df %>%  group_by(target) %>% 
   summarise(
@@ -690,7 +691,7 @@ kable(tabla_cuatro)
 
 Similarmente, este cuadro recuenta la cantidad de estudiantes por género y calcula las medidas de tendencia central para la nota de cada grupo en los primeros dos semestres de universidad. 
 
-:::{#tbl-tabla_cinco}
+:::{#fig-tabla_cinco}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 
 tabla_cinco <- df %>%  group_by(gender) %>% 
@@ -738,7 +739,7 @@ El último cuadro recopila las cifras correspondientes a la cantidad de estudian
    ))
 ```
 
-:::{#tbl-tabla_seis}
+:::{#fig-tabla_seis}
 ```{r, echo = TRUE, message=FALSE, warning=FALSE}
 tabla_seis <- df %>% group_by(course) %>% 
   summarise(Cantidad = n(),
@@ -824,7 +825,1043 @@ Mediante los datos provenientes de la base mencionada, que abarca información t
 
 Para la disminución de este fenómeno es fundamental fomentar el diálogo entre las instituciones gubernamentales y educativas ya que los factores que influyen en la deserción estudiantil están estrechamente interconectados. Se busca promover la reflexión para incentivar la mejora y expansión de las políticas y ayudas existentes en torno a este problema. Es importante que estas medidas reconozcan que la deserción no es el resultado de un único factor, sino una combinación de varios, por lo que se requiere planes integrales que aborden la complejidad del tema atacando múltiples factores simultáneamente. 
 
-#### Resumen
+# Resumen
 Existen múltiples factores externos que pueden influir sobre el desempeño académico de un estudiante. El propósito de esta investigación es analizar la interacción de las variables sociales, económicas, académicas y familiares en la trayectoria académica de un estudiante universitario. Para abordar el objetivo planteado, se realizó un análisis exploratorio de una base de datos elaborada por Realinho, et. al (2022). Esta base contiene información sobre las características socioeconómicas y académicas de 4424 estudiantes que ingresaron a una universidad en Portugal entre 2008 y 2018. El principal programa utilizado fue RStudio, donde se generaron múltiples tablas y gráficos que estudian la relación entre el rendimiento académico y las variables relevantes según la literatura. Se encontró que factores económicos como el goce de una beca y la puntualidad en los pagos de las cuotas tienen una fuerte relación con la permanencia del estudiante en la carrera. Asimismo, características demográficas como la edad de ingreso a la universidad y el género resultaron ser significativas sobre el rendimiento. Otros factores académicos, como el promedio de admisión a la universidad y las calificaciones obtenidas en los primeros dos semestres se identificaron como indicadores del rendimiento futuro del estudiante. Por otro lado, se observó que los antecedentes académicos del núcleo familiar del estudiante no son determinantes para su desempeño. Así, se concluye que el rendimiento académico de los estudiantes universitarios es un fenómeno complejo vinculado a diversas variables interconectadas. Finalmente, se propone que futuras investigaciones contemplen la posibilidad de ampliar el análisis de este tema mediante la aplicación de métodos estadísticos de carácter numérico. 
 
-#### Referencias
+# Gitlog
+ba89fa9 (2024-11-14, 04:37) [Debbie Con] (HEAD -> main, origin/main, origin/HEAD) feat: ortografia
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+fd74502 (2024-11-14, 04:30) [Debbie Con] fix: referencias
+ 5 files changed, 33 insertions(+), 27 deletions(-)
+
+f2592c3 (2024-11-14, 04:19) [Debbie Con] fix: separacion parrafos
+ 1 file changed, 13 insertions(+), 14 deletions(-)
+
+3c2d4ad (2024-11-14, 04:17) [Debbie Con] fix: ortografia
+a19ac7d (2024-11-14, 04:17) [Debbie Con] fix: fig
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+86f6977 (2024-11-14, 04:15) [Aaron Retana] feat: referencia figuras
+ 1 file changed, 14 insertions(+), 13 deletions(-)
+
+b2ee540 (2024-11-14, 04:01) [Debbie Con] feat: trabajo final
+ 6 files changed, 383 insertions(+), 507 deletions(-)
+
+c56af26 (2024-11-14, 03:45) [Debbie Con] feat: trabajo final
+ 3 files changed, 489 insertions(+)
+
+8f293c5 (2024-11-14, 03:44) [Debbie Con] feat: introduccion, resumen, conclusion
+ 3 files changed, 59 insertions(+), 6 deletions(-)
+
+aa9b0b2 (2024-11-14, 03:36) [Debbie Con] feat: corregir codigo
+ 9 files changed, 4651 insertions(+), 1265 deletions(-)
+
+02a4fea (2024-11-14, 03:32) [Debbie Con] fix: ortografia
+d671de0 (2024-11-14, 03:24) [Aaron Retana] feat: agrega sección de escritura
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+c7cf72c (2024-11-14, 03:09) [Debbie Con] fix: conflictos
+ 1 file changed, 1073 insertions(+)
+
+a614e3f (2024-11-14, 03:09) [Debbie Con] feat: grafica
+ 1 file changed, 13 insertions(+), 115 deletions(-)
+
+75157d7 (2024-11-14, 03:06) [Debbie Con] fix: conflicto
+f51edfd (2024-11-14, 03:04) [Debbie Con] fix: conflicto
+ 2 files changed, 60 insertions(+), 8 deletions(-)
+
+7059d75 (2024-11-14, 02:21) [Aaron Retana] feat: agrega grafica 13
+ 1 file changed, 25 insertions(+), 5 deletions(-)
+
+594ee3b (2024-11-14, 02:10) [Aaron Retana] feat: agrega justificación de fichas
+ 1 file changed, 1 insertion(+)
+
+969676a (2024-11-14, 02:09) [Aaron Retana] feat: agrega ficha 16
+ 1 file changed, 12 insertions(+)
+
+9e76f75 (2024-11-14, 01:53) [Andrey Prado] feat: Arregla conflicto bitacora 4
+1d8ba59 (2024-11-14, 01:49) [Andrey Prado] feat: añade títulos bitácora y gráfica
+ 25 files changed, 328 insertions(+), 213 deletions(-)
+
+c329378 (2024-11-14, 01:31) [Debbie Con] feat: cambio de variables
+8b64f52 (2024-11-14, 01:30) [Debbie Con] fix: tabla a cuadro, grafica a figura
+ 3 files changed, 30 insertions(+), 30 deletions(-)
+
+d22fe3a (2024-11-14, 01:17) [Andrey Prado] feat: arregla conflictos
+9201727 (2024-11-14, 01:14) [Debbie Con] feat: ficha 14
+ 3 files changed, 37 insertions(+), 15 deletions(-)
+
+d6bfbf6 (2024-11-14, 01:10) [Andrey Prado] feat: conflicto
+ 1 file changed, 111 insertions(+), 24 deletions(-)
+
+a36b822 (2024-11-14, 01:08) [Debbie Con] feat: graficas
+ 21 files changed, 165 insertions(+), 110 deletions(-)
+
+63cb5f6 (2024-11-14, 00:44) [Debbie Con] feat: cambio colores grafica
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+43e04db (2024-11-14, 00:43) [Debbie Con] feat: graficas bit-4
+ 18 files changed, 3754 insertions(+), 1389 deletions(-)
+
+130523c (2024-11-13, 23:48) [Debbie Con] feat: cross-referencing
+ 60 files changed, 4959 insertions(+), 54 deletions(-)
+
+e70ca14 (2024-11-13, 23:17) [Debbie Con] feat: anadir bitacora 4
+ 1 file changed, 1 insertion(+)
+
+adfab24 (2024-11-13, 23:16) [Debbie Con] fix: conflictos
+7fd49e4 (2024-11-13, 22:55) [Debbie Con] feat: bitacora 4
+ 77 files changed, 15693 insertions(+), 128 deletions(-)
+
+a794868 (2024-10-30, 17:32) [Aaron Retana] chore: actualiza index
+ 2 files changed, 667 insertions(+), 8 deletions(-)
+
+1325da7 (2024-10-30, 17:04) [Aaron Retana] chore: refresca sitio web
+ 3 files changed, 1 insertion(+), 3 deletions(-)
+
+9767eb0 (2024-10-30, 16:55) [Aaron Retana] chore: actualiza sitio web
+ 62 files changed, 10195 insertions(+), 1 deletion(-)
+
+b0363d5 (2024-10-30, 13:45) [Debbie Con] feat: summary git
+ 1 file changed, 14 insertions(+)
+
+d438ea5 (2024-10-30, 13:45) [Debbie Con] feat: actualizacion pagina
+ 57 files changed, 2149 insertions(+), 8548 deletions(-)
+
+2a36c2f (2024-10-30, 01:50) [Debbie Con] (tag: vbitacora-3) feat: correciones fichas
+77f9c55 (2024-10-30, 01:49) [Debbie Con] feat: correcciones nombre
+ 13 files changed, 19 insertions(+), 12 deletions(-)
+
+743bbdf (2024-10-30, 01:45) [Aaron Retana] feat: agrega sección de cambios y mejoras
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+401ca48 (2024-10-30, 01:33) [Debbie Con] feat: uve
+06faa00 (2024-10-30, 01:32) [Debbie Con] feat: cambio idioma
+ 4 files changed, 362 insertions(+), 89 deletions(-)
+
+a24d63a (2024-10-30, 01:31) [Aaron Retana] feat: agrega UVE actualizada
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+f3b34a9 (2024-10-30, 01:24) [Debbie Con] feat: coreccion codigo
+adfc7b5 (2024-10-30, 01:23) [Debbie Con] feat: logs.txt
+ 3 files changed, 788 insertions(+), 18 deletions(-)
+
+d745485 (2024-10-30, 01:21) [Aaron Retana] feat: añade resultados a sección de escritura
+ 1 file changed, 29 insertions(+)
+
+a0e5214 (2024-10-30, 01:12) [Aaron Retana] feat: agrega ficha 13
+ 1 file changed, 12 insertions(+)
+
+2bbd3f5 (2024-10-30, 01:09) [Aaron Retana] feat: agrega ficha 12
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+3d6cc60 (2024-10-30, 01:06) [Aaron Retana] feat: agrega ficha 11
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+23d6ad0 (2024-10-30, 01:02) [Aaron Retana] feat: agrega ficha 10
+ 1 file changed, 13 insertions(+)
+
+f13ce81 (2024-10-30, 01:00) [Aaron Retana] feat: agrega ficha 9
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+38d0695 (2024-10-30, 00:57) [Aaron Retana] feat: agrega y corrige fichas de resultados
+ 1 file changed, 16 insertions(+), 5 deletions(-)
+
+a9b1fe1 (2024-10-30, 00:50) [Aaron Retana] feat: agrega metodología a parte de escritura
+ 1 file changed, 8 insertions(+)
+
+1973713 (2024-10-30, 00:49) [Aaron Retana] feat: agrega intro a parte de escritura
+ 1 file changed, 20 insertions(+)
+
+088f938 (2024-10-30, 00:45) [Aaron Retana] feat: agrega tabla ordenada de elementos de reporte
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+cdb60a1 (2024-10-30, 00:39) [Aaron Retana] feat: agrega tabla de elementos de reporte
+ 1 file changed, 17 insertions(+)
+
+8cc9b25 (2024-10-30, 00:22) [Aaron Retana] feat: agrega descripción de tablas
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+
+8877b0b (2024-10-30, 00:20) [Aaron Retana] feat: describe gráficas 9 y 10
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+922c08a (2024-10-30, 00:18) [Aaron Retana] feat: describe gráficas 7 y 8
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+a4a4e4a (2024-10-30, 00:16) [Aaron Retana] feat: describe gráficas 5 y 6
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+8fb56d2 (2024-10-30, 00:14) [Aaron Retana] feat: describe gráficas 3 y 4
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+555e545 (2024-10-30, 00:12) [Aaron Retana] feat: describe gráficas 1 y 2
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+1549e7d (2024-10-30, 00:08) [Debbie Con] feat: graficas y tablas
+ 4 files changed, 44 insertions(+), 34 deletions(-)
+
+8aa825a (2024-10-30, 00:03) [Debbie Con] feat: graficas y tablas
+ 19 files changed, 567 insertions(+), 65 deletions(-)
+
+088ae4d (2024-10-29, 23:37) [Debbie Con] feat: grafica cuatro y cinco
+ 16 files changed, 184 insertions(+), 67 deletions(-)
+
+d7451d3 (2024-10-29, 23:27) [Debbie Con] feat: grafica dos y tres
+ 35 files changed, 7872 insertions(+), 82 deletions(-)
+
+6c613ca (2024-10-29, 23:21) [Andrey Prado] feat: añade cita de Montero
+ 60 files changed, 3 insertions(+), 6150 deletions(-)
+
+52480b5 (2024-10-29, 23:16) [Debbie Con] feat: grafica uno
+1c3d358 (2024-10-29, 23:15) [Debbie Con] feat: grafica uno
+ 61 files changed, 6603 insertions(+), 68 deletions(-)
+
+4c06886 (2024-10-29, 22:24) [Andrey Prado] feat: cambios generales
+ 38 files changed, 138 insertions(+), 901 deletions(-)
+
+3bcf371 (2024-10-29, 20:43) [Debbie Con] fix: arreglo conflicto
+491e5f1 (2024-10-29, 20:40) [Debbie Con] feat: bit 2
+ 1 file changed, 2 insertions(+), 9 deletions(-)
+
+97e26cf (2024-10-29, 20:37) [Andrey Prado] feat: resuelve conflictos
+037b544 (2024-10-29, 20:34) [Andrey Prado] feat: añade gráficas
+ 88 files changed, 48 insertions(+), 10001 deletions(-)
+
+deab991 (2024-10-29, 20:32) [Debbie Con] fix: cambio en numeracion
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+caf6e85 (2024-10-29, 14:38) [Andrey Prado] feat: conflictos
+14421e2 (2024-10-29, 14:34) [Andrey Prado] feat: arregla conflictos
+ 39 files changed, 225 insertions(+), 491 deletions(-)
+
+556348c (2024-10-29, 02:15) [Debbie Con] feat: bit-3
+ 1 file changed, 518 deletions(-)
+
+4ff0a74 (2024-10-29, 02:14) [Debbie Con] feat: primeros 2 graficos y fichas
+ 20 files changed, 4170 insertions(+)
+
+ea33de1 (2024-10-29, 02:12) [Debbie Con] feat: correcciones bit-2
+ 20 files changed, 44 insertions(+), 26 deletions(-)
+
+bf3e022 (2024-10-29, 02:11) [Debbie Con] feat: anadir bit-3
+ 1 file changed, 1 insertion(+)
+
+ced36ad (2024-10-28, 20:00) [Debbie Con] feat: bitacora 3
+ 15 files changed, 3771 insertions(+), 15 deletions(-)
+
+3085249 (2024-10-28, 19:40) [Debbie Con] fix: pagina
+9480394 (2024-10-28, 19:37) [Debbie Con] fix: arreglar pagina
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+a5f4316 (2024-10-28, 19:36) [Debbie Con] fix: arreglo pagina
+ 23 files changed, 260 insertions(+), 451 deletions(-)
+
+70b89f7 (2024-10-28, 11:48) [Aaron Retana] chore: corrige código
+ 4 files changed, 84 insertions(+), 101 deletions(-)
+
+d15c35d (2024-10-28, 11:35) [Aaron Retana] chore: actualiza sitio
+ 22 files changed, 191 insertions(+), 438 deletions(-)
+
+c6e59d4 (2024-10-27, 17:21) [Debbie Con] fix: conflictos
+81767de (2024-10-27, 17:16) [Debbie Con] feat: formato
+ 1 file changed, 38 insertions(+), 27 deletions(-)
+
+cd45756 (2024-10-27, 17:16) [Debbie Con] feat: formato
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+481ccc0 (2024-10-27, 15:46) [Andrey Prado] feat: resuelve conflicto bitácora 2
+f98a4da (2024-10-27, 15:42) [Andrey Prado] feat: errores
+ 128 files changed, 6581 insertions(+), 396 deletions(-)
+
+b9a4aa3 (2024-10-27, 15:24) [Andrey Prado] feat: arregla quarto
+ 4 files changed, 243 insertions(+), 104 deletions(-)
+
+d520b29 (2024-10-25, 18:14) [Debbie Con] fix: merge
+ 5 files changed, 876 insertions(+), 328 deletions(-)
+
+9054933 (2024-10-25, 18:09) [Debbie Con] feat: presentacion
+9987449 (2024-10-24, 16:09) [Debbie Con] feat: anadir files
+7d2edc8 (2024-10-03, 09:13) [Andrey Prado] feat: Añade presentación
+ 1 file changed, 165 insertions(+)
+
+0b57ea2 (2024-10-02, 20:49) [Andrey Prado] feat: cambios en conflictos
+1154b84 (2024-10-02, 20:43) [Debbie Con] fix: formato fichas
+ 2 files changed, 91 insertions(+), 57 deletions(-)
+
+7148e89 (2024-10-02, 20:38) [Andrey Prado] feat: grafica extra
+ 17 files changed, 9 insertions(+), 9 deletions(-)
+
+f88b855 (2024-10-02, 20:37) [Andrey Prado] feat: Nuevas Gráficas
+ 15 files changed, 12 insertions(+), 7 deletions(-)
+
+2f7db99 (2024-10-02, 20:29) [Debbie Con] fix: merge
+b221a6c (2024-10-02, 20:29) [Debbie Con] feat: ageregar espacios en fichas
+ 3 files changed, 207 insertions(+), 1626 deletions(-)
+
+ea717bb (2024-10-02, 20:27) [Aaron Retana] feat: agrega enlaces de literatura
+ 3 files changed, 45 insertions(+), 2 deletions(-)
+
+a868108 (2024-10-02, 20:17) [Andrey Prado] feat: Añade otra gráfica
+ 9 files changed, 369 insertions(+), 301 deletions(-)
+
+a212003 (2024-10-02, 20:16) [Andrey Prado] feat: Añade Gráficas
+ 9 files changed, 213 insertions(+), 85 deletions(-)
+
+dbf773f (2024-10-02, 20:13) [Aaron Retana] feat: agrega nombres de autores a resúmenes
+ 3 files changed, 445 insertions(+), 147 deletions(-)
+
+88ab30c (2024-10-02, 20:02) [Debbie Con] fix: tabla y grafica
+80ee2db (2024-10-02, 19:56) [Debbie Con] fix: arreglos tabla
+ 2 files changed, 16 insertions(+), 8 deletions(-)
+
+0673769 (2024-10-02, 19:39) [Andrey Prado] feat: Tabla nueva
+ 4 files changed, 92 insertions(+), 40 deletions(-)
+
+c854795 (2024-10-02, 19:27) [Andrey Prado] feat: Tabla Nueva Arreglada
+7eb0163 (2024-10-02, 19:23) [Andrey Prado] feat: tabla nueva
+ 1 file changed, 57 insertions(+), 2 deletions(-)
+
+c81ceea (2024-10-02, 19:02) [Debbie Con] feat: fichas resultado
+ 1 file changed, 39 insertions(+)
+
+4274932 (2024-10-02, 18:49) [Andrey Prado] feat: Estructura quarto
+ffc03e0 (2024-10-02, 18:48) [Andrey Prado] fix: conflictos
+66bf831 (2024-10-02, 18:46) [Debbie Con] feat: correccion tabla
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+f08a105 (2024-10-02, 18:38) [Andrey Prado] fix: arregla estructura
+ 37 files changed, 21 insertions(+), 6523 deletions(-)
+
+5dccc15 (2024-10-02, 18:31) [Andrey Prado] fix: Arregla Estructura de Todo
+ 1 file changed, 14 insertions(+), 35 deletions(-)
+
+3250d4e (2024-10-02, 18:30) [Debbie Con] feat: formato
+4a9398d (2024-10-02, 18:05) [Debbie Con] feat: contrastes y tabla literaria
+aefe3dd (2024-10-02, 17:52) [Andrey Prado] feat: Añade Gráficas y Arregal Estructura Quarto
+ 2 files changed, 31 insertions(+), 125 deletions(-)
+
+2580172 (2024-10-02, 14:39) [Debbie Con] fix: graficas
+ 2 files changed, 166 insertions(+), 39 deletions(-)
+
+4ba62a8 (2024-10-02, 14:25) [Debbie Con] fix: tamano grafico
+ 1 file changed, 18 insertions(+), 5 deletions(-)
+
+9630071 (2024-10-02, 11:57) [Andrey Prado] feat: intento de subir gráficas
+ 2 files changed, 426 insertions(+), 32 deletions(-)
+
+8f48b5b (2024-10-02, 10:57) [Andrey Prado] feat: Arreglos y Cambios realizados
+ 2 files changed, 19 insertions(+), 9 deletions(-)
+
+8f22f04 (2024-10-02, 10:38) [Andrey Prado] feat: Arreglos Git
+39cac65 (2024-10-02, 10:25) [Andrey Prado] fix: Arregla Conflicto
+7c9d29c (2024-10-02, 01:18) [Debbie Con] feat: fichas de 3-10
+ 1 file changed, 178 insertions(+)
+
+82b1601 (2024-10-02, 00:34) [Debbie Con] feat: pegar resumenes y intento tabla
+ 1 file changed, 49 insertions(+), 7 deletions(-)
+
+56a034c (2024-10-01, 22:51) [Debbie Con] feat: esqueleto bitacora 2
+ 3 files changed, 132 insertions(+), 102 deletions(-)
+
+1808bb3 (2024-10-01, 20:45) [Andrey Prado] feat: Gráfico Nacionalidad-Nota
+ 1 file changed, 40 insertions(+)
+
+8cf23eb (2024-10-01, 20:12) [Andrey Prado] feat: resuelve conflicto
+146ec89 (2024-10-01, 20:09) [Andrey Prado] chore: Cambios en bitácora
+ 5 files changed, 22 insertions(+)
+
+55a7805 (2024-10-01, 18:03) [Andrey Prado] feat: Merge
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+39b3c68 (2024-09-30, 23:53) [Debbie Con] feat: grafico estudiantes y permanencia
+ 1 file changed, 248 insertions(+), 6 deletions(-)
+
+a42f45f (2024-09-30, 22:48) [Andrey Prado] feat: Gráfica nueva
+ 2 files changed, 78 insertions(+), 3 deletions(-)
+
+96281f6 (2024-09-30, 22:29) [Debbie Con] feat: grafico de nivel educativo padres y educacion del estudiante
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+aade898 (2024-09-30, 22:09) [Debbie Con] fix: formato
+46f0cb5 (2024-09-30, 10:33) [Debbie Con] fix: arreglos
+ 1 file changed, 3 insertions(+)
+
+856fe0e (2024-09-30, 10:26) [Andrey Prado] feat: Agrega Base de Datos
+ 1 file changed, 4425 insertions(+)
+
+db8636e (2024-09-26, 19:17) [Andrey Prado] fix: Resuelve Conflicto
+2e32922 (2024-09-26, 19:14) [Andrey Prado] feat: Añade paquetes y 3 gráficos
+ 1 file changed, 131 insertions(+)
+
+dec3d4d (2024-09-26, 17:47) [Andrey Prado] feat: Cambio de Rama
+ 18 files changed, 655 insertions(+), 644 deletions(-)
+
+998b383 (2024-09-26, 17:42) [Andrey Prado] feat: Agrega archivo .R
+ 2 files changed, 36 insertions(+), 2 deletions(-)
+
+286943a (2024-09-16, 21:09) [Andrey Prado] feat: Agregar Bitacora 2
+ 2 files changed, 9 insertions(+)
+
+8105336 (2024-09-04, 23:00) [Aaron Retana] feat: actualiza la bitácora 1 a versión final
+ 2 files changed, 12 insertions(+), 4 deletions(-)
+
+872bfc2 (2024-09-04, 22:57) [Andrey Prado] feat: imágenes en carpeta
+ 31 files changed, 0 insertions(+), 0 deletions(-)
+
+64f0c27 (2024-09-04, 22:51) [Andrey Prado] feat: añadi imagenes
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+
+4f85a49 (2024-09-04, 22:16) [Aaron Retana] feat: actualiza el sitio con correcciones
+ 3 files changed, 161 insertions(+), 69 deletions(-)
+
+44614d2 (2024-09-04, 22:03) [Debbie Con] (tag: vBitacora-1) fix: correcciones formato
+ 1 file changed, 75 insertions(+), 93 deletions(-)
+
+5a8e679 (2024-09-04, 22:00) [Debbie Con] fix: coreccion de errores ortograficos y redaccion
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+01c8049 (2024-09-04, 20:28) [Debbie Con] fix: correccion escritura de definicion
+6399d3b (2024-09-04, 20:16) [Debbie Con] feat: correcion cita en resumen
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+c05e2e3 (2024-09-04, 20:12) [Aaron Retana] feat: actualiza los contenidos del sitio
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+bc250ed (2024-09-04, 20:11) [Aaron Retana] feat: actualiza el contenido del sitio
+ 3 files changed, 121 insertions(+), 32 deletions(-)
+
+53a05b6 (2024-09-04, 20:08) [Debbie Con] fix: formato cita en teoria 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+94c35fe (2024-09-04, 20:04) [Debbie Con] feat: correcion introduciion (2)
+ 1 file changed, 1 insertion(+)
+
+80742fd (2024-09-04, 20:03) [Debbie Con] feat: correccion introduccion
+ 1 file changed, 1 insertion(+)
+
+9a6cc69 (2024-09-04, 20:02) [Debbie Con] feat: añadi introduccion
+ 1 file changed, 2 insertions(+)
+
+09fab70 (2024-09-04, 19:48) [Aaron Retana] fix: arregla menciones de la referencias
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+1fe7e3d (2024-09-04, 19:36) [Aaron Retana] feat: parte final del resumen
+ 1 file changed, 34 insertions(+)
+
+b09cb11 (2024-09-04, 19:33) [Aaron Retana] feat: segunda parte de resumen
+ 1 file changed, 36 insertions(+)
+
+3989672 (2024-09-04, 19:28) [Debbie Con] fix: corregi cita
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+23bac8f (2024-09-04, 19:27) [Aaron Retana] fix: arregla conflicto
+d43f101 (2024-09-04, 19:21) [Aaron Retana] feat: agrega primera parte del resumen
+ 1 file changed, 273 insertions(+), 100 deletions(-)
+
+9b9c706 (2024-09-04, 19:20) [Andrey Prado] fix: Arregle Cambios
+5def0cd (2024-09-04, 19:16) [Debbie Con] feat: añadi prregunta investigacion y subtitulo
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+50fdb9b (2024-09-04, 18:59) [Andrey Prado] fix: Corrección Formato
+ 1 file changed, 5 insertions(+)
+
+b8ba762 (2024-09-04, 18:19) [Andrey Prado] feat: añade referencias base de datos
+ 1 file changed, 17 insertions(+)
+
+234e7e5 (2024-09-04, 18:14) [Andrey Prado] fix: Arreglé error references.bib
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+f824254 (2024-09-04, 18:10) [Debbie Con] feat: añadi citas en fichas
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+11ead08 (2024-09-04, 18:09) [Debbie Con] feat: añadi referencias
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+
+c589b3f (2024-09-04, 17:32) [Debbie Con] feat: añadi ficha 3
+ 1 file changed, 15 insertions(+), 12 deletions(-)
+
+a763be7 (2024-09-04, 17:28) [Andrey Prado] feat: Añadi Datos
+ 1 file changed, 85 insertions(+), 5 deletions(-)
+
+29ab382 (2024-09-04, 17:15) [Andrey Prado] feat: Añadi parte datos
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+
+6183a7d (2024-09-04, 17:04) [Andrey Prado] feat: Agrega Bibliografía
+ 1 file changed, 10 insertions(+)
+
+07a7b6e (2024-09-04, 16:53) [Debbie Con] feat: añadi segunda teoria
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+e08c51b (2024-09-04, 16:50) [Debbie Con] feat: añadi primera teoria
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+df1bd2f (2024-09-04, 14:49) [Aaron Retana] chore: actualiza el sitio web posterior a nuevo render
+ 2 files changed, 32 insertions(+), 53 deletions(-)
+
+7b7eadc (2024-09-04, 14:42) [Aaron Retana] chore: actualiza el sitio web
+ 2 files changed, 62 insertions(+), 65 deletions(-)
+
+577e8b6 (2024-09-04, 14:36) [Aaron Retana] feat: añade las conclusiones de la argumentación de cada pregunta
+ 1 file changed, 47 insertions(+), 3 deletions(-)
+
+4a5250b (2024-09-04, 14:21) [Aaron Retana] feat: agrega argumentos de la segunda pregunta
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+
+087d2eb (2024-09-04, 14:00) [Aaron Retana] feat: agrega ficha de literatura 2
+ 1 file changed, 47 insertions(+), 34 deletions(-)
+
+b2ed73e (2024-09-04, 13:48) [Aaron Retana] feat: agrega ficha de literatura 1
+ 1 file changed, 69 insertions(+), 16 deletions(-)
+
+96b5875 (2024-09-04, 12:02) [Aaron Retana] feat: incorpora argumentos de la cuarta pregunta
+ 1 file changed, 23 insertions(+), 4 deletions(-)
+
+cfe8ed2 (2024-09-04, 11:54) [Aaron Retana] feat: agrega contraargumentos de cuarta pregunta
+ 1 file changed, 21 insertions(+), 4 deletions(-)
+
+2a4d1d4 (2024-09-04, 11:44) [Aaron Retana] feat: añade argumentos de tercera pregunta
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+
+bf375c9 (2024-09-04, 11:36) [Aaron Retana] feat: añade contraargumentos de tercera pregunta
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+
+1e94c61 (2024-09-04, 11:31) [Aaron Retana] feat: agrega contraargumentos de segunda pregunta
+ 1 file changed, 33 insertions(+), 6 deletions(-)
+
+2f4aba4 (2024-09-04, 11:20) [Aaron Retana] feat: agrega argumentos de primera pregunta
+ 3 files changed, 27 insertions(+), 7 deletions(-)
+
+d496660 (2024-09-04, 11:12) [Aaron Retana] feat: agrega contraargumentos de primera pregunta
+ 3 files changed, 259 insertions(+), 173 deletions(-)
+
+3b8db84 (2024-09-04, 10:46) [Aaron Retana] feat: agrega imagen de la UVE al sitio
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+fc41f72 (2024-09-04, 10:39) [Aaron Retana] feat: actualiza el sitio web
+ 3 files changed, 416 insertions(+), 31 deletions(-)
+
+32e7b55 (2024-09-04, 10:36) [Aaron Retana] chore: modifica gitignore para incluir docs
+ 1 file changed, 3 deletions(-)
+
+2582eb7 (2024-09-04, 10:24) [Aaron Retana] fix: agrega source a repo-actions
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+77744a8 (2024-09-04, 10:04) [Aaron Retana] fix: corrección de enlace del repositorio
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+cbf261f (2024-09-04, 01:24) [Andrey Prado] feat: error en commits
+f619a5d (2024-09-04, 01:23) [Andrey Prado] chore: error
+ 1 file changed, 1 deletion(-)
+
+f36fcb7 (2024-09-04, 01:23) [Andrey Prado] feat: Bibliografía Urie Bronfenbrenner
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+ab46e9b (2024-09-04, 01:12) [Debbie Con] chore: eliminar chapter referencias
+ 1 file changed, 1 deletion(-)
+
+acd3650 (2024-09-04, 01:07) [Andrey Prado] feat: errores en url referencias
+1c7d78b (2024-09-04, 01:06) [Andrey Prado] fix: errores en el url
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+135b070 (2024-09-04, 01:05) [Debbie Con] fix: formato conceptos
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+800cc0a (2024-09-04, 01:01) [Andrey Prado] fix: error bibliografía
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+edbb294 (2024-09-04, 01:00) [Andrey Prado] feat: arreglo bibliografía
+f871707 (2024-09-04, 00:59) [Andrey Prado] feat: bibliografía nueva
+ 1 file changed, 31 insertions(+), 1 deletion(-)
+
+adaf5aa (2024-09-04, 00:57) [Debbie Con] fix: formato teorias o principios
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+42b76e3 (2024-09-04, 00:55) [Debbie Con] feat: añadi nombre y seccion de teorias
+ 1 file changed, 6 insertions(+)
+
+47bfed5 (2024-09-04, 00:47) [Debbie Con] feat: tension 2 y 3
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+9dcab5e (2024-09-04, 00:45) [Debbie Con] feat: preguntas añadidas en seccion respectiva
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+9e702ff (2024-09-04, 00:37) [Andrey Prado] fix: arreglo cita factor_académico
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+399ce05 (2024-09-04, 00:33) [Andrey Prado] feat: merge
+2125f37 (2024-09-04, 00:32) [Andrey Prado] feat: Arreglos a bitácora
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+f564b0b (2024-09-04, 00:31) [Andrey Prado] feat: Arreglo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+4db0ad6 (2024-09-04, 00:30) [Andrey Prado] feat: Bibliografía nueva
+ 1 file changed, 27 insertions(+)
+
+bdf38b9 (2024-09-04, 00:29) [Debbie Con] feat: añadi las 4 preguntas
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+6fe2daa (2024-09-04, 00:25) [Debbie Con] feat: añadi una tension
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+7a787ee (2024-09-04, 00:23) [Debbie Con] feat: añadi conceptos
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+
+af1ccda (2024-09-04, 00:13) [Andrey Prado] feat: bibliografía nueva
+f1d5304 (2024-09-04, 00:11) [Andrey Prado] feat: bibliografía nueva
+ 2 files changed, 26 insertions(+), 2 deletions(-)
+
+c23e758 (2024-09-03, 23:59) [Debbie Con] feat: añadi definicion de la idea
+ 1 file changed, 1 insertion(+)
+
+3ab3ce6 (2024-09-03, 23:51) [Debbie Con] fix: mejoras formato (area fichas literatura)
+ 1 file changed, 10 insertions(+), 12 deletions(-)
+
+f208022 (2024-09-03, 23:42) [Andrey Prado] feat: Intento de Arreglo de errores
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+bb0f466 (2024-09-03, 23:30) [Debbie Con] fix: coreccion nombre de seccion introduccion
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+4f01101 (2024-09-03, 23:29) [Debbie Con] fix: correccion formato titulos
+ 1 file changed, 20 insertions(+), 18 deletions(-)
+
+9433bea (2024-09-03, 23:16) [Debbie Con] fix: correccion parentesis
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+51d8077 (2024-09-03, 23:14) [Andrey Prado] chore: Arreglar formato documento
+ 1 file changed, 197 insertions(+)
+
+8cd21a1 (2024-09-03, 23:13) [Andrey Prado] fix: Eliminar Sección
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+e14b8ab (2024-09-03, 23:13) [Andrey Prado] chore: Carpeta para imágenes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+750bdcc (2024-09-03, 22:29) [Andrey Prado] fix: Arreglar formato
+ 1 file changed, 214 deletions(-)
+
+8a60fa7 (2024-09-02, 18:06) [Andrey Prado] fix: Cambio de Base de Datos
+ 1 file changed, 43 insertions(+), 43 deletions(-)
+
+c2cbb6d (2024-09-02, 12:02) [Andrey Prado] fix: Arreglos al Quarto
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+2e38202 (2024-09-02, 11:59) [Debbie Con] fix: correcciones formato
+ 1 file changed, 1 deletion(-)
+
+5c9f323 (2024-09-02, 10:23) [Debbie Con] fix: correcciones formato preguntas
+ 1 file changed, 18 insertions(+), 12 deletions(-)
+
+98567eb (2024-09-02, 00:49) [Andrey Prado] chore: Formato e Introducción del Análisis de Datos
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+357e23c (2024-09-02, 00:45) [Andrey Prado] feat: Introducción al Análisis de Datos
+ 1 file changed, 4 insertions(+)
+
+e93aa82 (2024-09-02, 00:33) [Andrey Prado] feat: Referencia y Ficha de Literatura
+ 1 file changed, 34 insertions(+), 1 deletion(-)
+
+14f4c2e (2024-09-02, 00:18) [Andrey Prado] chore: Argumentación pregunta 2
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+
+96d57c1 (2024-09-02, 00:13) [Andrey Prado] fix: Error en Formato
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+dd8faf7 (2024-09-02, 00:11) [Andrey Prado] feat: Formato Reformulación Pregunta
+ 1 file changed, 99 insertions(+)
+
+afd711f (2024-09-02, 00:07) [Andrey Prado] feat: Pregunta #2
+ 1 file changed, 22 insertions(+)
+
+67d6dca (2024-09-01, 23:59) [Andrey Prado] feat: Agregué Tensiones
+b9451f1 (2024-09-01, 03:02) [Debbie Con] fix: tildes
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+c30600e (2024-09-01, 02:59) [Debbie Con] feat: molde para argumentacion de la pregunta
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+
+d98e42b (2024-09-01, 02:45) [Debbie Con] feat: algunas definiciones añadidas
+ 1 file changed, 7 insertions(+)
+
+2c52f8b (2024-09-01, 02:33) [Debbie Con] (origin/debbie) feat: titulos añadidos
+ 1 file changed, 8 insertions(+)
+
+90a2a08 (2024-09-01, 02:04) [Debbie Con] fix: borrar pruebas
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+6be7511 (2024-08-31, 01:32) [Andrey Prado] Commit No Debería Ser Permitido
+ 1 file changed, 2 insertions(+)
+
+c84a0c6 (2024-08-30, 19:41) [Andrey Prado] Commit no Debería Ser Permitido V3
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+0f53685 (2024-08-30, 19:40) [Andrey Prado] Commit no Debería Ser Permitido V2
+ 1 file changed, 2 insertions(+)
+
+b301163 (2024-08-30, 19:16) [Aaron Retana] fix: elimina carpeta doc duplicada
+ 14 files changed, 5 insertions(+), 2728 deletions(-)
+
+4fefac0 (2024-08-30, 19:03) [Debbie Con] feat: borrar pruebas
+ 1 file changed, 5 deletions(-)
+
+5f61216 (2024-08-30, 19:00) [Debbie Con] feat: agrega nombres
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+171aaa9 (2024-08-30, 18:56) [Debbie Con] feat: prueba
+ 2 files changed, 10 insertions(+), 5 deletions(-)
+
+44711d5 (2024-08-30, 18:52) [Debbie Con] fix: coreccion error doc
+ 14 files changed, 2729 insertions(+), 1 deletion(-)
+
+a35c1cf (2024-08-31, 00:28) [Andrey Prado] Falso
+ 1 file changed, 4 insertions(+)
+
+5b93829 (2024-08-29, 19:36) [Aaron Retana] feat: agrega archivo de referencias
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+2c7ba90 (2024-08-29, 19:34) [Aaron Retana] feat: agrega archivo del índice
+ 1 file changed, 4 insertions(+)
+
+1ab445e (2024-08-29, 19:29) [Aaron Retana] chore: agrega archivo de formato de quarto
+ 1 file changed, 32 insertions(+)
+
+bb53d22 (2024-08-29, 19:24) [Aaron Retana] fix: cambiar nombre de la carpeta a docs
+ 19 files changed, 0 insertions(+), 0 deletions(-)
+
+febabc8 (2024-08-29, 17:38) [Aaron Retana] chore: actualiza sitio
+ 19 files changed, 6015 insertions(+)
+
+6974691 (2024-08-29, 16:48) [Aaron Retana] chore: agrega configuración de pre-commit
+ 1 file changed, 10 insertions(+)
+
+b62a792 (2024-08-29, 16:46) [Aaron Retana] feat: agrega proyecto de R
+ 1 file changed, 13 insertions(+)
+
+b9a752a (2024-08-29, 12:04) [Aaron Retana] feat: agrega documento
+ 1 file changed, 3 insertions(+)
+
+89b3a76 (2024-08-29, 09:24) [Debbie Con Ortega] Initial commit
+ 2 files changed, 50 insertions(+)
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [unreleased]
+
+### 🚀 Features
+
+- Actualizacion pagina
+- Summary git
+- Bitacora 4
+- Anadir bitacora 4
+- Cross-referencing
+- Graficas bit-4
+- Cambio colores grafica
+- Graficas
+- Ficha 14
+- Conflicto
+- Arregla conflictos
+- Cambio de variables
+- Añade títulos bitácora y gráfica
+- Arregla conflicto bitacora 4
+- Agrega ficha 16
+- Agrega justificación de fichas
+- Agrega grafica 13
+- Grafica
+- Agrega sección de escritura
+- Corregir codigo
+- Introduccion, resumen, conclusion
+- Trabajo final
+- Trabajo final
+- Referencia figuras
+- Ortografia
+
+### 🐛 Bug Fixes
+
+- Conflictos
+- Tabla a cuadro, grafica a figura
+- Conflicto
+- Conflicto
+- Conflictos
+- Ortografia
+- Fig
+- Ortografia
+- Separacion parrafos
+- Referencias
+
+### ⚙️ Miscellaneous Tasks
+
+- Actualiza sitio web
+- Refresca sitio web
+- Actualiza index
+
+## [bitacora-3] - 2024-10-30
+
+### 🚀 Features
+
+- Actualiza el sitio con correcciones
+- Añadi imagenes
+- Imágenes en carpeta
+- Actualiza la bitácora 1 a versión final
+- Agregar Bitacora 2
+- Agrega archivo .R
+- Cambio de Rama
+- Añade paquetes y 3 gráficos
+- Agrega Base de Datos
+- Grafico de nivel educativo padres y educacion del estudiante
+- Grafico estudiantes y permanencia
+- Esqueleto bitacora 2
+- Pegar resumenes y intento tabla
+- Fichas de 3-10
+- Gráfica nueva
+- Merge
+- Resuelve conflicto
+- Gráfico Nacionalidad-Nota
+- Arreglos Git
+- Arreglos y Cambios realizados
+- Intento de subir gráficas
+- Contrastes y tabla literaria
+- Añade Gráficas y Arregal Estructura Quarto
+- Formato
+- Correccion tabla
+- Fichas resultado
+- Estructura quarto
+- Tabla nueva
+- Tabla Nueva Arreglada
+- Tabla nueva
+- Agrega nombres de autores a resúmenes
+- Ageregar espacios en fichas
+- Agrega enlaces de literatura
+- Añade Gráficas
+- Añade otra gráfica
+- Nuevas Gráficas
+- Grafica extra
+- Cambios en conflictos
+- Anadir files
+- Añade presentación
+- Presentacion
+- Formato
+- Formato
+- Arregla quarto
+- Errores
+- Resuelve conflicto bitácora 2
+- Bitacora 3
+- Anadir bit-3
+- Correcciones bit-2
+- Primeros 2 graficos y fichas
+- Bit-3
+- Bit 2
+- Arregla conflictos
+- Conflictos
+- Añade gráficas
+- Resuelve conflictos
+- Grafica uno
+- Cambios generales
+- Grafica uno
+- Añade cita de Montero
+- Grafica dos y tres
+- Grafica cuatro y cinco
+- Graficas y tablas
+- Graficas y tablas
+- Logs.txt
+- Describe gráficas 1 y 2
+- Describe gráficas 3 y 4
+- Describe gráficas 5 y 6
+- Describe gráficas 7 y 8
+- Describe gráficas 9 y 10
+- Agrega descripción de tablas
+- Agrega tabla de elementos de reporte
+- Agrega tabla ordenada de elementos de reporte
+- Agrega intro a parte de escritura
+- Agrega metodología a parte de escritura
+- Agrega y corrige fichas de resultados
+- Agrega ficha 9
+- Agrega ficha 10
+- Agrega ficha 11
+- Agrega ficha 12
+- Agrega ficha 13
+- Añade resultados a sección de escritura
+- Coreccion codigo
+- Cambio idioma
+- Agrega UVE actualizada
+- Uve
+- Correcciones nombre
+- Agrega sección de cambios y mejoras
+- Correciones fichas
+
+### 🐛 Bug Fixes
+
+- Arreglos
+- Resuelve Conflicto
+- Formato
+- Tamano grafico
+- Graficas
+- Arregla Conflicto
+- Arreglos tabla
+- Arregla Estructura de Todo
+- Arregla estructura
+- Conflictos
+- Tabla y grafica
+- Merge
+- Formato fichas
+- Merge
+- Conflictos
+- Arreglo pagina
+- Arreglar pagina
+- Pagina
+- Cambio en numeracion
+- Arreglo conflicto
+
+### ⚙️ Miscellaneous Tasks
+
+- Cambios en bitácora
+- Actualiza sitio
+- Corrige código
+
+## [Bitacora-1] - 2024-09-05
+
+### 🚀 Features
+
+- Agrega documento
+- Agrega proyecto de R
+- Agrega archivo del índice
+- Agrega archivo de referencias
+- Prueba
+- Agrega nombres
+- Borrar pruebas
+- Titulos añadidos
+- Algunas definiciones añadidas
+- Molde para argumentacion de la pregunta
+- Agregué Tensiones
+- Pregunta #2
+- Formato Reformulación Pregunta
+- Referencia y Ficha de Literatura
+- Introducción al Análisis de Datos
+- Intento de Arreglo de errores
+- Bibliografía nueva
+- Añadi definicion de la idea
+- Bibliografía nueva
+- Bibliografía nueva
+- Arreglo
+- Arreglos a bitácora
+- Añadi conceptos
+- Añadi una tension
+- Añadi las 4 preguntas
+- Merge
+- Bibliografía nueva
+- Preguntas añadidas en seccion respectiva
+- Tension 2 y 3
+- Añadi nombre y seccion de teorias
+- Arreglo bibliografía
+- Errores en url referencias
+- Bibliografía Urie Bronfenbrenner
+- Error en commits
+- Actualiza el sitio web
+- Agrega imagen de la UVE al sitio
+- Agrega contraargumentos de primera pregunta
+- Agrega argumentos de primera pregunta
+- Agrega contraargumentos de segunda pregunta
+- Añade contraargumentos de tercera pregunta
+- Añade argumentos de tercera pregunta
+- Agrega contraargumentos de cuarta pregunta
+- Incorpora argumentos de la cuarta pregunta
+- Agrega ficha de literatura 1
+- Agrega ficha de literatura 2
+- Agrega argumentos de la segunda pregunta
+- Añade las conclusiones de la argumentación de cada pregunta
+- Añadi primera teoria
+- Añadi segunda teoria
+- Agrega Bibliografía
+- Añadi parte datos
+- Añadi Datos
+- Añadi ficha 3
+- Añadi referencias
+- Añadi citas en fichas
+- Añade referencias base de datos
+- Añadi prregunta investigacion y subtitulo
+- Agrega primera parte del resumen
+- Segunda parte de resumen
+- Parte final del resumen
+- Añadi introduccion
+- Correccion introduccion
+- Correcion introduciion (2)
+- Correcion cita en resumen
+- Actualiza el contenido del sitio
+- Actualiza los contenidos del sitio
+
+### 🐛 Bug Fixes
+
+- Cambiar nombre de la carpeta a docs
+- Coreccion error doc
+- Elimina carpeta doc duplicada
+- Borrar pruebas
+- Tildes
+- Error en Formato
+- Correcciones formato preguntas
+- Correcciones formato
+- Arreglos al Quarto
+- Cambio de Base de Datos
+- Arreglar formato
+- Eliminar Sección
+- Correccion parentesis
+- Correccion formato titulos
+- Coreccion nombre de seccion introduccion
+- Mejoras formato (area fichas literatura)
+- Arreglo cita factor_académico
+- Formato teorias o principios
+- Error bibliografía
+- Errores en el url
+- Formato conceptos
+- Corrección de enlace del repositorio
+- Agrega source a repo-actions
+- Arreglé error references.bib
+- Corrección Formato
+- Arregle Cambios
+- Arregla conflicto
+- Corregi cita
+- Arregla menciones de la referencias
+- Formato cita en teoria 2
+- Correccion escritura de definicion
+- Coreccion de errores ortograficos y redaccion
+- Correcciones formato
+
+### ⚙️ Miscellaneous Tasks
+
+- Agrega configuración de pre-commit
+- Actualiza sitio
+- Agrega archivo de formato de quarto
+- Argumentación pregunta 2
+- Formato e Introducción del Análisis de Datos
+- Carpeta para imágenes
+- Arreglar formato documento
+- Error
+- Eliminar chapter referencias
+- Modifica gitignore para incluir docs
+- Actualiza el sitio web
+- Actualiza el sitio web posterior a nuevo render
+
+<!-- generated by git-cliff -->
+
+# git summary
+ project     : Bitacoras-Grupo-4-CA-0204-II-2024-
+ repo age    : 3 months 
+ branch:     : main
+ last active : 25 minutes ago
+ active on   : 21 days
+ commits     : 266
+ files       : 391
+ uncommitted : 9
+ authors     : 
+   113	Debbie Con         42.5%
+    85	Andrey Prado       32.0%
+    67	Aaron Retana       25.2%
+     1	Debbie Con Ortega  0.4%
+
+
+# Correciones realizadas 
+- cross-referencing
+- arreglo grafica 1
+- corrección de gráfica a figura y de tabla a cuadro

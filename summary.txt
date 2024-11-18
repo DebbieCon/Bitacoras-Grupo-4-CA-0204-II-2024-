@@ -1,14 +1,14 @@
 
  project     : Bitacoras-Grupo-4-CA-0204-II-2024-
- repo age    : 9 weeks 
+ repo age    : 3 months 
  branch:     : main
- last active : 12 minutes ago
- active on   : 19 days
- commits     : 228
- files       : 240
- uncommitted : 10
+ last active : 25 minutes ago
+ active on   : 21 days
+ commits     : 266
+ files       : 391
+ uncommitted : 9
  authors     : 
-    87	Debbie Con         38.2%
-    81	Andrey Prado       35.5%
-    59	Aaron Retana       25.9%
+   113	Debbie Con         42.5%
+    85	Andrey Prado       32.0%
+    67	Aaron Retana       25.2%
      1	Debbie Con Ortega  0.4%

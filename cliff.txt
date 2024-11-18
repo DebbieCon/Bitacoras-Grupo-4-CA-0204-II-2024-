@@ -6,6 +6,55 @@ All notable changes to this project will be documented in this file.
 
 ### 🚀 Features
 
+- Actualizacion pagina
+- Summary git
+- Bitacora 4
+- Anadir bitacora 4
+- Cross-referencing
+- Graficas bit-4
+- Cambio colores grafica
+- Graficas
+- Ficha 14
+- Conflicto
+- Arregla conflictos
+- Cambio de variables
+- Añade títulos bitácora y gráfica
+- Arregla conflicto bitacora 4
+- Agrega ficha 16
+- Agrega justificación de fichas
+- Agrega grafica 13
+- Grafica
+- Agrega sección de escritura
+- Corregir codigo
+- Introduccion, resumen, conclusion
+- Trabajo final
+- Trabajo final
+- Referencia figuras
+- Ortografia
+
+### 🐛 Bug Fixes
+
+- Conflictos
+- Tabla a cuadro, grafica a figura
+- Conflicto
+- Conflicto
+- Conflictos
+- Ortografia
+- Fig
+- Ortografia
+- Separacion parrafos
+- Referencias
+
+### ⚙️ Miscellaneous Tasks
+
+- Actualiza sitio web
+- Refresca sitio web
+- Actualiza index
+
+## [bitacora-3] - 2024-10-30
+
+### 🚀 Features
+
 - Actualiza el sitio con correcciones
 - Añadi imagenes
 - Imágenes en carpeta

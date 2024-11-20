@@ -514,14 +514,15 @@ académicos y familiares en la trayectoria de un estudiante}
 \large
 Debbie Con Ortega, Jose Andrey Prado Rojas, Jesús Aarón Retana Castro \\
 debbie.con@ucr.ac.cr, joseandrey.prado@ucr.ac.cr, jesus.retana@ucr.ac.cr
-
 \end{center}
 ```
-```{=tex}
+
+````{=tex}
 \begin{center}
 \large \textbf{RESUMEN}
 \end{center}
 ```
+
 Existen múltiples factores externos que pueden influir sobre el
 desempeño académico de un estudiante. El propósito de esta investigación
 es analizar la interacción de las variables sociales, económicas,
@@ -532,6 +533,9 @@ base contiene información sobre las características socioeconómicas y
 académicas de 4424 estudiantes que ingresaron a una universidad en
 Portugal entre 2008 y 2018. El principal programa utilizado fue RStudio,
 donde se generaron múltiples gráficos que estudian la relación entre el
+académicas de 4424 estudiantes que ingresaron a universidades europeas
+entre 2008 y 2018. El principal programa utilizado fue RStudio, donde se
+generaron múltiples tablas y gráficos que estudian la relación entre el
 rendimiento académico y las variables relevantes según la literatura. Se
 encontró que factores económicos como el goce de una beca y la
 puntualidad en los pagos de las cuotas tienen una fuerte relación con la
@@ -822,8 +826,8 @@ estudiantes con notas más bajas al inicio de su carrera son más
 propensos a abandonar la educación superior. Por lo tanto, las primeras
 experiencias con la evaluación universitaria son importantes para las
 decisiones del estudiante. Esta tendencia, de mejores notas en las
-personas que eventualmente se gradúan se expone tanto por Martinez-Otero
-(2009), como por Lobos y Rodriguez (2022). Aunque la importancia que
+personas que eventualmente se gradúan se expone tanto por
+@condicionantes_fracaso, como por @Lobos. Aunque la importancia que
 ambos textos le dan a este factor varía, ambos están de acuerdo en que
 el rendimiento académico sí forma parte de la decisión que es desertar.
 
@@ -837,13 +841,13 @@ graduados es mayor que el de los demás grupos. Además, en el tercer
 cuartil de la categoría de graduados se alcanzan valores más altos que
 en las otras dos. Similarmente, en el segundo cuartil de los desertores
 están contenidas notas más bajas que en las otras categorías. Estos
-resultados concuerdan con los hallazgos de Montero, Villalobos y
-Valverde (2007), que determinaron que el promedio de admisión tiene una
-relación positiva con el desempeño académico más adelante en la carrera.
-Sin embargo, la similitud de los “bigotes” entre las tres
-clasificaciones (lo cual indica una variabilidad similar de los valores
-en los tres grupos), así como la presencia de valores atípicos muy altos
-entre los desertores, hacen cuestionar la firmeza de esta tendencia.
+resultados concuerdan con los hallazgos de @Montero, que determinaron
+que el promedio de admisión tiene una relación positiva con el desempeño
+académico más adelante en la carrera. Sin embargo, la similitud de los
+“bigotes” entre las tres clasificaciones (lo cual indica una
+variabilidad similar de los valores en los tres grupos), así como la
+presencia de valores atípicos muy altos entre los desertores, hacen
+cuestionar la firmeza de esta tendencia.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=2.5}
 #| label: fig-fam
@@ -948,22 +952,24 @@ Para las futuras investigaciones sobre la deserción estudiantil se
 recomienda incluir análisis que se compongan de la trayectoria completa
 del estudiante o de no ser posible agregar al menos un semestre más de
 estudios para estudiar cómo han evolucionado los factores anteriormente
-expuestos en la vida del estudiante. Se consideran como variables
-importantes la satisfacción estudiantil al completar los semestres para
-conocer el deseo del estudiante de seguir con la carrera seleccionada,
-algunas variables cualitativas como la motivación pueden revelar aún más
-información. Se pueden agregar estudios específicos de algunas áreas ya
-que se sabe que el área de letras y ciencias básicas son las que poseen
-una mayor tasa de deserción estudiantil en la mayoría de universidades.
-Para investigadores con mayor experiencia o conocimiento se puede
-incorporar un análisis multinivel donde se estudian las interacciones de
-los factores por separado para obtener un mismo resultado. Finalmente,
-este proyecto de investigación contribuye a llenar un vacío en la
-literatura al proporcionar un análisis de múltiples factores utilizando
-una base de datos actual y descubriendo una contradicción en la teoría
-al describir el impacto de los desplazamientos de los estudiantes. Estos
-descubrimientos y aportes abren líneas de investigación y cuestionan
-algunos supuestos sobre la deserción estudiantil.
+expuestos en la vida del estudiante. También se podrían considerar como
+variables importantes la satisfacción estudiantil al completar los
+semestres, para conocer el deseo del estudiante de seguir con la carrera
+seleccionada, así como algunas variables cualitativas, tales como la
+motivación, que pueden revelar aún más información aunque sean más
+difíciles de medir. Se pueden agregar estudios específicos de algunas
+áreas ya que se sabe que el área de letras y ciencias básicas son las
+que poseen una mayor tasa de deserción estudiantil en la mayoría de
+universidades. Para investigadores con mayor experiencia o conocimiento
+se puede incorporar un análisis multinivel donde se estudian las
+interacciones de los factores por separado para obtener un mismo
+resultado. Finalmente, este proyecto de investigación contribuye a
+llenar un vacío en la literatura al proporcionar un análisis de
+múltiples factores utilizando una base de datos actual y descubriendo
+una contradicción en la teoría al describir el impacto de los
+desplazamientos de los estudiantes. Estos descubrimientos y aportes
+abren líneas de investigación y cuestionan algunos supuestos sobre la
+deserción estudiantil.
 
 ```{=tex}
 \begin{center}

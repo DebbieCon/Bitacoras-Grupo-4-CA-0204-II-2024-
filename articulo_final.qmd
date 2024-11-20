@@ -220,12 +220,12 @@ sum_qualification<-sum_mothers_qualification %>%
 
 target_parents_qualification<-df %>% 
   mutate(mothers_qualification=fct_collapse(mothers_qualification,
-  "Educación Primaria" = c("7º Año (Antiguo)","7º Año de Escolaridad", 
+  "Primaria" = c("7º Año (Antiguo)","7º Año de Escolaridad", 
            "Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv.", 
            "Sabe leer sin tener el 4º Año de Escolaridad",
            "Educación Básica 1º Ciclo (4º/5º Año) o Equiv."),
           
-  "Educación Secundaria" =c("Educación Secundaria", 
+  "Secundaria" =c("Educación Secundaria", 
            "12º Año de Escolaridad", 
            "Curso Complementario de Secundaria",
            "9 - 12mo Año de Escolaridad - No Completado", 
@@ -236,27 +236,27 @@ target_parents_qualification<-df %>%
            "9º Año de Escolaridad - No Completado",
            "8º Año de Escolaridad","10º Año de Escolaridad"),
           
-  "Educación Universitaria"=c("Licenciatura","Grado","Master","Doctorado", 
+  "Universidad"=c("Licenciatura","Grado","Master","Doctorado", 
            "Educación Superior - Máster (2º Ciclo)",
            "Educación Superior - Grado (1º Ciclo)", 
            "Educación Superior - Doctorado (3º Ciclo)"),
           
-  "Educación Técnico-Profesional"= c("Curso de comercio general", 
+  "Técnicos"= c("Curso de comercio general", 
             "Curso técnico-profesional",
             "Curso General de Administración y Comercio",
             "Contabilidad y Administración Suplementaria",
             "Curso de especialización tecnológica",
             "Curso de estudios superiores especializados", 
             "Curso técnico superior profesional"),
-  "No sabe leer ni escribir" = c("No sabe leer ni escribir")
+  "Analfabetas" = c("No sabe leer ni escribir")
   )) %>% 
   mutate(fathers_qualification=fct_collapse(fathers_qualification,
-     "Educación Primaria" = c("7º Año (Antiguo)","7º Año de Escolaridad", 
+     "Primaria" = c("7º Año (Antiguo)","7º Año de Escolaridad", 
           "Educación Básica 2º Ciclo (6º/7º/8º Año) o Equiv.", 
           "Sabe leer sin tener el 4º Año de Escolaridad",
           "Educación Básica 1º Ciclo (4º/5º Año) o Equiv."),
      
-    "Educación Secundaria" =c("Educación Secundaria", "12º Año de Escolaridad", 
+    "Secundaria" =c("Educación Secundaria", "12º Año de Escolaridad", 
           "Curso Complementario de Secundaria", 
           "9 - 12mo Año de Escolaridad - No Completado",
           "11º Año de Escolaridad - No Completado",
@@ -267,12 +267,12 @@ target_parents_qualification<-df %>%
           "9º Año de Escolaridad - No Completado", "8º Año de Escolaridad",
           "10º Año de Escolaridad"),
     
-     "Educación Universitaria"=c("Licenciatura","Grado","Master","Doctorado", 
+     "Universidad"=c("Licenciatura","Grado","Master","Doctorado", 
           "Educación Superior - Máster (2º Ciclo)",
           "Educación Superior - Grado (1º Ciclo)",
           "Educación Superior - Doctorado (3º Ciclo)"),
     
-     "Educación Técnico-Profesional"= c("Curso de comercio general", 
+     "Técnicos"= c("Curso de comercio general", 
          "Curso técnico-profesional", 
          "Curso General de Administración y Comercio",
          "Contabilidad y Administración Suplementaria",
@@ -280,7 +280,7 @@ target_parents_qualification<-df %>%
          "Curso de estudios superiores especializados", 
          "Curso técnico superior profesional"),
     
-      "No sabe leer ni escribir" = c("No sabe leer ni escribir")
+      "Analfabetas" = c("No sabe leer ni escribir")
   )) %>% 
   group_by(target, mothers_qualification, fathers_qualification) %>% 
   summarise(count=n())
@@ -297,19 +297,19 @@ target_parents_qualification <- target_parents_qualification %>%
   mutate(mothers_qualification = str_replace_all(mothers_qualification, "\\n", " "))
 target_parents_qualification <- target_parents_qualification %>% 
   mutate(mothers_qualification=fct_relevel(mothers_qualification, 
-                                           "No sabe leer ni escribir",
-                                           "Educación Primaria",
-                                           "Educación Secundaria", 
-                                           "Educación Técnico-Profesional",
-                                           "Educación Universitaria" ))
+                                           "Analfabetas",
+                                           "Primaria",
+                                           "Secundaria", 
+                                           "Técnicos",
+                                           "Universidad" ))
 
 target_parents_qualification <- target_parents_qualification %>% 
   mutate(fathers_qualification =fct_relevel(fathers_qualification, 
-                                           "No sabe leer ni escribir",
-                                           "Educación Primaria",
-                                           "Educación Secundaria", 
-                                           "Educación Técnico-Profesional",
-                                           "Educación Universitaria" ))
+                                           "Analfabetas",
+                                           "Primaria",
+                                           "Secundaria", 
+                                           "Técnicos",
+                                           "Universidad" ))
 df <- df %>%
   mutate(tuition_fees_up_to_date = case_when(
     tuition_fees_up_to_date == 0 ~ "No",

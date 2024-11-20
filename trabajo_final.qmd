@@ -64,9 +64,8 @@ La independencia entre el origen del estudiante y la permanencia en la carrera e
 
 Otro resultado de carácter académico es la relación entre los créditos aprobados en el primer semestre de educación universitaria y la permanencia en la carrera, derivado de la @fig-grafica_cinco. Al visualizar la densidad de los créditos aprobados en el primer semestre por categoría de estudiante se evidencian patrones claros sobre el impacto de las primeras evaluaciones universitarias en el estudiante. Primero, los estudiantes con pocos créditos aprobados en el primer semestre son más propensos a ser desertores. De hecho, la mayor densidad de desertores ocurre cuando no se aprobó ningún crédito. Por otro lado, la máxima densidad de estudiantes graduados se da en un valor de créditos aprobados más elevado. Esto insinúa que existe una relación positiva entre créditos aprobados en primer semestre y la posibilidad de graduarse. Por lo tanto, las primeras experiencias con la evaluación universitaria son importantes para las decisiones del estudiante. No obstante, puede que sea necesario evaluar créditos aprobados contra créditos matriculados, pues la proporción entre estas variables es más representativa del “éxito” en el primer semestre que la cantidad absoluta de créditos aprobados.\
 
-<<<<<<< HEAD
 Otra forma de estudiar las diferencias entre las notas de estudiantes graduados, desertores y matriculados es mediante el @fig-tabla_cuatro. Esta tabla emplea medidas estadísticas de tendencia central para determinar que los estudiantes graduados presentan una media de notas en el primer semestre significativamente mayor que los desertores y matriculados, lo que coincide con lo mostrado visualmente por la @fig-grafica_cinco. Sin embargo, hay una amplia variabilidad en las notas, especialmente entre los graduados, quienes presentan una desviación estándar relativamente alta en comparación a su media y mediana, lo cual sugiere que existen algunos impactos complementarios que afectan el desempeño. Por otro lado, los datos de los estudiantes matriculados son los que se mantienen más consistentes. \
-=======
+
 Otra forma de estudiar las diferencias entre las notas de estudiantes graduados, desertores y matriculados es mediante el @tbl-tablacuatro. Esta tabla emplea medidas estadísticas de tendencia central para determinar que los estudiantes graduados presentan una media de notas en el primer semestre significativamente mayor que los desertores y matriculados, lo que coincide con lo mostrado visualmente por la figura @fig-grafica_cinco. Sin embargo, hay una amplia variabilidad en las notas, especialmente entre los graduados, quienes presentan una desviación estándar relativamente alta en comparación a su media y mediana, lo cual sugiere que existen algunos impactos complementarios que afectan el desempeño. Por otro lado, los datos de los estudiantes matriculados son los que se mantienen más consistentes. \
 
 
@@ -109,8 +108,6 @@ Primeramente, queremos expresar nuestro más sincero agradecimiento a Maikol Sol
 
 Asimismo, agradecemos las valiosas contribuciones de la asistente del curso, Ana Laura López, quien a lo largo del desarrollo de esta investigación nos proporcionó retroalimentación muy acertada que nos permitió presentar la mejor versión posible del trabajo. Por último, se agradece inmensamente el apoyo de nuestros compañeros de curso que han sido partícipes de este proceso a nuestro lado y que brindaron sugerencias clave en el transcurso del mismo. 
 
-
-## Referencias
 
 
 ### Referencias

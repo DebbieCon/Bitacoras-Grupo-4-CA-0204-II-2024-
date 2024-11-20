@@ -1,13 +1,16 @@
 ---
-title: "Análisis de la interacción de los factores sociales, económicos, académicos y familiares en la trayectoria de un estudiante"
-subtitle: "Bitácoras Grupo #4, CA-204 (II-2024)"
-author: "Debbie Con, Andrey Prado, Aarón Retana"
-date: today 
+lang: es
 format:
   html:
     number-sections: true
+    text: "Calibri"
+    fontsize: 11pt
+    fig-pos: "H"
   pdf: 
     documentclass: scrreprt
+    mainfont: "Calibri"
+    fontsize: 11pt
+    fig-pos: "H"
   latex: 
     documentclass: scrreprt
   docx: default
@@ -440,7 +443,7 @@ grafica_tres<-df %>%count(scholarship_holder, target) %>%
   geom_tile()+ 
   theme_classic() + 
   labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia") + 
-  scale_fill_continuous(low = "skyblue", high = "darkblue")+
+  scale_fill_continuous(low = "#AAE48D", high = "#2B7308")+
   theme(panel.border = element_rect(colour = "black", fill=NA),
         plot.title = element_text(hjust = 0.5))
 
@@ -452,7 +455,7 @@ grafica_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
     y= "Cantidad de estudiantes",
     fill="Género"
     )+scale_fill_manual(values = c("Hombre"= "#FD8A8A", "Mujer"= "#A9CDD7"))+
-  scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 200))+ theme(legend.position = "bottom")
+  scale_y_continuous(breaks = seq(0, max(table(df$target)), by = 500))+ theme(legend.position = "bottom")
 
 grafica_siete<-df %>% 
 filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,  
@@ -460,21 +463,21 @@ filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,
         target %in% c("Graduado", "Desertor")) %>% 
   ggplot(aes(x=curricular_units_1st_sem_grade, y=curricular_units_2nd_sem_grade,
              colour =target))+
-  geom_point(size=0.25)+labs(
+  geom_point(size=0.5)+labs(
     x="Nota del primer semestre",
     y="Nota del segundo \n semestre",
     color="Tipo de estudiante"
-  )+theme_classic()+ scale_fill_manual(values=c("Desertor" = "#A2CD5A", "Graduado"= "#CD5555"))+theme(legend.position = "right")
+  )+theme_classic()+ scale_fill_manual(values=c("Desertor" = "#A2CD5A", "Graduado"= "#CD5555"))+theme(legend.position = "bottom")
 
 grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target, 
-                         label = paste(target, "\n", count),
+                         label = paste(count),
                          subgroup = displaced)) +
   geom_treemap(alpha = 0.8) +
-  geom_treemap_text(colour = "white", place = "centre", size = 10)+
+  geom_treemap_text(colour = "black", place = "centre", size = 10)+
   facet_wrap(~displaced) +
   labs(
     fill = "Estado"
-  )+ scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))+ theme_minimal()+theme(legend.position="none")
+  )+ scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))+ theme_minimal()+theme(legend.position="bottom")
 
 grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
   geom_boxplot(alpha = 0.7)+
@@ -496,18 +499,29 @@ grafica_diez<-ggplot(df, aes(x = age_at_enrollment, y = target, fill = target))+
   theme(legend.position="none")
 
 social <- grafica_seis | grafica_diez
-economico <- (grafica_dos | grafica_ocho)/grafica_tres
+economico <- (grafica_dos | grafica_ocho)
 academico <- grafica_siete / grafica_nueve
 familiar <- grafica_uno
 ```
 
-## Título
+```{=tex}
+\begin{center}
+\Large
+\textbf{Análisis de la interacción de los factores sociales, económicos,
+académicos y familiares en la trayectoria de un estudiante}
+\end{center}
+\begin{center}
+\large
+Debbie Con Ortega, Jose Andrey Prado Rojas, Jesús Aarón Retana Castro \\
+debbie.con@ucr.ac.cr, joseandrey.prado@ucr.ac.cr, jesus.retana@ucr.ac.cr
 
-Análisis de la interacción de los factores sociales, económicos,
-académicos y familiares en la trayectoria de un estudiante
-
-## Resumen
-
+\end{center}
+```
+```{=tex}
+\begin{center}
+\large \textbf{RESUMEN}
+\end{center}
+```
 Existen múltiples factores externos que pueden influir sobre el
 desempeño académico de un estudiante. El propósito de esta investigación
 es analizar la interacción de las variables sociales, económicas,
@@ -535,13 +549,14 @@ Finalmente, se propone que futuras investigaciones contemplen la
 posibilidad de ampliar el análisis de este tema mediante la aplicación
 de métodos estadísticos de carácter numérico.
 
-## Palabras Clave
+\textbf{PALABRAS CLAVE:} Rendimiento académico, deserción estudiantil,
+factores socioeconómicos, factores familiares
 
-Rendimiento académico, deserción estudiantil, factores socioeconómicos,
-factores familiares
-
-## Introducción
-
+```{=tex}
+\begin{center}
+\large \textbf{INTRODUCCIÓN}
+\end{center}
+```
 La educación es el motor de cualquier sociedad, sirve como mecanismo
 para expandir el conocimiento y enriquecer la cultura. A su vez, es una
 herramienta capaz de combatir la pobreza, mejorar la salud y lograr la
@@ -549,16 +564,16 @@ igualdad de género. Sin embargo, una problemática creciente es la
 cantidad de personas que no completan sus estudios, ya sean de primaria,
 secundaria o educación superior. De estos niveles educativos, el
 abandono de la educación superior es el eje central de esta
-investigación.\
+investigación.
 
-La formación de profesionales es un peldaño fundamental en el
+La formación de profesionales es un pilar fundamental en el
 crecimiento económico y exploración del conocimiento para cualquier
 nación por lo que la permanencia en los centros de educación
 universitaria es fundamental. No obstante, no es un trabajo sencillo
 encontrar las causas del abandono de esta etapa de la educación para de
 esta manera ayudar a contrarrestarlas. Es así, que se busca analizar la
 manera en que los factores sociales, económicos, académicos y familiares
-influyen en la trayectoria académica de la persona estudiante.\
+influyen en la trayectoria académica de la persona estudiante.
 
 El contexto actual de la educación superior revela que a pesar de los
 esfuerzos por incrementar las tasas de graduación, la deserción sigue
@@ -572,20 +587,20 @@ lo que abre un espacio para un análisis más detallado, contextualizado y
 aplicado. Este trabajo se propone contribuir al conocimiento existente
 mediante un análisis tanto cualitativo como cuantitativo entre las
 variables brindadas por una base de datos de estudiantes en una
-universidad europea entre el 2008 y el 2018.\
+universidad europea entre el 2008 y el 2018.
 
 Mediante los datos provenientes de la base mencionada, que abarca
 información tanto demográfica, académica y socioeconómica de los
-estudiantes se pretende descubrir patrones y correlaciones que permitan
+estudiantes, se pretende descubrir patrones y correlaciones que permitan
 entender mejor las razones detrás de la permanencia o abandono de la
-educación superior. Principalmente, se pretende reconocer aquellos
+educación superior. Principalmente, se desea reconocer aquellos
 factores que tienen mayor incidencia sobre el abandono de los estudios.
 El objetivo es identificar las variables críticas que afectan la
 decisión de continuar o no la carrera universitaria para tener una base
 con la cual se pueden crear estrategias efectivas en contra de la
 deserción universitaria. Para lograrlo, se empleará un análisis
 estadístico basado en la visualización de datos mediante gráficas y
-tablas.\
+tablas.
 
 Para la disminución de este fenómeno es fundamental fomentar el diálogo
 entre las instituciones gubernamentales y educativas ya que los factores
@@ -597,8 +612,11 @@ es el resultado de un único factor, sino una combinación de varios, por
 lo que se requiere planes integrales que aborden la complejidad del tema
 atacando múltiples factores simultáneamente.
 
-## Metodología
-
+```{=tex}
+\begin{center}
+\large \textbf{METODOLOGÍA}
+\end{center}
+```
 El análisis de factores que influyen sobre el desempeño académico
 universitario, en especial, factores económicos, sociales, académicos y
 familiares, requiere de una metodología que logre segmentar el impacto
@@ -618,7 +636,8 @@ generar o eliminar datos según su importancia, así como clasificar
 información repetida para que sea más fácil su lectura. Luego mediante
 la herramienta “ggplot” se genera la visualización de los datos en
 gráficas relacionando variables que según la literatura resulta
-interesante de estudiar.\
+interesante de estudiar.
+
 Para este estudio resulta indispensable tener una base a la cual aplicar
 los métodos propuestos por @R4DS, para ello se cuenta con una base de
 datos recolectada por Realinho (2022). Esta base cuenta con 4424
@@ -628,7 +647,8 @@ características económicas, sociales, educativas, y otras más de los
 estudiantes. Como resultado principal se registra la deserción del
 estudiante o el éxito académico proponiendo una variable “target” que
 cuenta con tres opciones: graduado, desertor o matriculado, que define
-el tipo de estudiante luego de un año de estudios.\
+el tipo de estudiante luego de un año de estudios.
+
 La variable categórica “target” es de suma importancia para la presente
 investigación y es el principal resultado de la base de datos. Para
 evaluar su relación con otros factores se seleccionaron diez variables
@@ -637,26 +657,23 @@ económica. Para el entorno económico, se considerarán tres variables
 binarias: si el estudiante cuenta con retrasos en sus cuotas de
 matrícula, si este cuenta con beca y finalmente si el estudiante
 requirió desplazarse de su hogar para realizar sus estudios superiores.
-Para el área académica, se analizaran una variable discreta y dos
-continuas las cuales son la cantidad de créditos aprobados por
-estudiante, sus notas de admisión y sus promedios durante el primer año
-lectivo respectivamente. En el área social, se incluirá el género del
-estudiante y su edad al ser admitido. Finalmente, en el área familiar se
+Para el área académica, se analizaran dos variables continuas las cuales
+son, sus notas de admisión y sus promedios durante el primer año lectivo
+respectivamente. En el área social, se incluirá el género del estudiante
+y su edad al ser admitido. Finalmente, en el área familiar se
 considerará el nivel educativo de tanto el padre y la madre de cada
-estudiante. La relación entre la variable “target” y las variables
-seleccionadas se explorará a través de la generación de gráficas. Estas
-se seleccionan adecuadamente para cada par de variables considerando su
-tipo (categórica, continua,etc) y su propósito en el análisis, se
-elegirán diferentes tipos de gráficas como de barras, de densidad, mapas
-de calor (“heatmaps”), graficos de arbol (“treemaps”), de dispersión y
-diagramas de cajas.\
+estudiante.
+
 El tipo de datos que se plantean en la base de datos resulta de gran
 interés según @data, debido a la riqueza y diversidad de los mismos, lo
 que justifica la implementación de múltiples técnicas de análisis de
 datos para capturar los impactos del estudio.
 
-## Resultados
-
+```{=tex}
+\begin{center}
+\large \textbf{RESULTADOS}
+\end{center}
+```
 El objetivo de esta sección de resultados es presentar un desglose de
 los hallazgos obtenidos a partir de la metodología descrita
 anteriormente, la cual consiste en gráficos de diferentes estilos que
@@ -670,11 +687,11 @@ decisión de concluir los estudios universitarios o abandonarlos.
 También, se busca comparar y contrastar los resultados propios de este
 estudio con los argumentos propuestos por otros autores, para así
 contribuir al conocimiento general del tema e incluso hallar vacíos en
-la literatura existente.\
+la literatura existente.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE,fig.width=6,fig.height=3}
 #| label: fig-soc
-#| fig-cap: "Factores Sociales que influyen en la deserción estudiantil. Elaboración Propia @data"
+#| fig-cap: "Factores Sociales que influyen en la deserción estudiantil. Elaboración Propia. Fuente @data"
 
 print(social)
 
@@ -697,7 +714,8 @@ notar que no hay una diferencia significativa entre géneros dentro de la
 categoría de desertor. Otra consideración pertinente es que al tomar en
 cuenta sólo dos géneros, existe una parte de la población que queda
 totalmente fuera del estudio, pero este problema viene desde el origen
-de los datos.\
+de los datos.
+
 Por otro lado, la figura de la derecha muestra la influencia de la edad
 de ingreso a la universidad sobre la permanencia en la carrera. Para
 esto, se representaron las edades de admisión a la universidad según la
@@ -717,11 +735,11 @@ ingresan a una edad más avanzada se vean obligados a abandonar los
 estudios por responsabilidades laborales o familiares, razones que
 resalta @jovenes, especialmente en mujeres. Por otro lado, los
 estudiantes más jóvenes probablemente carecen de estas obligaciones y
-hasta reciben apoyo de sus familiares.\
+hasta reciben apoyo de sus familiares.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=10, fig.height=4}
 #| label: fig-eco
-#| fig-cap: "Factores Económicos que influyen en la deserción estudiantil"
+#| fig-cap: "Factores Económicos que influyen en la deserción estudiantil. Elaboración Propia. Fuente @data"
 
 print(economico)
 ```
@@ -743,20 +761,9 @@ relevante es que en los estudiantes desertores existe una parte
 significativa de la población que es deudora, lo que muestra que la
 imposibilidad de pagar las cuotas escolares por dificultades económicas
 puede ser un factor de peso en la decisión de abandonar la carrera. Este
-hallazgo es consistente con @Lobos.\
-La figura de en medio ilustra el impacto de la obtención de una beca
-socioeconómica en la permanencia en la universidad. Esta gráfica de tipo
-heatmap muestra la frecuencia absoluta de cada combinación de las dos
-variables categóricas escogidas: tipo de estudiante y si es poseedor de
-beca. La conclusión es clara, pues dentro del grupo de los estudiantes
-poseedores de beca, los estudiantes graduados son los más numerosos,
-mientras que en los estudiantes sin beca, la diferencia entre las tres
-categorías no es tan significativa. Nuevamente se puede deducir que la
-situación económica que enfrenta cada estudiante tiene un gran impacto
-en su decisión de continuar con su carrera universitaria o no. Esta
-relación es recurrente en el material bibliográfico y ha sido estudiada
-en títulos como el de Sistemas Ecológicos de Urie Bronfenbrenner.\
-La última figura describe la incidencia sobre la permanencia en la
+hallazgo es consistente con @Lobos.
+
+La segunda figura describe la incidencia sobre la permanencia en la
 carrera de la necesidad de desplazamiento a la universidad. Agrupando
 los estudiantes entre aquellos que tuvieron que desplazarse para asistir
 a la universidad y los que no, luego clasificándolos por su estado en la
@@ -775,20 +782,74 @@ argumentan que los costos de alquiler y transporte son algunos de los
 principales obstáculos que enfrentan los estudiantes para continuar con
 su carrera.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=2}
+#| label: fig-eco2
+#| fig-cap: "Factores Económicos que influyen en la deserción estudiantil. Elaboración Propia. Fuente @data"
+
+print(grafica_tres)
+```
+
+La @fig-eco2 ilustra el impacto de la obtención de una beca
+socioeconómica en la permanencia en la universidad. Esta gráfica de tipo
+heatmap muestra la frecuencia absoluta de cada combinación de las dos
+variables categóricas escogidas: tipo de estudiante y si es poseedor de
+beca. La conclusión es clara, pues dentro del grupo de los estudiantes
+poseedores de beca, los estudiantes graduados son los más numerosos,
+mientras que en los estudiantes sin beca, la diferencia entre las tres
+categorías no es tan significativa. Nuevamente se puede deducir que la
+situación económica que enfrenta cada estudiante tiene un gran impacto
+en su decisión de continuar con su carrera universitaria o no. Esta
+relación es recurrente en el material bibliográfico y ha sido estudiada
+en títulos como el de Sistemas Ecológicos de Urie Bronfenbrenner.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE,fig.width=5}
 #| label: fig-aca
-#| fig-cap: "Factores Académicos que influyen en la deserción estudiantil"
+#| fig-cap: "Factores Académicos que influyen en la deserción estudiantil. Elaboración Propia. Fuente @data"
 
 print(academico)
 ```
 
-La @fig-aca abarca los factores académicos que mostraron consecuencias más marcadas sobre la trayectoria académica de los estudiantes universitarios. La gráfica de la izquierda ofrece información sobre el vínculo entre las notas del primer año y la decisión de continuar sus estudios superiores o desertar. Esta utiliza una representación de tipo scatter, con las notas del primer semestre como eje horizontal y las notas del segundo semestre en el vertical, también diferenciando entre estudiantes graduados y desertores mediante colores distintos. Basado en este gráfico, es posible concluir que, a grandes rasgos, los estudiantes con notas más altas durante tanto el primer como el segundo semestre son aquellos que con mayor frecuencia se gradúan. Por el contrario, aquellos estudiantes con notas más bajas al inicio de su carrera son más propensos a abandonar la educación superior. Por lo tanto, las primeras experiencias con la evaluación universitaria son importantes para las decisiones del estudiante. Esta tendencia, de mejores notas en las personas que eventualmente se gradúan se expone tanto por Martinez-Otero (2009), como por Lobos y Rodriguez (2022). Aunque la importancia que ambos textos le dan a este factor varía, ambos están de acuerdo en que el rendimiento académico sí forma parte de la decisión que es desertar.\
-En la segunda de la @fig-aca, se presenta la importancia de la nota de admisión sobre la probabilidad de que un estudiante se gradúe. Al graficar la distribución de las notas de admisión según la categoría final del estudiante mediante un diagrama de cajas, se obtuvo un resultado previsible, aunque tal vez la tendencia no es tan fuerte como se esperaba. Es evidente que el valor de la mediana para los estudiantes graduados es mayor que el de los demás grupos. Además, en el tercer cuartil de la categoría de graduados se alcanzan valores más altos que en las otras dos. Similarmente, en el segundo cuartil de los desertores están contenidas notas más bajas que en las otras categorías. Estos resultados concuerdan con los hallazgos de Montero, Villalobos y Valverde (2007), que determinaron que el promedio de admisión tiene una relación positiva con el desempeño académico más adelante en la carrera. Sin embargo, la similitud de los “bigotes” entre las tres clasificaciones (lo cual indica una variabilidad similar de los valores en los tres grupos), así como la presencia de valores atípicos muy altos entre los desertores, hacen cuestionar la firmeza de esta tendencia. 
+La @fig-aca abarca los factores académicos que mostraron consecuencias
+más marcadas sobre la trayectoria académica de los estudiantes
+universitarios. La gráfica de la izquierda ofrece información sobre el
+vínculo entre las notas del primer año y la decisión de continuar sus
+estudios superiores o desertar. Esta utiliza una representación de tipo
+scatter, con las notas del primer semestre como eje horizontal y las
+notas del segundo semestre en el vertical, también diferenciando entre
+estudiantes graduados y desertores mediante colores distintos. Basado en
+este gráfico, es posible concluir que, a grandes rasgos, los estudiantes
+con notas más altas durante tanto el primer como el segundo semestre son
+aquellos que con mayor frecuencia se gradúan. Por el contrario, aquellos
+estudiantes con notas más bajas al inicio de su carrera son más
+propensos a abandonar la educación superior. Por lo tanto, las primeras
+experiencias con la evaluación universitaria son importantes para las
+decisiones del estudiante. Esta tendencia, de mejores notas en las
+personas que eventualmente se gradúan se expone tanto por Martinez-Otero
+(2009), como por Lobos y Rodriguez (2022). Aunque la importancia que
+ambos textos le dan a este factor varía, ambos están de acuerdo en que
+el rendimiento académico sí forma parte de la decisión que es desertar.
 
+En la segunda de la @fig-aca, se presenta la importancia de la nota de
+admisión sobre la probabilidad de que un estudiante se gradúe. Al
+graficar la distribución de las notas de admisión según la categoría
+final del estudiante mediante un diagrama de cajas, se obtuvo un
+resultado previsible, aunque tal vez la tendencia no es tan fuerte como
+se esperaba. Es evidente que el valor de la mediana para los estudiantes
+graduados es mayor que el de los demás grupos. Además, en el tercer
+cuartil de la categoría de graduados se alcanzan valores más altos que
+en las otras dos. Similarmente, en el segundo cuartil de los desertores
+están contenidas notas más bajas que en las otras categorías. Estos
+resultados concuerdan con los hallazgos de Montero, Villalobos y
+Valverde (2007), que determinaron que el promedio de admisión tiene una
+relación positiva con el desempeño académico más adelante en la carrera.
+Sin embargo, la similitud de los “bigotes” entre las tres
+clasificaciones (lo cual indica una variabilidad similar de los valores
+en los tres grupos), así como la presencia de valores atípicos muy altos
+entre los desertores, hacen cuestionar la firmeza de esta tendencia.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=2.5}
 #| label: fig-fam
-#| fig-cap: "Factores Familiares que influyen en la deserción estudiantil"
+#| fig-cap: "Factores Familiares que influyen en la deserción estudiantil. Elaboración Propia. Fuente @data"
 
 print(familiar)
 ```
@@ -805,13 +866,14 @@ estudiantes desertores. Esto contradice la suposición que entre mayor es
 el nivel educativo de los padres, mejores posibilidades de que sus hijos
 alcancen uno igual o mayor. Sin embargo, esta relación que a primera
 vista parece algo contradictoria, es respaldada por la literatura en el
-artículo de @factores_desempeño. Aunque parece que hay mayor cantidad de
+artículo de @factores_desempeno. Aunque parece que hay mayor cantidad de
 estudiantes graduados que desertores cuyos padres tienen educación
 primaria o secundaria, esto se debe a que el grupo de graduados es más
 numeroso que el grupo de desertores y no a una tendencia discernible. En
 todo caso, dada la gran cantidad de combinaciones entre el nivel
 educativo del padre y la madre se dificulta establecer una única
-conclusión global.\
+conclusión global.
+
 Antes de concluir, es oportuno mencionar otras relaciones entre
 variables que fueron exploradas, pero que no mostraron repercusiones
 importantes sobre la trayectoria académica de los estudiantes
@@ -827,8 +889,11 @@ se contempló el estado civil del estudiante y si era extranjero o
 nacional, pero ninguna de las dos variables demostró comportamientos
 distintivos en las categorías de la variable objetivo.
 
-## Conclusiones
-
+```{=tex}
+\begin{center}
+\large \textbf{CONCLUSIONES}
+\end{center}
+```
 Durante la presente investigación se propuso identificar y analizar los
 factores sociales, económicos, académicos y familiares que influyen
 sobre la decisión de abandonar o continuar los estudios universitarios
@@ -842,7 +907,7 @@ debido a la necesidad de comprender mejor el desarrollo del capital
 humano en la educación superior. A su vez se quiere estudiar cómo
 mejorar las condiciones de educación para muchas personas, considerando
 el tiempo que demandan las responsabilidades laborales o familiares, así
-como el desplazamiento al centro educativo.\
+como el desplazamiento al centro educativo.
 
 Se realizó un análisis cuantitativo que se basó en la visualización de
 datos mediante el uso de las herramientas vistas en el curso
@@ -852,7 +917,7 @@ base de datos que contaba con 4424 registros de estudiantes europeos
 donde se consideraban más de 20 variables macroeconómicas,
 microeconómicas, sociales, familiares, entre otras. Entre estas
 variables se encontraron algunos patrones que pueden responder las
-preguntas planteadas.\
+preguntas planteadas.
 
 Con respecto a los factores académicos se encontró una fuerte relación
 entre las notas del primer semestre y las notas de admisión de los
@@ -870,7 +935,7 @@ presentaron una mayor proporción de graduaciones que los que no las
 portaban, dicho comportamiento se respalda con los hallazgos de @Lobos,
 pues los autores muestran que los gastos de transporte, matrícula,
 alimentación y demás son la principal causa del abandono de los estudios
-universitarios.\
+universitarios.
 
 Al aplicar la metodología propuesta se encontró un resultado inesperado
 donde se contradecía la literatura al respecto, ya que los gráficos
@@ -879,7 +944,7 @@ para poder estudiar muestran mayores tasas de graduación que los que no
 necesitan desplazarse. Por el contrario, según la teoría muchos factores
 económicos, sociales y familiares que conlleva el no desplazamiento
 pueden ayudar al estudiante, por ejemplo el estar cerca de su familia o
-no tener diversos gastos como los expuestos anteriormente.\
+no tener diversos gastos como los expuestos anteriormente.
 
 Para las futuras investigaciones sobre la deserción estudiantil se
 recomienda incluir análisis que se compongan de la trayectoria completa
@@ -902,14 +967,17 @@ al describir el impacto de los desplazamientos de los estudiantes. Estos
 descubrimientos y aportes abren líneas de investigación y cuestionan
 algunos supuestos sobre la deserción estudiantil.
 
-## Agradecimientos
-
+```{=tex}
+\begin{center}
+\large \textbf{AGRADECIMIENTOS}
+\end{center}
+```
 Primeramente, queremos expresar nuestro más sincero agradecimiento a
 Maikol Solis, profesor del presente curso CA0204: Herramientas de
 Ciencia de Datos I. Su ayuda fue fundamental en la elaboración de esta
 investigación al proporcionar conocimiento de las herramientas a
 utilizar y propiciar un espacio donde poner en práctica habilidades tan
-importantes como la investigación y el pensamiento crítico.\
+importantes como la investigación y el pensamiento crítico.
 
 Asimismo, agradecemos las valiosas contribuciones de la asistente del
 curso, Ana Laura López, quien a lo largo del desarrollo de esta
@@ -919,4 +987,8 @@ agradece inmensamente el apoyo de nuestros compañeros de curso que han
 sido partícipes de este proceso a nuestro lado y que brindaron
 sugerencias clave en el transcurso del mismo.
 
-## Referencias
+```{=tex}
+\begin{center}
+\large \textbf{REFERENCIAS}
+\end{center}
+```

@@ -429,7 +429,7 @@ grafica_dos<-df %>%count(tuition_fees_up_to_date, target) %>%
   geom_col(position = "dodge") + 
   theme_classic()+
   labs(
-    x = "Tipo de Estudiante",
+    x = "Categoría del Estudiante",
     y = "Frecuencia",
     fill = "Cuotas al día"
   ) +
@@ -442,7 +442,7 @@ grafica_tres<-df %>%count(scholarship_holder, target) %>%
   ggplot(aes(x=scholarship_holder, y = target, fill = n))+
   geom_tile()+ 
   theme_classic() + 
-  labs(x = "Poseedor de Beca Socioeconómica", y = "Tipo de Estudiante", fill = "Frecuencia") + 
+  labs(x = "Poseedor de Beca Socioeconómica", y = "Categoría del Estudiante", fill = "Frecuencia") + 
   scale_fill_continuous(low = "#AAE48D", high = "#2B7308")+
   theme(panel.border = element_rect(colour = "black", fill=NA),
         plot.title = element_text(hjust = 0.5))
@@ -451,7 +451,7 @@ grafica_tres<-df %>%count(scholarship_holder, target) %>%
 
 grafica_seis<-df %>% ggplot(aes(fill=gender, x=target))+geom_bar(stat="count")+
   theme_classic()+labs(
-    x="Tipo de estudiante",
+    x="Categoría del estudiante",
     y= "Cantidad de estudiantes",
     fill="Género"
     )+scale_fill_manual(values = c("Hombre"= "#FD8A8A", "Mujer"= "#A9CDD7"))+
@@ -466,7 +466,7 @@ filter(curricular_units_1st_sem_grade < 20,curricular_units_2nd_sem_grade > 10,
   geom_point(size=0.5)+labs(
     x="Nota del primer semestre",
     y="Nota del segundo \n semestre",
-    color="Tipo de estudiante"
+    color="Categoría del estudiante"
   )+theme_classic()+ scale_fill_manual(values=c("Desertor" = "#A2CD5A", "Graduado"= "#CD5555"))+theme(legend.position = "bottom")
 
 grafica_ocho<-ggplot(data_summary, aes(area = count, fill = target, 
@@ -483,7 +483,7 @@ grafica_nueve<-ggplot(df, aes(x = admission_grade, y = target, fill = target))+
   geom_boxplot(alpha = 0.7)+
   labs(
     x = "Nota de admisión",
-    y = "Categoría"
+    y = "Categoría del estudiante"
   )+scale_fill_manual(values = c("Matriculado"="#A9CDD7", "Desertor"= "#A2CD5A", "Graduado"="#CD5555"))+
   theme_minimal()+
   theme(legend.position="none")
@@ -510,6 +510,8 @@ familiar <- grafica_uno
 \textbf{Análisis de la interacción de los factores sociales, económicos,
 académicos y familiares en la trayectoria de un estudiante}
 \end{center}
+```
+```{=tex}
 \begin{center}
 \large
 Debbie Con Ortega, Jose Andrey Prado Rojas, Jesús Aarón Retana Castro \\
@@ -517,7 +519,7 @@ debbie.con@ucr.ac.cr, joseandrey.prado@ucr.ac.cr, jesus.retana@ucr.ac.cr
 \end{center}
 ```
 
-````{=tex}
+```{=tex}
 \begin{center}
 \large \textbf{RESUMEN}
 \end{center}
@@ -552,9 +554,10 @@ fenómeno complejo vinculado a diversas variables interconectadas.
 Finalmente, se propone que futuras investigaciones contemplen la
 posibilidad de ampliar el análisis de este tema mediante la aplicación
 de métodos estadísticos de carácter numérico.
-
+```{=tex}
 \textbf{PALABRAS CLAVE:} Rendimiento académico, deserción estudiantil,
 factores socioeconómicos, factores familiares
+```
 
 ```{=tex}
 \begin{center}

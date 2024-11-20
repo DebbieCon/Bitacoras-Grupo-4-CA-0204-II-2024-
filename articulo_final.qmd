@@ -529,16 +529,16 @@ académicas y familiares en la trayectoria académica de un estudiante
 universitario. Para abordar el objetivo planteado, se realizó un
 análisis exploratorio de una base de datos elaborada por @data. Esta
 base contiene información sobre las características socioeconómicas y
-académicas de 4424 estudiantes que ingresaron a una universidad en
-Portugal entre 2008 y 2018. El principal programa utilizado fue RStudio,
-donde se generaron múltiples tablas y gráficos que estudian la relación
-entre el rendimiento académico y las variables relevantes según la
-literatura. Se encontró que factores económicos como el goce de una beca
-y la puntualidad en los pagos de las cuotas tienen una fuerte relación
-con la permanencia del estudiante en la carrera. Asimismo,
-características demográficas como la edad de ingreso a la universidad y
-el género resultaron ser significativas sobre el rendimiento. Otros
-factores académicos, como el promedio de admisión a la universidad y las
+académicas de 4424 estudiantes que ingresaron a universidades europeas
+entre 2008 y 2018. El principal programa utilizado fue RStudio, donde se
+generaron múltiples tablas y gráficos que estudian la relación entre el
+rendimiento académico y las variables relevantes según la literatura. Se
+encontró que factores económicos como el goce de una beca y la
+puntualidad en los pagos de las cuotas tienen una fuerte relación con la
+permanencia del estudiante en la carrera. Asimismo, características
+demográficas como la edad de ingreso a la universidad y el género
+resultaron ser significativas sobre el rendimiento. Otros factores
+académicos, como el promedio de admisión a la universidad y las
 calificaciones obtenidas en los primeros dos semestres se identificaron
 como indicadores del rendimiento futuro del estudiante. Por otro lado,
 se observó que los antecedentes académicos del núcleo familiar del
@@ -566,14 +566,14 @@ secundaria o educación superior. De estos niveles educativos, el
 abandono de la educación superior es el eje central de esta
 investigación.
 
-La formación de profesionales es un pilar fundamental en el
-crecimiento económico y exploración del conocimiento para cualquier
-nación por lo que la permanencia en los centros de educación
-universitaria es fundamental. No obstante, no es un trabajo sencillo
-encontrar las causas del abandono de esta etapa de la educación para de
-esta manera ayudar a contrarrestarlas. Es así, que se busca analizar la
-manera en que los factores sociales, económicos, académicos y familiares
-influyen en la trayectoria académica de la persona estudiante.
+La formación de profesionales es un pilar fundamental en el crecimiento
+económico y exploración del conocimiento para cualquier nación por lo
+que la permanencia en los centros de educación universitaria es
+fundamental. No obstante, no es un trabajo sencillo encontrar las causas
+del abandono de esta etapa de la educación para de esta manera ayudar a
+contrarrestarlas. Es así, que se busca analizar la manera en que los
+factores sociales, económicos, académicos y familiares influyen en la
+trayectoria académica de la persona estudiante.
 
 El contexto actual de la educación superior revela que a pesar de los
 esfuerzos por incrementar las tasas de graduación, la deserción sigue
@@ -593,14 +593,13 @@ Mediante los datos provenientes de la base mencionada, que abarca
 información tanto demográfica, académica y socioeconómica de los
 estudiantes, se pretende descubrir patrones y correlaciones que permitan
 entender mejor las razones detrás de la permanencia o abandono de la
-educación superior. Principalmente, se desea reconocer aquellos
-factores que tienen mayor incidencia sobre el abandono de los estudios.
-El objetivo es identificar las variables críticas que afectan la
-decisión de continuar o no la carrera universitaria para tener una base
-con la cual se pueden crear estrategias efectivas en contra de la
-deserción universitaria. Para lograrlo, se empleará un análisis
-estadístico basado en la visualización de datos mediante gráficas y
-tablas.
+educación superior. Principalmente, se desea reconocer aquellos factores
+que tienen mayor incidencia sobre el abandono de los estudios. El
+objetivo es identificar las variables críticas que afectan la decisión
+de continuar o no la carrera universitaria para tener una base con la
+cual se pueden crear estrategias efectivas en contra de la deserción
+universitaria. Para lograrlo, se empleará un análisis estadístico basado
+en la visualización de datos mediante gráficas y tablas.
 
 Para la disminución de este fenómeno es fundamental fomentar el diálogo
 entre las instituciones gubernamentales y educativas ya que los factores
@@ -624,18 +623,18 @@ de cada uno de estos factores por separado y así concluir sobre estos,
 así como sugerir cuáles son los que se deben considerar para
 investigaciones a futuro. Se implementará el uso de gráficas y tablas
 elaboradas en RStudio basándose en las metodologías planteadas en el
-libro “R for Data Science” @R4DS donde se proporciona un enfoque para el
-análisis de datos considerando la importación, limpieza y visualización
-de los datos utilizando el sistema tidyverse como herramienta principal.
-Estos pasos se caracterizan de la siguiente manera: primero, la
-importación de datos y la limpieza de los mismos establecen las bases
-para la realización de la investigación donde mediante paquetes como
-“readr” se carga una base de datos y se procede a implementar
-estructuras como “filter(), select(), mutate()”. Estos métodos permiten
-generar o eliminar datos según su importancia, así como clasificar
-información repetida para que sea más fácil su lectura. Luego mediante
-la herramienta “ggplot” se genera la visualización de los datos en
-gráficas relacionando variables que según la literatura resulta
+libro “R for Data Science” @R4DS, en donde se proporciona un enfoque
+para el análisis de datos considerando la importación, limpieza y
+visualización de los datos utilizando el sistema tidyverse como
+herramienta principal. Estos pasos se caracterizan de la siguiente
+manera: primero, la importación de datos y la limpieza de los mismos
+establecen las bases para la realización de la investigación donde
+mediante paquetes como “readr” se carga una base de datos y se procede a
+implementar estructuras como “filter(), select(), mutate()”. Estos
+métodos permiten generar o eliminar datos según su importancia, así como
+clasificar información repetida para que sea más fácil su lectura. Luego
+mediante la herramienta “ggplot” se genera la visualización de los datos
+en gráficas relacionando variables que según la literatura resulta
 interesante de estudiar.
 
 Para este estudio resulta indispensable tener una base a la cual aplicar
@@ -824,8 +823,8 @@ estudiantes con notas más bajas al inicio de su carrera son más
 propensos a abandonar la educación superior. Por lo tanto, las primeras
 experiencias con la evaluación universitaria son importantes para las
 decisiones del estudiante. Esta tendencia, de mejores notas en las
-personas que eventualmente se gradúan se expone tanto por Martinez-Otero
-(2009), como por Lobos y Rodriguez (2022). Aunque la importancia que
+personas que eventualmente se gradúan se expone tanto por
+@condicionantes_fracaso, como por @Lobos. Aunque la importancia que
 ambos textos le dan a este factor varía, ambos están de acuerdo en que
 el rendimiento académico sí forma parte de la decisión que es desertar.
 
@@ -839,13 +838,13 @@ graduados es mayor que el de los demás grupos. Además, en el tercer
 cuartil de la categoría de graduados se alcanzan valores más altos que
 en las otras dos. Similarmente, en el segundo cuartil de los desertores
 están contenidas notas más bajas que en las otras categorías. Estos
-resultados concuerdan con los hallazgos de Montero, Villalobos y
-Valverde (2007), que determinaron que el promedio de admisión tiene una
-relación positiva con el desempeño académico más adelante en la carrera.
-Sin embargo, la similitud de los “bigotes” entre las tres
-clasificaciones (lo cual indica una variabilidad similar de los valores
-en los tres grupos), así como la presencia de valores atípicos muy altos
-entre los desertores, hacen cuestionar la firmeza de esta tendencia.
+resultados concuerdan con los hallazgos de @Montero, que determinaron
+que el promedio de admisión tiene una relación positiva con el desempeño
+académico más adelante en la carrera. Sin embargo, la similitud de los
+“bigotes” entre las tres clasificaciones (lo cual indica una
+variabilidad similar de los valores en los tres grupos), así como la
+presencia de valores atípicos muy altos entre los desertores, hacen
+cuestionar la firmeza de esta tendencia.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=2.5}
 #| label: fig-fam
@@ -950,22 +949,24 @@ Para las futuras investigaciones sobre la deserción estudiantil se
 recomienda incluir análisis que se compongan de la trayectoria completa
 del estudiante o de no ser posible agregar al menos un semestre más de
 estudios para estudiar cómo han evolucionado los factores anteriormente
-expuestos en la vida del estudiante. Se consideran como variables
-importantes la satisfacción estudiantil al completar los semestres para
-conocer el deseo del estudiante de seguir con la carrera seleccionada,
-algunas variables cualitativas como la motivación pueden revelar aún más
-información. Se pueden agregar estudios específicos de algunas áreas ya
-que se sabe que el área de letras y ciencias básicas son las que poseen
-una mayor tasa de deserción estudiantil en la mayoría de universidades.
-Para investigadores con mayor experiencia o conocimiento se puede
-incorporar un análisis multinivel donde se estudian las interacciones de
-los factores por separado para obtener un mismo resultado. Finalmente,
-este proyecto de investigación contribuye a llenar un vacío en la
-literatura al proporcionar un análisis de múltiples factores utilizando
-una base de datos actual y descubriendo una contradicción en la teoría
-al describir el impacto de los desplazamientos de los estudiantes. Estos
-descubrimientos y aportes abren líneas de investigación y cuestionan
-algunos supuestos sobre la deserción estudiantil.
+expuestos en la vida del estudiante. También se podrían considerar como
+variables importantes la satisfacción estudiantil al completar los
+semestres, para conocer el deseo del estudiante de seguir con la carrera
+seleccionada, así como algunas variables cualitativas, tales como la
+motivación, que pueden revelar aún más información aunque sean más
+difíciles de medir. Se pueden agregar estudios específicos de algunas
+áreas ya que se sabe que el área de letras y ciencias básicas son las
+que poseen una mayor tasa de deserción estudiantil en la mayoría de
+universidades. Para investigadores con mayor experiencia o conocimiento
+se puede incorporar un análisis multinivel donde se estudian las
+interacciones de los factores por separado para obtener un mismo
+resultado. Finalmente, este proyecto de investigación contribuye a
+llenar un vacío en la literatura al proporcionar un análisis de
+múltiples factores utilizando una base de datos actual y descubriendo
+una contradicción en la teoría al describir el impacto de los
+desplazamientos de los estudiantes. Estos descubrimientos y aportes
+abren líneas de investigación y cuestionan algunos supuestos sobre la
+deserción estudiantil.
 
 ```{=tex}
 \begin{center}

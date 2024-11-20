@@ -531,14 +531,14 @@ análisis exploratorio de una base de datos elaborada por @data. Esta
 base contiene información sobre las características socioeconómicas y
 académicas de 4424 estudiantes que ingresaron a una universidad en
 Portugal entre 2008 y 2018. El principal programa utilizado fue RStudio,
-donde se generaron múltiples tablas y gráficos que estudian la relación
-entre el rendimiento académico y las variables relevantes según la
-literatura. Se encontró que factores económicos como el goce de una beca
-y la puntualidad en los pagos de las cuotas tienen una fuerte relación
-con la permanencia del estudiante en la carrera. Asimismo,
-características demográficas como la edad de ingreso a la universidad y
-el género resultaron ser significativas sobre el rendimiento. Otros
-factores académicos, como el promedio de admisión a la universidad y las
+donde se generaron múltiples gráficos que estudian la relación entre el
+rendimiento académico y las variables relevantes según la literatura. Se
+encontró que factores económicos como el goce de una beca y la
+puntualidad en los pagos de las cuotas tienen una fuerte relación con la
+permanencia del estudiante en la carrera. Asimismo, características
+demográficas como la edad de ingreso a la universidad y el género
+resultaron ser significativas sobre el rendimiento. Otros factores
+académicos, como el promedio de admisión a la universidad y las
 calificaciones obtenidas en los primeros dos semestres se identificaron
 como indicadores del rendimiento futuro del estudiante. Por otro lado,
 se observó que los antecedentes académicos del núcleo familiar del
@@ -566,14 +566,14 @@ secundaria o educación superior. De estos niveles educativos, el
 abandono de la educación superior es el eje central de esta
 investigación.
 
-La formación de profesionales es un pilar fundamental en el
-crecimiento económico y exploración del conocimiento para cualquier
-nación por lo que la permanencia en los centros de educación
-universitaria es fundamental. No obstante, no es un trabajo sencillo
-encontrar las causas del abandono de esta etapa de la educación para de
-esta manera ayudar a contrarrestarlas. Es así, que se busca analizar la
-manera en que los factores sociales, económicos, académicos y familiares
-influyen en la trayectoria académica de la persona estudiante.
+La formación de profesionales es un pilar fundamental en el crecimiento
+económico y exploración del conocimiento para cualquier nación por lo
+que la permanencia en los centros de educación universitaria es
+fundamental. No obstante, no es un trabajo sencillo encontrar las causas
+del abandono de esta etapa de la educación para de esta manera ayudar a
+contrarrestarlas. Es así, que se busca analizar la manera en que los
+factores sociales, económicos, académicos y familiares influyen en la
+trayectoria académica de la persona estudiante.
 
 El contexto actual de la educación superior revela que a pesar de los
 esfuerzos por incrementar las tasas de graduación, la deserción sigue
@@ -593,14 +593,13 @@ Mediante los datos provenientes de la base mencionada, que abarca
 información tanto demográfica, académica y socioeconómica de los
 estudiantes, se pretende descubrir patrones y correlaciones que permitan
 entender mejor las razones detrás de la permanencia o abandono de la
-educación superior. Principalmente, se desea reconocer aquellos
-factores que tienen mayor incidencia sobre el abandono de los estudios.
-El objetivo es identificar las variables críticas que afectan la
-decisión de continuar o no la carrera universitaria para tener una base
-con la cual se pueden crear estrategias efectivas en contra de la
-deserción universitaria. Para lograrlo, se empleará un análisis
-estadístico basado en la visualización de datos mediante gráficas y
-tablas.
+educación superior. Principalmente, se desea reconocer aquellos factores
+que tienen mayor incidencia sobre el abandono de los estudios. El
+objetivo es identificar las variables críticas que afectan la decisión
+de continuar o no la carrera universitaria para tener una base con la
+cual se pueden crear estrategias efectivas en contra de la deserción
+universitaria. Para lograrlo, se empleará un análisis estadístico basado
+en la visualización de datos mediante gráficas.
 
 Para la disminución de este fenómeno es fundamental fomentar el diálogo
 entre las instituciones gubernamentales y educativas ya que los factores
@@ -609,8 +608,8 @@ interconectados. Se busca promover la reflexión para incentivar la
 mejora y expansión de las políticas y ayudas existentes en torno a este
 problema. Es importante que estas medidas reconozcan que la deserción no
 es el resultado de un único factor, sino una combinación de varios, por
-lo que se requiere planes integrales que aborden la complejidad del tema
-atacando múltiples factores simultáneamente.
+lo que se requieren planes integrales que aborden la complejidad del
+tema atacando múltiples factores simultáneamente.
 
 ```{=tex}
 \begin{center}
@@ -622,21 +621,20 @@ universitario, en especial, factores económicos, sociales, académicos y
 familiares, requiere de una metodología que logre segmentar el impacto
 de cada uno de estos factores por separado y así concluir sobre estos,
 así como sugerir cuáles son los que se deben considerar para
-investigaciones a futuro. Se implementará el uso de gráficas y tablas
-elaboradas en RStudio basándose en las metodologías planteadas en el
-libro “R for Data Science” @R4DS donde se proporciona un enfoque para el
-análisis de datos considerando la importación, limpieza y visualización
-de los datos utilizando el sistema tidyverse como herramienta principal.
-Estos pasos se caracterizan de la siguiente manera: primero, la
-importación de datos y la limpieza de los mismos establecen las bases
-para la realización de la investigación donde mediante paquetes como
-“readr” se carga una base de datos y se procede a implementar
-estructuras como “filter(), select(), mutate()”. Estos métodos permiten
-generar o eliminar datos según su importancia, así como clasificar
-información repetida para que sea más fácil su lectura. Luego mediante
-la herramienta “ggplot” se genera la visualización de los datos en
-gráficas relacionando variables que según la literatura resulta
-interesante de estudiar.
+investigaciones a futuro. Se implementará el uso de gráficas elaboradas
+en RStudio basándose en las metodologías planteadas en el libro “R for
+Data Science” @R4DS donde se proporciona un enfoque para el análisis de
+datos considerando la importación, limpieza y visualización de los datos
+utilizando el sistema tidyverse como herramienta principal. Estos pasos
+se caracterizan de la siguiente manera: primero, la importación de datos
+y su limpieza establecen las bases para la realización de la
+investigación donde mediante paquetes como “readr” se carga una base de
+datos y se procede a implementar estructuras como “filter(), select(),
+mutate()”. Estos métodos permiten generar o eliminar datos según su
+importancia, así como clasificar información repetida para que sea más
+fácil su lectura. Luego mediante la herramienta “ggplot” se genera la
+visualización de los datos en gráficas relacionando variables que según
+la literatura resulta interesante de estudiar.
 
 Para este estudio resulta indispensable tener una base a la cual aplicar
 los métodos propuestos por @R4DS, para ello se cuenta con una base de

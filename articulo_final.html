@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Debbie Con, Andrey Prado, Aarón Retana">
-<meta name="dcterms.date" content="2024-11-18">
+<meta name="dcterms.date" content="2024-11-19">
 
 <title>Análisis de la interacción de los factores sociales, económicos, académicos y familiares en la trayectoria de un estudiante</title>
 <style>
@@ -86,7 +86,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 18, 2024</p>
+      <p class="date">November 19, 2024</p>
     </div>
   </div>
   
@@ -135,7 +135,7 @@ El tipo de datos que se plantean en la base de datos resulta de gran interés se
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-soc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-soc" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-soc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="articulo_final_files/figure-html/fig-soc-1.png" class="img-fluid figure-img" width="672">
@@ -152,7 +152,7 @@ Por otro lado, la figura de la derecha muestra la influencia de la edad de ingre
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-eco" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-eco" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-eco-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="articulo_final_files/figure-html/fig-eco-1.png" class="img-fluid figure-img" width="672">
@@ -169,7 +169,7 @@ La figura de en medio ilustra el impacto de la obtención de una beca socioecon�
 La última figura describe la incidencia sobre la permanencia en la carrera de la necesidad de desplazamiento a la universidad. Agrupando los estudiantes entre aquellos que tuvieron que desplazarse para asistir a la universidad y los que no, luego clasificándolos por su estado en la carrera (graduado, matriculado o desertor) y representando estos datos en un gráfico facetado de tipo treemap, se revelaron comportamientos interesantes. Primero, es destacable que entre los desplazados existe una menor cantidad de desertores que en los no desplazados, aunque en términos absolutos existen más estudiantes del primer grupo que del segundo. Otro resultado llamativo es que, dentro de los desplazados, la categoría de estudiantes graduados representan alrededor del 54,57%, mientras que en los no desplazados, los graduados componen el 44,29%. Lo anterior parece indicar que existe una mayor probabilidad de graduarse entre los estudiantes que tuvieron que mudarse para recibir una educación superior. Esto contradice los resultados de <span class="citation" data-cites="Lobos">Rivera and Vásquez (<a href="#ref-Lobos" role="doc-biblioref">2023</a>)</span>, quienes argumentan que los costos de alquiler y transporte son algunos de los principales obstáculos que enfrentan los estudiantes para continuar con su carrera.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-aca" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-aca" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-aca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="articulo_final_files/figure-html/fig-aca-1.png" class="img-fluid figure-img" width="672">
@@ -186,7 +186,7 @@ En cuanto a la segunda figura, esta proporciona información sobre el vínculo e
 En la tercera figura, se presenta la importancia de la nota de admisión sobre la probabilidad de que un estudiante se gradúe. Al graficar la distribución de las notas de admisión según la categoría final del estudiante mediante un diagrama de cajas, se obtuvo un resultado previsible, aunque tal vez la tendencia no es tan fuerte como se esperaba. Es evidente que el valor de la mediana para los estudiantes graduados es mayor que el de los demás grupos. Además, en el tercer cuartil de la categoría de graduados se alcanzan valores más altos que en las otras dos. Similarmente, en el segundo cuartil de los desertores están contenidas notas más bajas que en las otras categorías. Estos resultados concuerdan con los hallazgos de <span class="citation" data-cites="Montero">Montero Rojas (<a href="#ref-Montero" role="doc-biblioref">2007</a>)</span>, que determinaron que el promedio de admisión tiene una relación positiva con el desempeño académico más adelante en la carrera. Sin embargo, la similitud de los “bigotes” entre las tres clasificaciones (lo cual indica una variabilidad similar de los valores en los tres grupos), así como la presencia de valores atípicos muy altos entre los desertores, hacen cuestionar la firmeza de esta tendencia.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-fam" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-fam" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="articulo_final_files/figure-html/fig-fam-1.png" class="img-fluid figure-img" width="672">
@@ -286,7 +286,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -318,29 +329,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -348,7 +337,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
